@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>London tube map</title>
+    <link rel="stylesheet" href="./tubeMap.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hammersmith+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- d3-tube-map 1.5.0 peer-depends on d3 "5 - 6"; v7 breaks it. -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-tube-map@1.5.0/dist/d3-tube-map.js"></script>
+  </head>
+
+  <body>
+    <div id="tube-map"></div>
+    <div id="selection"><span class="hint">Click a station</span></div>
+
+    <script>
+      var container = d3.select('#tube-map');
+      var selection = d3.select('#selection');
+
+      var map = d3
+        .tubeMap()
+        .width(window.innerWidth)
+        .height(window.innerHeight)
+        .margin({ top: 40, right: 40, bottom: 40, left: 40 });
+
+      d3.json('./map.json').then(function (data) {
+        // The click handler reports the station key. Everything the blue plaque
+        // work will need is hanging off the station record: its name, its Naptan
+        // id, and the position the plaques get matched against.
+        map.on('click', function (name) {
+          var station = data.stations[name];
+          selection.html(
+            '<div class="name">' + station.label.replace(/\n/g, ' ') + '</div>' +
+            '<div class="hint">' + station.uid + ' &middot; ' +
+            station.lat.toFixed(4) + ', ' + station.lon.toFixed(4) + '</div>'
+          );
+        });
+
+        container.datum(data).call(map);
+
+        // The library draws at a fixed scale and has no pan or zoom of its own,
+        // which a map this size badly needs.
+        var svg = container.select('svg');
+        var zoom = d3.zoom().scaleExtent([0.15, 8]).on('zoom', function (event) {
+          svg.select('g').attr('transform', event.transform.toString());
+        });
+        svg.call(zoom);
+        zoom.scaleTo(svg, 0.5);
+      });
+    </script>
+  </body>
+</html>

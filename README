@@ -44,12 +44,73 @@ rather than a file path (so `src/` goes on `sys.path` instead of
 ## Layout
 
     src/
-    ├── handler/main.py        entry point: runs every source, rebuilds the views
-    └── utils/
-        ├── db.py              versioned (SCD type 2) SQLite storage
-        ├── distances.py       haversine distances between coordinates
-        ├── sources/tfl.py     TfL station data: download, load, coordinates
-        └── sql/               derived views, reapplied on every build
+    ├── handler/main.py             entry point: runs every source, rebuilds the views, writes the map
+    ├── layout_overrides.json       hand-tuning of the map, applied on top of the generated layout
+    ├── utils/
+    │   ├── db.py                   versioned (SCD type 2) SQLite storage
+    │   ├── distances.py            haversine distances between coordinates
+    │   ├── layout.py               the octilinear geometry: placing, routing, validating
+    │   ├── mapdata.py              assembles src/web/map.json
+    │   ├── sources/tfl.py          TfL station data: download, load, coordinates
+    │   ├── sources/tfl_network.py  TfL route sequences: which stations each line calls at
+    │   └── sql/                    derived views, reapplied on every build
+    └── web/                        the map, as a static page
+
+## The map
+
+    cd src/web && python3 -m http.server 8000
+
+Then open <http://localhost:8000>. Drag to pan, scroll to zoom, click a station
+to see what the database holds for it.
+
+The page is plain HTML - no build step, no node_modules - and draws
+[d3-tube-map](https://github.com/johnwalley/d3-tube-map) from a CDN. Note that
+it pins d3 v6: d3-tube-map 1.5.0 will not work with v7.
+
+`src/web/map.json` is generated, but it is committed, so the page works straight
+from a clone without waiting on a build.
+
+### Where the shape comes from
+
+The 19 lines, 421 stations and 580 stretches of track are all live TfL data. The
+*positions* are not: the real Tube map is a copyrighted design, licensed through
+Pinder Creative on terms that forbid altering it - renaming the stations very
+much included - so this draws its own diagram of the same network instead.
+
+d3-tube-map will not accept an arbitrary polyline. Every segment has to run
+along one of the eight compass points, and a change of direction needs its own
+node placed one incoming plus one outgoing step past the end of the run. So
+`utils/layout.py` earns the geometry in three passes:
+
+  * **place** - project each station, then pull it towards the centre by the
+    square root of its distance. Beck's map gives the centre most of the room
+    and squeezes the ends of the lines; without that compression the grid would
+    have to be about 1000 cells wide to keep Covent Garden and Leicester Square
+    apart, and would be mostly empty. Stations then take an integer cell,
+    busiest first, so interchanges land where they asked to.
+  * **route** - join each pair of stations with straight runs and corners,
+    trying short sequences before long ones and preferring the shortest drawn
+    line, which is what puts the diagonals in. A line leaves a station the way
+    it arrived, so the turning happens in between; four corners is a full
+    reversal, which is the worst any line asks for.
+  * **validate** - a port of the library's own `populateLineDirections`, run
+    over every branch before the JSON is written, so a geometry mistake fails
+    the build rather than the browser.
+
+### Hand-tuning it
+
+The generated layout is geographically honest rather than beautiful, and the
+place to improve it is `src/layout_overrides.json`, which is applied last and
+so survives a rebuild:
+
+    {
+      "stations": { "Bank": { "coords": [104, -66], "labelPos": "E" } },
+      "lines":    { "circle": { "shiftNormal": 1 } }
+    }
+
+Stations are keyed the way `map.json` keys them - `OxfordCircus`,
+`KingsCrossStPancras` - and `shiftNormal` is what holds two lines apart where
+they share track.
 
 ## The database
 
@@ -58,3 +119,15 @@ the load it first appeared in (`valid_from_load`) and the load that replaced or
 removed it (`valid_to_load`), so re-running the build against an unchanged feed
 writes nothing at all. Each table has a `current_<table>` view showing only the
 live rows, and `loads` records every ingestion run.
+
+Two sources feed it. `tfl_stationdata` is the zip of CSVs TfL publish, which is
+where station names and coordinates come from; the extracted CSVs are deleted
+once they are in the database. `tfl_network` is the Unified API, which is where
+the lines and their running order come from. Unregistered API callers get 50
+requests a minute and a build makes about 40, so two builds in quick succession
+will pause and retry; setting `TFL_APP_KEY` avoids the wait.
+
+The views in `utils/sql/` join the two together. The wrinkle they handle is that
+the API calls Euston `940GZZLUEUS` while the station data files it under its hub
+code `HUBEUS`; falling back to `topMostParentId` is what gets all 469 stops on
+all 19 lines onto a row with coordinates.

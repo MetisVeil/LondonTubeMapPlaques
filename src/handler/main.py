@@ -5,15 +5,19 @@ Run it from src/ as a module, so that `utils` is importable:
     cd src && python -m handler.main
 
 Each source fetches its data and versions it into the database; the .sql files
-in utils/sql/ then rebuild the derived views on top. Nothing under data/ is
-committed to git, so this is also what you run after cloning the repo.
+in utils/sql/ then rebuild the derived views on top, and the map the web page
+draws is written out last. Nothing under data/ is committed to git, so this is
+also what you run after cloning the repo.
 """
 
-from utils import db
-from utils.sources import tfl
+import shutil
+from pathlib import Path
+
+from utils import db, mapdata
+from utils.sources import tfl, tfl_network
 
 # Every source exposes SOURCE and load(conn). Add new ones here.
-SOURCES = [tfl]
+SOURCES = [tfl, tfl_network]
 
 
 def build(db_path=db.DB_PATH) -> None:
@@ -29,7 +33,17 @@ def build(db_path=db.DB_PATH) -> None:
         for name in db.apply_sql(conn):
             print(f"  {name}")
 
+        print("\nmap:")
+        for field, value in mapdata.export(conn).items():
+            print(f"  {field:16} {value}")
+
         print(f"\nbuilt {db_path}")
+
+        # Clean up downloaded CSVs; they're now in the database.
+        tmp_dir = Path(db_path).parent / "tmp"
+        if tmp_dir.exists():
+            shutil.rmtree(tmp_dir)
+            print(f"cleaned {tmp_dir}")
     finally:
         conn.close()
 

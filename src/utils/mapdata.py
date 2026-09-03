@@ -15,10 +15,12 @@ import sqlite3
 import textwrap
 from pathlib import Path
 
-from . import layout
+from . import categories, layout
 
 SRC_DIR = Path(__file__).resolve().parents[1]          # src/
 MAP_PATH = SRC_DIR / "web" / "map.json"
+CATEGORIES_PATH = SRC_DIR / "web" / "categories.json"
+CATEGORIES_SOURCE = SRC_DIR / "role_categories.md"
 OVERRIDES_PATH = SRC_DIR / "layout_overrides.json"
 
 # Chosen by sweeping: the smallest grid on which every branch still routes, with
@@ -31,7 +33,22 @@ LABEL_WIDTH = 11
 # Lines running along the same track have to be drawn side by side or they land
 # on top of each other. shiftNormal offsets a line along its own normal, so
 # these are the offsets to hand out, nearest the centre line first.
-OFFSETS = [0, 1, -1, 2, -2, 3, -3, 4, -4]
+#
+# Capped at one width either side. Two things go wrong as the offset grows: a
+# line's station markers travel with it, away from the interchange they are
+# meant to share, and - worse - the line tears open at its own junctions, since
+# each branch is offset along its own normal and branches leave on different
+# bearings. A gap reads as the line ending. One width keeps both within what the
+# map already lived with; two put a three cell hole in the Central at Woodford.
+OFFSETS = [0, 1, -1]
+
+# What an offset is worth paying. Landing on another line is the thing being
+# fixed; looking like you stop at a station you run past is nearly as bad;
+# tearing a line open at a junction is worse than either, since a gap reads as
+# the line ending. All else equal a line belongs on its own coordinates.
+PHANTOM_COST = 5
+BREAK_COST = 2
+DRIFT_COST = 1
 
 
 def station_key(name: str) -> str:
@@ -50,6 +67,18 @@ def station_key(name: str) -> str:
 def label(name: str) -> str:
     """Wrap a long station name, the way the library's own data does."""
     return "\n".join(textwrap.wrap(name, LABEL_WIDTH, break_long_words=False))
+
+
+def station_keys(stations: dict) -> dict[str, str]:
+    """Map each station to the key the map files use for it.
+
+    A handful of names belong to two genuinely separate stations - there really
+    are two Edgware Roads, and the map shows both - so those keys carry the
+    Naptan id to tell them apart. The label stays the plain name either way.
+    """
+    named = collections.Counter(station_key(s["name"]) for s in stations.values())
+    return {uid: station_key(s["name"]) + ("_" + uid if named[station_key(s["name"])] > 1 else "")
+            for uid, s in stations.items()}
 
 
 def read(conn: sqlite3.Connection) -> tuple[dict, dict, dict]:
@@ -76,25 +105,125 @@ def read(conn: sqlite3.Connection) -> tuple[dict, dict, dict]:
     return stations, lines, {k: v for k, v in branches.items() if len(v) > 1}
 
 
-def side_by_side(branches: dict) -> dict[str, int]:
-    """Give lines that share track a different offset, so both stay visible.
+def travel_axis(before: dict, after: dict) -> tuple[int, int]:
+    """The axis a segment runs along, opposite directions folded together.
 
-    Busiest first, each line takes the offset nearest the centre that none of the
-    lines it shares track with has already claimed.
+    Two lines sharing a corridor are drawn alongside each other whichever way
+    round they run it, so for holding them apart N and S - or NE and SW - are
+    the same thing. Keeping the axis is what stops a plain crossing, where the
+    two genuinely belong on the same cell, from being read as a collision.
     """
-    neighbours = collections.defaultdict(set)
-    users = collections.defaultdict(set)
-    for (line_id, _), path in branches.items():
-        for pair in zip(path, path[1:]):
-            users[frozenset(pair)].add(line_id)
-    for sharing in users.values():
-        for line_id in sharing:
-            neighbours[line_id] |= sharing - {line_id}
+    dx = after["coords"][0] - before["coords"][0]
+    dy = after["coords"][1] - before["coords"][1]
+    step = ((dx > 0) - (dx < 0), (dy > 0) - (dy < 0))
+    return step if step > (0, 0) else (-step[0], -step[1])
 
-    offsets = {}
-    for line_id in sorted(neighbours, key=lambda l: (-len(neighbours[l]), l)):
-        taken = {offsets[other] for other in neighbours[line_id] if other in offsets}
-        offsets[line_id] = next(o for o in OFFSETS if o not in taken)
+
+def drawn_lanes(nodes: list[dict], shift: float):
+    """Every (cell, axis) pair a branch is drawn through at `shift`."""
+    for before, after in zip(nodes, nodes[1:]):
+        along = travel_axis(before, after)
+        for cell in layout.cells([before, after], shift):
+            yield cell, along
+
+
+def phantom_stops(branches: list, shift: float, stations: dict, served: set) -> int:
+    """Count the stations a line is drawn beside but does not call at.
+
+    A line passing within a cell of a station reads as stopping there: the
+    Bakerloo runs one cell under Great Portland Street and looks for all the
+    world like it serves it. Cells are dilated by one to catch that, since at
+    0.8 line widths a neighbouring cell is already touching the marker.
+    """
+    drawn = {cell for nodes in branches for cell, _ in drawn_lanes(nodes, shift)}
+    beside = {(x + dx, y + dy) for x, y in drawn
+              for dx in (-1, 0, 1) for dy in (-1, 0, 1)}
+    return sum(1 for key, cell in stations.items()
+               if cell in beside and key not in served)
+
+
+def junction_breaks(branches: list, shift: float) -> float:
+    """How far a line is torn apart at its own junctions by being offset.
+
+    shiftNormal moves each segment along its *own* normal, so where two branches
+    of one line meet at a station on different bearings their shifted ends no
+    longer coincide and the line is drawn with a gap in it - Woodford, Hainault,
+    North Acton. The gap grows with the offset, which is what keeps a line with
+    branches spreading in all directions near its own coordinates.
+    """
+    drawn = collections.defaultdict(list)
+    for nodes in branches:
+        for index, node in enumerate(nodes):
+            if not node.get("name"):
+                continue
+            for start in (index - 1, index):
+                if 0 <= start < len(nodes) - 1:
+                    (x, y) = nodes[start]["coords"]
+                    (to_x, to_y) = nodes[start + 1]["coords"]
+                    length = math.hypot(to_x - x, to_y - y) or 1.0
+                    drawn[node["name"]].append((
+                        node["coords"][0] + layout.LINE_WIDTH_MULTIPLIER * shift * (to_y - y) / length,
+                        node["coords"][1] - layout.LINE_WIDTH_MULTIPLIER * shift * (to_x - x) / length))
+
+    return sum(max(math.dist(a, b) for a in points for b in points)
+               for points in drawn.values() if len(points) > 1)
+
+
+def side_by_side(routed: dict, stations: dict, rounds: int = 6) -> dict[str, int]:
+    """Offset the lines that would otherwise be drawn on top of each other.
+
+    This asks where the lines are actually *drawn*, which is not the same
+    question as which of them share track. The Bakerloo and the Victoria have no
+    pair of stations in common between Regent's Park and Oxford Circus, yet the
+    router sends both of them down the same column into it; matching on shared
+    track sees no conflict there and leaves both on the centre line.
+
+    Each line is scored against the cells the others already occupy, plus the
+    stations it would appear to stop at, plus how far it has strayed. Offsets are
+    revisited a few times because the cheapest place for an early line depends on
+    where the later ones end up, and one pass cannot know that.
+    """
+    branches, served = collections.defaultdict(list), collections.defaultdict(set)
+    for (line_id, _), nodes in routed.items():
+        branches[line_id].append(nodes)
+        served[line_id] |= {n["name"] for n in nodes if n.get("name")}
+
+    footprint = {line_id: {shift: set(itertools.chain.from_iterable(
+                     drawn_lanes(nodes, shift) for nodes in paths))
+                 for shift in OFFSETS}
+                 for line_id, paths in branches.items()}
+    ghosts = {line_id: {shift: phantom_stops(paths, shift, stations, served[line_id])
+                        for shift in OFFSETS}
+              for line_id, paths in branches.items()}
+    tears = {line_id: {shift: junction_breaks(paths, shift) for shift in OFFSETS}
+             for line_id, paths in branches.items()}
+
+    # Busiest first: a line with the most drawing on the map has the least room
+    # to move once everything else is down.
+    order = sorted(branches, key=lambda l: (-sum(map(len, branches[l])), l))
+    offsets = {line_id: 0 for line_id in order}
+
+    for _ in range(rounds):
+        settled = True
+        for line_id in order:
+            taken = collections.Counter()
+            for other in order:
+                if other != line_id:
+                    taken.update(footprint[other][offsets[other]])
+
+            def cost(shift, line_id=line_id, taken=taken):
+                return (sum(taken[key] for key in footprint[line_id][shift])
+                        + ghosts[line_id][shift] * PHANTOM_COST
+                        + tears[line_id][shift] * BREAK_COST
+                        + abs(shift) * DRIFT_COST)
+
+            # OFFSETS runs nearest the centre first, so a tie stays put.
+            best = min(OFFSETS, key=cost)
+            if best != offsets[line_id]:
+                offsets[line_id], settled = best, False
+        if settled:
+            break
+
     return offsets
 
 
@@ -141,12 +270,7 @@ def build(conn: sqlite3.Connection, scale: float = SCALE) -> dict:
     stations, lines, branches = read(conn)
     tuning = overrides()
 
-    # A handful of names belong to two genuinely separate stations - there really
-    # are two Edgware Roads, and the map shows both - so those keys carry the
-    # Naptan id to tell them apart. The label stays the plain name either way.
-    named = collections.Counter(station_key(s["name"]) for s in stations.values())
-    keys = {uid: station_key(s["name"]) + ("_" + uid if named[station_key(s["name"])] > 1 else "")
-            for uid, s in stations.items()}
+    keys = station_keys(stations)
     by_key = {key: uid for uid, key in keys.items()}
     if len(by_key) != len(keys):
         raise ValueError("station keys are not unique")
@@ -161,14 +285,20 @@ def build(conn: sqlite3.Connection, scale: float = SCALE) -> dict:
         if "coords" in tuned:
             coords[by_key[key]] = tuple(tuned["coords"])
 
-    offsets = side_by_side(branches)
+    # Route everything before choosing offsets: which lines need holding apart is
+    # a question about the cells they are drawn on, and routing is what decides
+    # those. Doing it the other way round is how two lines end up on one column.
+    routed = {}
+    for branch, path in sorted(branches.items()):
+        nodes = layout.chain([coords[uid] for uid in path], [keys[uid] for uid in path])
+        layout.validate(nodes)
+        routed[branch] = nodes
+
+    offsets = side_by_side(routed, {keys[uid]: tuple(coords[uid]) for uid in stations})
     numbering = collections.Counter()
     drawn, occupied = [], set()
 
-    for (line_id, _), path in sorted(branches.items()):
-        nodes = layout.chain([coords[uid] for uid in path], [keys[uid] for uid in path])
-        layout.validate(nodes)
-
+    for (line_id, _), nodes in sorted(routed.items()):
         shift = tuning.get("lines", {}).get(line_id, {}).get(
             "shiftNormal", offsets.get(line_id, 0))
         occupied |= set(layout.cells(nodes, shift))
@@ -284,6 +414,34 @@ def label_report(built: dict) -> dict[str, int]:
                 clashes.add((a, b))
 
     return {"close to a line": over_lines, "overlapping": len(clashes)}
+
+
+def export_categories(conn: sqlite3.Connection, path: Path = CATEGORIES_PATH,
+                      source: Path = CATEGORIES_SOURCE) -> dict:
+    """Write the themed maps the page's menu switches between.
+
+    Kept out of map.json so the map still draws if this fails, and so adding a
+    category does not rewrite the map itself.
+    """
+    stations, _, _ = read(conn)
+    keys = station_keys(stations)
+
+    themes = []
+    for theme in categories.build(conn, source):
+        named = {}
+        for uid, plaque in theme["stations"].items():
+            if uid in keys:
+                named[keys[uid]] = dict(plaque, label=label(plaque["person"]))
+        if named:
+            themes.append({"name": theme["name"], "group": theme["group"], "stations": named})
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(themes, indent=1))
+
+    return {"categories": len(themes),
+            "widest": max((f'{t["name"]} ({len(t["stations"])} stations)' for t in themes),
+                          key=lambda t: int(t.split("(")[1].split()[0])),
+            "path": str(path)}
 
 
 def export(conn: sqlite3.Connection, path: Path = MAP_PATH, scale: float = SCALE) -> dict:

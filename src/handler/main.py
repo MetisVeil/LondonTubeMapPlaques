@@ -37,6 +37,10 @@ def build(db_path=db.DB_PATH) -> None:
         for field, value in plaque_stations.build(conn).items():
             print(f"  {field:16} {value}")
 
+        print("\ncategories:")
+        for field, value in mapdata.export_categories(conn).items():
+            print(f"  {field:16} {value}")
+
         print("\nmap:")
         for field, value in mapdata.export(conn).items():
             print(f"  {field:16} {value}")

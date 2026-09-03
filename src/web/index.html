@@ -16,11 +16,21 @@
 
   <body>
     <div id="tube-map"></div>
+
+    <div id="categories">
+      <button id="category-toggle" aria-haspopup="true" aria-expanded="false">
+        <span id="category-name">Tube map</span><span class="triangle">&#9662;</span>
+      </button>
+      <div id="category-menu" hidden></div>
+    </div>
+
     <div id="selection"><span class="hint">Click a station</span></div>
 
     <script>
       var container = d3.select('#tube-map');
       var selection = d3.select('#selection');
+      var toggle = document.getElementById('category-toggle');
+      var menu = document.getElementById('category-menu');
 
       var map = d3
         .tubeMap()
@@ -28,61 +38,154 @@
         .height(window.innerHeight)
         .margin({ top: 40, right: 40, bottom: 40, left: 40 });
 
-      d3.json('./map.json').then(function (data) {
-        // The click handler reports the station key. Everything the blue plaque
-        // work will need is hanging off the station record: its name, its Naptan
-        // id, and the position the plaques get matched against.
-        map.on('click', function (name) {
-          var station = data.stations[name];
-          selection.html(
-            '<div class="name">' + station.label.replace(/\n/g, ' ') + '</div>' +
-            '<div class="hint">' + station.uid + ' &middot; ' +
-            station.lat.toFixed(4) + ', ' + station.lon.toFixed(4) + '</div>'
-          );
-        });
+      var svg, root, data, names = {}, themes = null, showing = null;
 
+      var zoom = d3.zoom().on('zoom', function (event) {
+        root.attr('transform', event.transform.toString());
+      });
+
+      // Fit the drawing to the window rather than picking a scale by hand.
+      // getBBox measures what was actually drawn - labels included, which
+      // stick out well past the lines - and it ignores the group's own
+      // transform, so it stays correct however far the map has been zoomed.
+      function fit() {
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var box = root.node().getBBox();
+        if (!box.width || !box.height) return;
+
+        // Fill the window rather than fitting inside it: take the larger of
+        // the two ratios, so whichever axis has the most room to spare is the
+        // one that gets used up, and the other overflows and is panned to.
+        // That leaves no whitespace around the map whatever shape the window is.
+        var contain = Math.min(width / box.width, height / box.height);
+        var scale = Math.max(width / box.width, height / box.height);
+
+        // Zooming out has to reach past the fill, or the ends of the lines
+        // would be stranded off-screen with no way back to the whole map.
+        zoom.scaleExtent([contain * 0.5, scale * 24]);
+        svg.call(
+          zoom.transform,
+          d3.zoomIdentity
+            .translate(width / 2 - scale * (box.x + box.width / 2),
+                       height / 2 - scale * (box.y + box.height / 2))
+            .scale(scale)
+        );
+      }
+
+      // The library draws its labels once, into nested tspans, so changing the
+      // names means drawing the map again. The view is put back afterwards, so
+      // switching category leaves you looking at the same place.
+      function draw(keepView) {
+        var was = svg ? d3.zoomTransform(svg.node()) : null;
+        container.selectAll('svg').remove();
         container.datum(data).call(map);
 
-        // The library draws at a fixed scale and has no pan or zoom of its own,
-        // which a map this size badly needs.
-        var svg = container.select('svg');
-        var root = svg.select('g');
-        var zoom = d3.zoom().on('zoom', function (event) {
-          root.attr('transform', event.transform.toString());
-        });
+        svg = container.select('svg');
+        root = svg.select('g');
         svg.call(zoom);
 
-        // Fit the drawing to the window rather than picking a scale by hand.
-        // getBBox measures what was actually drawn - labels included, which
-        // stick out well past the lines - and it ignores the group's own
-        // transform, so it stays correct however far the map has been zoomed.
-        function fit() {
-          var width = window.innerWidth;
-          var height = window.innerHeight;
-          var box = root.node().getBBox();
-          if (!box.width || !box.height) return;
+        if (was && keepView) svg.call(zoom.transform, was);
+        else fit();
 
-          // Fill the window rather than fitting inside it: take the larger of
-          // the two ratios, so whichever axis has the most room to spare is the
-          // one that gets used up, and the other overflows and is panned to.
-          // That leaves no whitespace around the map whatever shape the window is.
-          var contain = Math.min(width / box.width, height / box.height);
-          var scale = Math.max(width / box.width, height / box.height);
+        // Fade the stations this theme has nobody for, so what it covers reads
+        // at a glance rather than having to be picked out of the real names.
+        svg.selectAll('g.labels > g').style('opacity', function () {
+          if (!showing) return 1;
+          return showing.stations[this.getAttribute('id')] ? 1 : 0.22;
+        });
+      }
 
-          // Zooming out has to reach past the fill, or the ends of the lines
-          // would be stranded off-screen with no way back to the whole map.
-          zoom.scaleExtent([contain * 0.5, scale * 24]);
-          svg.call(
-            zoom.transform,
-            d3.zoomIdentity
-              .translate(width / 2 - scale * (box.x + box.width / 2),
-                         height / 2 - scale * (box.y + box.height / 2))
-              .scale(scale)
-          );
+      function show(theme) {
+        showing = theme;
+        Object.keys(data.stations).forEach(function (key) {
+          var named = theme && theme.stations[key];
+          data.stations[key].label = named ? named.label : names[key];
+        });
+        document.getElementById('category-name').textContent = theme ? theme.name : 'Tube map';
+        draw(true);
+      }
+
+      function buildMenu() {
+        menu.innerHTML = '';
+        var groups = {};
+        themes.forEach(function (theme) {
+          (groups[theme.group || 'Whole map'] = groups[theme.group || 'Whole map'] || []).push(theme);
+        });
+
+        function item(label, count, theme) {
+          var row = document.createElement('button');
+          row.className = 'category-item';
+          row.innerHTML = '<span>' + label + '</span>' +
+                          (count === null ? '' : '<span class="count">' + count + '</span>');
+          row.onclick = function () { show(theme); close(); };
+          menu.appendChild(row);
         }
 
-        fit();
-        window.addEventListener('resize', fit);
+        item('Tube map', null, null);
+        Object.keys(groups).forEach(function (name) {
+          var heading = document.createElement('div');
+          heading.className = 'category-group';
+          heading.textContent = name;
+          menu.appendChild(heading);
+          groups[name].forEach(function (theme) {
+            item(theme.name, Object.keys(theme.stations).length, theme);
+          });
+        });
+      }
+
+      function close() {
+        menu.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+
+      toggle.onclick = function (event) {
+        event.stopPropagation();
+        if (!menu.hidden) return close();
+
+        // Fetched the first time the menu is opened: it is far larger than the
+        // map, and most of the time nobody asks for it.
+        var ready = themes ? Promise.resolve() : d3.json('./categories.json').then(function (loaded) {
+          themes = loaded;
+          buildMenu();
+        });
+
+        ready.then(function () {
+          menu.hidden = false;
+          toggle.setAttribute('aria-expanded', 'true');
+        });
+      };
+
+      document.addEventListener('click', function (event) {
+        if (!menu.hidden && !menu.contains(event.target)) close();
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') close();
+      });
+
+      d3.json('./map.json').then(function (loaded) {
+        data = loaded;
+        Object.keys(data.stations).forEach(function (key) {
+          names[key] = data.stations[key].label;
+        });
+
+        map.on('click', function (key) {
+          var station = data.stations[key];
+          var named = showing && showing.stations[key];
+          var title = named ? named.person : station.label.replace(/\n/g, ' ');
+          var under = named
+            ? named.role + ' &middot; ' + named.distance_m + 'm from ' +
+              names[key].replace(/\n/g, ' ')
+            : station.uid + ' &middot; ' + station.lat.toFixed(4) + ', ' + station.lon.toFixed(4);
+
+          selection.html('<div class="name">' + title + '</div><div class="hint">' + under + '</div>' +
+            (named && named.wikipedia
+              ? '<a class="more" target="_blank" rel="noopener" href="' + named.wikipedia + '">Wikipedia</a>'
+              : ''));
+        });
+
+        draw(false);
+        window.addEventListener('resize', function () { fit(); });
       });
     </script>
   </body>

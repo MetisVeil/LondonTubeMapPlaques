@@ -46,11 +46,15 @@ rather than a file path (so `src/` goes on `sys.path` instead of
     src/
     ├── handler/main.py             entry point: runs every source, rebuilds the views, writes the map
     ├── layout_overrides.json       hand-tuning of the map, applied on top of the generated layout
+    ├── role_categories.md          the themed maps on offer - edit this to add one
     ├── utils/
     │   ├── db.py                   versioned (SCD type 2) SQLite storage
     │   ├── distances.py            haversine distances between coordinates
     │   ├── layout.py               the octilinear geometry: placing, routing, validating
     │   ├── mapdata.py              assembles src/web/map.json
+    │   ├── categories.py           role_categories.md -> the themed maps
+    │   ├── plaque_stations.py      which station each plaque belongs to
+    │   ├── sources/plaques.py      OpenPlaques London dump: find, download, load
     │   ├── sources/tfl.py          TfL station data: download, load, coordinates
     │   ├── sources/tfl_network.py  TfL route sequences: which stations each line calls at
     │   └── sql/                    derived views, reapplied on every build
@@ -97,6 +101,17 @@ node placed one incoming plus one outgoing step past the end of the run. So
   * **validate** - a port of the library's own `populateLineDirections`, run
     over every branch before the JSON is written, so a geometry mistake fails
     the build rather than the browser.
+  * **label** - decide which side of each station its name sits on, and how far
+    out. Each name is measured into a rectangle - a long one needs more room
+    than a short one - and scored on what it would cover: the lines, and the
+    names already placed. Landing on another name costs more than crossing a
+    line, since two names on top of each other are unreadable where a name over
+    a line is merely untidy. Crowded stations choose first, and then the worst
+    few are re-placed a few times over against everything else.
+
+The build prints how it did - `0 overlapping, 56 close to a line` - which is
+worth watching when hand-tuning. The overlap count is exact; the line count is
+pessimistic, treating a line as filling every cell it crosses.
 
 ### Hand-tuning it
 
@@ -112,6 +127,80 @@ so survives a rebuild:
 Stations are keyed the way `map.json` keys them - `OxfordCircus`,
 `KingsCrossStPancras` - and `shiftNormal` is what holds two lines apart where
 they share track.
+
+## The plaques
+
+`utils/sources/plaques.py` finds the latest London dump linked from
+[OpenPlaques](https://openplaques.org/posts/data) - 3,781 plaques, of which
+3,675 have been given a position - and versions it into the `plaques` table.
+
+`utils/plaque_stations.py` then attributes each one to the three stations
+nearest it, using the haversine distances in `distances.py`: one call measures
+every station against every plaque, 421 by 3,675, and the ranking is a sort down
+each column. Anything more than a kilometre from a station is dropped, which is
+about a twelve minute walk and keeps 3,238 of them. That fills the
+`plaque_stations` table, which is computed rather than fetched and so is rebuilt
+each run rather than versioned.
+
+Three stations each rather than one, because the closest station is not always
+the one a person would use, and a map wanting a *different* plaque at every
+station needs somewhere to fall back to.
+
+The `station_plaques` view joins the three together, and is the one to query:
+
+    SELECT station_name, person, role, distance_m
+    FROM station_plaques
+    WHERE rank = 1 AND role = 'composer'
+    ORDER BY distance_m;
+
+`role` is the plaque's `lead_subject_primary_role`, which is filled in for 3,186
+of them and runs to 1,091 different values - poet, novelist, actor, composer,
+singer - which is what a map of musicians or politicians gets built from.
+`roles` holds the fuller list where one is given.
+
+The view drops plaques with nobody named or no role recorded. Plenty of what
+survives still commemorates a place or a thing rather than a person - a housing
+estate, a bicycle club, a tube station - and `subject_type` is what separates
+them: `man` and `woman` are the people. Prefer it to `gender`, which records 95
+men as `object` and cannot be trusted for that. `person_image` links a portrait
+where one exists and `plaque_photo` a picture of the plaque itself.
+
+An absent value in the dump is an empty field, which would otherwise reach
+SQLite as `''` and quietly defeat every `IS NULL` test, so the loader makes
+those null.
+
+## The themed maps
+
+The triangle at the top right opens the list: Music, Women of London, Politician
+& government, and so on. Picking one relabels every station it has somebody for
+and fades the rest, so what a theme covers reads at a glance.
+
+What is on that list comes from `src/role_categories.md`, and **that file is the
+only thing to edit to add a category** - no code changes. It has three levels:
+
+    ## Arts & Literature          a group, which also becomes a map of its own
+    - Music                       a category within it
+      - composer                  a role, matched against the plaque's
+      - subject_type: woman       or a column and value, for anything not a role
+
+Roles are matched case-insensitively and with curly apostrophes folded to
+straight ones, which is otherwise an easy way to list a role that silently
+matches nothing. A `field: value` entry may use `subject_type`, `gender`,
+`colour` or `area`; anything else is rejected by name rather than ignored.
+
+Each group gets a combined map as well as its parts, because several categories
+are thin on their own - Education covers five stations - but good combined.
+Only people are included: `man` and `woman`, so the plaques for churches, public
+houses and bomb sites stay out of it.
+
+A station shows one name, and a person appears once. The nearest pairings are
+taken first and the rest fall back to the second or third station recorded for
+that plaque, which is what those were kept for - so Music fills 87 stations
+where only 71 have a musician as their single nearest plaque.
+
+The result is written to `src/web/categories.json`, separate from the map so
+adding a category does not rewrite the map itself, and fetched only when the
+menu is first opened.
 
 ## The database
 

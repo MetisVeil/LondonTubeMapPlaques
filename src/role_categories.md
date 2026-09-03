@@ -1,0 +1,981 @@
+# Hierarchy
+
+## Special
+
+- Women of London
+  - subject_type: woman
+
+- Men of London
+  - subject_type: man
+
+## 1. Arts & Literature
+
+- Writer / Literary figure
+  - writer
+  - fictional character
+  - author
+  - novelist
+  - poet
+  - playwright
+  - essayist
+  - dramatist
+  - diarist
+  - journalist
+  - children's writer
+  - man of letters
+  - publisher
+  - bookseller
+  - founder of the Hogarth Press
+  - author of A Vindication of the Rights of Woman
+  - crime writer
+  - detective novelist
+  - detective story writer
+  - cookery writer
+  - short story writer
+  - greek poet
+  - irish poet
+  - lyric poet
+  - screenwriter
+  - newspaper columnist
+  - editor of the Oxford English Dictionary
+  - Poet Laureate of the United Kingdom
+  - author of the "Canterbury Tales"
+  - author of Frankenstein
+  - author of Dracula
+  - author of Moby Dick
+  - author of Swallows and Amazons
+  - author of the Just William series
+  - author of books for boys
+  - author of Common Sense
+  - author of more than fifty books including We The Accused
+  - author of A Hoxton Childhood
+  - writer on music
+  - editor of Punch
+  - indian poet
+  - biographer of Samuel Johnson
+  - indian poet
+  - creator of Sherlock Holmes
+  - creator of James Bond
+  - creator of Dr Fu Manchu
+  - author of crime fiction
+  - Nobel Literature Laureate
+  - war correspondent
+  - father of Fleet Street
+  - founding father of American literature
+  - inventor of time travel
+  - Charlotte Cowan
+  - Frank Richards
+
+- Visual artist
+  - artist
+  - painter
+  - portrait painter
+  - sculptor
+  - engraver
+  - illustrator
+  - cartoonist
+  - photographer
+  - artist's model
+  - landscape painter
+  - impressionist painter
+  - pre-raphaelite painter
+  - sporting painter
+  - stained glass artist
+  - topographical artist
+  - watercolourist
+  - wax artist
+  - marine painter
+  - graphic artist
+  - illustrator of Dickens's novels
+  - illustrator of Rupert Bear
+  - camden town group painter
+  - make-up artist
+  - President of the Royal Academy
+  - Associate of the Royal Society of Painter-Printmakers
+  - Royal Institute of Painters in Water Colours member
+  - master of photomontage
+  - potter
+
+- Architecture & design
+  - architect
+  - theatre architect
+  - landscape architect
+  - designer
+  - Fellow of the Royal Institute of British Architects
+  - Royal Academician
+  - aircraft designer
+  - architect of Calverley New Town
+  - architectural historian
+  - architectural visionary
+  - church architect
+  - designer in flowers
+  - designer of Colossus
+  - designer of Spitalfields Silks
+  - designer of the first Hammersmith Bridge
+  - designer of the London Underground map
+  - furniture designer
+  - gothic architect
+  - textile designer
+  - theatre designer
+  - fashion designer
+  - Court Dressmaker
+  - typographer
+  - landscape gardener
+  - planner
+  - town and country planning pioneer
+  - pioneer of the Garden City Movement
+
+- Performing arts
+  - actor
+  - comedy actor
+  - comic actor
+  - actor-manager
+  - comedian
+  - entertainer
+  - music hall artiste
+  - music hall comedian
+  - ballet dancer
+  - prima ballerina
+  - choreographer
+  - film director
+  - cinema pioneer
+  - television pioneer
+  - shakespearian actor
+  - dancer
+  - radio comedian
+  - film pioneer
+  - film producer
+  - documentary film maker
+  - film legend
+  - film maker
+  - theatre owner
+  - pioneer of documentary film making
+  - manager of the Old Vic theatre
+  - director-general of the BBC
+  - director of the women's royal naval service
+  - director of the national gallery of Ireland
+  - Academy Award Winner
+  - Oscar winner
+  - BAFTA Award recipient
+  - black British woman to be nominated for an Oscar
+  - star of Driving Miss Daisy
+  - comedienne
+  - tragedian
+  - broadcaster
+  - comedy broadcaster
+  - talk show host
+  - television celebrity
+  - impresario
+  - theatrical impresario
+  - theatrical wigmaker
+  - magician
+  - cinematograph pioneer
+  - prima ballerina assolluta
+  - king rat
+  - father of modern ventriloquism
+  - tv cookery expert
+  - disc jockey
+
+- Music
+  - musician
+  - composer
+  - conductor
+  - singer
+  - songwriter
+  - singer-songwriter
+  - guitarist
+  - pianist
+  - cellist
+  - jazz musician
+  - record producer
+  - rock legend
+  - popular singer
+  - tenor
+  - lyric tenor
+  - opera singer
+  - music hall singer
+  - music hall star
+  - international opera singer
+  - jazz singer
+  - lead singer
+  - organist
+  - composer of By The Sleepy Lagoon
+  - composer of Facade, Belshazzar's Feast & the Coronation Marches of 1937 and 1953
+  - composer of The Song of Hiawatha
+  - rock musician
+  - jazz drummer
+  - drummer of The Southern Syncopated Orchestra
+  - drummer of The Who
+  - clarinetist
+  - horn player
+  - viola player
+  - saxophonist
+  - dance band leader
+  - band member of Blur
+  - band member of Small Faces
+  - band member of The Shadows
+  - founder of The Kinks
+  - vocalist
+  - contralto
+  - Australia's Queen of Song
+  - organ builder
+
+## 2. Science, Medicine & Engineering
+
+- Scientist
+  - scientist
+  - man of science
+  - physicist
+  - chemist
+  - astronomer
+  - botanist
+  - naturalist
+  - mathematician
+  - social scientist
+  - Fellow of the Royal Society
+  - theoretical physicist
+  - astronomer royal
+  - biochemist
+  - geologist
+  - professor of Chemistry
+  - analytical chemist
+  - crystallographer
+  - immunologist
+  - neurologist
+  - physiologist
+  - zoologist
+  - natural philosopher
+  - epidemiologist
+  - egyptologist
+  - horticulturalist
+  - horticulturist
+  - economist
+  - political economist
+  - statistician
+  - pioneer statistician
+  - pioneer in social research
+  - pioneer of social anthropology
+  - pioneer in the scientific study of sex
+  - meteorologist
+  - namer of clouds
+  - biologist
+  - researcher
+  - code-breaker
+  - cryptanalyst
+  - fingerprint pioneer
+  - father of English geology
+  - hydrographer
+  - plant collector
+  - gardener
+  - head gardener at Chatsworth
+
+- Medicine & healthcare
+  - physician
+  - surgeon
+  - immunologist
+  - ophthalmologist
+  - nurse
+  - Doctor - Bachelor of Medicine MBBS
+  - Doctor (unknown type)
+  - general practitioner
+  - psychiatrist
+  - dentist
+  - anatomist
+  - pharmacist
+  - homoeopathic physician
+  - ophthalmic surgeon
+  - aural surgeon
+  - thoracic surgeon
+  - neurosurgeon
+  - reconstructive surgeon
+  - pioneer plastic surgeon
+  - pioneer of anaesthesia and dentistry
+  - pioneer anaesthetist
+  - doctor of Medicine
+  - doctor of Philosophy
+  - doctor of Law
+  - fellow of the Royal College of Surgeons
+  - speech therapist
+  - psychoanalyst
+  - pioneer psychoanalyst
+  - pioneer of child psychoanalysis
+  - paediatrician
+  - matron
+  - master of surgery
+  - british woman dentist
+  - dentist to Queen Victoria
+  - pioneer of modern nursing in Belgium
+  - discoverer of penicillin
+  - discoverer of the mosquito transmission of malaria
+  - father of modern tropical medicine
+  - forensic pathologist
+  - dermatologist
+  - midwife
+  - heroine of the Crimean War
+  - Mother of the Wounded
+
+- Engineering
+  - engineer
+  - civil engineer
+  - electrical engineer
+  - railway engineer
+  - inventor
+  - clockmaker
+  - builder
+  - maker of the first all-British powered flight
+  - chartered engineer
+  - mechanical engineer
+  - electronics engineer
+  - locomotive engineer
+  - inventor of a wireless telegraphy system
+  - inventor of holography
+  - inventor of the first plastic
+  - inventor of the hansom cab
+  - inventor of the London A to Z
+  - inventor of the marine chronometer
+  - inventor of the Morse Code
+  - inventor of the printed circuit board
+  - inventor of the uniform loading line (the Plimsoll Line)
+  - inventor of the vulcanisation of rubber
+  - inventor of traffic lights
+  - pioneer english aeronaut
+  - aviation pioneer
+  - founder of Lotus Engineering Co
+  - developer of office copying machinery
+  - pioneer of the diving helmet
+  - pioneer of the screw-propeller
+  - pioneer of the study of molecular structures including DNA
+  - discoverer of how DNA carries genetic information
+  - aviator
+  - pilot
+  - pioneer of computing
+  - assistant of Guglielmo Marconi
+  - maker and seller of Britain's first bicycle
+  - pioneer of motoring
+  - father of the British motor industry
+  - wireless operator aboard RMS Titanic
+  - diver
+
+## 3. Politics, Government & Royalty
+
+- Politician & government
+  - politician
+  - statesman
+  - Member of Parliament
+  - Prime Minister of the United Kingdom
+  - Mayor of London
+  - Privy Counsellor
+  - President of the French National Committee
+  - Pan-Africanist leader
+  - Italian patriot
+  - ambassador
+  - diplomat
+  - foreign secretary
+  - home secretary of the United Kingdom
+  - secretary of state of the United Kingdom
+  - secretary
+  - prime minister of Australia
+  - prime minister of India
+  - prime minister of Israel
+  - president of the United States
+  - president of Czechoslovakia
+  - president of Ghana
+  - president of the Republic of Kenya
+  - governor general of Canada
+  - governor of Jersey
+  - governor of the tower of London
+  - greek ambassador
+  - united states ambassador
+  - united states ambassador to the Netherlands
+  - french statesman
+  - polish statesman
+  - turkish statesman
+  - indian statesman
+  - civil servant
+  - councillor
+  - first woman to sit in Parliament
+  - deputy lieutenant
+  - reformist MP
+  - law reformer
+  - leader of Westminster City Council
+  - chairman of London Transport
+  - chairman of the BBC Board of Governors
+  - town clerk
+  - lord mayor of London
+  - lord mayor of Westminster
+  - deputy governor of the Hudson's Bay Company
+  - Cabinet Minister
+  - Speaker of the House of Commons
+  - Austrian Chancellor
+  - former President of the African National Congress
+  - creator of the League of Nations
+  - clerk to the London County Council
+  - Master of the Alienation Office
+  - Steward for the new Hackney Manors
+  - Asian elected to the House of Commons
+  - first black mayor in London
+  - colonial administrator
+  - colonial pioneer
+  - Indian agent
+  - Founding Father of the United States
+  - American patriot
+  - Indian patriot
+  - Irish Nationalist
+  - patriot
+  - democrat
+  - political exile
+  - Pan-Africanist
+  - Latvian anarchist
+  - supporter of American independence
+
+- Royalty
+  - King of the United Kingdom
+  - King of England
+  - Queen of the United Kingdom
+  - Queen of England
+  - Queen Consort of England
+  - Prince of Wales
+  - Princess of Wales
+  - King of East Anglia
+  - King of Wessex
+  - King of the Zulus
+  - King of Norway
+  - King of Tonga
+  - Queen of Haiti
+  - Queen of the Netherlands
+  - Prince of France
+  - Prince
+  - Princess Royal
+  - Baron
+  - Baroness
+  - Baronet
+  - Duke
+  - Duchess
+  - Earl
+  - Marquess
+  - Viscount
+  - Lady
+  - Baron Sheffield
+  - Baron Tredegar
+  - Baroness Burdett-Coutts
+  - Baroness Wentworth
+  - Baronet Grosvenor of Eaton
+  - Baronet Tench of Low Leyton
+  - Baronet Wakefield of Saltwood
+  - Baronne de Stael-Holstein
+  - Duchess of St Albans
+  - Duke of Buccleuch
+  - Duke of Buckingham
+  - Duke of Chandos
+  - Duke of Lancaster
+  - Duke of Suffolk
+  - Duke of Wellington
+  - Earl Grosvenor
+  - Earl Kitchener of Khartoum and of Broome
+  - Earl of Derby
+  - Earl of Richmond
+  - Earl of Rosebery
+  - Earl Stanhope
+  - favourite of Queen Elizabeth I
+  - Kabaka of the Kingdom of Buganda
+  - King's Baker of Charles II
+  - King's Cosmographer of Charles II
+  - King's Silversmith of George I
+  - last Bourbon King of France
+  - last Rajah of Sarawak
+  - last ruler of Lahore
+  - last Viceroy of India
+  - notorious mistress of the Duke of York
+  - art tutor to the children of Queen Victoria
+  - Lord Balmerino
+  - Lord Chancellor of England
+  - Lord Privy Seal
+  - Viscount Northcliffe
+  - Viscount Wolseley
+  - Marchioness of Reading
+  - Marquess of Northampton
+  - Vicomte de Chateaubriand
+  - Plantagenet
+  - aristocrat
+  - Count
+  - Czar of Russia
+  - Chief
+
+- Honours & distinctions
+  - Commander of the Most Excellent Order of the British Empire
+  - Officer of the Most Excellent Order of the British Empire
+  - Member of the Most Excellent Order of the British Empire
+  - Dame Commander of the Most Excellent Order of the British Empire
+  - Knight Bachelor
+  - Knight Commander of the Order of the Bath
+  - Victoria Cross recipient
+  - Dame
+  - Knight
+  - Knight Grand Cross of the Order of the Bath
+  - Knight Grand Cross Order of St Michael and St George
+  - Knight Grand Cross of the First Class
+  - Knight Commander of The Most Distinguished Order of Saint Michael and Saint George
+  - Distinguished Flying Cross recipient
+  - Distinguished Flying Cross & Bar recipient
+  - Distinguished Service Order recipient
+  - George Cross recipient
+  - Sea Gallantry Medal recipient
+  - British Armed Forces Military Cross recipient
+  - Commander of the Royal Victorian Order
+  - Companion of Honour
+  - GBE - Dame Grand Cross of the British Empire
+
+## 4. Social, Law, Activism & Religion
+
+- Social reform & activism
+  - social reformer
+  - reformer
+  - prison reformer
+  - housing reformer
+  - postal reformer
+  - anti-slavery campaigner
+  - campaigner for women's rights
+  - Suffragette
+  - Trade unionist
+  - founder of the National Society for the Prevention of Cruelty to Children
+  - founder of Britain's first African Caribbean Carnival
+  - philanthropist
+  - activist
+  - campaigner
+  - campaigner for civil rights
+  - campaigner for human rights
+  - campaigner for Indian independence
+  - campaigner for African rights
+  - campaigner for justice
+  - campaigner for social justice
+  - political activist
+  - political campaigner
+  - political reformer
+  - suffragist
+  - benefactor
+  - public benefactor
+  - benefactor of the British Museum
+  - benefactor of Harvard University
+  - humanitarian
+  - human rights campaigner
+  - health care reformer
+  - nursing reformer
+  - public health reformer
+  - pioneer of good design for London Transport
+  - pioneer of public health
+  - pioneer welfare worker
+  - labour leader
+  - leader of the Grunwick workers strike
+  - communist revolutionary
+  - socialist
+  - socialist leader
+  - community activist
+  - founder of the Suffragette Movement
+  - london labour party pioneer
+  - anti-apartheid activist
+  - south african freedom fighter
+  - rescuer of prisoners from auschwitz
+  - trade union leader
+  - veteran of the printing trade union movement
+  - pioneer of women's suffrage
+  - pioneer of family allowances
+  - pioneer of education for women
+  - pioneer of free trade
+  - pioneer of natural childbirth
+  - pioneer of physical education for women
+  - abolitionist
+  - civil rights activist
+  - feminist
+  - champion of women's rights
+  - former slave
+  - The African
+  - Jewish Workers' Bund leader
+  - pioneer of religious liberty
+  - Warden of Toynbee Hall
+  - saviour of the City Road Basin
+  - Chairman of the Clissold Park Preservation Committee
+  - Chairman of the Tenants & Residents Association
+  - honorary secretary of the Sutton & Cheam Society
+  - founder of Marshall's Charity
+  - founder of the London Penny Post
+
+- Law
+  - high court judge
+  - judge
+  - barrister
+  - solicitor
+  - law student
+  - magistrate
+  - lawyer
+  - King's Counsel
+  - Queen's Counsel
+  - Serjeant-at-law
+
+- Religion
+  - Reverend
+  - evangelist
+  - missionary
+  - indian spiritual leader
+  - preacher
+  - theologian
+  - founder of the English Oratory
+  - martyr
+  - Saint
+  - priest
+  - vicar
+  - vicar apostolic of the london district
+  - vicar of st peter's, london docks
+  - cardinal
+  - bishop
+  - monk
+  - methodist preacher
+  - quaker
+  - unitarian minister
+  - wesleyan methodist
+  - congregationalist
+  - churchman
+  - clergyman
+  - cleric
+  - divine
+  - deaconess
+  - churchwarden
+  - rector
+  - archbishop of the diocese of Sourozh
+  - founder of the Catholic Apostolic Church
+  - founder of the Church Army
+  - founder of Hoxton Market Christian Mission
+  - founder of Young Men's Christian Association
+  - china inland mission founder
+  - christian philosopher
+  - hindu philosopher
+  - muslim reformer
+  - indian spiritual leader
+  - Bible translator
+
+## 5. Military, Emergency Services & Exploration
+
+- Military
+  - soldier
+  - Royal Navy Admiral
+  - United States Army General
+  - admiral of the fleet
+  - captain
+  - general
+  - major general
+  - lieutenant general
+  - major
+  - lieutenant
+  - second lieutenant
+  - sergeant
+  - private
+  - field-marshal
+  - air chief marshal
+  - british army captain
+  - british army general
+  - british army lieutenant general
+  - british army major
+  - british army major general
+  - british army second lieutenant
+  - british army or royal marines sergeant
+  - british army fusilier
+  - british army private
+  - royal air force commander
+  - royal air force pilot
+  - royal air force wing commander
+  - raf fighter pilot
+  - royal navy captain
+  - general of the salvation army
+  - austrian army general
+  - corsican army general
+  - argentine soldier
+  - hungarian patriot
+  - commander of british forces in north america
+  - commander-in-chief during the crimean war
+  - first sea lord
+  - youngest british soldier first world war
+  - scottish patriot
+  - liberator of latin america
+  - precursor of latin american independence
+  - victor of quebec
+  - founder of modern vietnam
+  - Commander of the Bounty
+  - secret agent
+  - Special Operations Executive Agent
+  - spy
+  - leader of the first women’s army corps
+
+- Emergency services
+  - Police Constable
+  - firefighter
+  - Auxiliary Fireman
+  - police officer
+  - police sergeant
+  - woman police constable
+  - chief officer of the metropolitan fire brigade
+  - london fire brigade district officer
+  - superintendent of the london fire brigade
+  - Auxiliary Firewoman
+  - firewatcher
+  - Air Raid Precautions rescue squad leader
+
+- Exploration & travel
+  - explorer
+  - Antarctic explorer
+  - traveller
+  - explorer of Australia
+  - explorer of Canada
+  - arctic explorer
+  - polar explorer
+  - circumnavigator
+  - navigator
+  - Captain of The Mayflower
+  - mountaineer
+
+## 6. Sport & Physical Performance
+
+- Sportsperson
+  - cricketer
+  - tennis player
+  - pugilist
+  - footballer
+  - rugby footballer
+  - golfer
+  - boxer
+  - athlete
+  - acrobat
+  - sportsman
+  - all-round sportsman
+  - champion
+  - olympian
+  - racing driver
+  - heavyweight boxing champion of Britain
+  - bare knuckle boxing champion
+  - world champion racing driver
+  - world formula 1 champion
+  - world welterweight boxing champion
+  - world land speed record holder
+  - world speed record holder
+  - lawn tennis champion
+  - tennis champion
+  - olympic athlete
+  - olympic rowing champion
+  - olympic sportsman
+  - olympic gold medallist
+  - olympic torchbearer
+  - father of lawn tennis
+  - last amateur footballer to play for England
+  - footballer of Scotland National Football Team
+  - cricketer of Gloucestershire County Cricket Team
+  - british world chess champion
+  - motorcycle racer
+  - gymnastics instructor
+  - gymnast
+  - football legend
+  - football legend of Peckham
+  - football manager
+  - football manager of West Ham United Football Club
+  - cyclist
+  - body-builder
+  - president of Kensington Rowing Club
+  - The Guv'nor
+  - Whitechapel Windmill
+
+## 7. Business & Commerce
+
+- Business
+  - entrepreneur
+  - founder of the Hogarth Press
+  - bookseller
+  - publisher
+  - founder of the Times
+  - founder of the Kinks
+  - founder of the East India Company
+  - founder of the Imperial War Graves Commission
+  - founder of Lotus Engineering Co
+  - founder of Marshall Amplification
+  - founder of Lord's Cricket Ground
+  - founder of Macmillan Cancer Relief
+  - founder of what is now the Royal National Institute for Deaf People
+  - founder of the Workers' Educational Association
+  - founder of the John Innes Horticultural Institute
+  - founder of the House of Commons
+  - founder of the Distressed Gentlefolk's Aid Association
+  - founder of the Doves Bindery and Doves Press
+  - founder of the Family Planning Association
+  - founder of the Fawcett Association
+  - founder of the first voluntary blood donor service
+  - founder of the Greig's chain of grocers
+  - founder of Jewish Refugees Committee
+  - founder of London's first antiques market
+  - founder of the Radical Club
+  - founder of Girton College, Cambridge
+  - founder of Hampstead Garden Suburb
+  - founder of the Royal Ballet
+  - founder of the Putney School of Art
+  - founder of Carnaby Street as world centre for men's fashion in the 1960's
+  - founder of Canterbury, New Zealand
+  - founder of the first hospital for diseases of the throat
+  - founder of the Polytechnic, Regent Street
+  - founder of Pakistan
+  - founder of the USSR
+  - founder of Hoxton Market Christian Mission
+  - founder of Young Men's Christian Association
+  - founder of Bedford College for Women
+  - founder of Forteanism
+  - founder of G Nissel & Co
+  - founder of workshops for disabled girls
+  - founder of Psychoanalysis
+  - merchant
+  - merchant of London
+  - businessman
+  - banker
+  - shopkeeper
+  - publican
+  - brewer
+  - brewery owner
+  - distiller
+  - tea merchant
+  - whale-oil merchant
+  - coal merchant
+  - charcoal merchant
+  - tailor
+  - bespoke tailor
+  - butcher
+  - clockmaker
+  - manufacturer
+  - pottery manufacturer
+  - cabinet maker
+  - carpenter
+  - builder
+  - construction worker
+  - brick maker
+  - blacksmith
+  - bronze founder
+  - master calligrapher
+  - master dairyman
+  - master puppeteer
+  - gunmaker
+  - watchmaker
+  - noted watch and chronometer maker
+  - industrialist
+  - department store owner
+  - restaurant owner
+  - coach operator
+  - newspaper publisher
+  - publisher of London Street View
+  - model maker
+  - architect of Calverley New Town
+  - hotelier
+  - accountant
+  - founder of St Mark's Hospital
+  - founder of the world's first hospital for diseases of the throat
+  - founder of the BBO
+  - Founder of the British Kodaly Academy
+  - soap-maker
+  - fishmonger
+  - seafood supplier
+  - funeral director
+  - Chef de cuisine
+  - pioneer of mass catering
+  - dog show promoter
+  - Chairman of the South Metropolitan Gas Company
+  - Master Builder
+  - builder of 37 houses in Kemp Town
+  - Chief Carpenter to Edward III Richard II Henry IV
+  - artificial teeth maker
+  - totter
+  - transport operator
+  - train guard
+
+## 8. Education & Other
+
+- Education
+  - teacher
+  - educator
+  - professor
+  - professor of Mathematics
+  - headmistress
+  - professor of Chemistry
+  - headmaster of Westminster School
+  - head teacher
+  - headmaster
+  - academic
+  - scholar
+  - historian
+  - historian of ideas
+  - historian of Hampstead
+  - american historian
+  - serbian historian
+  - art historian
+  - grammarian
+  - archaeologist
+  - fellow of the society of antiquaries
+  - fellow of the british computer society
+  - fellow in optometry of the worshipful company of spectacle makers
+  - fellow of the royal society of arts
+  - collector of english folk songs and dances
+  - compiler of the concordance to the Bible
+  - compiler of the golden treasury
+  - creator of the Royal Botanical Gardens at Kew
+  - connoisseur
+  - chief scout of the world
+  - athletics coach of Harold Abrahams
+  - local historian
+  - social historian
+  - philosopher
+  - political philosopher
+  - social philosopher
+  - political theorist
+  - Shakespearian scholar
+  - antiquary
+  - Indian scholar
+
+- Personality / descriptive
+  - wit
+  - comic genius
+  - clown
+  - aesthete
+  - satirist
+  - critic
+  - orator
+  - cross-dresser
+  - notorious mistress of the Duke of York
+  - victorian courtesan
+  - favourite of queen elizabeth i
+  - friend of samuel johnson
+  - friend of all in need
+  - leader of fashion
+  - hero of the adelphi melodramas
+  - consulting detective
+  - literary hostess
+  - model
+  - model maker
+  - hostess
+  - mother
+  - prostitute
+  - drunken buffoon
+  - duelist
+  - highwayman
+  - master astrologer
+  - Victorian values propagandist
+  - burrower
+
+- Other
+  - dog
+  - cat
+  - person to be murdered on a railway train
+  - Whitechapel murder victim
+  - air raid victim
+  - Holocaust victim
+  - Holocaust survivor
+  - street sweeper
+  - underground passenger railway
+  - Underground Railroad station
+  - ambulance station
+  - geological society
+  - nursery
+  - design studio
+  - battle
+  - bombing victim
+  - bronze gun
+  - birthplace of British Rock 'n Roll

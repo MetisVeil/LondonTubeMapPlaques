@@ -166,7 +166,10 @@ def build(conn: sqlite3.Connection, scale: float = SCALE) -> dict:
     for (line_id, _), path in sorted(branches.items()):
         nodes = layout.chain([coords[uid] for uid in path], [keys[uid] for uid in path])
         layout.validate(nodes)
-        occupied |= set(layout.cells(nodes))
+
+        shift = tuning.get("lines", {}).get(line_id, {}).get(
+            "shiftNormal", offsets.get(line_id, 0))
+        occupied |= set(layout.cells(nodes, shift))
 
         numbering[line_id] += 1
         drawn.append({
@@ -174,21 +177,37 @@ def build(conn: sqlite3.Connection, scale: float = SCALE) -> dict:
             "label": lines[line_id]["name"],
             "color": lines[line_id]["colour"],
             "shiftCoords": [0, 0],
-            "shiftNormal": tuning.get("lines", {}).get(line_id, {}).get(
-                "shiftNormal", offsets.get(line_id, 0)),
+            "shiftNormal": shift,
             "nodes": nodes,
         })
 
     hide_opposed_markers(drawn)
 
-    label_at = layout.label_positions({uid: coords[uid] for uid in stations}, occupied)
+    # A station takes its label settings from the first line that mentions it,
+    # so that is the line whose shift the label has to be corrected for.
+    anchor = {}
+    for line in drawn:
+        for node, direction in zip(line["nodes"], layout.directions(line["nodes"])):
+            if node.get("name") and node["name"] not in anchor:
+                anchor[node["name"]] = (direction, line["shiftNormal"])
+
+    label_at = layout.label_positions(
+        {uid: (coords[uid], label(station["name"])) for uid, station in stations.items()},
+        occupied)
+
     for line in drawn:
         for node in line["nodes"]:
-            if node.get("name"):
-                uid = by_key[node["name"]]
-                node["labelPos"] = label_at[uid]
-                if stations[uid]["n_lines"] > 1:
-                    node["marker"] = "interchange"
+            key = node.get("name")
+            if not key:
+                continue
+            uid = by_key[key]
+            side, offset = label_at[uid]
+            direction, shift = anchor[key]
+            node["labelPos"] = side
+            node["labelShiftCoords"] = layout.label_shift(
+                layout.COMPASS[side], offset, direction, shift)
+            if stations[uid]["n_lines"] > 1:
+                node["marker"] = "interchange"
 
     built = {
         "stations": {

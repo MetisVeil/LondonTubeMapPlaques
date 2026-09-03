@@ -34,6 +34,23 @@ LONDON_LAT = 51.5
 # and Leicester Square apart, and the result would be mostly empty space.
 COMPRESSION = 0.5
 
+# Label sizes in grid units, measured off the rendered page. The library draws
+# text at 1.96 line widths, and a line width is 0.8 of a grid cell.
+# The library draws a line offset from its own coordinates by shiftNormal, so
+# this is needed to know where the ink actually lands.
+LINE_WIDTH_MULTIPLIER = 0.8
+
+LABEL_CHAR_WIDTH = 0.9
+LABEL_LINE_HEIGHT = 1.7
+LABEL_OFFSET = 1.5
+
+# How far out to try pushing a label when the space beside its station is busy.
+LABEL_OFFSETS = (1.5, 2.5, 3.5, 4.5)
+
+# Tie-break only. Sideways reads most naturally next to a station, and the
+# diagonals are the untidiest, so they go last.
+LABEL_PREFERENCE = ["E", "W", "N", "S", "NE", "SE", "NW", "SW"]
+
 # Four 45 degree corners add up to a full reversal, which is the worst a line
 # ever asks for - the Central line doubling back around the Hainault loop.
 MAX_TURNS = 4
@@ -336,38 +353,112 @@ def validate(nodes: list[dict]) -> None:
     directions(nodes)
 
 
-def cells(nodes: list[dict]):
+def cells(nodes: list[dict], shift_normal: float = 0.0):
     """Yield every grid cell a branch's line passes through, not just its nodes.
 
     Nodes only appear where a run starts, ends or turns, so a label placed by
     node positions alone happily lands on top of a long straight stretch of line.
+
+    A line that shares track with another is drawn alongside its own coordinates
+    rather than on them, by shiftNormal line widths along the normal, so that
+    offset is applied here too - otherwise the label dodges where the line isn't.
     """
     for before, after in zip(nodes, nodes[1:]):
         (x, y), (to_x, to_y) = before["coords"], after["coords"]
         steps = max(abs(to_x - x), abs(to_y - y))
+        length = math.hypot(to_x - x, to_y - y) or 1.0
+        across = (LINE_WIDTH_MULTIPLIER * shift_normal * (to_y - y) / length,
+                  -LINE_WIDTH_MULTIPLIER * shift_normal * (to_x - x) / length)
+
         for step in range(steps + 1):
-            yield (x + round((to_x - x) * step / steps),
-                   y + round((to_y - y) * step / steps))
+            yield (round(x + (to_x - x) * step / steps + across[0]),
+                   round(y + (to_y - y) * step / steps + across[1]))
 
 
-def label_positions(stations: dict[str, tuple[int, int]], occupied: set,
-                    reach: int = 5) -> dict[str, str]:
-    """Point each station's label at the emptiest patch of grid around it.
+def label_shift(direction: tuple, offset: float, dir_name: str,
+                shift_normal: float) -> list[float]:
+    """The labelShiftCoords that put a label exactly where it was placed.
 
-    Everything already drawn counts as clutter - other stations, and the lines
-    themselves - so labels tend to fall on the outside of a curve rather than
-    across the line they belong to. Near misses count for more than distant ones.
+    drawLabels adds `labelShiftNormal` along the station's own normal before it
+    applies textPos, so that term is cancelled here and the wanted displacement
+    put in its place. Without the cancellation a label on a line drawn alongside
+    its coordinates lands a couple of cells from where it was scored.
     """
-    positions = {}
-    for uid, (x, y) in stations.items():
-        def crowding(vector):
-            total = 0
-            for step in range(1, reach + 1):
-                spot = (x + vector[0] * step, y + vector[1] * step)
-                for across in ((0, 0), (vector[1], -vector[0]), (-vector[1], vector[0])):
-                    if (spot[0] + across[0], spot[1] + across[1]) in occupied:
-                        total += reach + 1 - step
-            return total
+    tangent = COMPASS[dir_name]
+    length = math.hypot(*tangent)
+    tangent = (tangent[0] / length, tangent[1] / length)
 
-        positions[uid] = min(COMPASS, key=lambda name: (crowding(COMPASS[name]), name))
+    extra = offset - LABEL_OFFSET
+    towards = math.hypot(*direction)
+    return [extra * direction[0] / towards / LINE_WIDTH_MULTIPLIER - shift_normal * tangent[1],
+            extra * direction[1] / towards / LINE_WIDTH_MULTIPLIER + shift_normal * tangent[0]]
+
+
+def label_box(cell: tuple, direction: tuple, text: str, offset: float = None) -> tuple:
+    """Return the rectangle a label would occupy, in grid units.
+
+    The sizes are measured off the rendered page rather than guessed: the library
+    draws labels at 1.96 line widths and a line width is 0.8 of a cell, which
+    comes out at about 0.82 of a cell per character and 1.67 per line of text.
+    """
+    rows = text.split("\n")
+    width = max(len(row) for row in rows) * LABEL_CHAR_WIDTH
+    height = len(rows) * LABEL_LINE_HEIGHT
+
+    offset = LABEL_OFFSET if offset is None else offset
+    length = math.hypot(*direction)
+    x = cell[0] + direction[0] / length * (offset + width / 2)
+    y = cell[1] + direction[1] / length * (offset + height / 2)
+    return (x - width / 2, y - height / 2, x + width / 2, y + height / 2)
+
+
+def box_cells(box: tuple) -> list:
+    """The grid cells a rectangle covers."""
+    x0, y0, x1, y1 = box
+    return [(x, y)
+            for x in range(math.floor(x0), math.ceil(x1))
+            for y in range(math.floor(y0), math.ceil(y1))]
+
+
+def label_positions(stations: dict[str, tuple], occupied: set) -> dict[str, str]:
+    """Choose which side of each station its name sits on.
+
+    `stations` maps each station to its cell and the text that will be drawn, so
+    a long name is known to need more room than a short one. A label is scored on
+    what its rectangle would cover: the lines of the map, and the labels already
+    placed. Overlapping another label is weighted worse than crossing a line -
+    two names on top of each other are unreadable, whereas a name over a line is
+    merely untidy.
+
+    Crowded stations choose first. A station hemmed in by track has only one or
+    two places its name can go, so letting it pick before its roomier neighbours
+    spend the space is what makes the difference in the middle of the map.
+    """
+    def crowding(cell):
+        return sum(1 for c in box_cells((cell[0] - 7, cell[1] - 7, cell[0] + 7, cell[1] + 7))
+                   if c in occupied)
+
+    taken = set()
+    positions = {}
+
+    for uid in sorted(stations, key=lambda u: (-crowding(stations[u][0]), u)):
+        cell, text = stations[uid]
+
+        best, best_cost, best_cells = None, None, None
+        for name, direction in COMPASS.items():
+            for offset in LABEL_OFFSETS:
+                cells = box_cells(label_box(cell, direction, text, offset))
+                # Pushing a label away from its station buys room, but too far
+                # and it stops obviously belonging to the station, so distance
+                # is charged for rather than free.
+                cost = (3 * sum(c in taken for c in cells)
+                        + sum(c in occupied for c in cells)
+                        + 1.2 * (offset - LABEL_OFFSET)
+                        + LABEL_PREFERENCE.index(name) / 100)
+                if best_cost is None or cost < best_cost:
+                    best, best_cost, best_cells = (name, offset), cost, cells
+
+        positions[uid] = best
+        taken |= set(best_cells)
+
     return positions

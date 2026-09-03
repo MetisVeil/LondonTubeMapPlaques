@@ -232,11 +232,14 @@
             ? named.role + ' &middot; ' + named.distance_m + 'm from ' +
               names[key].replace(/\n/g, ' ')
             : station.uid + ' &middot; ' + station.lat.toFixed(4) + ', ' + station.lon.toFixed(4);
+          var image = named && named.person_image
+            ? '<img class="portrait" width="56" height="56" src="' + named.person_image + '" alt="" />'
+            : '';
 
-          selection.html('<div class="name">' + title + '</div><div class="hint">' + under + '</div>' +
+          selection.html(image + '<div class="copy"><div class="name">' + title + '</div><div class="hint">' + under + '</div>' +
             (named && named.wikipedia
               ? '<a class="more" target="_blank" rel="noopener" href="' + named.wikipedia + '">Wikipedia</a>'
-              : ''));
+              : '') + '</div>');
         });
 
         draw(false);

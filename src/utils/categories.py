@@ -17,6 +17,8 @@ import re
 import sqlite3
 import unicodedata
 
+from .sources.wikipedia import fetch_image as wikipedia_image
+
 GROUP = re.compile(r"^##\s+(?:\d+\.\s*)?(.+?)\s*$")
 CATEGORY = re.compile(r"^-\s+(.+?)\s*$")
 ENTRY = re.compile(r"^\s+-\s+(.+?)\s*$")
@@ -122,9 +124,10 @@ def assign(conn: sqlite3.Connection, plaque_ids: list[str]) -> dict[str, dict]:
     for uid, plaque, rank, metres, person, role, wiki, portrait, photo in pairs:
         if uid in chosen or plaque in used:
             continue
+        image = portrait or wikipedia_image(wiki)
         chosen[uid] = {"plaque": plaque, "person": person, "role": role,
                        "distance_m": round(metres), "wikipedia": wiki,
-                       "person_image": portrait, "plaque_photo": photo}
+                       "person_image": image, "plaque_photo": photo}
         used.add(plaque)
 
     return chosen

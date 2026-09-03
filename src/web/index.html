@@ -62,8 +62,16 @@
           var box = root.node().getBBox();
           if (!box.width || !box.height) return;
 
-          var scale = Math.min(width / box.width, height / box.height) * 0.96;
-          zoom.scaleExtent([scale * 0.5, scale * 24]);
+          // Fill the window rather than fitting inside it: take the larger of
+          // the two ratios, so whichever axis has the most room to spare is the
+          // one that gets used up, and the other overflows and is panned to.
+          // That leaves no whitespace around the map whatever shape the window is.
+          var contain = Math.min(width / box.width, height / box.height);
+          var scale = Math.max(width / box.width, height / box.height);
+
+          // Zooming out has to reach past the fill, or the ends of the lines
+          // would be stranded off-screen with no way back to the whole map.
+          zoom.scaleExtent([contain * 0.5, scale * 24]);
           svg.call(
             zoom.transform,
             d3.zoomIdentity

@@ -46,11 +46,35 @@
         // The library draws at a fixed scale and has no pan or zoom of its own,
         // which a map this size badly needs.
         var svg = container.select('svg');
-        var zoom = d3.zoom().scaleExtent([0.15, 8]).on('zoom', function (event) {
-          svg.select('g').attr('transform', event.transform.toString());
+        var root = svg.select('g');
+        var zoom = d3.zoom().on('zoom', function (event) {
+          root.attr('transform', event.transform.toString());
         });
         svg.call(zoom);
-        zoom.scaleTo(svg, 0.5);
+
+        // Fit the drawing to the window rather than picking a scale by hand.
+        // getBBox measures what was actually drawn - labels included, which
+        // stick out well past the lines - and it ignores the group's own
+        // transform, so it stays correct however far the map has been zoomed.
+        function fit() {
+          var width = window.innerWidth;
+          var height = window.innerHeight;
+          var box = root.node().getBBox();
+          if (!box.width || !box.height) return;
+
+          var scale = Math.min(width / box.width, height / box.height) * 0.96;
+          zoom.scaleExtent([scale * 0.5, scale * 24]);
+          svg.call(
+            zoom.transform,
+            d3.zoomIdentity
+              .translate(width / 2 - scale * (box.x + box.width / 2),
+                         height / 2 - scale * (box.y + box.height / 2))
+              .scale(scale)
+          );
+        }
+
+        fit();
+        window.addEventListener('resize', fit);
       });
     </script>
   </body>

@@ -4889,6 +4889,7 @@
       -64
      ],
      "name": "BakerStreet",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -6323,6 +6324,7 @@
       -79
      ],
      "name": "Blackfriars",
+     "hide": true,
      "labelPos": "NW",
      "marker": "interchange"
     },
@@ -6344,6 +6346,7 @@
       -85
      ],
      "name": "Temple",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -6407,6 +6410,7 @@
       -114
      ],
      "name": "StJamessPark",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -6428,6 +6432,7 @@
       -120
      ],
      "name": "Victoria",
+     "hide": true,
      "labelPos": "E",
      "marker": "interchange"
     },
@@ -6449,6 +6454,7 @@
       -125
      ],
      "name": "SloaneSquare",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -6470,6 +6476,7 @@
       -118
      ],
      "name": "SouthKensington",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -6491,6 +6498,7 @@
       -114
      ],
      "name": "GloucesterRoad",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -6733,6 +6741,7 @@
       -42
      ],
      "name": "CanningTown",
+     "hide": true,
      "labelPos": "E",
      "marker": "interchange"
     },
@@ -6843,6 +6852,7 @@
       -16
      ],
      "name": "WestHam",
+     "hide": true,
      "labelPos": "E",
      "marker": "interchange"
     },
@@ -6910,6 +6920,7 @@
       12
      ],
      "name": "Stratford",
+     "hide": true,
      "labelPos": "E",
      "marker": "interchange"
     }
@@ -7477,6 +7488,7 @@
       -58
      ],
      "name": "Westferry",
+     "hide": true,
      "labelPos": "NE"
     },
     {
@@ -7599,6 +7611,7 @@
       -59
      ],
      "name": "Poplar",
+     "hide": true,
      "labelPos": "N"
     }
    ]
@@ -8069,6 +8082,7 @@
       -86
      ],
      "name": "HeathrowTerminals23",
+     "hide": true,
      "labelPos": "S",
      "marker": "interchange"
     }
@@ -8090,6 +8104,7 @@
       -53
      ],
      "name": "LiverpoolStreet",
+     "hide": true,
      "labelPos": "NW",
      "marker": "interchange"
     },
@@ -8153,6 +8168,7 @@
       -89
      ],
      "name": "BondStreet",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -9279,6 +9295,7 @@
       -64
      ],
      "name": "BakerStreet",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -9546,6 +9563,7 @@
       -42
      ],
      "name": "CanningTown",
+     "hide": true,
      "labelPos": "E",
      "marker": "interchange"
     },
@@ -9714,6 +9732,7 @@
       -101
      ],
      "name": "Waterloo",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -9735,6 +9754,7 @@
       -109
      ],
      "name": "Westminster",
+     "hide": true,
      "labelPos": "E",
      "marker": "interchange"
     },
@@ -10141,6 +10161,7 @@
       51
      ],
      "name": "Romford",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     }
@@ -10775,6 +10796,7 @@
       -64
      ],
      "name": "BakerStreet",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -11630,6 +11652,7 @@
       -125
      ],
      "name": "Richmond",
+     "hide": true,
      "labelPos": "NW",
      "marker": "interchange"
     },
@@ -11651,6 +11674,7 @@
       -109
      ],
      "name": "KewGardens",
+     "hide": true,
      "labelPos": "E",
      "marker": "interchange"
     },
@@ -12803,6 +12827,7 @@
       -111
      ],
      "name": "ElephantCastle",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -14385,6 +14410,7 @@
       -96
      ],
      "name": "PiccadillyCircus",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -15037,6 +15063,7 @@
       82
      ],
      "name": "GospelOak",
+     "hide": true,
      "labelPos": "NW",
      "marker": "interchange"
     }
@@ -15195,6 +15222,7 @@
       -26
      ],
      "name": "KingsCrossStPancras",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -15216,6 +15244,7 @@
       -47
      ],
      "name": "Euston",
+     "hide": true,
      "labelPos": "SE",
      "marker": "interchange"
     },
@@ -15435,6 +15464,7 @@
       -101
      ],
      "name": "Waterloo",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     }
@@ -16359,6 +16389,7 @@
       -60
      ],
      "name": "Shadwell",
+     "hide": true,
      "labelPos": "NW",
      "marker": "interchange"
     },
@@ -16386,6 +16417,7 @@
       -42
      ],
      "name": "Whitechapel",
+     "hide": true,
      "labelPos": "E",
      "marker": "interchange"
     },
@@ -16499,6 +16531,7 @@
       41
      ],
      "name": "Canonbury",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     },
@@ -16520,6 +16553,7 @@
       38
      ],
      "name": "HighburyIslington",
+     "hide": true,
      "labelPos": "N",
      "marker": "interchange"
     }

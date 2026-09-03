@@ -10,6 +10,13 @@ body {
   background: #fff;
 }
 
+/* The library sizes its svg at 100% of this, so it needs a real height to fill
+   rather than collapsing to the default replaced-element box. */
+#tube-map {
+  width: 100vw;
+  height: 100vh;
+}
+
 text {
   font-family: "Hammersmith One", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;

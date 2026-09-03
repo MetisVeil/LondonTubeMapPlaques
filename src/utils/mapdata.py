@@ -96,6 +96,37 @@ def side_by_side(branches: dict) -> dict[str, int]:
     return offsets
 
 
+def hide_opposed_markers(drawn: list[dict]) -> int:
+    """Drop the markers that would make the library place a station at the origin.
+
+    An interchange is positioned by interchangeShift, which divides by the cross
+    product of the first two non-parallel directions running through it. Its idea
+    of parallel excludes opposites, so two lines passing through a station in
+    exactly opposite directions give it a cross product of zero, a translate of
+    NaN, and a marker that silently falls to the top left corner of the map.
+
+    Hiding the later of the two opposed markers is enough to avoid it. The
+    station keeps its ring - the library reads only the first marker to decide
+    that - and where nothing is opposed every marker survives, so interchanges
+    still sit centred across the lines that meet them.
+    """
+    kept = collections.defaultdict(list)
+    hidden = 0
+
+    for line in drawn:
+        for node, direction in zip(line["nodes"], layout.directions(line["nodes"])):
+            key = node.get("name")
+            if not key:
+                continue
+            if any(layout.opposed(direction, other) for other in kept[key]):
+                node["hide"] = True
+                hidden += 1
+            else:
+                kept[key].append(direction)
+
+    return hidden
+
+
 def overrides(path: Path = OVERRIDES_PATH) -> dict:
     """Read the hand-tuning file, which is optional and may be empty."""
     if not path.exists():
@@ -147,6 +178,8 @@ def build(conn: sqlite3.Connection, scale: float = SCALE) -> dict:
                 "shiftNormal", offsets.get(line_id, 0)),
             "nodes": nodes,
         })
+
+    hide_opposed_markers(drawn)
 
     label_at = layout.label_positions({uid: coords[uid] for uid in stations}, occupied)
     for line in drawn:

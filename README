@@ -60,8 +60,9 @@ rather than a file path (so `src/` goes on `sys.path` instead of
 
     cd src/web && python3 -m http.server 8000
 
-Then open <http://localhost:8000>. Drag to pan, scroll to zoom, click a station
-to see what the database holds for it.
+Then open <http://localhost:8000>. The map sizes itself to fill the window on
+load and on resize; drag to pan, scroll to zoom, click a station to see what the
+database holds for it.
 
 The page is plain HTML - no build step, no node_modules - and draws
 [d3-tube-map](https://github.com/johnwalley/d3-tube-map) from a CDN. Note that

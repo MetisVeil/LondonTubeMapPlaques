@@ -289,12 +289,22 @@ def chain(path: list[tuple[int, int]], names: list[str]) -> list[dict]:
     return nodes
 
 
-def validate(nodes: list[dict]) -> None:
-    """Re-run the library's own direction pass, so mistakes surface here not in the browser.
+def opposed(a: str, b: str) -> bool:
+    """Whether two compass bearings point in exactly opposite directions."""
+    return COMPASS[a] == (-COMPASS[b][0], -COMPASS[b][1])
 
-    This is a port of populateLineDirections from d3-tube-map's curve.js.
+
+def directions(nodes: list[dict]) -> list[str]:
+    """Return the direction the line is travelling at each node.
+
+    This is a port of populateLineDirections from d3-tube-map's curve.js, so it
+    raises on exactly what the library would raise on - which is the point: a
+    geometry mistake fails the build here rather than the browser. The
+    directions it works out are worth keeping, because the library decides where
+    to put an interchange marker from them.
     """
-    direction = None
+    found, direction = [], None
+
     for i in range(1, len(nodes)):
         previous, current = nodes[i - 1]["coords"], nodes[i]["coords"]
         step = (current[0] - previous[0], current[1] - previous[1])
@@ -305,19 +315,25 @@ def validate(nodes: list[dict]) -> None:
         if i == 1:
             direction = bearing(step)
             if direction is None:
-                raise ValueError(f"opening segment {previous} -> {current} is not a compass direction")
-            continue
+                raise ValueError(
+                    f"opening segment {previous} -> {current} is not a compass direction")
+            found.append(direction)          # the first node takes the opening bearing
+        elif not parallel(COMPASS[direction], step):
+            if (abs(step[0]), abs(step[1])) not in {(1, 1), (1, 2), (2, 1)}:
+                raise ValueError(f"cannot draw a corner between {previous} and {current}")
+            vector = COMPASS[direction]
+            direction = bearing((step[0] - vector[0], step[1] - vector[1]))
+            if direction is None:
+                raise ValueError(f"corner at {current} turns further than 45 degrees")
 
-        vector = COMPASS[direction]
-        if parallel(vector, step):
-            continue
+        found.append(direction)
 
-        if (abs(step[0]), abs(step[1])) not in {(1, 1), (1, 2), (2, 1)}:
-            raise ValueError(f"cannot draw a corner between {previous} and {current}")
+    return found
 
-        direction = bearing((step[0] - vector[0], step[1] - vector[1]))
-        if direction is None:
-            raise ValueError(f"corner at {current} turns further than 45 degrees")
+
+def validate(nodes: list[dict]) -> None:
+    """Raise if the library would refuse to draw this branch."""
+    directions(nodes)
 
 
 def cells(nodes: list[dict]):
@@ -338,10 +354,9 @@ def label_positions(stations: dict[str, tuple[int, int]], occupied: set,
                     reach: int = 5) -> dict[str, str]:
     """Point each station's label at the emptiest patch of grid around it.
 
-    Everything already drawn counts as clutter - other stations, and the bend
-    nodes that trace out the lines - so labels tend to fall on the outside of a
-    curve rather than across the line they belong to. Near misses count for more
-    than distant ones.
+    Everything already drawn counts as clutter - other stations, and the lines
+    themselves - so labels tend to fall on the outside of a curve rather than
+    across the line they belong to. Near misses count for more than distant ones.
     """
     positions = {}
     for uid, (x, y) in stations.items():

@@ -1,0 +1,60 @@
+# London Tube Map: Blue Plaques
+
+London’s famous blue plaques link the people of the past with the buildings of the present. Now run by English Heritage, the London blue plaques scheme was started in 1866 and is thought to be the oldest of its kind in the world.
+
+More than 1,000 plaques across the capital, on buildings humble and grand, honour the notable women and men who have lived or worked in them.
+
+The London Underground is London's rapid transit system serving Greater London and some parts of adjacent counties. The Underground has its origins in 1863 as the world's first underground passenger railway and has now expanded to 11 lines with 400km of track. 
+
+With its 272 stations it accommodates up to 5 million passenger journeys a day and is a part of daily life.
+
+XXXXX - Work this out how to combine.
+
+## How does it work?
+
+Using [OpenPlaques](https://openplaques.org/data#) we gather London's blue plaques, combine this with the London Tube to generate a map of London.
+
+
+## Running it
+
+The virtual environment lives at the repo root; the code lives in `src/`.
+
+First time only:
+
+    python3 -m venv .venv
+    .venv/bin/pip install -r requirements.txt
+
+Build the database — this downloads the latest TfL feed, versions any changes
+into SQLite, and rebuilds the derived views:
+
+    cd src && ../.venv/bin/python -m handler.main
+
+Or, without changing directory, from the repo root:
+
+    PYTHONPATH=src .venv/bin/python -m handler.main
+
+Both write to `src/data/london.db`. Nothing under `src/data/` is committed to
+git, so run this after cloning.
+
+Three things have to line up, which is why the command looks the way it does:
+the venv's `python` (the system one does not have the dependencies), `-m`
+rather than a file path (so `src/` goes on `sys.path` instead of
+`src/handler/`), and `src/` as the working directory.
+
+## Layout
+
+    src/
+    ├── handler/main.py        entry point: runs every source, rebuilds the views
+    └── utils/
+        ├── db.py              versioned (SCD type 2) SQLite storage
+        ├── distances.py       haversine distances between coordinates
+        ├── sources/tfl.py     TfL station data: download, load, coordinates
+        └── sql/               derived views, reapplied on every build
+
+## The database
+
+`src/data/london.db` keeps the full history of every row. A row version records
+the load it first appeared in (`valid_from_load`) and the load that replaced or
+removed it (`valid_to_load`), so re-running the build against an unchanged feed
+writes nothing at all. Each table has a `current_<table>` view showing only the
+live rows, and `loads` records every ingestion run.

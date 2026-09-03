@@ -15,6 +15,7 @@ from pathlib import Path
 import polars as pl
 
 DB_PATH = Path(__file__).resolve().parents[1] / "data" / "london.db"
+SQL_DIR = Path(__file__).resolve().parent / "sql"
 
 
 def _cols(names: list[str]) -> str:
@@ -111,3 +112,17 @@ def ingest_csv(conn: sqlite3.Connection, csv_path: Path, table: str,
                key_cols: list[str], attr_cols: list[str], load_id: int) -> dict[str, int]:
     """Read a CSV and store it with `ingest`."""
     return ingest(conn, pl.read_csv(csv_path), table, key_cols, attr_cols, load_id)
+
+
+def apply_sql(conn: sqlite3.Connection, sql_dir: Path = SQL_DIR) -> list[str]:
+    """Run every .sql file in `sql_dir`, in filename order.
+
+    The files drop and recreate their views, so this is safe to run on every
+    build and picks up any edits to a view definition.
+    """
+    applied = []
+    for path in sorted(sql_dir.glob("*.sql")):
+        conn.executescript(path.read_text())
+        applied.append(path.name)
+    conn.commit()
+    return applied

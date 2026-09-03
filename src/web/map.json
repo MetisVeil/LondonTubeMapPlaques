@@ -2546,8 +2546,8 @@
      "name": "HarrowWealdstone",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.5303300858899107,
+      2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -2571,7 +2571,7 @@
      "name": "Kenton",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ],
      "marker": "interchange"
@@ -2596,8 +2596,8 @@
      "name": "SouthKenton",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -2613,9 +2613,9 @@
       50
      ],
      "name": "NorthWembley",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -2640,8 +2640,8 @@
      "name": "WembleyCentral",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -2665,7 +2665,7 @@
      "name": "StonebridgePark",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ],
      "marker": "interchange"
@@ -2688,7 +2688,7 @@
       0
      ],
      "name": "Harlesden",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -2721,8 +2721,8 @@
      "name": "WillesdenJunction",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      -0.5303300858899107,
+      2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -2746,8 +2746,8 @@
      "name": "KensalGreen",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -2783,8 +2783,8 @@
      "name": "QueensPark",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -2830,7 +2830,7 @@
       -23
      ],
      "name": "MaidaVale",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -2854,9 +2854,9 @@
       -47
      ],
      "name": "WarwickAvenue",
-     "labelPos": "W",
+     "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
+      2.0,
       0.0
      ]
     },
@@ -2880,8 +2880,8 @@
      "name": "Paddington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -2911,8 +2911,8 @@
      "name": "EdgwareRoad_940GZZLUERB",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ]
     },
     {
@@ -2935,8 +2935,8 @@
      "name": "Marylebone",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      -1.7677669529663687,
+      1.7677669529663687
      ]
     },
     {
@@ -2959,8 +2959,8 @@
      "name": "BakerStreet",
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -2984,7 +2984,7 @@
      "name": "RegentsPark",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
+      -2.0,
       0.0
      ]
     },
@@ -3008,8 +3008,8 @@
      "name": "OxfordCircus",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -3031,10 +3031,10 @@
       -96
      ],
      "name": "PiccadillyCircus",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -1.25
      ],
      "marker": "interchange"
     },
@@ -3046,8 +3046,8 @@
      "name": "CharingCross",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -3077,8 +3077,8 @@
      "name": "Embankment",
      "labelPos": "NE",
      "labelShiftCoords": [
-      1.7677669529663687,
-      1.7677669529663687
+      3.1819805153394634,
+      0.3535533905932736
      ],
      "marker": "interchange"
     },
@@ -3102,7 +3102,7 @@
      "name": "Waterloo",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ],
      "marker": "interchange"
@@ -3224,8 +3224,8 @@
      "name": "TheydonBois",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -3246,10 +3246,10 @@
       155
      ],
      "name": "Debden",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.414213562373095,
+      -1.414213562373095
      ]
     },
     {
@@ -3314,7 +3314,7 @@
      "name": "BuckhurstHill",
      "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       0.0
      ]
     },
@@ -3330,7 +3330,7 @@
       118
      ],
      "name": "Woodford",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -3354,7 +3354,7 @@
       101
      ],
      "name": "Hainault",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -3384,7 +3384,7 @@
       90
      ],
      "name": "Fairlop",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -3402,7 +3402,7 @@
       76
      ],
      "name": "Barkingside",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -3428,8 +3428,8 @@
      "name": "NewburyPark",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      0.8838834764831843
      ]
     },
     {
@@ -3465,7 +3465,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -3486,10 +3486,10 @@
       68
      ],
      "name": "Redbridge",
-     "labelPos": "NE",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      -3.1819805153394634,
+      -0.3535533905932736
      ]
     },
     {
@@ -3512,8 +3512,8 @@
      "name": "Wanstead",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ]
     },
     {
@@ -3543,7 +3543,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     }
    ]
@@ -3564,7 +3564,7 @@
       101
      ],
      "name": "Hainault",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -3591,7 +3591,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -3612,10 +3612,10 @@
       123
      ],
      "name": "Chigwell",
-     "labelPos": "N",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -0.0
      ]
     },
     {
@@ -3638,8 +3638,8 @@
      "name": "RodingValley",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      0.8838834764831843
      ]
     },
     {
@@ -3678,7 +3678,7 @@
       118
      ],
      "name": "Woodford",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -3705,7 +3705,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -3726,7 +3726,7 @@
       41
      ],
      "name": "Leyton",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -3752,8 +3752,8 @@
      "name": "Stratford",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -3783,8 +3783,8 @@
      "name": "MileEnd",
      "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -3820,7 +3820,7 @@
      "name": "BethnalGreen_940GZZLUBLG",
      "labelPos": "W",
      "labelShiftCoords": [
-      -1.25,
+      -2.5,
       0.0
      ]
     },
@@ -3850,8 +3850,8 @@
      "name": "LiverpoolStreet",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -2.5
+      -2.0,
+      -3.75
      ],
      "marker": "interchange"
     },
@@ -3873,10 +3873,10 @@
       -68
      ],
      "name": "Bank",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -3904,10 +3904,10 @@
       -66
      ],
      "name": "StPauls",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     },
     {
@@ -3924,8 +3924,8 @@
      "name": "ChanceryLane",
      "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -2.0,
+      1.25
      ]
     },
     {
@@ -3973,8 +3973,8 @@
      "name": "TottenhamCourtRoad",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -1.7677669529663687,
-      1.7677669529663687
+      -2.651650429449553,
+      2.651650429449553
      ],
      "marker": "interchange"
     },
@@ -3998,8 +3998,8 @@
      "name": "OxfordCircus",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -4023,7 +4023,7 @@
      "name": "BondStreet",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       -0.0
      ],
      "marker": "interchange"
@@ -4034,7 +4034,7 @@
       -89
      ],
      "name": "MarbleArch",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -4058,10 +4058,10 @@
       -83
      ],
      "name": "LancasterGate",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     },
     {
@@ -4082,10 +4082,10 @@
       -80
      ],
      "name": "Queensway",
-     "labelPos": "S",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      0.0
      ]
     },
     {
@@ -4118,10 +4118,10 @@
       -79
      ],
      "name": "NottingHillGate",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      3.75
+      1.237436867076458,
+      -4.065863991822647
      ],
      "marker": "interchange"
     },
@@ -4158,7 +4158,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      -1.25
      ]
     },
     {
@@ -4187,8 +4187,8 @@
      "name": "ShepherdsBush",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -4234,10 +4234,10 @@
       -45
      ],
      "name": "EastActon",
-     "labelPos": "NW",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      -3.1819805153394634,
+      -0.3535533905932736
      ]
     },
     {
@@ -4258,10 +4258,10 @@
       -28
      ],
      "name": "NorthActon",
-     "labelPos": "N",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.414213562373095,
+      1.414213562373095
      ]
     }
    ]
@@ -4282,10 +4282,10 @@
       -28
      ],
      "name": "NorthActon",
-     "labelPos": "N",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.414213562373095,
+      1.414213562373095
      ]
     },
     {
@@ -4306,10 +4306,10 @@
       -37
      ],
      "name": "WestActon",
-     "labelPos": "NE",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      1.7677669529663687,
-      1.7677669529663687
+      1.237436867076458,
+      -4.065863991822647
      ]
     },
     {
@@ -4332,8 +4332,8 @@
      "name": "EalingBroadway",
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     }
@@ -4355,10 +4355,10 @@
       -28
      ],
      "name": "NorthActon",
-     "labelPos": "N",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.414213562373095,
+      1.414213562373095
      ]
     },
     {
@@ -4382,7 +4382,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -4403,9 +4403,9 @@
       1
      ],
      "name": "Perivale",
-     "labelPos": "W",
+     "labelPos": "S",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ]
     },
@@ -4427,10 +4427,10 @@
       11
      ],
      "name": "Greenford",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     },
     {
@@ -4451,7 +4451,7 @@
       20
      ],
      "name": "Northolt",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       -0.0
@@ -4475,10 +4475,10 @@
       31
      ],
      "name": "SouthRuislip",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -4490,7 +4490,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -4499,9 +4499,9 @@
       47
      ],
      "name": "WestRuislip",
-     "labelPos": "NE",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       0.0
      ]
     }
@@ -4523,7 +4523,7 @@
       118
      ],
      "name": "Woodford",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -4559,10 +4559,10 @@
       96
      ],
      "name": "SouthWoodford",
-     "labelPos": "SE",
+     "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      -2.0
      ]
     },
     {
@@ -4589,10 +4589,10 @@
       80
      ],
      "name": "Snaresbrook",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.7677669529663687,
+      1.7677669529663687
      ]
     },
     {
@@ -4622,7 +4622,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     }
    ]
@@ -4645,8 +4645,8 @@
      "name": "EdgwareRoad_940GZZLUERC",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -4670,8 +4670,8 @@
      "name": "Paddington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -4693,7 +4693,7 @@
       -75
      ],
      "name": "Bayswater",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -4718,10 +4718,10 @@
       -79
      ],
      "name": "NottingHillGate",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      3.75
+      1.237436867076458,
+      -4.065863991822647
      ],
      "marker": "interchange"
     },
@@ -4751,8 +4751,8 @@
      "name": "HighStreetKensington",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -4774,10 +4774,10 @@
       -114
      ],
      "name": "GloucesterRoad",
-     "labelPos": "S",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      -3.75
+      0.3535533905932736,
+      3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -4801,8 +4801,8 @@
      "name": "SouthKensington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      0.5303300858899107,
+      -2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -4851,8 +4851,8 @@
      "name": "Victoria",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -4877,7 +4877,7 @@
      "labelPos": "N",
      "labelShiftCoords": [
       0.0,
-      1.25
+      2.5
      ],
      "marker": "interchange"
     },
@@ -4902,7 +4902,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -4926,8 +4926,8 @@
      "name": "Embankment",
      "labelPos": "NE",
      "labelShiftCoords": [
-      1.7677669529663687,
-      1.7677669529663687
+      3.1819805153394634,
+      0.3535533905932736
      ],
      "marker": "interchange"
     },
@@ -4949,10 +4949,10 @@
       -85
      ],
      "name": "Temple",
-     "labelPos": "S",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -4976,8 +4976,8 @@
      "name": "Blackfriars",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -5001,8 +5001,8 @@
      "name": "MansionHouse",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -5012,10 +5012,10 @@
       -73
      ],
      "name": "CannonStreet",
-     "labelPos": "S",
+     "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      -1.25
+      3.75,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -5049,7 +5049,7 @@
       -72
      ],
      "name": "Monument",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -5070,8 +5070,8 @@
      "name": "TowerHill",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -1.25
+      2.0,
+      -3.75
      ],
      "marker": "interchange"
     },
@@ -5095,8 +5095,8 @@
      "name": "Aldgate",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -2.651650429449553,
+      -2.651650429449553
      ],
      "marker": "interchange"
     },
@@ -5120,8 +5120,8 @@
      "name": "LiverpoolStreet",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -2.5
+      -2.0,
+      -3.75
      ],
      "marker": "interchange"
     },
@@ -5151,8 +5151,8 @@
      "name": "Moorgate",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      -0.3535533905932736,
+      3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -5180,10 +5180,10 @@
       -53
      ],
      "name": "Barbican",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      -2.5
      ],
      "marker": "interchange"
     },
@@ -5211,10 +5211,10 @@
       -55
      ],
      "name": "Farringdon",
-     "labelPos": "SE",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.8838834764831843,
-      -0.8838834764831843
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -5244,8 +5244,8 @@
      "name": "KingsCrossStPancras",
      "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      3.75
      ],
      "marker": "interchange"
     },
@@ -5269,8 +5269,8 @@
      "name": "EustonSquare",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -5295,7 +5295,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      -1.25
      ],
      "marker": "interchange"
     },
@@ -5320,8 +5320,8 @@
      "hide": true,
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -5351,8 +5351,8 @@
      "name": "EdgwareRoad_940GZZLUERC",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     }
@@ -5376,8 +5376,8 @@
      "name": "EdgwareRoad_940GZZLUERC",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -5401,8 +5401,8 @@
      "name": "Paddington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -5424,10 +5424,10 @@
       -57
      ],
      "name": "RoyalOak",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ],
      "marker": "interchange"
     },
@@ -5449,10 +5449,10 @@
       -46
      ],
      "name": "WestbournePark",
-     "labelPos": "N",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -5468,10 +5468,10 @@
       -53
      ],
      "name": "LadbrokeGrove",
-     "labelPos": "NW",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      2.0
      ],
      "marker": "interchange"
     },
@@ -5495,8 +5495,8 @@
      "name": "LatimerRoad",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
-      0.0
+      2.5,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -5520,8 +5520,8 @@
      "name": "WoodLane",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      2.5,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -5552,7 +5552,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -5599,10 +5599,10 @@
       -101
      ],
      "name": "Hammersmith",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     }
@@ -5626,8 +5626,8 @@
      "name": "EarlsCourt",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      0.8838834764831843,
+      -1.8838834764831844
      ],
      "marker": "interchange"
     },
@@ -5652,7 +5652,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.7071067811865475,
-      -0.7071067811865475
+      1.2928932188134525
      ],
      "marker": "interchange"
     }
@@ -5676,8 +5676,8 @@
      "name": "EarlsCourt",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      0.8838834764831843,
+      -1.8838834764831844
      ],
      "marker": "interchange"
     },
@@ -5699,9 +5699,9 @@
       -112
      ],
      "name": "WestKensington",
-     "labelPos": "SE",
+     "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
+      2.0,
       -1.0
      ]
     },
@@ -5725,8 +5725,8 @@
      "name": "BaronsCourt",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      -0.7071067811865475
+      -1.9571067811865475,
+      -2.7071067811865475
      ],
      "marker": "interchange"
     },
@@ -5748,10 +5748,10 @@
       -101
      ],
      "name": "Hammersmith",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -5773,7 +5773,7 @@
       -95
      ],
      "name": "RavenscourtPark",
-     "labelPos": "S",
+     "labelPos": "W",
      "labelShiftCoords": [
       -0.7071067811865475,
       -0.7071067811865475
@@ -5797,10 +5797,10 @@
       -90
      ],
      "name": "StamfordBrook",
-     "labelPos": "SE",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      1.414213562373095,
+      -2.414213562373095
      ]
     },
     {
@@ -5823,8 +5823,8 @@
      "name": "TurnhamGreen",
      "labelPos": "N",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      0.5428932188134525
+      1.2928932188134525,
+      1.7928932188134525
      ],
      "marker": "interchange"
     }
@@ -5848,8 +5848,8 @@
      "name": "EarlsCourt",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      0.8838834764831843,
+      -1.8838834764831844
      ],
      "marker": "interchange"
     },
@@ -5879,8 +5879,8 @@
      "name": "WestBrompton",
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.7071067811865475,
-      0.7071067811865475
+      -1.0606601717798212,
+      -1.0606601717798212
      ],
      "marker": "interchange"
     },
@@ -5904,8 +5904,8 @@
      "name": "FulhamBroadway",
      "labelPos": "SE",
      "labelShiftCoords": [
-      1.0,
-      0.0
+      1.8838834764831844,
+      -0.8838834764831843
      ]
     },
     {
@@ -5920,10 +5920,10 @@
       -138
      ],
      "name": "ParsonsGreen",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      -0.7071067811865475,
+      -2.1213203435596424
      ]
     },
     {
@@ -5953,7 +5953,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       1.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -5977,7 +5977,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.7071067811865475,
-      0.7071067811865475
+      2.7071067811865475
      ]
     },
     {
@@ -6000,7 +6000,7 @@
      "name": "Southfields",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.0,
+      2.25,
       0.0
      ]
     },
@@ -6016,10 +6016,10 @@
       -186
      ],
      "name": "WimbledonPark",
-     "labelPos": "NE",
+     "labelPos": "E",
      "labelShiftCoords": [
       0.7071067811865475,
-      0.7071067811865475
+      2.7071067811865475
      ]
     },
     {
@@ -6078,8 +6078,8 @@
      "name": "EdgwareRoad_940GZZLUERC",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -6103,8 +6103,8 @@
      "name": "Paddington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -6126,7 +6126,7 @@
       -75
      ],
      "name": "Bayswater",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -6151,10 +6151,10 @@
       -79
      ],
      "name": "NottingHillGate",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      3.75
+      1.237436867076458,
+      -4.065863991822647
      ],
      "marker": "interchange"
     },
@@ -6184,8 +6184,8 @@
      "name": "HighStreetKensington",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -6209,8 +6209,8 @@
      "name": "EarlsCourt",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      0.8838834764831843,
+      -1.8838834764831844
      ],
      "marker": "interchange"
     }
@@ -6234,8 +6234,8 @@
      "name": "TurnhamGreen",
      "labelPos": "N",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      0.5428932188134525
+      1.2928932188134525,
+      1.7928932188134525
      ],
      "marker": "interchange"
     },
@@ -6259,8 +6259,8 @@
      "name": "ChiswickPark",
      "labelPos": "S",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      -0.7071067811865475
+      1.2928932188134525,
+      -1.9571067811865475
      ]
     },
     {
@@ -6281,10 +6281,10 @@
       -66
      ],
      "name": "ActonTown",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -1.0,
-      0.0
+      -2.767766952966369,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -6308,7 +6308,7 @@
      "name": "EalingCommon",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.7071067811865475,
+      -1.9571067811865475,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -6339,8 +6339,8 @@
      "name": "EalingBroadway",
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     }
@@ -6364,8 +6364,8 @@
      "name": "TurnhamGreen",
      "labelPos": "N",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      0.5428932188134525
+      1.2928932188134525,
+      1.7928932188134525
      ],
      "marker": "interchange"
     },
@@ -6377,7 +6377,7 @@
      "name": "Gunnersbury",
      "labelPos": "W",
      "labelShiftCoords": [
-      -1.25,
+      -2.5,
       -1.0
      ],
      "marker": "interchange"
@@ -6396,7 +6396,7 @@
      "name": "KewGardens",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.0,
+      2.25,
       0.0
      ],
      "marker": "interchange"
@@ -6419,7 +6419,7 @@
       -125
      ],
      "name": "Richmond",
-     "labelPos": "E",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -6446,7 +6446,7 @@
      "name": "Upminster",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
+      2.5,
       -1.0
      ],
      "marker": "interchange"
@@ -6459,8 +6459,8 @@
      "name": "UpminsterBridge",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      -1.414213562373095,
+      -2.414213562373095
      ]
     },
     {
@@ -6475,10 +6475,10 @@
       23
      ],
      "name": "Hornchurch",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      -0.7071067811865475,
+      -2.1213203435596424
      ]
     },
     {
@@ -6499,7 +6499,7 @@
       18
      ],
      "name": "ElmPark",
-     "labelPos": "E",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -6523,7 +6523,7 @@
       11
      ],
      "name": "DagenhamEast",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -6550,7 +6550,7 @@
      "labelPos": "N",
      "labelShiftCoords": [
       0.0,
-      0.25
+      1.5
      ]
     },
     {
@@ -6595,7 +6595,7 @@
       4
      ],
      "name": "Upney",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -6619,10 +6619,10 @@
       6
      ],
      "name": "Barking",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      -0.7071067811865475
+      0.7071067811865475,
+      -2.1213203435596424
      ],
      "marker": "interchange"
     },
@@ -6650,7 +6650,7 @@
       5
      ],
      "name": "EastHam",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -6677,8 +6677,8 @@
      "name": "UptonPark",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      -1.8838834764831844
+      -1.414213562373095,
+      -2.414213562373095
      ],
      "marker": "interchange"
     },
@@ -6700,7 +6700,7 @@
       -9
      ],
      "name": "Plaistow",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -6713,10 +6713,10 @@
       -16
      ],
      "name": "WestHam",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      3.3587572106361003,
+      -3.3587572106361003
      ],
      "marker": "interchange"
     },
@@ -6741,7 +6741,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -1.0
+      -2.25
      ],
      "marker": "interchange"
     },
@@ -6763,10 +6763,10 @@
       -20
      ],
      "name": "BowRoad",
-     "labelPos": "S",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      -4.457106781186548
+      3.3587572106361,
+      0.5303300858899105
      ],
      "marker": "interchange"
     },
@@ -6796,8 +6796,8 @@
      "name": "MileEnd",
      "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -6819,10 +6819,10 @@
       -34
      ],
      "name": "StepneyGreen",
-     "labelPos": "S",
+     "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      -2.0,
+      1.5
      ],
      "marker": "interchange"
     },
@@ -6846,7 +6846,7 @@
      "name": "Whitechapel",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      4.457106781186548,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -6877,8 +6877,8 @@
      "name": "AldgateEast",
      "labelPos": "SE",
      "labelShiftCoords": [
-      1.8838834764831844,
-      -0.8838834764831843
+      2.767766952966369,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -6902,8 +6902,8 @@
      "name": "TowerHill",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -1.25
+      2.0,
+      -3.75
      ],
      "marker": "interchange"
     },
@@ -6919,7 +6919,7 @@
       -72
      ],
      "name": "Monument",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -6956,10 +6956,10 @@
       -73
      ],
      "name": "CannonStreet",
-     "labelPos": "S",
+     "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      -1.25
+      3.75,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -6989,8 +6989,8 @@
      "name": "MansionHouse",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -7027,8 +7027,8 @@
      "hide": true,
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -7051,10 +7051,10 @@
      ],
      "name": "Temple",
      "hide": true,
-     "labelPos": "S",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -7078,8 +7078,8 @@
      "name": "Embankment",
      "labelPos": "NE",
      "labelShiftCoords": [
-      1.7677669529663687,
-      1.7677669529663687
+      3.1819805153394634,
+      0.3535533905932736
      ],
      "marker": "interchange"
     },
@@ -7104,7 +7104,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -7130,7 +7130,7 @@
      "labelPos": "N",
      "labelShiftCoords": [
       0.0,
-      1.25
+      2.5
      ],
      "marker": "interchange"
     },
@@ -7155,8 +7155,8 @@
      "hide": true,
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -7207,8 +7207,8 @@
      "hide": true,
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      0.5303300858899107,
+      -2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -7231,10 +7231,10 @@
      ],
      "name": "GloucesterRoad",
      "hide": true,
-     "labelPos": "S",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      -3.75
+      0.3535533905932736,
+      3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -7270,8 +7270,8 @@
      "name": "EarlsCourt",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      0.8838834764831843,
+      -1.8838834764831844
      ],
      "marker": "interchange"
     }
@@ -7319,7 +7319,7 @@
      "name": "GallionsReach",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ]
     },
@@ -7343,8 +7343,8 @@
      "name": "Cyprus",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      -0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -7353,10 +7353,10 @@
       -46
      ],
      "name": "BecktonPark",
-     "labelPos": "N",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.414213562373095,
+      1.414213562373095
      ]
     },
     {
@@ -7377,10 +7377,10 @@
       -48
      ],
      "name": "RoyalAlbert",
-     "labelPos": "SE",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.8838834764831843,
-      -0.8838834764831843
+      -2.5,
+      2.0
      ]
     },
     {
@@ -7413,10 +7413,10 @@
       -48
      ],
      "name": "PrinceRegent",
-     "labelPos": "NE",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      2.651650429449553,
+      -2.651650429449553
      ]
     },
     {
@@ -7443,10 +7443,10 @@
       -48
      ],
      "name": "CustomHouseForExcel",
-     "labelPos": "SE",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      2.651650429449553,
-      -2.651650429449553
+      0.0,
+      0.0
      ],
      "marker": "interchange"
     },
@@ -7468,10 +7468,10 @@
       -50
      ],
      "name": "RoyalVictoria",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.7677669529663687,
+      -1.7677669529663687
      ]
     },
     {
@@ -7492,9 +7492,9 @@
       -42
      ],
      "name": "CanningTown",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -7518,9 +7518,9 @@
      ],
      "name": "CanningTown",
      "hide": true,
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -7543,7 +7543,7 @@
       -52
      ],
      "name": "EastIndia",
-     "labelPos": "E",
+     "labelPos": "N",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -7579,7 +7579,7 @@
       -59
      ],
      "name": "Poplar",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -7603,9 +7603,9 @@
       -42
      ],
      "name": "CanningTown",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -7628,10 +7628,10 @@
       -30
      ],
      "name": "StarLane",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -1.7677669529663687,
+      -1.7677669529663687
      ]
     },
     {
@@ -7653,10 +7653,10 @@
      ],
      "name": "WestHam",
      "hide": true,
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      3.3587572106361003,
+      -3.3587572106361003
      ],
      "marker": "interchange"
     },
@@ -7687,7 +7687,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -7710,8 +7710,8 @@
      "name": "StratfordHighStreet",
      "labelPos": "W",
      "labelShiftCoords": [
-      -1.25,
-      0.0
+      -2.5,
+      2.0
      ]
     },
     {
@@ -7735,8 +7735,8 @@
      "hide": true,
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     }
@@ -7758,9 +7758,9 @@
       -130
      ],
      "name": "Lewisham",
-     "labelPos": "W",
+     "labelPos": "S",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ]
     },
@@ -7791,7 +7791,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -7814,7 +7814,7 @@
      "name": "DeptfordBridge",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ]
     },
@@ -7830,7 +7830,7 @@
       -110
      ],
      "name": "Greenwich",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -7854,10 +7854,10 @@
       -104
      ],
      "name": "CuttySarkForMaritimeGreenwich",
-     "labelPos": "E",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.414213562373095,
+      -1.414213562373095
      ]
     },
     {
@@ -7880,8 +7880,8 @@
      "name": "IslandGardens",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -7908,10 +7908,10 @@
       -89
      ],
      "name": "Mudchute",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     },
     {
@@ -7938,7 +7938,7 @@
       -81
      ],
      "name": "Crossharbour",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -7956,10 +7956,10 @@
       -73
      ],
      "name": "SouthQuay",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -1.7677669529663687,
+      -1.7677669529663687
      ]
     },
     {
@@ -7982,7 +7982,7 @@
      "name": "HeronQuays",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      2.5,
       0.0
      ]
     },
@@ -8006,8 +8006,8 @@
      "name": "CanaryWharf",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -2.651650429449553,
-      -2.651650429449553
+      -1.237436867076458,
+      -4.065863991822647
      ],
      "marker": "interchange"
     },
@@ -8035,10 +8035,10 @@
       -61
      ],
      "name": "WestIndiaQuay",
-     "labelPos": "E",
+     "labelPos": "N",
      "labelShiftCoords": [
-      3.75,
-      0.0
+      -2.0,
+      3.75
      ]
     }
    ]
@@ -8059,7 +8059,7 @@
       -59
      ],
      "name": "Poplar",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -8083,10 +8083,10 @@
       -51
      ],
      "name": "AllSaints",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.3535533905932736,
+      3.1819805153394634
      ]
     },
     {
@@ -8095,10 +8095,10 @@
       -43
      ],
      "name": "LangdonPark",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      2.0
      ]
     },
     {
@@ -8107,10 +8107,10 @@
       -29
      ],
      "name": "DevonsRoad",
-     "labelPos": "SE",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      1.7677669529663687,
-      -1.7677669529663687
+      -0.3535533905932736,
+      -3.1819805153394634
      ]
     },
     {
@@ -8131,10 +8131,10 @@
       -18
      ],
      "name": "BowChurch",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.237436867076458,
+      4.065863991822647
      ]
     },
     {
@@ -8161,9 +8161,9 @@
       -4
      ],
      "name": "PuddingMillLane",
-     "labelPos": "W",
+     "labelPos": "N",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ]
     },
@@ -8187,8 +8187,8 @@
      "name": "Stratford",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     }
@@ -8210,7 +8210,7 @@
       -59
      ],
      "name": "Poplar",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -8240,10 +8240,10 @@
       -58
      ],
      "name": "Westferry",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     }
    ]
@@ -8264,10 +8264,10 @@
       -60
      ],
      "name": "Shadwell",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.7677669529663687,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -8289,10 +8289,10 @@
       -68
      ],
      "name": "Bank",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     }
@@ -8314,10 +8314,10 @@
       -60
      ],
      "name": "Shadwell",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.7677669529663687,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -8341,8 +8341,8 @@
      "name": "TowerGateway",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     }
    ]
@@ -8365,8 +8365,8 @@
      "name": "Stratford",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -8413,10 +8413,10 @@
      ],
      "name": "Westferry",
      "hide": true,
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     },
     {
@@ -8439,8 +8439,8 @@
      "name": "CanaryWharf",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -2.651650429449553,
-      -2.651650429449553
+      -1.237436867076458,
+      -4.065863991822647
      ],
      "marker": "interchange"
     }
@@ -8462,10 +8462,10 @@
       -58
      ],
      "name": "Westferry",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     },
     {
@@ -8488,8 +8488,8 @@
      "name": "Limehouse",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      0.3535533905932736,
+      3.1819805153394634
      ]
     },
     {
@@ -8510,10 +8510,10 @@
       -60
      ],
      "name": "Shadwell",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.7677669529663687,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     }
@@ -8535,10 +8535,10 @@
       -61
      ],
      "name": "WestIndiaQuay",
-     "labelPos": "E",
+     "labelPos": "N",
      "labelShiftCoords": [
-      3.75,
-      0.0
+      -2.0,
+      3.75
      ]
     },
     {
@@ -8560,7 +8560,7 @@
      ],
      "name": "Poplar",
      "hide": true,
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -8584,10 +8584,10 @@
       -61
      ],
      "name": "WestIndiaQuay",
-     "labelPos": "E",
+     "labelPos": "N",
      "labelShiftCoords": [
-      3.75,
-      0.0
+      -2.0,
+      3.75
      ]
     },
     {
@@ -8596,10 +8596,10 @@
       -58
      ],
      "name": "Westferry",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     }
    ]
@@ -8620,9 +8620,9 @@
       -74
      ],
      "name": "WoolwichArsenal",
-     "labelPos": "W",
+     "labelPos": "S",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ]
     },
@@ -8656,10 +8656,10 @@
       -56
      ],
      "name": "KingGeorgeV",
-     "labelPos": "E",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      2.5,
-      0.0
+      0.5303300858899107,
+      -2.2980970388562794
      ]
     },
     {
@@ -8692,10 +8692,10 @@
       -56
      ],
      "name": "LondonCityAirport",
-     "labelPos": "S",
+     "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      -3.75
+      1.25,
+      2.0
      ]
     },
     {
@@ -8716,10 +8716,10 @@
       -60
      ],
      "name": "PontoonDock",
-     "labelPos": "NW",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      -1.7677669529663687,
-      1.7677669529663687
+      1.237436867076458,
+      -4.065863991822647
      ]
     },
     {
@@ -8731,7 +8731,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      0.0
      ]
     },
     {
@@ -8752,9 +8752,9 @@
       -42
      ],
      "name": "CanningTown",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -8779,8 +8779,8 @@
      "name": "ActonMainLine",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -1.237436867076458,
+      -4.065863991822647
      ]
     },
     {
@@ -8803,8 +8803,8 @@
      "name": "Paddington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     }
@@ -8828,8 +8828,8 @@
      "name": "ActonMainLine",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -1.237436867076458,
+      -4.065863991822647
      ]
     },
     {
@@ -8852,8 +8852,8 @@
      "name": "Paddington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     }
@@ -8875,10 +8875,10 @@
       -47
      ],
      "name": "HayesHarlington",
-     "labelPos": "W",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -8887,7 +8887,7 @@
       -47
      ],
      "name": "Southall",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -8911,7 +8911,7 @@
       -41
      ],
      "name": "Hanwell",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -8929,10 +8929,10 @@
       -40
      ],
      "name": "WestEaling",
-     "labelPos": "N",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.414213562373095,
+      1.414213562373095
      ]
     },
     {
@@ -8943,8 +8943,8 @@
      "name": "EalingBroadway",
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -8980,8 +8980,8 @@
      "name": "ActonMainLine",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -1.237436867076458,
+      -4.065863991822647
      ]
     }
    ]
@@ -9004,8 +9004,8 @@
      "name": "HeathrowTerminals23",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      -0.3535533905932736,
+      -3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -9027,10 +9027,10 @@
       -47
      ],
      "name": "HayesHarlington",
-     "labelPos": "W",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     }
    ]
@@ -9053,7 +9053,7 @@
      "name": "HeathrowTerminal4",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -9078,8 +9078,8 @@
      "name": "HeathrowTerminals23",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      -0.3535533905932736,
+      -3.1819805153394634
      ],
      "marker": "interchange"
     }
@@ -9129,8 +9129,8 @@
      "hide": true,
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      -0.3535533905932736,
+      -3.1819805153394634
      ],
      "marker": "interchange"
     }
@@ -9155,8 +9155,8 @@
      "hide": true,
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -2.5
+      -2.0,
+      -3.75
      ],
      "marker": "interchange"
     },
@@ -9180,8 +9180,8 @@
      "name": "Stratford",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     }
@@ -9205,8 +9205,8 @@
      "name": "Paddington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -9231,7 +9231,7 @@
      "hide": true,
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       -0.0
      ],
      "marker": "interchange"
@@ -9256,8 +9256,8 @@
      "name": "TottenhamCourtRoad",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -1.7677669529663687,
-      1.7677669529663687
+      -2.651650429449553,
+      2.651650429449553
      ],
      "marker": "interchange"
     },
@@ -9279,10 +9279,10 @@
       -55
      ],
      "name": "Farringdon",
-     "labelPos": "SE",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.8838834764831843,
-      -0.8838834764831843
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -9306,8 +9306,8 @@
      "name": "LiverpoolStreet",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -2.5
+      -2.0,
+      -3.75
      ],
      "marker": "interchange"
     },
@@ -9331,7 +9331,7 @@
      "name": "Whitechapel",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      4.457106781186548,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -9378,7 +9378,7 @@
       -54
      ],
      "name": "Twyford",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9402,7 +9402,7 @@
       -18
      ],
      "name": "Maidenhead",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9426,7 +9426,7 @@
       -13
      ],
      "name": "Taplow",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
       -0.0,
       0.0
@@ -9462,7 +9462,7 @@
       -14
      ],
      "name": "Burnham",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9486,7 +9486,7 @@
       -27
      ],
      "name": "Slough",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9510,7 +9510,7 @@
       -34
      ],
      "name": "Langley",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9528,7 +9528,7 @@
       -35
      ],
      "name": "Iver",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9540,7 +9540,7 @@
       -35
      ],
      "name": "WestDrayton",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9564,10 +9564,10 @@
       -47
      ],
      "name": "HayesHarlington",
-     "labelPos": "W",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     }
    ]
@@ -9590,8 +9590,8 @@
      "name": "Stratford",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -9613,7 +9613,7 @@
       20
      ],
      "name": "Maryland",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9637,7 +9637,7 @@
       25
      ],
      "name": "ForestGate",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9664,7 +9664,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -9685,7 +9685,7 @@
       37
      ],
      "name": "Ilford",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9709,10 +9709,10 @@
       43
      ],
      "name": "SevenKings",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      2.0
      ]
     },
     {
@@ -9727,7 +9727,7 @@
       44
      ],
      "name": "Goodmayes",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9751,10 +9751,10 @@
       46
      ],
      "name": "ChadwellHeath",
-     "labelPos": "SE",
+     "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -9803,7 +9803,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -9824,10 +9824,10 @@
       70
      ],
      "name": "HaroldWood",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      2.0
      ]
     },
     {
@@ -9848,7 +9848,7 @@
       87
      ],
      "name": "Brentwood",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -9872,9 +9872,9 @@
       102
      ],
      "name": "Shenfield",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       0.0
      ]
     }
@@ -9898,7 +9898,7 @@
      "name": "Whitechapel",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      4.457106781186548,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -9923,8 +9923,8 @@
      "name": "CanaryWharf",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -2.651650429449553,
-      -2.651650429449553
+      -1.237436867076458,
+      -4.065863991822647
      ],
      "marker": "interchange"
     },
@@ -9946,10 +9946,10 @@
       -48
      ],
      "name": "CustomHouseForExcel",
-     "labelPos": "SE",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      2.651650429449553,
-      -2.651650429449553
+      0.0,
+      0.0
      ],
      "marker": "interchange"
     },
@@ -10007,9 +10007,9 @@
       -65
      ],
      "name": "AbbeyWood",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       0.0
      ]
     }
@@ -10033,7 +10033,7 @@
      "name": "Whitechapel",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      4.457106781186548,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -10058,8 +10058,8 @@
      "name": "Stratford",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     }
@@ -10081,10 +10081,10 @@
       6
      ],
      "name": "Barking",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      -0.7071067811865475
+      0.7071067811865475,
+      -2.1213203435596424
      ],
      "marker": "interchange"
     },
@@ -10112,7 +10112,7 @@
       5
      ],
      "name": "EastHam",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -10139,8 +10139,8 @@
      "name": "UptonPark",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      -1.8838834764831844
+      -1.414213562373095,
+      -2.414213562373095
      ],
      "marker": "interchange"
     },
@@ -10162,7 +10162,7 @@
       -9
      ],
      "name": "Plaistow",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -10175,10 +10175,10 @@
       -16
      ],
      "name": "WestHam",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      3.3587572106361003,
+      -3.3587572106361003
      ],
      "marker": "interchange"
     },
@@ -10203,7 +10203,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -1.0
+      -2.25
      ],
      "marker": "interchange"
     },
@@ -10225,10 +10225,10 @@
       -20
      ],
      "name": "BowRoad",
-     "labelPos": "S",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      -4.457106781186548
+      3.3587572106361,
+      0.5303300858899105
      ],
      "marker": "interchange"
     },
@@ -10258,8 +10258,8 @@
      "name": "MileEnd",
      "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -10281,10 +10281,10 @@
       -34
      ],
      "name": "StepneyGreen",
-     "labelPos": "S",
+     "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      -2.0,
+      1.5
      ],
      "marker": "interchange"
     },
@@ -10308,7 +10308,7 @@
      "name": "Whitechapel",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      4.457106781186548,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -10345,8 +10345,8 @@
      "name": "AldgateEast",
      "labelPos": "SE",
      "labelShiftCoords": [
-      1.8838834764831844,
-      -0.8838834764831843
+      2.767766952966369,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -10370,8 +10370,8 @@
      "name": "LiverpoolStreet",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -2.5
+      -2.0,
+      -3.75
      ],
      "marker": "interchange"
     },
@@ -10401,8 +10401,8 @@
      "name": "Moorgate",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      -0.3535533905932736,
+      3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -10430,10 +10430,10 @@
       -53
      ],
      "name": "Barbican",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      -2.5
      ],
      "marker": "interchange"
     },
@@ -10461,10 +10461,10 @@
       -55
      ],
      "name": "Farringdon",
-     "labelPos": "SE",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.8838834764831843,
-      -0.8838834764831843
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -10494,8 +10494,8 @@
      "name": "KingsCrossStPancras",
      "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      3.75
      ],
      "marker": "interchange"
     },
@@ -10519,8 +10519,8 @@
      "name": "EustonSquare",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -10545,7 +10545,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      -1.25
      ],
      "marker": "interchange"
     },
@@ -10570,8 +10570,8 @@
      "hide": true,
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -10601,8 +10601,8 @@
      "name": "EdgwareRoad_940GZZLUERC",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -10626,8 +10626,8 @@
      "name": "Paddington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -10649,10 +10649,10 @@
       -57
      ],
      "name": "RoyalOak",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ],
      "marker": "interchange"
     },
@@ -10674,10 +10674,10 @@
       -46
      ],
      "name": "WestbournePark",
-     "labelPos": "N",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -10693,10 +10693,10 @@
       -53
      ],
      "name": "LadbrokeGrove",
-     "labelPos": "NW",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      2.0
      ],
      "marker": "interchange"
     },
@@ -10720,8 +10720,8 @@
      "name": "LatimerRoad",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
-      0.0
+      2.5,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -10745,8 +10745,8 @@
      "name": "WoodLane",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      2.5,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -10777,7 +10777,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -10824,10 +10824,10 @@
       -101
      ],
      "name": "Hammersmith",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     }
@@ -10851,8 +10851,8 @@
      "name": "Stratford",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -10874,10 +10874,10 @@
       -16
      ],
      "name": "WestHam",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      3.3587572106361003,
+      -3.3587572106361003
      ],
      "marker": "interchange"
     },
@@ -10888,9 +10888,9 @@
      ],
      "name": "CanningTown",
      "hide": true,
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -10916,7 +10916,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -10945,8 +10945,8 @@
      "name": "CanaryWharf",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -2.651650429449553,
-      -2.651650429449553
+      -1.237436867076458,
+      -4.065863991822647
      ],
      "marker": "interchange"
     },
@@ -10976,8 +10976,8 @@
      "name": "CanadaWater",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -10999,10 +10999,10 @@
       -91
      ],
      "name": "Bermondsey",
-     "labelPos": "N",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -0.0
      ]
     },
     {
@@ -11026,7 +11026,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      -2.5
      ],
      "marker": "interchange"
     },
@@ -11060,7 +11060,7 @@
       -96
      ],
      "name": "Southwark",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -11087,7 +11087,7 @@
      "hide": true,
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ],
      "marker": "interchange"
@@ -11114,7 +11114,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -11150,7 +11150,7 @@
      "name": "GreenPark",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -11163,7 +11163,7 @@
      "name": "BondStreet",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       -0.0
      ],
      "marker": "interchange"
@@ -11188,8 +11188,8 @@
      "name": "BakerStreet",
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -11213,7 +11213,7 @@
      "name": "StJohnsWood",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ]
     },
@@ -11237,8 +11237,8 @@
      "name": "SwissCottage",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -11267,8 +11267,8 @@
      "name": "FinchleyRoad",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
-      0.0
+      2.5,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -11296,10 +11296,10 @@
       36
      ],
      "name": "WestHampstead_940GZZLUWHP",
-     "labelPos": "S",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -2.5
+      1.237436867076458,
+      -4.065863991822647
      ]
     },
     {
@@ -11322,7 +11322,7 @@
      "name": "Kilburn",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       -0.0
      ]
     },
@@ -11344,10 +11344,10 @@
       35
      ],
      "name": "WillesdenGreen",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      -1.25
+      0.5303300858899107,
+      -2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -11369,7 +11369,7 @@
       39
      ],
      "name": "DollisHill",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -11393,9 +11393,9 @@
       41
      ],
      "name": "Neasden",
-     "labelPos": "W",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ]
     },
@@ -11417,10 +11417,10 @@
       55
      ],
      "name": "WembleyPark",
-     "labelPos": "SW",
+     "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      -0.0
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -11448,7 +11448,7 @@
       94
      ],
      "name": "Kingsbury",
-     "labelPos": "E",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -11478,10 +11478,10 @@
       107
      ],
      "name": "Queensbury",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      -0.0
      ]
     },
     {
@@ -11496,9 +11496,9 @@
       125
      ],
      "name": "CanonsPark",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       0.0
      ]
     },
@@ -11558,7 +11558,7 @@
      "name": "Upminster",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
+      2.5,
       -1.0
      ],
      "marker": "interchange"
@@ -11572,7 +11572,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -11651,7 +11651,7 @@
      "name": "WatfordHighStreet",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       0.7071067811865475
      ]
     },
@@ -11694,7 +11694,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.7071067811865475,
-      -0.7071067811865475
+      -2.7071067811865475
      ]
     },
     {
@@ -11727,7 +11727,7 @@
       111
      ],
      "name": "HatchEnd",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.7071067811865475,
       0.7071067811865475
@@ -11754,7 +11754,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       1.0,
-      0.0
+      2.0
      ]
     },
     {
@@ -11777,8 +11777,8 @@
      "name": "HarrowWealdstone",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.5303300858899107,
+      2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -11802,7 +11802,7 @@
      "name": "Kenton",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ],
      "marker": "interchange"
@@ -11827,8 +11827,8 @@
      "name": "SouthKenton",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -11844,9 +11844,9 @@
       50
      ],
      "name": "NorthWembley",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -11871,8 +11871,8 @@
      "name": "WembleyCentral",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -11896,7 +11896,7 @@
      "name": "StonebridgePark",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ],
      "marker": "interchange"
@@ -11919,7 +11919,7 @@
       0
      ],
      "name": "Harlesden",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -11952,8 +11952,8 @@
      "name": "WillesdenJunction",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      -0.5303300858899107,
+      2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -11977,8 +11977,8 @@
      "name": "KensalGreen",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -12014,8 +12014,8 @@
      "name": "QueensPark",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -12093,8 +12093,8 @@
      "name": "Euston",
      "labelPos": "SE",
      "labelShiftCoords": [
-      2.474873734152916,
-      -1.0606601717798212
+      3.3587572106361003,
+      -1.9445436482630054
      ],
      "marker": "interchange"
     }
@@ -12118,8 +12118,8 @@
      "name": "Aldgate",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -2.651650429449553,
+      -2.651650429449553
      ],
      "marker": "interchange"
     },
@@ -12143,8 +12143,8 @@
      "name": "LiverpoolStreet",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -2.5
+      -2.0,
+      -3.75
      ],
      "marker": "interchange"
     },
@@ -12174,8 +12174,8 @@
      "name": "Moorgate",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      -0.3535533905932736,
+      3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -12203,10 +12203,10 @@
       -53
      ],
      "name": "Barbican",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      -2.5
      ],
      "marker": "interchange"
     },
@@ -12234,10 +12234,10 @@
       -55
      ],
      "name": "Farringdon",
-     "labelPos": "SE",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.8838834764831843,
-      -0.8838834764831843
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -12267,8 +12267,8 @@
      "name": "KingsCrossStPancras",
      "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      3.75
      ],
      "marker": "interchange"
     },
@@ -12292,8 +12292,8 @@
      "name": "EustonSquare",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -12318,7 +12318,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      -1.25
      ],
      "marker": "interchange"
     },
@@ -12343,8 +12343,8 @@
      "hide": true,
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -12368,8 +12368,8 @@
      "name": "FinchleyRoad",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
-      0.0
+      2.5,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -12391,10 +12391,10 @@
       55
      ],
      "name": "WembleyPark",
-     "labelPos": "SW",
+     "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      -0.0
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -12418,8 +12418,8 @@
      "name": "PrestonRoad",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -1.0,
-      0.0
+      -2.767766952966369,
+      1.7677669529663687
      ]
     },
     {
@@ -12442,8 +12442,8 @@
      "name": "NorthwickPark",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -1.8838834764831844
+      -1.7677669529663687,
+      -2.767766952966369
      ]
     },
     {
@@ -12464,10 +12464,10 @@
       73
      ],
      "name": "HarrowOnTheHill",
-     "labelPos": "S",
+     "labelPos": "N",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -3.2071067811865475
+      -1.2928932188134525,
+      3.0428932188134525
      ]
     }
    ]
@@ -12488,10 +12488,10 @@
       147
      ],
      "name": "ChalfontLatimer",
-     "labelPos": "SW",
+     "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      -1.0
+      -3.0
      ]
     },
     {
@@ -12500,9 +12500,9 @@
       147
      ],
      "name": "Amersham",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       -1.0
      ]
     }
@@ -12524,10 +12524,10 @@
       147
      ],
      "name": "ChalfontLatimer",
-     "labelPos": "SW",
+     "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      -1.0
+      -3.0
      ]
     },
     {
@@ -12572,10 +12572,10 @@
       73
      ],
      "name": "HarrowOnTheHill",
-     "labelPos": "S",
+     "labelPos": "N",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -3.2071067811865475
+      -1.2928932188134525,
+      3.0428932188134525
      ]
     },
     {
@@ -12626,9 +12626,9 @@
       85
      ],
      "name": "Pinner",
-     "labelPos": "W",
+     "labelPos": "S",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       -1.0
      ]
     },
@@ -12710,9 +12710,9 @@
       125
      ],
      "name": "MoorPark",
-     "labelPos": "W",
+     "labelPos": "E",
      "labelShiftCoords": [
-      -0.7071067811865475,
+      1.7928932188134525,
       0.7071067811865475
      ]
     }
@@ -12734,10 +12734,10 @@
       73
      ],
      "name": "HarrowOnTheHill",
-     "labelPos": "S",
+     "labelPos": "N",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -3.2071067811865475
+      -1.2928932188134525,
+      3.0428932188134525
      ]
     },
     {
@@ -12758,10 +12758,10 @@
       71
      ],
      "name": "WestHarrow",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      -0.7071067811865475,
+      -2.1213203435596424
      ]
     },
     {
@@ -12772,7 +12772,7 @@
      "name": "RaynersLane",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -12789,10 +12789,10 @@
       60
      ],
      "name": "Eastcote",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
-      0.25
+      -1.0
      ],
      "marker": "interchange"
     },
@@ -12816,8 +12816,8 @@
      "name": "RuislipManor",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      -0.17677669529663687,
+      0.17677669529663687
      ],
      "marker": "interchange"
     },
@@ -12839,7 +12839,7 @@
       51
      ],
      "name": "Ruislip",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -12866,7 +12866,7 @@
      "name": "Ickenham",
      "labelPos": "W",
      "labelShiftCoords": [
-      1.0,
+      -0.25,
       0.0
      ],
      "marker": "interchange"
@@ -12889,10 +12889,10 @@
       24
      ],
      "name": "Hillingdon",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      2.474873734152916,
+      -2.474873734152916
      ],
      "marker": "interchange"
     },
@@ -12939,9 +12939,9 @@
       125
      ],
      "name": "MoorPark",
-     "labelPos": "W",
+     "labelPos": "E",
      "labelShiftCoords": [
-      -0.7071067811865475,
+      1.7928932188134525,
       0.7071067811865475
      ]
     },
@@ -12987,9 +12987,9 @@
       139
      ],
      "name": "Chorleywood",
-     "labelPos": "W",
+     "labelPos": "S",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       -1.0
      ]
     },
@@ -13011,10 +13011,10 @@
       147
      ],
      "name": "ChalfontLatimer",
-     "labelPos": "SW",
+     "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      -1.0
+      -3.0
      ]
     }
    ]
@@ -13035,9 +13035,9 @@
       125
      ],
      "name": "MoorPark",
-     "labelPos": "W",
+     "labelPos": "E",
      "labelShiftCoords": [
-      -0.7071067811865475,
+      1.7928932188134525,
       0.7071067811865475
      ]
     },
@@ -13071,7 +13071,7 @@
       159
      ],
      "name": "Watford",
-     "labelPos": "E",
+     "labelPos": "N",
      "labelShiftCoords": [
       0.0,
       1.0
@@ -13095,10 +13095,10 @@
       55
      ],
      "name": "WembleyPark",
-     "labelPos": "SW",
+     "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      -0.0
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -13120,10 +13120,10 @@
       35
      ],
      "name": "WillesdenGreen",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      -1.25
+      0.5303300858899107,
+      -2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -13147,8 +13147,8 @@
      "name": "FinchleyRoad",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
-      0.0
+      2.5,
+      2.0
      ],
      "marker": "interchange"
     }
@@ -13173,7 +13173,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      0.0
      ],
      "marker": "interchange"
     },
@@ -13198,7 +13198,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -13221,8 +13221,8 @@
      "name": "WestBrompton",
      "labelPos": "SW",
      "labelShiftCoords": [
-      0.7071067811865475,
-      0.7071067811865475
+      -1.0606601717798212,
+      -1.0606601717798212
      ],
      "marker": "interchange"
     },
@@ -13247,7 +13247,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.7071067811865475,
-      -0.7071067811865475
+      1.2928932188134525
      ],
      "marker": "interchange"
     },
@@ -13271,8 +13271,8 @@
      "name": "ShepherdsBush",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -13296,8 +13296,8 @@
      "name": "WillesdenJunction",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      -0.5303300858899107,
+      2.2980970388562794
      ],
      "marker": "interchange"
     }
@@ -13322,7 +13322,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -13346,7 +13346,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      0.0
      ],
      "marker": "interchange"
     }
@@ -13369,7 +13369,7 @@
      ],
      "name": "Richmond",
      "hide": true,
-     "labelPos": "E",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -13397,7 +13397,7 @@
      "hide": true,
      "labelPos": "E",
      "labelShiftCoords": [
-      1.0,
+      2.25,
       0.0
      ],
      "marker": "interchange"
@@ -13434,7 +13434,7 @@
      "name": "Gunnersbury",
      "labelPos": "W",
      "labelShiftCoords": [
-      -1.25,
+      -2.5,
       -1.0
      ],
      "marker": "interchange"
@@ -13453,8 +13453,8 @@
      "name": "SouthActon",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ]
     },
     {
@@ -13477,8 +13477,8 @@
      "name": "ActonCentral",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -13501,8 +13501,8 @@
      "name": "WillesdenJunction",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      -0.5303300858899107,
+      2.2980970388562794
      ],
      "marker": "interchange"
     }
@@ -13526,8 +13526,8 @@
      "name": "WillesdenJunction",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      -0.5303300858899107,
+      2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -13551,8 +13551,8 @@
      "name": "KensalRise",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      1.414213562373095,
+      1.414213562373095
      ]
     },
     {
@@ -13573,9 +13573,9 @@
       14
      ],
      "name": "BrondesburyPark",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       0.0
      ]
     },
@@ -13600,7 +13600,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -13623,8 +13623,8 @@
      "name": "WestHampstead_910GWHMDSTD",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      0.5303300858899107,
+      2.2980970388562794
      ]
     },
     {
@@ -13669,7 +13669,7 @@
       76
      ],
      "name": "HampsteadHeath",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -13695,8 +13695,8 @@
      "name": "GospelOak",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      2.0
      ],
      "marker": "interchange"
     },
@@ -13724,7 +13724,7 @@
       61
      ],
      "name": "KentishTownWest",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -13748,7 +13748,7 @@
       42
      ],
      "name": "CamdenRoad",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -13775,7 +13775,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -1.25
+      -2.5
      ]
     },
     {
@@ -13810,8 +13810,8 @@
      "name": "HighburyIslington",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
-      0.0
+      2.5,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -13836,7 +13836,7 @@
      "labelPos": "N",
      "labelShiftCoords": [
       0.0,
-      1.25
+      2.5
      ],
      "marker": "interchange"
     },
@@ -13861,7 +13861,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -13884,8 +13884,8 @@
      "name": "HackneyCentral",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -13906,7 +13906,7 @@
       26
      ],
      "name": "Homerton",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -13932,7 +13932,7 @@
      "name": "HackneyWick",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
+      -3.75,
       0.0
      ]
     },
@@ -13956,8 +13956,8 @@
      "name": "Stratford",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ],
      "marker": "interchange"
     }
@@ -13981,7 +13981,7 @@
      "name": "CamdenTown",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       0.7071067811865475
      ]
     },
@@ -14005,7 +14005,7 @@
      "name": "MorningtonCrescent",
      "labelPos": "W",
      "labelShiftCoords": [
-      1.0,
+      -0.25,
       0.0
      ]
     },
@@ -14029,8 +14029,8 @@
      "name": "Euston",
      "labelPos": "SE",
      "labelShiftCoords": [
-      2.474873734152916,
-      -1.0606601717798212
+      3.3587572106361003,
+      -1.9445436482630054
      ],
      "marker": "interchange"
     }
@@ -14054,7 +14054,7 @@
      "name": "CamdenTown",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       0.7071067811865475
      ]
     },
@@ -14078,8 +14078,8 @@
      "name": "Euston",
      "labelPos": "SE",
      "labelShiftCoords": [
-      2.474873734152916,
-      -1.0606601717798212
+      3.3587572106361003,
+      -1.9445436482630054
      ],
      "marker": "interchange"
     }
@@ -14125,7 +14125,7 @@
       127
      ],
      "name": "BurntOak",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.7071067811865475,
       0.7071067811865475
@@ -14182,7 +14182,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.7071067811865475,
-      0.7071067811865475
+      2.7071067811865475
      ]
     },
     {
@@ -14203,7 +14203,7 @@
       100
      ],
      "name": "BrentCross",
-     "labelPos": "N",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.0,
       1.0
@@ -14290,7 +14290,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.7071067811865475,
-      0.7071067811865475
+      2.7071067811865475
      ]
     },
     {
@@ -14313,7 +14313,7 @@
      "name": "CamdenTown",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       0.7071067811865475
      ]
     }
@@ -14337,8 +14337,8 @@
      "name": "Euston",
      "labelPos": "SE",
      "labelShiftCoords": [
-      2.474873734152916,
-      -1.0606601717798212
+      3.3587572106361003,
+      -1.9445436482630054
      ],
      "marker": "interchange"
     },
@@ -14362,8 +14362,8 @@
      "name": "WarrenStreet",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.17677669529663687,
-      0.17677669529663687
+      -1.0606601717798212,
+      1.0606601717798212
      ],
      "marker": "interchange"
     },
@@ -14417,8 +14417,8 @@
      "name": "TottenhamCourtRoad",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -1.7677669529663687,
-      1.7677669529663687
+      -2.651650429449553,
+      2.651650429449553
      ],
      "marker": "interchange"
     },
@@ -14442,8 +14442,8 @@
      "name": "LeicesterSquare",
      "labelPos": "W",
      "labelShiftCoords": [
-      0.7071067811865475,
-      0.7071067811865475
+      -1.7928932188134525,
+      -1.2928932188134525
      ],
      "marker": "interchange"
     },
@@ -14467,8 +14467,8 @@
      "name": "CharingCross",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -14486,8 +14486,8 @@
      "name": "Embankment",
      "labelPos": "NE",
      "labelShiftCoords": [
-      1.7677669529663687,
-      1.7677669529663687
+      3.1819805153394634,
+      0.3535533905932736
      ],
      "marker": "interchange"
     },
@@ -14511,7 +14511,7 @@
      "name": "Waterloo",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ],
      "marker": "interchange"
@@ -14534,7 +14534,7 @@
       -124
      ],
      "name": "Kennington",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       1.0,
       0.0
@@ -14560,8 +14560,8 @@
      "name": "Euston",
      "labelPos": "SE",
      "labelShiftCoords": [
-      2.474873734152916,
-      -1.0606601717798212
+      3.3587572106361003,
+      -1.9445436482630054
      ],
      "marker": "interchange"
     },
@@ -14585,8 +14585,8 @@
      "name": "KingsCrossStPancras",
      "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      3.75
      ],
      "marker": "interchange"
     },
@@ -14640,7 +14640,7 @@
      "name": "OldStreet",
      "labelPos": "W",
      "labelShiftCoords": [
-      1.0,
+      -0.25,
       0.0
      ]
     },
@@ -14664,8 +14664,8 @@
      "name": "Moorgate",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      -0.3535533905932736,
+      3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -14687,10 +14687,10 @@
       -68
      ],
      "name": "Bank",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -14715,7 +14715,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      -2.5
      ],
      "marker": "interchange"
     },
@@ -14793,7 +14793,7 @@
       -124
      ],
      "name": "Kennington",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       1.0,
       0.0
@@ -14819,7 +14819,7 @@
      "name": "FinchleyCentral",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       0.7071067811865475
      ]
     },
@@ -14865,7 +14865,7 @@
       122
      ],
      "name": "Highgate",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.7071067811865475,
       0.7071067811865475
@@ -14889,7 +14889,7 @@
       101
      ],
      "name": "Archway",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.0,
       1.0
@@ -14969,7 +14969,7 @@
      "name": "CamdenTown",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       0.7071067811865475
      ]
     }
@@ -14991,7 +14991,7 @@
       199
      ],
      "name": "HighBarnet",
-     "labelPos": "E",
+     "labelPos": "N",
      "labelShiftCoords": [
       0.7071067811865475,
       0.7071067811865475
@@ -15039,7 +15039,7 @@
       168
      ],
      "name": "WoodsidePark",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -15089,7 +15089,7 @@
      "name": "FinchleyCentral",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       0.7071067811865475
      ]
     }
@@ -15111,7 +15111,7 @@
       -124
      ],
      "name": "Kennington",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       1.0,
       0.0
@@ -15135,7 +15135,7 @@
       -141
      ],
      "name": "NineElms",
-     "labelPos": "E",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -15159,10 +15159,10 @@
       -143
      ],
      "name": "BatterseaPowerStation",
-     "labelPos": "W",
+     "labelPos": "E",
      "labelShiftCoords": [
       0.7071067811865475,
-      -0.7071067811865475
+      -2.7071067811865475
      ]
     }
    ]
@@ -15183,7 +15183,7 @@
       -124
      ],
      "name": "Kennington",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       1.0,
       0.0
@@ -15207,7 +15207,7 @@
       -135
      ],
      "name": "Oval",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -15231,7 +15231,7 @@
       -150
      ],
      "name": "Stockwell",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -15258,8 +15258,8 @@
      "name": "ClaphamNorth",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      2.474873734152916,
+      -2.474873734152916
      ]
     },
     {
@@ -15280,10 +15280,10 @@
       -163
      ],
      "name": "ClaphamCommon",
-     "labelPos": "S",
+     "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      -2.0,
+      1.5
      ]
     },
     {
@@ -15304,7 +15304,7 @@
       -173
      ],
      "name": "ClaphamSouth",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -15352,7 +15352,7 @@
       -190
      ],
      "name": "TootingBec",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -15376,7 +15376,7 @@
       -197
      ],
      "name": "TootingBroadway",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -15424,7 +15424,7 @@
       -206
      ],
      "name": "SouthWimbledon",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.7071067811865475,
       -0.7071067811865475
@@ -15510,7 +15510,7 @@
      "name": "FinchleyCentral",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       0.7071067811865475
      ]
     }
@@ -15532,10 +15532,10 @@
       -66
      ],
      "name": "ActonTown",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -1.0,
-      0.0
+      -2.767766952966369,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -15584,7 +15584,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.7071067811865475,
-      0.7071067811865475
+      2.7071067811865475
      ]
     },
     {
@@ -15679,8 +15679,8 @@
      "name": "HounslowEast",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.5428932188134525,
-      -0.7071067811865475
+      1.7928932188134525,
+      1.2928932188134525
      ]
     },
     {
@@ -15715,7 +15715,7 @@
      "name": "HounslowCentral",
      "labelPos": "W",
      "labelShiftCoords": [
-      1.0,
+      -0.25,
       0.0
      ]
     },
@@ -15761,10 +15761,10 @@
       -96
      ],
      "name": "HattonCross",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      1.9571067811865475
+      0.17677669529663687,
+      -0.17677669529663687
      ]
     }
    ]
@@ -15785,10 +15785,10 @@
       -66
      ],
      "name": "ActonTown",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -1.0,
-      0.0
+      -2.767766952966369,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -15812,7 +15812,7 @@
      "name": "EalingCommon",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.7071067811865475,
+      -1.9571067811865475,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -15837,8 +15837,8 @@
      "name": "NorthEaling",
      "labelPos": "N",
      "labelShiftCoords": [
-      0.7071067811865475,
-      0.7071067811865475
+      2.7071067811865475,
+      1.9571067811865475
      ]
     },
     {
@@ -15907,7 +15907,7 @@
       9
      ],
      "name": "Alperton",
-     "labelPos": "E",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.7071067811865475,
       0.7071067811865475
@@ -16005,7 +16005,7 @@
      "name": "RaynersLane",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      1.9571067811865475,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -16034,10 +16034,10 @@
       60
      ],
      "name": "Eastcote",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
-      0.25
+      -1.0
      ],
      "marker": "interchange"
     },
@@ -16061,8 +16061,8 @@
      "name": "RuislipManor",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      -0.17677669529663687,
+      0.17677669529663687
      ],
      "marker": "interchange"
     },
@@ -16084,7 +16084,7 @@
       51
      ],
      "name": "Ruislip",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -16111,7 +16111,7 @@
      "name": "Ickenham",
      "labelPos": "W",
      "labelShiftCoords": [
-      1.0,
+      -0.25,
       0.0
      ],
      "marker": "interchange"
@@ -16134,10 +16134,10 @@
       24
      ],
      "name": "Hillingdon",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.7071067811865475,
-      -0.7071067811865475
+      2.474873734152916,
+      -2.474873734152916
      ],
      "marker": "interchange"
     },
@@ -16184,7 +16184,7 @@
       204
      ],
      "name": "Cockfosters",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -16402,7 +16402,7 @@
      "name": "FinsburyPark",
      "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       1.0
      ],
      "marker": "interchange"
@@ -16464,7 +16464,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.7071067811865475,
-      0.7071067811865475
+      2.7071067811865475
      ]
     },
     {
@@ -16511,8 +16511,8 @@
      "name": "KingsCrossStPancras",
      "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      3.75
      ],
      "marker": "interchange"
     },
@@ -16534,7 +16534,7 @@
       -58
      ],
      "name": "RussellSquare",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
       -1.0,
       0.0
@@ -16589,10 +16589,10 @@
       -85
      ],
      "name": "CoventGarden",
-     "labelPos": "N",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
-      4.75
+      -1.25,
+      1.0
      ]
     },
     {
@@ -16615,8 +16615,8 @@
      "name": "LeicesterSquare",
      "labelPos": "W",
      "labelShiftCoords": [
-      0.7071067811865475,
-      0.7071067811865475
+      -1.7928932188134525,
+      -1.2928932188134525
      ],
      "marker": "interchange"
     },
@@ -16639,10 +16639,10 @@
      ],
      "name": "PiccadillyCircus",
      "hide": true,
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -1.25
      ],
      "marker": "interchange"
     },
@@ -16666,7 +16666,7 @@
      "name": "GreenPark",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -16751,8 +16751,8 @@
      "name": "SouthKensington",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      0.5303300858899107,
+      -2.2980970388562794
      ],
      "marker": "interchange"
     },
@@ -16774,10 +16774,10 @@
       -114
      ],
      "name": "GloucesterRoad",
-     "labelPos": "S",
+     "labelPos": "NE",
      "labelShiftCoords": [
-      0.0,
-      -3.75
+      0.3535533905932736,
+      3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -16813,8 +16813,8 @@
      "name": "EarlsCourt",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -1.0
+      0.8838834764831843,
+      -1.8838834764831844
      ],
      "marker": "interchange"
     },
@@ -16850,8 +16850,8 @@
      "name": "BaronsCourt",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      -0.7071067811865475
+      -1.9571067811865475,
+      -2.7071067811865475
      ],
      "marker": "interchange"
     },
@@ -16873,10 +16873,10 @@
       -101
      ],
      "name": "Hammersmith",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.414213562373095,
+      -1.414213562373095
      ],
      "marker": "interchange"
     },
@@ -16900,8 +16900,8 @@
      "name": "TurnhamGreen",
      "labelPos": "N",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      0.5428932188134525
+      1.2928932188134525,
+      1.7928932188134525
      ],
      "marker": "interchange"
     },
@@ -16929,10 +16929,10 @@
       -66
      ],
      "name": "ActonTown",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -1.0,
-      0.0
+      -2.767766952966369,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     }
@@ -16954,10 +16954,10 @@
       -96
      ],
      "name": "HattonCross",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      1.9571067811865475
+      0.17677669529663687,
+      -0.17677669529663687
      ]
     },
     {
@@ -16980,7 +16980,7 @@
      "name": "HeathrowTerminal4",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -17003,10 +17003,10 @@
       -96
      ],
      "name": "HattonCross",
-     "labelPos": "N",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      1.9571067811865475
+      0.17677669529663687,
+      -0.17677669529663687
      ]
     },
     {
@@ -17029,8 +17029,8 @@
      "name": "HeathrowTerminals23",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      -0.3535533905932736,
+      -3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -17079,7 +17079,7 @@
      "name": "HeathrowTerminal4",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -17104,8 +17104,8 @@
      "name": "HeathrowTerminals23",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      -0.3535533905932736,
+      -3.1819805153394634
      ],
      "marker": "interchange"
     }
@@ -17127,9 +17127,9 @@
       -24
      ],
      "name": "BarkingRiverside",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       0.0
      ]
     },
@@ -17151,10 +17151,10 @@
       6
      ],
      "name": "Barking",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      -0.7071067811865475,
-      -0.7071067811865475
+      0.7071067811865475,
+      -2.1213203435596424
      ],
      "marker": "interchange"
     },
@@ -17176,10 +17176,10 @@
       23
      ],
      "name": "WoodgrangePark",
-     "labelPos": "S",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      1.414213562373095,
+      -1.414213562373095
      ]
     },
     {
@@ -17226,7 +17226,7 @@
      "name": "LeytonstoneHighRoad",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ]
     },
@@ -17250,7 +17250,7 @@
      "name": "LeytonMidlandRoad",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       -0.0
      ]
     },
@@ -17274,8 +17274,8 @@
      "name": "WalthamstowQueensRoad",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      -0.8838834764831843
+      -2.2980970388562794,
+      0.5303300858899107
      ]
     },
     {
@@ -17298,8 +17298,8 @@
      "name": "BlackhorseRoad",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      -0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -17311,8 +17311,8 @@
      "name": "SouthTottenham",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -17335,8 +17335,8 @@
      "name": "HarringayGreenLanes",
      "labelPos": "NE",
      "labelShiftCoords": [
-      0.8838834764831843,
-      0.8838834764831843
+      1.7677669529663687,
+      1.7677669529663687
      ]
     },
     {
@@ -17366,7 +17366,7 @@
      "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -17390,7 +17390,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      0.0
      ]
     },
     {
@@ -17414,8 +17414,8 @@
      "hide": true,
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
-      0.0
+      0.0,
+      2.0
      ],
      "marker": "interchange"
     }
@@ -17437,10 +17437,10 @@
       93
      ],
      "name": "WalthamstowCentral",
-     "labelPos": "NE",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.3535533905932736,
+      -3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -17464,8 +17464,8 @@
      "name": "BlackhorseRoad",
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
-      -0.0
+      -0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -17487,7 +17487,7 @@
       115
      ],
      "name": "TottenhamHale",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -17513,8 +17513,8 @@
      "name": "SevenSisters",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -17538,7 +17538,7 @@
      "name": "FinsburyPark",
      "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
+      -1.25,
       1.0
      ],
      "marker": "interchange"
@@ -17569,8 +17569,8 @@
      "name": "HighburyIslington",
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
-      0.0
+      2.5,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -17601,8 +17601,8 @@
      "hide": true,
      "labelPos": "N",
      "labelShiftCoords": [
-      0.0,
-      2.5
+      -2.0,
+      3.75
      ],
      "marker": "interchange"
     },
@@ -17627,8 +17627,8 @@
      "hide": true,
      "labelPos": "SE",
      "labelShiftCoords": [
-      2.474873734152916,
-      -1.0606601717798212
+      3.3587572106361003,
+      -1.9445436482630054
      ],
      "marker": "interchange"
     },
@@ -17652,8 +17652,8 @@
      "name": "WarrenStreet",
      "labelPos": "NW",
      "labelShiftCoords": [
-      -0.17677669529663687,
-      0.17677669529663687
+      -1.0606601717798212,
+      1.0606601717798212
      ],
      "marker": "interchange"
     },
@@ -17677,8 +17677,8 @@
      "name": "OxfordCircus",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -17702,7 +17702,7 @@
      "name": "GreenPark",
      "labelPos": "W",
      "labelShiftCoords": [
-      -0.0,
+      -1.25,
       0.0
      ],
      "marker": "interchange"
@@ -17727,8 +17727,8 @@
      "name": "Victoria",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      -2.0
      ],
      "marker": "interchange"
     },
@@ -17750,7 +17750,7 @@
       -129
      ],
      "name": "Pimlico",
-     "labelPos": "N",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -17774,7 +17774,7 @@
       -132
      ],
      "name": "Vauxhall",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -17804,7 +17804,7 @@
       -150
      ],
      "name": "Stockwell",
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
       0.0,
       -1.0
@@ -17835,7 +17835,7 @@
       -160
      ],
      "name": "Brixton",
-     "labelPos": "E",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -17859,10 +17859,10 @@
       -68
      ],
      "name": "Bank",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -1.7677669529663687,
+      1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -17887,7 +17887,7 @@
      "hide": true,
      "labelPos": "SW",
      "labelShiftCoords": [
-      -0.0,
+      0.0,
       0.0
      ],
      "marker": "interchange"
@@ -17910,7 +17910,7 @@
       234
      ],
      "name": "Cheshunt",
-     "labelPos": "E",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -17934,7 +17934,7 @@
       227
      ],
      "name": "TheobaldsGrove",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -17960,8 +17960,8 @@
      "name": "TurkeyStreet",
      "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      -0.0
+      0.8838834764831843,
+      -0.8838834764831843
      ]
     },
     {
@@ -17988,7 +17988,7 @@
       190
      ],
      "name": "Southbury",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -18018,10 +18018,10 @@
       166
      ],
      "name": "EdmontonGreen",
-     "labelPos": "W",
+     "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     }
    ]
@@ -18066,7 +18066,7 @@
       128
      ],
      "name": "HighamsPark",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -18092,8 +18092,8 @@
      "name": "WoodStreet",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.25,
+      2.0
      ]
     },
     {
@@ -18132,10 +18132,10 @@
       93
      ],
      "name": "WalthamstowCentral",
-     "labelPos": "NE",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      0.3535533905932736,
+      -3.1819805153394634
      ],
      "marker": "interchange"
     },
@@ -18151,10 +18151,10 @@
       94
      ],
      "name": "StJamesStreet",
-     "labelPos": "NW",
+     "labelPos": "N",
      "labelShiftCoords": [
-      -0.8838834764831843,
-      0.8838834764831843
+      2.0,
+      1.25
      ]
     },
     {
@@ -18175,7 +18175,7 @@
       63
      ],
      "name": "Clapton",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -18223,10 +18223,10 @@
       166
      ],
      "name": "EdmontonGreen",
-     "labelPos": "W",
+     "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -18247,7 +18247,7 @@
       156
      ],
      "name": "SilverStreet",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -18259,7 +18259,7 @@
       144
      ],
      "name": "WhiteHartLane",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -18286,7 +18286,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -18309,8 +18309,8 @@
      "name": "SevenSisters",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -18335,7 +18335,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -18356,7 +18356,7 @@
       76
      ],
      "name": "StokeNewington",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -18383,7 +18383,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     },
     {
@@ -18452,7 +18452,7 @@
       186
      ],
      "name": "BushHillPark",
-     "labelPos": "E",
+     "labelPos": "W",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -18476,10 +18476,10 @@
       166
      ],
      "name": "EdmontonGreen",
-     "labelPos": "W",
+     "labelPos": "E",
      "labelShiftCoords": [
       0.0,
-      0.0
+      -2.0
      ]
     }
    ]
@@ -18526,8 +18526,8 @@
      "name": "LondonFields",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ]
     },
     {
@@ -18538,7 +18538,7 @@
      "name": "CambridgeHeath",
      "labelPos": "E",
      "labelShiftCoords": [
-      0.0,
+      1.25,
       0.0
      ]
     },
@@ -18560,10 +18560,10 @@
       -32
      ],
      "name": "BethnalGreen_910GBTHNLGR",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      -1.25,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ]
     },
     {
@@ -18586,8 +18586,8 @@
      "name": "LiverpoolStreet",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
-      -2.5
+      -2.0,
+      -3.75
      ],
      "marker": "interchange"
     }
@@ -18612,7 +18612,7 @@
      "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      0.0
      ],
      "marker": "interchange"
     },
@@ -18658,10 +18658,10 @@
       -159
      ],
      "name": "ClaphamHighStreet",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
-      0.7071067811865475,
-      0.7071067811865475
+      -0.5303300858899105,
+      -3.3587572106361
      ]
     },
     {
@@ -18688,7 +18688,7 @@
       -148
      ],
      "name": "DenmarkHill",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
       -0.7071067811865475,
       0.7071067811865475
@@ -18712,9 +18712,9 @@
       -140
      ],
      "name": "PeckhamRye",
-     "labelPos": "N",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       1.0
      ]
     },
@@ -18739,7 +18739,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.7071067811865475,
-      0.7071067811865475
+      2.7071067811865475
      ]
     },
     {
@@ -18762,7 +18762,7 @@
      "name": "SurreyQuays",
      "labelPos": "W",
      "labelShiftCoords": [
-      -1.0,
+      -2.25,
       0.0
      ]
     }
@@ -18784,7 +18784,7 @@
       -200
      ],
      "name": "CrystalPalace",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
       -0.7071067811865475,
       0.7071067811865475
@@ -18858,7 +18858,7 @@
      "name": "SurreyQuays",
      "labelPos": "W",
      "labelShiftCoords": [
-      -1.0,
+      -2.25,
       0.0
      ]
     }
@@ -18882,7 +18882,7 @@
      "name": "SurreyQuays",
      "labelPos": "W",
      "labelShiftCoords": [
-      -1.0,
+      -2.25,
       0.0
      ]
     },
@@ -18918,8 +18918,8 @@
      "name": "CanadaWater",
      "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.8838834764831843,
+      0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -18935,10 +18935,10 @@
       -81
      ],
      "name": "Rotherhithe",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      -1.0,
-      0.0
+      -2.767766952966369,
+      1.7677669529663687
      ]
     },
     {
@@ -18959,9 +18959,9 @@
       -75
      ],
      "name": "Wapping",
-     "labelPos": "W",
+     "labelPos": "E",
      "labelShiftCoords": [
-      -0.7071067811865475,
+      3.0428932188134525,
       -0.7071067811865475
      ]
     },
@@ -18990,10 +18990,10 @@
      ],
      "name": "Shadwell",
      "hide": true,
-     "labelPos": "E",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      1.7677669529663687,
+      -1.7677669529663687
      ],
      "marker": "interchange"
     },
@@ -19024,7 +19024,7 @@
      "hide": true,
      "labelPos": "E",
      "labelShiftCoords": [
-      0.7071067811865475,
+      4.457106781186548,
       -0.7071067811865475
      ],
      "marker": "interchange"
@@ -19049,7 +19049,7 @@
      "name": "ShoreditchHighStreet",
      "labelPos": "S",
      "labelShiftCoords": [
-      0.0,
+      -2.0,
       -1.0
      ]
     },
@@ -19077,9 +19077,9 @@
       -14
      ],
      "name": "Hoxton",
-     "labelPos": "N",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      0.0,
+      -0.0,
       1.0
      ]
     },
@@ -19113,10 +19113,10 @@
       7
      ],
      "name": "Haggerston",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
-      -0.0,
-      -1.0
+      -1.414213562373095,
+      -2.414213562373095
      ]
     },
     {
@@ -19131,7 +19131,7 @@
       28
      ],
      "name": "DalstonJunction",
-     "labelPos": "W",
+     "labelPos": "SW",
      "labelShiftCoords": [
       -1.0,
       0.0
@@ -19159,7 +19159,7 @@
      "labelPos": "N",
      "labelShiftCoords": [
       0.0,
-      1.25
+      2.5
      ],
      "marker": "interchange"
     },
@@ -19184,8 +19184,8 @@
      "hide": true,
      "labelPos": "E",
      "labelShiftCoords": [
-      1.25,
-      0.0
+      2.5,
+      -2.0
      ],
      "marker": "interchange"
     }
@@ -19329,7 +19329,7 @@
      "name": "SurreyQuays",
      "labelPos": "W",
      "labelShiftCoords": [
-      -1.0,
+      -2.25,
       0.0
      ]
     }
@@ -19375,7 +19375,7 @@
       -218
      ],
      "name": "NorwoodJunction",
-     "labelPos": "W",
+     "labelPos": "NW",
      "labelShiftCoords": [
       -0.7071067811865475,
       0.7071067811865475

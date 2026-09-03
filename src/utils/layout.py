@@ -14,6 +14,7 @@ geometry mistake into a build error naming the offending pair of coordinates
 rather than an exception in the browser.
 """
 
+import collections
 import itertools
 import math
 
@@ -44,8 +45,22 @@ LABEL_CHAR_WIDTH = 0.9
 LABEL_LINE_HEIGHT = 1.7
 LABEL_OFFSET = 1.5
 
+# The library anchors text differently on each of the eight sides, and the box
+# worked out here is close to that rather than exactly it. Padding the box
+# absorbs the difference, so a label that is modelled as clear really is clear.
+LABEL_PADDING = 0.8
+
 # How far out to try pushing a label when the space beside its station is busy.
 LABEL_OFFSETS = (1.5, 2.5, 3.5, 4.5)
+
+# And how far to slide it sideways, which is what frees up a label boxed in by a
+# line running the same way it wants to sit.
+LABEL_NUDGES = (0.0, 1.6, -1.6)
+
+# Placing every label in one greedy sweep leaves whoever went last with the
+# scraps. A few passes of re-placing the worst offenders against everything else
+# clears up most of what the first sweep gets wrong.
+LABEL_PASSES = 3
 
 # Tie-break only. Sideways reads most naturally next to a station, and the
 # diagonals are the untidiest, so they go last.
@@ -375,26 +390,24 @@ def cells(nodes: list[dict], shift_normal: float = 0.0):
                    round(y + (to_y - y) * step / steps + across[1]))
 
 
-def label_shift(direction: tuple, offset: float, dir_name: str,
-                shift_normal: float) -> list[float]:
+def label_shift(extra: tuple, dir_name: str, shift_normal: float) -> list[float]:
     """The labelShiftCoords that put a label exactly where it was placed.
 
     drawLabels adds `labelShiftNormal` along the station's own normal before it
     applies textPos, so that term is cancelled here and the wanted displacement
-    put in its place. Without the cancellation a label on a line drawn alongside
-    its coordinates lands a couple of cells from where it was scored.
+    put in its place. Without the cancellation a label belonging to a line drawn
+    alongside its coordinates lands a couple of cells from where it was scored.
     """
     tangent = COMPASS[dir_name]
     length = math.hypot(*tangent)
     tangent = (tangent[0] / length, tangent[1] / length)
 
-    extra = offset - LABEL_OFFSET
-    towards = math.hypot(*direction)
-    return [extra * direction[0] / towards / LINE_WIDTH_MULTIPLIER - shift_normal * tangent[1],
-            extra * direction[1] / towards / LINE_WIDTH_MULTIPLIER + shift_normal * tangent[0]]
+    return [extra[0] / LINE_WIDTH_MULTIPLIER - shift_normal * tangent[1],
+            extra[1] / LINE_WIDTH_MULTIPLIER + shift_normal * tangent[0]]
 
 
-def label_box(cell: tuple, direction: tuple, text: str, offset: float = None) -> tuple:
+def label_box(cell: tuple, direction: tuple, text: str, extra: tuple = (0.0, 0.0),
+              padding: float = LABEL_PADDING) -> tuple:
     """Return the rectangle a label would occupy, in grid units.
 
     The sizes are measured off the rendered page rather than guessed: the library
@@ -405,11 +418,11 @@ def label_box(cell: tuple, direction: tuple, text: str, offset: float = None) ->
     width = max(len(row) for row in rows) * LABEL_CHAR_WIDTH
     height = len(rows) * LABEL_LINE_HEIGHT
 
-    offset = LABEL_OFFSET if offset is None else offset
     length = math.hypot(*direction)
-    x = cell[0] + direction[0] / length * (offset + width / 2)
-    y = cell[1] + direction[1] / length * (offset + height / 2)
-    return (x - width / 2, y - height / 2, x + width / 2, y + height / 2)
+    x = cell[0] + direction[0] / length * (LABEL_OFFSET + width / 2) + extra[0]
+    y = cell[1] + direction[1] / length * (LABEL_OFFSET + height / 2) + extra[1]
+    return (x - width / 2 - padding, y - height / 2 - padding,
+            x + width / 2 + padding, y + height / 2 + padding)
 
 
 def box_cells(box: tuple) -> list:
@@ -420,45 +433,64 @@ def box_cells(box: tuple) -> list:
             for y in range(math.floor(y0), math.ceil(y1))]
 
 
-def label_positions(stations: dict[str, tuple], occupied: set) -> dict[str, str]:
-    """Choose which side of each station its name sits on.
+def label_choices(cell: tuple, text: str):
+    """Every place a label could go: eight sides, pushed out and slid sideways."""
+    for side, direction in COMPASS.items():
+        length = math.hypot(*direction)
+        along = (direction[0] / length, direction[1] / length)
+        across = (-along[1], along[0])
+
+        for offset, nudge in itertools.product(LABEL_OFFSETS, LABEL_NUDGES):
+            reach = offset - LABEL_OFFSET
+            extra = (reach * along[0] + nudge * across[0],
+                     reach * along[1] + nudge * across[1])
+            yield side, extra, reach, nudge, box_cells(label_box(cell, direction, text, extra))
+
+
+def label_positions(stations: dict[str, tuple], occupied: set) -> dict[str, tuple]:
+    """Decide where each station's name sits, as (side, displacement).
 
     `stations` maps each station to its cell and the text that will be drawn, so
     a long name is known to need more room than a short one. A label is scored on
-    what its rectangle would cover: the lines of the map, and the labels already
-    placed. Overlapping another label is weighted worse than crossing a line -
-    two names on top of each other are unreadable, whereas a name over a line is
-    merely untidy.
+    what its rectangle would cover: the lines of the map, and the other labels.
+    Landing on another label is weighted worse than crossing a line - two names
+    on top of each other are unreadable, whereas a name over a line is untidy.
 
-    Crowded stations choose first. A station hemmed in by track has only one or
-    two places its name can go, so letting it pick before its roomier neighbours
-    spend the space is what makes the difference in the middle of the map.
+    Crowded stations choose first, because a station hemmed in by track has only
+    one or two places its name can go, and its roomier neighbours have plenty.
+    Then the worst-placed labels are re-placed a few times over, which is what
+    fixes the ones that only had bad options left when their turn came.
     """
     def crowding(cell):
         return sum(1 for c in box_cells((cell[0] - 7, cell[1] - 7, cell[0] + 7, cell[1] + 7))
                    if c in occupied)
 
-    taken = set()
-    positions = {}
+    taken = collections.Counter()
 
-    for uid in sorted(stations, key=lambda u: (-crowding(stations[u][0]), u)):
+    def cost(side, reach, nudge, cells):
+        # Reaching and sliding both buy room, but a label that wanders stops
+        # obviously belonging to its station, so they are charged for.
+        return (3 * sum(taken[c] for c in cells)
+                + sum(c in occupied for c in cells)
+                + 1.2 * reach + 0.6 * abs(nudge)
+                + LABEL_PREFERENCE.index(side) / 100)
+
+    def best(uid):
         cell, text = stations[uid]
+        return min(label_choices(cell, text),
+                   key=lambda choice: cost(choice[0], choice[2], choice[3], choice[4]))
 
-        best, best_cost, best_cells = None, None, None
-        for name, direction in COMPASS.items():
-            for offset in LABEL_OFFSETS:
-                cells = box_cells(label_box(cell, direction, text, offset))
-                # Pushing a label away from its station buys room, but too far
-                # and it stops obviously belonging to the station, so distance
-                # is charged for rather than free.
-                cost = (3 * sum(c in taken for c in cells)
-                        + sum(c in occupied for c in cells)
-                        + 1.2 * (offset - LABEL_OFFSET)
-                        + LABEL_PREFERENCE.index(name) / 100)
-                if best_cost is None or cost < best_cost:
-                    best, best_cost, best_cells = (name, offset), cost, cells
+    placed = {}
+    for uid in sorted(stations, key=lambda u: (-crowding(stations[u][0]), u)):
+        placed[uid] = best(uid)
+        taken.update(placed[uid][4])
 
-        positions[uid] = best
-        taken |= set(best_cells)
+    for _ in range(LABEL_PASSES):
+        worst = sorted(placed, key=lambda u: -cost(placed[u][0], placed[u][2],
+                                                   placed[u][3], placed[u][4]))
+        for uid in worst:
+            taken.subtract(placed[uid][4])      # ignore where it currently is
+            placed[uid] = best(uid)
+            taken.update(placed[uid][4])
 
-    return positions
+    return {uid: (choice[0], choice[1]) for uid, choice in placed.items()}

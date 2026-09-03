@@ -7,7 +7,9 @@ src/web/map.json.
 """
 
 import collections
+import itertools
 import json
+import math
 import re
 import sqlite3
 import textwrap
@@ -201,11 +203,10 @@ def build(conn: sqlite3.Connection, scale: float = SCALE) -> dict:
             if not key:
                 continue
             uid = by_key[key]
-            side, offset = label_at[uid]
+            side, extra = label_at[uid]
             direction, shift = anchor[key]
             node["labelPos"] = side
-            node["labelShiftCoords"] = layout.label_shift(
-                layout.COMPASS[side], offset, direction, shift)
+            node["labelShiftCoords"] = layout.label_shift(extra, direction, shift)
             if stations[uid]["n_lines"] > 1:
                 node["marker"] = "interchange"
 
@@ -232,6 +233,59 @@ def build(conn: sqlite3.Connection, scale: float = SCALE) -> dict:
     return built
 
 
+def label_report(built: dict) -> dict[str, int]:
+    """Count the labels the finished map draws close to a line, or over each other.
+
+    Read back off the built map rather than out of the placement, so it reports
+    what will be drawn rather than what the placer was aiming for. The overlap
+    count is exact. The line count is deliberately pessimistic - a line is
+    treated as filling every cell it crosses, where the ink is thinner than that
+    - so it reads high against the rendered page, and is worth watching as a
+    number that should go down rather than as a tally of visible collisions.
+    """
+    occupied, anchor = set(), {}
+    for line in built["lines"]:
+        occupied |= set(layout.cells(line["nodes"], line["shiftNormal"]))
+        for node, direction in zip(line["nodes"], layout.directions(line["nodes"])):
+            if node.get("name") and node["name"] not in anchor:
+                anchor[node["name"]] = (direction, line["shiftNormal"])
+
+    boxes = {}
+    for line in built["lines"]:
+        for node in line["nodes"]:
+            key = node.get("name")
+            if not key or key in boxes:
+                continue
+            direction, shift = anchor[key]
+            tangent = layout.COMPASS[direction]
+            length = math.hypot(*tangent)
+            shift_x, shift_y = node["labelShiftCoords"]
+            extra = ((shift_x + shift * tangent[1] / length) * layout.LINE_WIDTH_MULTIPLIER,
+                     (shift_y - shift * tangent[0] / length) * layout.LINE_WIDTH_MULTIPLIER)
+            # Measured without the placement padding, so this reports the text
+            # as it is actually drawn rather than the margin kept around it.
+            boxes[key] = layout.label_box(tuple(node["coords"]),
+                                          layout.COMPASS[node["labelPos"]],
+                                          built["stations"][key]["label"], extra, padding=0.0)
+
+    over_lines = sum(any(c in occupied for c in layout.box_cells(box))
+                     for box in boxes.values())
+
+    covering = collections.defaultdict(list)
+    for key, box in boxes.items():
+        for cell in layout.box_cells(box):
+            covering[cell].append(key)
+
+    clashes = set()
+    for keys in covering.values():
+        for a, b in itertools.combinations(sorted(set(keys)), 2):
+            if not (boxes[a][2] <= boxes[b][0] or boxes[b][2] <= boxes[a][0]
+                    or boxes[a][3] <= boxes[b][1] or boxes[b][3] <= boxes[a][1]):
+                clashes.add((a, b))
+
+    return {"close to a line": over_lines, "overlapping": len(clashes)}
+
+
 def export(conn: sqlite3.Connection, path: Path = MAP_PATH, scale: float = SCALE) -> dict:
     """Write the map out for the web page, and report what went into it."""
     built = build(conn, scale)
@@ -250,10 +304,13 @@ def export(conn: sqlite3.Connection, path: Path = MAP_PATH, scale: float = SCALE
         raise ValueError("some stations were never drawn on a line")
 
     cells = [node["coords"] for line in built["lines"] for node in line["nodes"]]
+    labels = label_report(built)
+
     return {
         "stations": len(built["stations"]),
         "paths": len(built["lines"]),
         "nodes": sum(len(line["nodes"]) for line in built["lines"]),
+        "labels": f'{labels["overlapping"]} overlapping, {labels["close to a line"]} close to a line',
         "grid": (max(c[0] for c in cells) - min(c[0] for c in cells),
                  max(c[1] for c in cells) - min(c[1] for c in cells)),
         "path": str(path),

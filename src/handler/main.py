@@ -13,11 +13,11 @@ also what you run after cloning the repo.
 import shutil
 from pathlib import Path
 
-from utils import db, mapdata
-from utils.sources import tfl, tfl_network
+from utils import db, mapdata, plaque_stations
+from utils.sources import plaques, tfl, tfl_network
 
 # Every source exposes SOURCE and load(conn). Add new ones here.
-SOURCES = [tfl, tfl_network]
+SOURCES = [tfl, tfl_network, plaques]
 
 
 def build(db_path=db.DB_PATH) -> None:
@@ -32,6 +32,10 @@ def build(db_path=db.DB_PATH) -> None:
         print("\nviews:")
         for name in db.apply_sql(conn):
             print(f"  {name}")
+
+        print("\nplaques:")
+        for field, value in plaque_stations.build(conn).items():
+            print(f"  {field:16} {value}")
 
         print("\nmap:")
         for field, value in mapdata.export(conn).items():

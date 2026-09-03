@@ -38,21 +38,23 @@
         .height(window.innerHeight)
         .margin({ top: 40, right: 40, bottom: 40, left: 40 });
 
-      var svg, root, data, names = {}, themes = null, showing = null;
+      var svg, root, data, names = {}, themes = null, showing = null, initialViewApplied = false;
+      var initialBounds = {
+        left: 'ShepherdsBush',
+        right: 'CanadaWater',
+        south: 'SouthWimbledon',
+        north: 'StJohnsWood',
+        center: 'GreenPark'
+      };
 
       var zoom = d3.zoom().on('zoom', function (event) {
-        root.attr('transform', event.transform.toString());
+        if (root) root.attr('transform', event.transform.toString());
       });
 
-      // Fit the drawing to the window rather than picking a scale by hand.
-      // getBBox measures what was actually drawn - labels included, which
-      // stick out well past the lines - and it ignores the group's own
-      // transform, so it stays correct however far the map has been zoomed.
-      function fit() {
+      function fitBox(box) {
         var width = window.innerWidth;
         var height = window.innerHeight;
-        var box = root.node().getBBox();
-        if (!box.width || !box.height) return;
+        if (!box || !box.width || !box.height) return;
 
         // Fill the window rather than fitting inside it: take the larger of
         // the two ratios, so whichever axis has the most room to spare is the
@@ -73,6 +75,55 @@
         );
       }
 
+      // Fit the drawing to the window rather than picking a scale by hand.
+      // getBBox measures what was actually drawn - labels included, which
+      // stick out well past the lines - and it ignores the group's own
+      // transform, so it stays correct however far the map has been zoomed.
+      function fit() {
+        if (!root || !root.node()) return;
+        fitBox(root.node().getBBox());
+      }
+
+      function fitToBounds(bounds) {
+        if (!root || !root.node() || !data || !data.stations) return false;
+
+        var keys = [bounds.left, bounds.right, bounds.north, bounds.south, bounds.center];
+        var boxes = [];
+
+        keys.forEach(function (key) {
+          if (!key || !data.stations[key]) return;
+          var node = root.select('#' + key).node();
+          if (!node) return;
+
+          var box = node.getBBox();
+          if (box && box.width && box.height) boxes.push(box);
+        });
+
+        if (!boxes.length) return false;
+
+        var xMin = d3.min(boxes, function (box) { return box.x; });
+        var xMax = d3.max(boxes, function (box) { return box.x + box.width; });
+        var yMin = d3.min(boxes, function (box) { return box.y; });
+        var yMax = d3.max(boxes, function (box) { return box.y + box.height; });
+
+        var greenBox = root.select('#' + bounds.center).node();
+        var green = greenBox ? greenBox.getBBox() : null;
+        var centerX = green ? green.x + green.width / 2 : (xMin + xMax) / 2;
+        var centerY = green ? green.y + green.height / 2 : (yMin + yMax) / 2;
+        var boxWidth = xMax - xMin;
+        var boxHeight = yMax - yMin;
+        var padX = Math.max(boxWidth * 0.55, 140);
+        var padY = Math.max(boxHeight * 0.55, 120);
+
+        fitBox({
+          x: centerX - (boxWidth / 2 + padX),
+          y: centerY - (boxHeight / 2 + padY),
+          width: boxWidth + padX * 2,
+          height: boxHeight + padY * 2
+        });
+        return true;
+      }
+
       // The library draws its labels once, into nested tspans, so changing the
       // names means drawing the map again. The view is put back afterwards, so
       // switching category leaves you looking at the same place.
@@ -86,7 +137,11 @@
         svg.call(zoom);
 
         if (was && keepView) svg.call(zoom.transform, was);
-        else fit();
+        else if (!initialViewApplied && fitToBounds(initialBounds)) {
+          initialViewApplied = true;
+        } else {
+          fit();
+        }
 
         // Fade the stations this theme has nobody for, so what it covers reads
         // at a glance rather than having to be picked out of the real names.

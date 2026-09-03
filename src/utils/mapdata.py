@@ -107,7 +107,22 @@ def read(conn: sqlite3.Connection) -> tuple[dict, dict, dict]:
         if not path or path[-1] != uid:      # the two halves of an interchange
             path.append(uid)
 
-    return stations, lines, {k: v for k, v in branches.items() if len(v) > 1}
+    # The API describes routes, not track, so one stretch can arrive under two
+    # branch ids - the Elizabeth reaches Paddington on two platforms and calls
+    # the result two branches over the same pair of stations. Drawn, they are
+    # one polyline on top of another: no wider, just twice the ink and twice the
+    # markers. Direction is not meaningful here either, so a branch that is
+    # another read backwards counts as the same one.
+    seen, kept = set(), {}
+    for (line_id, branch), path in branches.items():
+        if len(path) < 2:
+            continue
+        shape = (line_id, min(tuple(path), tuple(reversed(path))))
+        if shape not in seen:
+            seen.add(shape)
+            kept[(line_id, branch)] = path
+
+    return stations, lines, kept
 
 
 def travel_axis(before: dict, after: dict) -> tuple[int, int]:

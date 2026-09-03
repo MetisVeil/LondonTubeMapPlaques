@@ -1,4 +1,221 @@
 {
-  "stations": {},
+  "stations": {
+    "ClaphamCommon": {
+      "coords": [
+        12,
+        -167
+      ]
+    },
+    "ClaphamSouth": {
+      "coords": [
+        4,
+        -175
+      ]
+    },
+    "Balham": {
+      "coords": [
+        -4,
+        -183
+      ]
+    },
+    "TootingBec": {
+      "coords": [
+        -12,
+        -191
+      ]
+    },
+    "TootingBroadway": {
+      "coords": [
+        -20,
+        -199
+      ]
+    },
+    "ColliersWood": {
+      "coords": [
+        -28,
+        -207
+      ]
+    },
+    "SouthWimbledon": {
+      "coords": [
+        -36,
+        -215
+      ]
+    },
+    "Morden": {
+      "coords": [
+        -44,
+        -223
+      ]
+    },
+    "FulhamBroadway": {
+      "coords": [
+        -77,
+        -133
+      ]
+    },
+    "ParsonsGreen": {
+      "coords": [
+        -77,
+        -144
+      ]
+    },
+    "PutneyBridge": {
+      "coords": [
+        -77,
+        -155
+      ]
+    },
+    "EastPutney": {
+      "coords": [
+        -77,
+        -166
+      ]
+    },
+    "Southfields": {
+      "coords": [
+        -77,
+        -177
+      ]
+    },
+    "WimbledonPark": {
+      "coords": [
+        -77,
+        -188
+      ]
+    },
+    "Wimbledon": {
+      "coords": [
+        -77,
+        -199
+      ]
+    },
+    "HounslowEast": {
+      "coords": [
+        -215,
+        -92
+      ]
+    },
+    "HounslowCentral": {
+      "coords": [
+        -223,
+        -92
+      ]
+    },
+    "HounslowWest": {
+      "coords": [
+        -231,
+        -92
+      ]
+    },
+    "WestRuislip": {
+      "coords": [
+        -248,
+        41
+      ]
+    },
+    "Loughton": {
+      "coords": [
+        194,
+        147
+      ]
+    },
+    "BuckhurstHill": {
+      "coords": [
+        186,
+        139
+      ]
+    },
+    "Wanstead": {
+      "coords": [
+        191,
+        68
+      ]
+    },
+    "SouthWoodford": {
+      "coords": [
+        184,
+        96
+      ]
+    },
+    "Snaresbrook": {
+      "coords": [
+        184,
+        80
+      ]
+    },
+    "WestBrompton": {
+      "coords": [
+        -77,
+        -122
+      ]
+    },
+    "RoyalVictoria": {
+      "coords": [
+        189,
+        -50
+      ]
+    },
+    "CustomHouseForExcel": {
+      "coords": [
+        196,
+        -50
+      ]
+    },
+    "PrinceRegent": {
+      "coords": [
+        203,
+        -50
+      ]
+    },
+    "RoyalAlbert": {
+      "coords": [
+        210,
+        -50
+      ]
+    },
+    "BecktonPark": {
+      "coords": [
+        217,
+        -50
+      ]
+    },
+    "Cyprus": {
+      "coords": [
+        224,
+        -50
+      ]
+    },
+    "GallionsReach": {
+      "coords": [
+        231,
+        -50
+      ]
+    },
+    "Beckton": {
+      "coords": [
+        238,
+        -50
+      ]
+    },
+    "Woolwich": {
+      "coords": [
+        213,
+        -64
+      ]
+    },
+    "AbbeyWood": {
+      "coords": [
+        235,
+        -64
+      ]
+    },
+    "StratfordInternational": {
+      "coords": [
+        170,
+        20
+      ]
+    }
+  },
   "lines": {}
 }

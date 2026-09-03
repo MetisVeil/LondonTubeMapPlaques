@@ -43,12 +43,17 @@ LABEL_WIDTH = 11
 OFFSETS = [0, 1, -1]
 
 # What an offset is worth paying. Landing on another line is the thing being
-# fixed; looking like you stop at a station you run past is nearly as bad;
-# tearing a line open at a junction is worse than either, since a gap reads as
-# the line ending. All else equal a line belongs on its own coordinates.
+# fixed; looking like you stop at a station you run past is nearly as bad; and
+# all else equal a line belongs on its own coordinates.
 PHANTOM_COST = 5
-BREAK_COST = 2
 DRIFT_COST = 1
+
+# How far a line may be torn open at its own junctions, in grid cells. This is
+# a limit rather than a price: a gap reads as the line ending, which no amount
+# of overlap saved elsewhere makes up for. Lines whose branches leave on very
+# different bearings - the Central at Woodford, the Elizabeth at Whitechapel -
+# cannot be offset at all without tearing, and are held on the centre line.
+MAX_BREAK = 1.2
 
 
 def station_key(name: str) -> str:
@@ -142,8 +147,8 @@ def phantom_stops(branches: list, shift: float, stations: dict, served: set) -> 
                if cell in beside and key not in served)
 
 
-def junction_breaks(branches: list, shift: float) -> float:
-    """How far a line is torn apart at its own junctions by being offset.
+def worst_junction_break(branches: list, shift: float) -> float:
+    """The widest gap a line is torn open by at its own junctions.
 
     shiftNormal moves each segment along its *own* normal, so where two branches
     of one line meet at a station on different bearings their shifted ends no
@@ -165,8 +170,8 @@ def junction_breaks(branches: list, shift: float) -> float:
                         node["coords"][0] + layout.LINE_WIDTH_MULTIPLIER * shift * (to_y - y) / length,
                         node["coords"][1] - layout.LINE_WIDTH_MULTIPLIER * shift * (to_x - x) / length))
 
-    return sum(max(math.dist(a, b) for a in points for b in points)
-               for points in drawn.values() if len(points) > 1)
+    return max((max(math.dist(a, b) for a in points for b in points)
+                for points in drawn.values() if len(points) > 1), default=0.0)
 
 
 def side_by_side(routed: dict, stations: dict, rounds: int = 6) -> dict[str, int]:
@@ -182,21 +187,27 @@ def side_by_side(routed: dict, stations: dict, rounds: int = 6) -> dict[str, int
     stations it would appear to stop at, plus how far it has strayed. Offsets are
     revisited a few times because the cheapest place for an early line depends on
     where the later ones end up, and one pass cannot know that.
+
+    An offset that would tear a line open at one of its own junctions is not
+    scored at all but withheld, so the branchiest lines - the Central, the
+    District, the Elizabeth - stay on the centre line and the ones with room to
+    move are the ones that move.
     """
     branches, served = collections.defaultdict(list), collections.defaultdict(set)
     for (line_id, _), nodes in routed.items():
         branches[line_id].append(nodes)
         served[line_id] |= {n["name"] for n in nodes if n.get("name")}
 
+    intact = {line_id: [shift for shift in OFFSETS
+                        if worst_junction_break(paths, shift) <= MAX_BREAK]
+              for line_id, paths in branches.items()}
     footprint = {line_id: {shift: set(itertools.chain.from_iterable(
                      drawn_lanes(nodes, shift) for nodes in paths))
-                 for shift in OFFSETS}
+                 for shift in intact[line_id]}
                  for line_id, paths in branches.items()}
     ghosts = {line_id: {shift: phantom_stops(paths, shift, stations, served[line_id])
-                        for shift in OFFSETS}
+                        for shift in intact[line_id]}
               for line_id, paths in branches.items()}
-    tears = {line_id: {shift: junction_breaks(paths, shift) for shift in OFFSETS}
-             for line_id, paths in branches.items()}
 
     # Busiest first: a line with the most drawing on the map has the least room
     # to move once everything else is down.
@@ -214,11 +225,10 @@ def side_by_side(routed: dict, stations: dict, rounds: int = 6) -> dict[str, int
             def cost(shift, line_id=line_id, taken=taken):
                 return (sum(taken[key] for key in footprint[line_id][shift])
                         + ghosts[line_id][shift] * PHANTOM_COST
-                        + tears[line_id][shift] * BREAK_COST
                         + abs(shift) * DRIFT_COST)
 
             # OFFSETS runs nearest the centre first, so a tie stays put.
-            best = min(OFFSETS, key=cost)
+            best = min(intact[line_id], key=cost)
             if best != offsets[line_id]:
                 offsets[line_id], settled = best, False
         if settled:

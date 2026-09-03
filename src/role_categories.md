@@ -12,6 +12,7 @@
 
 - Writer / Literary figure
   - writer
+  - wit
   - fictional character
   - author
   - novelist
@@ -61,6 +62,7 @@
   - Nobel Literature Laureate
   - war correspondent
   - father of Fleet Street
+  - consulting detective
   - founding father of American literature
   - inventor of time travel
   - Charlotte Cowan
@@ -129,6 +131,7 @@
   - actor
   - comedy actor
   - comic actor
+  - comic genius
   - actor-manager
   - comedian
   - entertainer
@@ -931,8 +934,6 @@
   - Indian scholar
 
 - Personality / descriptive
-  - wit
-  - comic genius
   - clown
   - aesthete
   - satirist
@@ -946,7 +947,6 @@
   - friend of all in need
   - leader of fashion
   - hero of the adelphi melodramas
-  - consulting detective
   - literary hostess
   - model
   - model maker

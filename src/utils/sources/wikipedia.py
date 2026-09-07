@@ -40,6 +40,10 @@ def _pick_image_src(image) -> str | None:
 
 def _image_from_html(html: str) -> str | None:
     soup = BeautifulSoup(html, "html.parser")
+    meta = soup.select_one('meta[property="og:image"]')
+    if meta and meta.get("content"):
+        return meta["content"]
+
     image = soup.select_one("table.infobox img") or soup.select_one(".infobox img")
     if not image:
         return None
@@ -67,11 +71,13 @@ def fetch_image(page_url: str | None) -> str | None:
 
 
 if __name__ == "__main__":
+    meta_sample = '<meta property="og:image" content="https://upload.wikimedia.org/full.jpg">'
     sample = (
         '<table class="infobox"><tr><td><a class="image" href="/wiki/Foo">'
         '<img src="//upload.wikimedia.org/a.jpg" '
         'srcset="//upload.wikimedia.org/a.jpg 1x, //upload.wikimedia.org/b.jpg 2x">'
         '</a></td></tr></table>'
     )
+    assert _image_from_html(meta_sample) == "https://upload.wikimedia.org/full.jpg"
     assert _image_from_html(sample) == "https://upload.wikimedia.org/b.jpg"
     print("ok")

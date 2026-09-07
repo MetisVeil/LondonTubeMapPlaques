@@ -333,8 +333,8 @@ def build(conn: sqlite3.Connection, scale: float = SCALE) -> dict:
             "name": f"{line_id}-{numbering[line_id]}",
             "label": lines[line_id]["name"],
             "color": lines[line_id]["colour"],
-            # Carried through so the page can draw the tube on its own: the
-            # overground is half the ink and none of the reason anyone opens it.
+            # Carried through so the page can offer the tube on its own, without
+            # having to keep its own list of which lines are the overground.
             "mode": lines[line_id]["mode"],
             "shiftCoords": [0, 0],
             "shiftNormal": shift,

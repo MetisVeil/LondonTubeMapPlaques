@@ -68,6 +68,16 @@ Then open <http://localhost:8000>. The map sizes itself to fill the window on
 load and on resize; drag to pan, scroll to zoom, click a station to see what the
 database holds for it.
 
+Options, top left, holds the two switches the drawing itself responds to:
+
+  * **Overground lines** - off to start with. Hiding the six Overground lines
+    takes the 83 stations only they call at with them, and drops the interchange
+    rings from the two dozen tube stops whose only connection was one of them.
+  * **Dark mode** - follows the machine's own setting until it is touched. The
+    paper and the ink flip; TfL's line colours mostly do not, bar the few too
+    dark to make out against a dark backdrop, and the Northern line's black,
+    which is ink rather than a colour and flips with the page.
+
 The page is plain HTML - no build step, no node_modules - and draws
 [d3-tube-map](https://github.com/johnwalley/d3-tube-map) from a CDN. Note that
 it pins d3 v6: d3-tube-map 1.5.0 will not work with v7.

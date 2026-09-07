@@ -1,3 +1,33 @@
+/* One palette, flipped by the class on the body. Only the paper and the ink
+   change here; the lines keep TfL's colours, which the page lifts where one is
+   too dark to make out. */
+:root {
+  --paper: #fff;
+  --ink: #10137e;
+  --panel: rgba(255, 255, 255, 0.94);
+  --solid: #fff;
+  --edge: #d4d7e5;
+  --muted: #6b6f85;
+  --faint: #8b8fa3;
+  --hover: #eef0fa;
+  --shadow: rgba(16, 19, 126, 0.14);
+}
+
+body.dark {
+  /* Checkboxes and scrollbars are the browser's to draw, not ours. */
+  color-scheme: dark;
+
+  --paper: #15171c;
+  --ink: #e6e9f5;
+  --panel: rgba(28, 31, 38, 0.94);
+  --solid: #1c1f26;
+  --edge: #3a3f4b;
+  --muted: #9aa1b6;
+  --faint: #848b9f;
+  --hover: #262a33;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -7,7 +37,7 @@ html, body {
 
 body {
   overflow: hidden;
-  background: #fff;
+  background: var(--paper);
 }
 
 /* The library sizes its svg at 100% of this, so it needs a real height to fill
@@ -42,9 +72,9 @@ text {
   max-width: calc(100vw - 32px);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
-  color: #10137e;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid #d4d7e5;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--edge);
   border-radius: 4px;
 }
 
@@ -56,7 +86,7 @@ text {
   display: block;
   object-fit: contain;
   border-radius: 4px;
-  background: #eef0fa;
+  background: var(--hover);
 }
 
 #selection .copy {
@@ -70,53 +100,74 @@ text {
 }
 
 #selection .hint {
-  color: #6b6f85;
+  color: var(--muted);
 }
 
-#categories {
+#categories,
+#options {
   position: fixed;
   top: 16px;
-  right: 16px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
 }
 
-#category-toggle {
+#categories {
+  right: 16px;
+}
+
+#options {
+  left: 16px;
+}
+
+#category-toggle,
+#options-toggle {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 9px 12px;
   min-width: 150px;
   font: inherit;
-  color: #10137e;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid #d4d7e5;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--edge);
   border-radius: 4px;
   cursor: pointer;
 }
 
-#category-toggle:hover {
-  border-color: #10137e;
+#category-toggle:hover,
+#options-toggle:hover {
+  border-color: var(--ink);
 }
 
-#category-toggle .triangle {
+#category-toggle .triangle,
+#options-toggle .triangle {
   margin-left: auto;
   font-size: 11px;
-  color: #6b6f85;
+  color: var(--muted);
 }
 
-#category-menu {
+#category-menu,
+#options-menu {
   position: absolute;
   top: calc(100% + 6px);
-  right: 0;
-  width: 265px;
   max-height: 70vh;
   overflow-y: auto;
   padding: 4px;
-  background: #fff;
-  border: 1px solid #d4d7e5;
+  background: var(--solid);
+  border: 1px solid var(--edge);
   border-radius: 4px;
-  box-shadow: 0 8px 24px rgba(16, 19, 126, 0.14);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+#category-menu {
+  right: 0;
+  width: 265px;
+}
+
+#options-menu {
+  left: 0;
+  min-width: 100%;
+  white-space: nowrap;
 }
 
 .category-group {
@@ -125,7 +176,7 @@ text {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #8b8fa3;
+  color: var(--faint);
 }
 
 .category-item {
@@ -136,7 +187,7 @@ text {
   padding: 7px 10px;
   font: inherit;
   text-align: left;
-  color: #10137e;
+  color: var(--ink);
   background: none;
   border: 0;
   border-radius: 3px;
@@ -144,44 +195,48 @@ text {
 }
 
 .category-item:hover {
-  background: #eef0fa;
+  background: var(--hover);
 }
 
 .category-item .count {
   margin-left: auto;
   font-size: 11px;
-  color: #8b8fa3;
+  color: var(--faint);
 }
 
 #selection .more {
   display: inline-block;
   margin-top: 6px;
-  color: #10137e;
+  color: var(--ink);
 }
 
-/* Away from the category menu, which drops down over the top right. */
-#modes {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  padding: 9px 12px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  color: #10137e;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid #d4d7e5;
-  border-radius: 4px;
-}
-
-#modes label {
+.option {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  color: var(--ink);
   cursor: pointer;
 }
 
-#modes input {
+.option:hover {
+  background: var(--hover);
+}
+
+.option input {
   margin: 0;
   cursor: pointer;
-  accent-color: #10137e;
+  accent-color: var(--ink);
+}
+
+/* The library paints these on as presentation attributes, which any rule here
+   outranks - so this is where the drawing itself learns about the theme. */
+g.labels text {
+  fill: var(--ink);
+}
+
+path.interchange {
+  fill: var(--paper);
+  stroke: var(--ink);
 }

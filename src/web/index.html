@@ -24,8 +24,18 @@
       <div id="category-menu" hidden></div>
     </div>
 
-    <div id="modes">
-      <label><input type="checkbox" id="overground-toggle" /> Overground</label>
+    <div id="options">
+      <button id="options-toggle" aria-haspopup="true" aria-expanded="false">
+        <span>Options</span><span class="triangle">&#9662;</span>
+      </button>
+      <div id="options-menu" hidden>
+        <label class="option">
+          <input type="checkbox" id="overground-toggle" /><span>Overground lines</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" id="dark-toggle" /><span>Dark mode</span>
+        </label>
+      </div>
     </div>
 
     <div id="selection"><span class="hint">Click a station</span></div>
@@ -43,8 +53,12 @@
         .margin({ top: 40, right: 40, bottom: 40, left: 40 });
 
       var svg, root, data, names = {}, themes = null, showing = null, initialViewApplied = false;
+      var options = document.getElementById('options-toggle');
+      var optionsMenu = document.getElementById('options-menu');
       var overgroundBox = document.getElementById('overground-toggle');
+      var darkBox = document.getElementById('dark-toggle');
       var overground = false;
+      var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       var initialBounds = {
         left: 'ShepherdsBush',
         right: 'CanadaWater',
@@ -130,6 +144,48 @@
         return true;
       }
 
+      // The backdrop the dark theme paints, and the smallest contrast a line has
+      // to reach against it to still read as a line. Kept in step with --paper
+      // and --ink in the stylesheet.
+      var DARK_PAPER = 0.0086, DARK_INK = '#e6e9f5', MIN_CONTRAST = 3;
+
+      function luminance(rgb) {
+        return rgb.reduce(function (total, value, i) {
+          value /= 255;
+          value = value <= 0.03928 ? value / 12.92 : Math.pow((value + 0.055) / 1.055, 2.4);
+          return total + [0.2126, 0.7152, 0.0722][i] * value;
+        }, 0);
+      }
+
+      // TfL's palette is the map, so the dark theme repaints as little of it as
+      // it can get away with: a colour bright enough to see is left exactly as
+      // it is, and one that is not gets mixed towards white by the smallest
+      // step that clears MIN_CONTRAST. Black is the exception, because no
+      // mixture of it is still black - it is ink rather than a colour, and like
+      // the labels it simply flips with the page.
+      var lifted = {};
+
+      function contrast(rgb) {
+        return (luminance(rgb) + 0.05) / (DARK_PAPER + 0.05);
+      }
+
+      function lift(color) {
+        if (lifted[color]) return lifted[color];
+
+        var base = [1, 3, 5].map(function (i) { return parseInt(color.substr(i, 2), 16); });
+        var mixed = base;
+
+        if (luminance(base) < 0.02) return (lifted[color] = DARK_INK);
+
+        for (var t = 0.05; t <= 1 && contrast(mixed) < MIN_CONTRAST; t += 0.05) {
+          mixed = base.map(function (value) { return value + (255 - value) * t; });
+        }
+
+        return (lifted[color] = '#' + mixed.map(function (value) {
+          return ('0' + Math.round(value).toString(16)).slice(-2);
+        }).join(''));
+      }
+
       // What to hand the library: the tube on its own unless the overground has
       // been asked for. It reads every key of stations, and a station left with
       // no line through it has no marker to read, so the stations have to be cut
@@ -139,6 +195,9 @@
       function shown() {
         var lines = data.lines.filter(function (line) {
           return overground || line.mode !== 'overground';
+        }).map(function (line) {
+          // A copy, so the theme can be turned back off again.
+          return dark ? Object.assign({}, line, { color: lift(line.color) }) : line;
         });
         var stations = {}, through = {};
 
@@ -230,14 +289,23 @@
         });
       }
 
+      // Both menus behave alike: one open at a time, and anything else closes
+      // them - a click outside, Escape, or picking something.
+      function reveal(button, panel, open) {
+        panel.hidden = !open;
+        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+
       function close() {
-        menu.hidden = true;
-        toggle.setAttribute('aria-expanded', 'false');
+        reveal(toggle, menu, false);
+        reveal(options, optionsMenu, false);
       }
 
       toggle.onclick = function (event) {
         event.stopPropagation();
-        if (!menu.hidden) return close();
+        var open = menu.hidden;
+        close();
+        if (!open) return;
 
         // Fetched the first time the menu is opened: it is far larger than the
         // map, and most of the time nobody asks for it.
@@ -246,10 +314,14 @@
           buildMenu();
         });
 
-        ready.then(function () {
-          menu.hidden = false;
-          toggle.setAttribute('aria-expanded', 'true');
-        });
+        ready.then(function () { reveal(toggle, menu, true); });
+      };
+
+      options.onclick = function (event) {
+        event.stopPropagation();
+        var open = optionsMenu.hidden;
+        close();
+        reveal(options, optionsMenu, open);
       };
 
       overgroundBox.onchange = function () {
@@ -257,12 +329,23 @@
         draw(true);
       };
 
+      // The line colours are painted into the drawing, so the theme is not
+      // something the stylesheet can finish on its own.
+      darkBox.onchange = function () {
+        dark = darkBox.checked;
+        document.body.classList.toggle('dark', dark);
+        draw(true);
+      };
+
       document.addEventListener('click', function (event) {
-        if (!menu.hidden && !menu.contains(event.target)) close();
+        if (!menu.contains(event.target) && !optionsMenu.contains(event.target)) close();
       });
       document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') close();
       });
+
+      darkBox.checked = dark;
+      document.body.classList.toggle('dark', dark);
 
       d3.json('./map.json').then(function (loaded) {
         data = loaded;

@@ -4000,26 +4000,56 @@
     },
     {
      "coords": [
-      -33,
+      -25,
       -89
+     ]
+    },
+    {
+     "coords": [
+      -27,
+      -90
+     ]
+    },
+    {
+     "coords": [
+      -28,
+      -91
+     ]
+    },
+    {
+     "coords": [
+      -30,
+      -92
+     ]
+    },
+    {
+     "coords": [
+      -32,
+      -91
+     ]
+    },
+    {
+     "coords": [
+      -33,
+      -90
      ],
      "name": "MarbleArch",
-     "labelPos": "S",
+     "labelPos": "W",
      "labelShiftCoords": [
-      0.0,
-      0.0
+      -0.0,
+      -2.0
      ]
     },
     {
      "coords": [
-      -58,
-      -89
+      -39,
+      -84
      ]
     },
     {
      "coords": [
-      -60,
-      -88
+      -41,
+      -83
      ]
     },
     {
@@ -4028,22 +4058,22 @@
       -83
      ],
      "name": "LancasterGate",
-     "labelPos": "SW",
+     "labelPos": "S",
      "labelShiftCoords": [
       0.0,
-      -0.0
+      0.0
      ]
     },
     {
      "coords": [
-      -67,
-      -81
+      -79,
+      -83
      ]
     },
     {
      "coords": [
-      -69,
-      -80
+      -81,
+      -82
      ]
     },
     {
@@ -4052,7 +4082,7 @@
       -80
      ],
      "name": "Queensway",
-     "labelPos": "SE",
+     "labelPos": "NE",
      "labelShiftCoords": [
       0.0,
       0.0
@@ -4060,26 +4090,8 @@
     },
     {
      "coords": [
-      -86,
-      -80
-     ]
-    },
-    {
-     "coords": [
-      -88,
-      -81
-     ]
-    },
-    {
-     "coords": [
-      -90,
-      -82
-     ]
-    },
-    {
-     "coords": [
-      -92,
-      -81
+      -85,
+      -79
      ]
     },
     {
@@ -4090,34 +4102,10 @@
      "name": "NottingHillGate",
      "labelPos": "SE",
      "labelShiftCoords": [
-      1.237436867076458,
-      -4.065863991822647
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
-    },
-    {
-     "coords": [
-      -97,
-      -76
-     ]
-    },
-    {
-     "coords": [
-      -99,
-      -75
-     ]
-    },
-    {
-     "coords": [
-      -100,
-      -75
-     ]
-    },
-    {
-     "coords": [
-      -102,
-      -76
-     ]
     },
     {
      "coords": [
@@ -4125,28 +4113,10 @@
       -79
      ],
      "name": "HollandPark",
-     "labelPos": "S",
+     "labelPos": "N",
      "labelShiftCoords": [
       0.0,
-      -1.25
-     ]
-    },
-    {
-     "coords": [
-      -109,
-      -83
-     ]
-    },
-    {
-     "coords": [
-      -111,
-      -84
-     ]
-    },
-    {
-     "coords": [
-      -113,
-      -83
+      1.25
      ]
     },
     {
@@ -4155,23 +4125,23 @@
       -79
      ],
      "name": "ShepherdsBush",
-     "labelPos": "NE",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      2.651650429449553,
-      2.651650429449553
+      3.1819805153394634,
+      -0.3535533905932736
      ],
      "marker": "interchange"
     },
     {
      "coords": [
       -126,
-      -70
+      -79
      ]
     },
     {
      "coords": [
       -127,
-      -68
+      -78
      ]
     },
     {
@@ -4642,8 +4612,8 @@
      "name": "NottingHillGate",
      "labelPos": "SE",
      "labelShiftCoords": [
-      1.237436867076458,
-      -4.065863991822647
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -5471,10 +5441,10 @@
       -75
      ],
      "name": "ShepherdsBushMarket",
-     "labelPos": "SW",
+     "labelPos": "W",
      "labelShiftCoords": [
-      -1.0606601717798212,
-      -1.0606601717798212
+      -0.5428932188134525,
+      -1.2928932188134525
      ],
      "marker": "interchange"
     },
@@ -5499,7 +5469,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.25,
-      -2.0
+      0.0
      ],
      "marker": "interchange"
     },
@@ -5980,8 +5950,8 @@
      "name": "NottingHillGate",
      "labelPos": "SE",
      "labelShiftCoords": [
-      1.237436867076458,
-      -4.065863991822647
+      0.8838834764831843,
+      -0.8838834764831843
      ],
      "marker": "interchange"
     },
@@ -10457,10 +10427,10 @@
       -75
      ],
      "name": "ShepherdsBushMarket",
-     "labelPos": "SW",
+     "labelPos": "W",
      "labelShiftCoords": [
-      -1.0606601717798212,
-      -1.0606601717798212
+      -0.5428932188134525,
+      -1.2928932188134525
      ],
      "marker": "interchange"
     },
@@ -10485,7 +10455,7 @@
      "labelPos": "W",
      "labelShiftCoords": [
       -0.25,
-      -2.0
+      0.0
      ],
      "marker": "interchange"
     },
@@ -12940,10 +12910,10 @@
       -79
      ],
      "name": "ShepherdsBush",
-     "labelPos": "NE",
+     "labelPos": "SE",
      "labelShiftCoords": [
-      2.651650429449553,
-      2.651650429449553
+      3.1819805153394634,
+      -0.3535533905932736
      ],
      "marker": "interchange"
     },

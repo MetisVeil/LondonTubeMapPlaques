@@ -166,13 +166,18 @@ def place(stations: dict[str, tuple[float, float]], edges: list[tuple[str, str]]
 # Routing a branch
 # --------------------------------------------------------------------------
 
-def _solve(dirs: list[tuple], remaining: tuple, minimums: list[int], sweep: int = 7) -> list[int] | None:
-    """Find how many steps to take along each direction to cover `remaining`.
+def _solve(dirs: list[tuple], remaining: tuple, minimums: list[int], sweep: int = 7):
+    """Yield every way of splitting `remaining` into steps along each direction.
 
     Two directions pin the answer exactly; any beyond that are underdetermined,
     so the extra runs are swept over a short range and the last independent pair
-    solved for. Long routes put their length in the first and last run, so a
-    short sweep of the middle ones is enough.
+    solved for. Which pair is held back decides where the length ends up: solving
+    the first and last run puts it in those, solving an adjacent pair puts it in
+    the middle instead. Both reach the same station by different shapes, and only
+    the caller's scoring can say which draws better - so every distribution is
+    offered rather than the first that happens to fit. Returning that first one
+    is what used to send a line on a long detour past a station when a straight
+    run at the same drawn length was sitting in another pair's sweep.
     """
     def pair(u, v, target):
         det = u[0] * v[1] - u[1] * v[0]
@@ -184,10 +189,13 @@ def _solve(dirs: list[tuple], remaining: tuple, minimums: list[int], sweep: int 
 
     if len(dirs) == 1:
         if remaining != (0, 0) and not parallel(dirs[0], remaining):
-            return None
+            return
         steps = max(abs(remaining[0]), abs(remaining[1]))
-        return [steps] if steps >= minimums[0] else None
+        if steps >= minimums[0]:
+            yield [steps]
+        return
 
+    seen = set()
     for i, j in ((0, len(dirs) - 1), (0, 1), (len(dirs) - 2, len(dirs) - 1)):
         if i >= j or dirs[i][0] * dirs[j][1] - dirs[i][1] * dirs[j][0] == 0:
             continue
@@ -207,13 +215,14 @@ def _solve(dirs: list[tuple], remaining: tuple, minimums: list[int], sweep: int 
             steps[i], steps[j] = found
             for k, count in zip(others, combination):
                 steps[k] = count
-            if all(s >= m for s, m in zip(steps, minimums)):
-                return steps
-    return None
+            # The pairings overlap, so the same split can be reached twice.
+            if all(s >= m for s, m in zip(steps, minimums)) and tuple(steps) not in seen:
+                seen.add(tuple(steps))
+                yield steps
 
 
 def _legs(dirs: list[tuple], displacement: tuple, first_run_min: int):
-    """Turn a candidate sequence of directions into (direction, steps) runs, or None.
+    """Yield each way of walking `dirs` as (direction, steps) runs.
 
     Every corner eats one incoming plus one outgoing step of displacement, so the
     straight runs only have to cover what is left over.
@@ -227,8 +236,9 @@ def _legs(dirs: list[tuple], displacement: tuple, first_run_min: int):
     minimums[0] = first_run_min
     minimums[-1] = max(minimums[-1], 1)   # arrive at the station going straight
 
-    steps = _solve(dirs, (displacement[0] - spent[0], displacement[1] - spent[1]), minimums)
-    return list(zip(dirs, steps)) if steps else None
+    for steps in _solve(dirs, (displacement[0] - spent[0],
+                               displacement[1] - spent[1]), minimums):
+        yield list(zip(dirs, steps))
 
 
 def _alignment(vector: tuple, direction: tuple) -> float:
@@ -248,8 +258,8 @@ def route(start: tuple, end: tuple, entry: tuple | None, onward: tuple = (0, 0),
     last run always has at least one step, which is what keeps the arriving
     station off a corner and lets the next edge pick up cleanly.
 
-    Sequences are tried shortest first, so a straight run wins over a route that
-    wanders. `onward` points at the station after this one: preferring an exit
+    Sequences are tried shortest first, and every way of distributing the steps
+    along one is scored, so a straight run wins over a route that wanders. `onward` points at the station after this one: preferring an exit
     that already faces that way keeps the next edge from having to turn back on
     itself, which is what makes the deep searches rare.
 
@@ -269,9 +279,8 @@ def route(start: tuple, end: tuple, entry: tuple | None, onward: tuple = (0, 0),
 
     # Four turns is a full reversal, which is as far as a line ever has to bend.
     for _ in range(MAX_TURNS + 1):
-        solved = [legs for legs in
-                  (_legs(dirs, displacement, first_run_min) for dirs in frontier)
-                  if legs is not None]
+        solved = [legs for dirs in frontier
+                  for legs in _legs(dirs, displacement, first_run_min)]
         if solved:
             return min(solved, key=score)
         frontier = [dirs + [nxt] for dirs in frontier for nxt in COMPASS.values()

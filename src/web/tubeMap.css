@@ -158,3 +158,30 @@ text {
   margin-top: 6px;
   color: #10137e;
 }
+
+/* Away from the category menu, which drops down over the top right. */
+#modes {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  padding: 9px 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #10137e;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #d4d7e5;
+  border-radius: 4px;
+}
+
+#modes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+#modes input {
+  margin: 0;
+  cursor: pointer;
+  accent-color: #10137e;
+}

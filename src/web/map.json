@@ -2532,6 +2532,7 @@
    "name": "bakerloo-1",
    "label": "Bakerloo",
    "color": "#B36305",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -3186,6 +3187,7 @@
    "name": "central-1",
    "label": "Central",
    "color": "#E32017",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -3342,6 +3344,7 @@
    "name": "central-2",
    "label": "Central",
    "color": "#E32017",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -3540,6 +3543,7 @@
    "name": "central-3",
    "label": "Central",
    "color": "#E32017",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -3678,6 +3682,7 @@
    "name": "central-4",
    "label": "Central",
    "color": "#E32017",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -4276,6 +4281,7 @@
    "name": "central-5",
    "label": "Central",
    "color": "#E32017",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -4349,6 +4355,7 @@
    "name": "central-6",
    "label": "Central",
    "color": "#E32017",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -4517,6 +4524,7 @@
    "name": "central-7",
    "label": "Central",
    "color": "#E32017",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -4589,6 +4597,7 @@
    "name": "circle-1",
    "label": "Circle",
    "color": "#FFD300",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -5320,6 +5329,7 @@
    "name": "circle-2",
    "label": "Circle",
    "color": "#FFD300",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -5576,6 +5586,7 @@
    "name": "district-1",
    "label": "District",
    "color": "#00782A",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -5626,6 +5637,7 @@
    "name": "district-2",
    "label": "District",
    "color": "#00782A",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -5798,6 +5810,7 @@
    "name": "district-3",
    "label": "District",
    "color": "#00782A",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -5933,6 +5946,7 @@
    "name": "district-4",
    "label": "District",
    "color": "#00782A",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -6089,6 +6103,7 @@
    "name": "district-5",
    "label": "District",
    "color": "#00782A",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -6219,6 +6234,7 @@
    "name": "district-6",
    "label": "District",
    "color": "#00782A",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -6301,6 +6317,7 @@
    "name": "district-7",
    "label": "District",
    "color": "#00782A",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -7156,6 +7173,7 @@
    "name": "dlr-1",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -7290,6 +7308,7 @@
    "name": "dlr-2",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -7376,6 +7395,7 @@
    "name": "dlr-3",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -7531,6 +7551,7 @@
    "name": "dlr-4",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -7832,6 +7853,7 @@
    "name": "dlr-5",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -7983,6 +8005,7 @@
    "name": "dlr-6",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8043,6 +8066,7 @@
    "name": "dlr-7",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8093,6 +8117,7 @@
    "name": "dlr-8",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8142,6 +8167,7 @@
    "name": "dlr-9",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8180,6 +8206,7 @@
    "name": "dlr-10",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8230,6 +8257,7 @@
    "name": "dlr-11",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8303,6 +8331,7 @@
    "name": "dlr-12",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8352,6 +8381,7 @@
    "name": "dlr-13",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8388,6 +8418,7 @@
    "name": "dlr-14",
    "label": "DLR",
    "color": "#00A4A7",
+   "mode": "dlr",
    "shiftCoords": [
     0,
     0
@@ -8545,6 +8576,7 @@
    "name": "elizabeth-1",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -8594,6 +8626,7 @@
    "name": "elizabeth-2",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -8721,6 +8754,7 @@
    "name": "elizabeth-3",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -8770,6 +8804,7 @@
    "name": "elizabeth-4",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -8820,6 +8855,7 @@
    "name": "elizabeth-5",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -8871,6 +8907,7 @@
    "name": "elizabeth-6",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -8922,6 +8959,7 @@
    "name": "elizabeth-7",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -9073,6 +9111,7 @@
    "name": "elizabeth-8",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -9301,6 +9340,7 @@
    "name": "elizabeth-9",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -9609,6 +9649,7 @@
    "name": "elizabeth-10",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -9750,6 +9791,7 @@
    "name": "elizabeth-11",
    "label": "Elizabeth line",
    "color": "#6950A1",
+   "mode": "elizabeth-line",
    "shiftCoords": [
     0,
     0
@@ -9800,6 +9842,7 @@
    "name": "hammersmith-city-1",
    "label": "Hammersmith & City",
    "color": "#F3A9BB",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -10580,6 +10623,7 @@
    "name": "jubilee-1",
    "label": "Jubilee",
    "color": "#A0A5A9",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -11281,6 +11325,7 @@
    "name": "liberty-1",
    "label": "Liberty",
    "color": "#5D6061",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -11344,6 +11389,7 @@
    "name": "lioness-1",
    "label": "Lioness",
    "color": "#FAA61A",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -11835,6 +11881,7 @@
    "name": "metropolitan-1",
    "label": "Metropolitan",
    "color": "#9B0056",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -12207,6 +12254,7 @@
    "name": "metropolitan-2",
    "label": "Metropolitan",
    "color": "#9B0056",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -12243,6 +12291,7 @@
    "name": "metropolitan-3",
    "label": "Metropolitan",
    "color": "#9B0056",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -12291,6 +12340,7 @@
    "name": "metropolitan-4",
    "label": "Metropolitan",
    "color": "#9B0056",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -12453,6 +12503,7 @@
    "name": "metropolitan-5",
    "label": "Metropolitan",
    "color": "#9B0056",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -12658,6 +12709,7 @@
    "name": "metropolitan-6",
    "label": "Metropolitan",
    "color": "#9B0056",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -12754,6 +12806,7 @@
    "name": "metropolitan-7",
    "label": "Metropolitan",
    "color": "#9B0056",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -12814,6 +12867,7 @@
    "name": "metropolitan-8",
    "label": "Metropolitan",
    "color": "#9B0056",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -12889,6 +12943,7 @@
    "name": "mildmay-1",
    "label": "Mildmay",
    "color": "#0077AD",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -13026,6 +13081,7 @@
    "name": "mildmay-2",
    "label": "Mildmay",
    "color": "#0077AD",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -13075,6 +13131,7 @@
    "name": "mildmay-3",
    "label": "Mildmay",
    "color": "#0077AD",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -13231,6 +13288,7 @@
    "name": "mildmay-4",
    "label": "Mildmay",
    "color": "#0077AD",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -13680,6 +13738,7 @@
    "name": "northern-1",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -13753,6 +13812,7 @@
    "name": "northern-2",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -13802,6 +13862,7 @@
    "name": "northern-3",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -14036,6 +14097,7 @@
    "name": "northern-4",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -14259,6 +14321,7 @@
    "name": "northern-5",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -14517,6 +14580,7 @@
    "name": "northern-6",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -14691,6 +14755,7 @@
    "name": "northern-7",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -14811,6 +14876,7 @@
    "name": "northern-8",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -14883,6 +14949,7 @@
    "name": "northern-9",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -15076,6 +15143,7 @@
    "name": "northern-10",
    "label": "Northern",
    "color": "#000000",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -15124,6 +15192,7 @@
    "name": "piccadilly-1",
    "label": "Piccadilly",
    "color": "#003688",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -15329,6 +15398,7 @@
    "name": "piccadilly-2",
    "label": "Piccadilly",
    "color": "#003688",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -15716,6 +15786,7 @@
    "name": "piccadilly-3",
    "label": "Piccadilly",
    "color": "#003688",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -16474,6 +16545,7 @@
    "name": "piccadilly-4",
    "label": "Piccadilly",
    "color": "#003688",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -16523,6 +16595,7 @@
    "name": "piccadilly-5",
    "label": "Piccadilly",
    "color": "#003688",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -16597,6 +16670,7 @@
    "name": "piccadilly-6",
    "label": "Piccadilly",
    "color": "#003688",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -16647,6 +16721,7 @@
    "name": "suffragette-1",
    "label": "Suffragette",
    "color": "#5BBD72",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -16957,6 +17032,7 @@
    "name": "victoria-1",
    "label": "Victoria",
    "color": "#0098D4",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -17377,6 +17453,7 @@
    "name": "waterloo-city-1",
    "label": "Waterloo & City",
    "color": "#95CDBA",
+   "mode": "tube",
    "shiftCoords": [
     0,
     0
@@ -17428,6 +17505,7 @@
    "name": "weaver-1",
    "label": "Weaver",
    "color": "#823A62",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -17566,6 +17644,7 @@
    "name": "weaver-2",
    "label": "Weaver",
    "color": "#823A62",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -17747,6 +17826,7 @@
    "name": "weaver-3",
    "label": "Weaver",
    "color": "#823A62",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -17952,6 +18032,7 @@
    "name": "weaver-4",
    "label": "Weaver",
    "color": "#823A62",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -18024,6 +18105,7 @@
    "name": "weaver-5",
    "label": "Weaver",
    "color": "#823A62",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -18133,6 +18215,7 @@
    "name": "windrush-1",
    "label": "Windrush",
    "color": "#ED1B00",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -18308,6 +18391,7 @@
    "name": "windrush-2",
    "label": "Windrush",
    "color": "#ED1B00",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -18356,6 +18440,7 @@
    "name": "windrush-3",
    "label": "Windrush",
    "color": "#ED1B00",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -18404,6 +18489,7 @@
    "name": "windrush-4",
    "label": "Windrush",
    "color": "#ED1B00",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -18737,6 +18823,7 @@
    "name": "windrush-5",
    "label": "Windrush",
    "color": "#ED1B00",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0
@@ -18881,6 +18968,7 @@
    "name": "windrush-6",
    "label": "Windrush",
    "color": "#ED1B00",
+   "mode": "overground",
    "shiftCoords": [
     0,
     0

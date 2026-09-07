@@ -24,6 +24,10 @@
       <div id="category-menu" hidden></div>
     </div>
 
+    <div id="modes">
+      <label><input type="checkbox" id="overground-toggle" /> Overground</label>
+    </div>
+
     <div id="selection"><span class="hint">Click a station</span></div>
 
     <script>
@@ -39,6 +43,8 @@
         .margin({ top: 40, right: 40, bottom: 40, left: 40 });
 
       var svg, root, data, names = {}, themes = null, showing = null, initialViewApplied = false;
+      var overgroundBox = document.getElementById('overground-toggle');
+      var overground = false;
       var initialBounds = {
         left: 'ShepherdsBush',
         right: 'CanadaWater',
@@ -124,13 +130,48 @@
         return true;
       }
 
+      // What to hand the library: the tube on its own unless the overground has
+      // been asked for. It reads every key of stations, and a station left with
+      // no line through it has no marker to read, so the stations have to be cut
+      // down to match the lines. It also *appends* to the markers it finds
+      // already on a station, so last draw's have to go, or a line that is no
+      // longer drawn would keep its ticks on the map.
+      function shown() {
+        var lines = data.lines.filter(function (line) {
+          return overground || line.mode !== 'overground';
+        });
+        var stations = {}, through = {};
+
+        lines.forEach(function (line) {
+          line.nodes.forEach(function (node) {
+            if (!node.name) return;
+            stations[node.name] = data.stations[node.name];
+            delete stations[node.name].marker;
+            (through[node.name] = through[node.name] || {})[line.label] = true;
+          });
+        });
+
+        // An interchange is a station where you can change, so it is the lines
+        // actually drawn that decide it: a tube stop that only meets the
+        // overground is an ordinary stop once the overground is gone.
+        lines.forEach(function (line) {
+          line.nodes.forEach(function (node) {
+            if (!node.name) return;
+            if (Object.keys(through[node.name]).length > 1) node.marker = 'interchange';
+            else delete node.marker;
+          });
+        });
+
+        return { stations: stations, lines: lines };
+      }
+
       // The library draws its labels once, into nested tspans, so changing the
       // names means drawing the map again. The view is put back afterwards, so
       // switching category leaves you looking at the same place.
       function draw(keepView) {
         var was = svg ? d3.zoomTransform(svg.node()) : null;
         container.selectAll('svg').remove();
-        container.datum(data).call(map);
+        container.datum(shown()).call(map);
 
         svg = container.select('svg');
         root = svg.select('g');
@@ -209,6 +250,11 @@
           menu.hidden = false;
           toggle.setAttribute('aria-expanded', 'true');
         });
+      };
+
+      overgroundBox.onchange = function () {
+        overground = overgroundBox.checked;
+        draw(true);
       };
 
       document.addEventListener('click', function (event) {

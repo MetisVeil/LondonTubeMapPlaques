@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/d3-tube-map@1.5.0/dist/d3-tube-map.js"></script>
   </head>
 
-  <body>
+  <body class="dark">
     <div id="tube-map"></div>
 
     <div id="categories">
@@ -97,7 +97,8 @@
       var overgroundBox = document.getElementById('overground-toggle');
       var darkBox = document.getElementById('dark-toggle');
       var overground = false;
-      var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      // Dark is the map's default; the toggle is the way back to light.
+      var dark = true;
       var initialBounds = {
         left: 'ShepherdsBush',
         right: 'CanadaWater',

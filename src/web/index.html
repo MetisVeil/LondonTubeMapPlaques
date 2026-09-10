@@ -264,11 +264,92 @@
         return { stations: stations, lines: lines };
       }
 
+      // Where each line sits in the drawing, by line. The lines are measured
+      // rather than the stations or their labels because a line's shape is its
+      // own coordinates and nothing else: a station's tick turns to face the
+      // lines through it and a label is only as wide as the name it is given,
+      // so both move for reasons that have nothing to do with the view.
+      function anchors() {
+        var points = {};
+        if (!root || !root.node()) return points;
+
+        root.selectAll('g.lines > path').each(function () {
+          var id = this.getAttribute('id');
+          if (!id) return;
+
+          var box = this.getBBox();
+          if (!box || (!box.width && !box.height)) return;
+          points[id] = [box.x + box.width / 2, box.y + box.height / 2];
+        });
+
+        return points;
+      }
+
+      // The library fits its scales to whatever lines it was handed, so taking
+      // the overground away moves every remaining station and redraws the lot
+      // at a different size. The two drawings still differ by nothing more than
+      // a scale and a shift, though, and the lines they have in common are
+      // enough to recover it: the middle of them all against the spread about
+      // that middle, which is the same measurement either side and so gives the
+      // scale straight off.
+      function realign(before, after) {
+        var olds = [], news = [];
+
+        Object.keys(before).forEach(function (id) {
+          if (!after[id]) return;
+          olds.push(before[id]);
+          news.push(after[id]);
+        });
+
+        if (olds.length < 2) return null;
+
+        function middle(points) {
+          return [0, 1].map(function (i) {
+            return d3.mean(points, function (point) { return point[i]; });
+          });
+        }
+
+        function spread(points, mid) {
+          return Math.sqrt(d3.sum(points, function (point) {
+            return Math.pow(point[0] - mid[0], 2) + Math.pow(point[1] - mid[1], 2);
+          }));
+        }
+
+        var oldMid = middle(olds), newMid = middle(news);
+        var oldSpread = spread(olds, oldMid), newSpread = spread(news, newMid);
+        if (!oldSpread || !newSpread) return null;
+
+        var scale = newSpread / oldSpread;
+        return {
+          scale: scale,
+          x: newMid[0] - scale * oldMid[0],
+          y: newMid[1] - scale * oldMid[1]
+        };
+      }
+
+      // The view that was, rewritten into the new drawing's coordinates, so it
+      // still frames the same piece of London. The drawing grew by the scale
+      // realign found, so the view shrinks by it to leave what is on screen the
+      // size it was, and the shift is taken back out at that new scale.
+      function held(was, before) {
+        var move = before && realign(before, anchors());
+        if (!move) return was;
+
+        var scale = was.k / move.scale;
+        var extent = zoom.scaleExtent();
+        zoom.scaleExtent([extent[0] / move.scale, extent[1] / move.scale]);
+
+        return d3.zoomIdentity
+          .translate(was.x - scale * move.x, was.y - scale * move.y)
+          .scale(scale);
+      }
+
       // The library draws its labels once, into nested tspans, so changing the
       // names means drawing the map again. The view is put back afterwards, so
       // switching category leaves you looking at the same place.
       function draw(keepView) {
         var was = svg ? d3.zoomTransform(svg.node()) : null;
+        var before = was && keepView ? anchors() : null;
         container.selectAll('svg').remove();
         container.datum(shown()).call(map);
 
@@ -276,7 +357,7 @@
         root = svg.select('g');
         svg.call(zoom);
 
-        if (was && keepView) svg.call(zoom.transform, was);
+        if (was && keepView) svg.call(zoom.transform, held(was, before));
         else if (!initialViewApplied && fitToBounds(initialBounds)) {
           initialViewApplied = true;
         } else {

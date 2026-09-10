@@ -1,0 +1,76 @@
+name: Deploy map
+
+# Two ways in:
+#   push       — someone edited the page; deploy what is already committed.
+#   schedule   — refresh the feeds first, commit the new JSON, then deploy.
+# workflow_dispatch runs the full refresh on demand.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 4 1 * *" # 04:00 UTC on the 1st of each month
+  workflow_dispatch:
+
+permissions:
+  contents: write # to commit the refreshed map data
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Everything below up to the commit only runs on schedule/dispatch;
+      # a plain push has nothing to rebuild.
+      - uses: actions/setup-python@v5
+        if: github.event_name != 'push'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # src/data/ is gitignored, so the SCD-2 history in london.db would reset
+      # on every run. Roll it forward: the key never hits, restore-keys picks
+      # up the newest previous save, and this run saves a fresh entry.
+      - name: Restore versioned database
+        if: github.event_name != 'push'
+        uses: actions/cache@v4
+        with:
+          path: src/data/london.db
+          key: london-db-${{ github.run_id }}
+          restore-keys: london-db-
+
+      - name: Rebuild map data
+        if: github.event_name != 'push'
+        env:
+          TFL_APP_KEY: ${{ secrets.TFL_APP_KEY }}
+        run: |
+          pip install -r requirements.txt
+          PYTHONPATH=src python -m handler.main
+
+      # [skip ci] so this push does not trigger a second, redundant deploy —
+      # the deploy steps below already ship the files this commit contains.
+      - name: Commit refreshed map data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/web/map.json src/web/categories.json
+          git diff --cached --quiet && echo "feeds unchanged" && exit 0
+          git commit -m "data: refresh TfL and Open Plaques feeds [skip ci]"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: src/web
+      - uses: actions/deploy-pages@v4
+        id: deploy

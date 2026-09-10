@@ -25,6 +25,8 @@ def _cols(names: list[str]) -> str:
 
 def get_connection(db_path: Path = DB_PATH) -> sqlite3.Connection:
     """Open the database, creating the `loads` table on first use."""
+    # data/ is not committed, so it is missing on a fresh clone or CI runner.
+    Path(db_path).parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(db_path)
     conn.execute("PRAGMA foreign_keys = ON")
     conn.execute("""

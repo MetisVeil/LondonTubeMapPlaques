@@ -17,7 +17,7 @@ from pathlib import Path
 
 from . import categories, layout
 
-SRC_DIR = Path(__file__).resolve().parents[1]          # src/
+SRC_DIR = Path(__file__).resolve().parents[2]          # src/
 MAP_PATH = SRC_DIR / "web" / "map.json"
 CATEGORIES_PATH = SRC_DIR / "web" / "categories.json"
 CATEGORIES_SOURCE = SRC_DIR / "role_categories.md"

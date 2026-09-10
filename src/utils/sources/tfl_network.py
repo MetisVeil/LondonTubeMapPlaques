@@ -1,11 +1,12 @@
-"""The TfL network topology: which stations each line serves, and in what order.
+"""How the stations connect: which stations each line serves, and in what order.
 
 `load(conn)` is the entry point - it fetches every line's route sequence from
 the TfL Unified API and versions it into the database.
 
-Unlike the station data, this comes back as JSON over HTTPS rather than a zip of
-CSVs, so nothing is written to or read from disk: the API response goes straight
-into a DataFrame and on to `db.ingest`.
+The companion source is `tfl_stations`, which carries where the stations are.
+Unlike that feed, this comes back as JSON over HTTPS rather than a zip of CSVs,
+so nothing is written to or read from disk: the API response goes straight into
+a DataFrame and on to `db.ingest`.
 """
 
 import hashlib

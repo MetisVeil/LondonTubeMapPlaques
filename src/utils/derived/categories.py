@@ -17,7 +17,7 @@ import re
 import sqlite3
 import unicodedata
 
-from .sources.wikipedia import fetch_image as wikipedia_image
+from ..sources.wikipedia import fetch_image as wikipedia_image
 
 GROUP = re.compile(r"^##\s+(?:\d+\.\s*)?(.+?)\s*$")
 CATEGORY = re.compile(r"^-\s+(.+?)\s*$")

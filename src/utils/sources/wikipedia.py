@@ -3,6 +3,10 @@
 The only thing this project needs right now is the lead image from the page's
 infobox, which is the portrait shown on the right-hand side of most biography
 pages.
+
+The odd one out in this folder: it exposes no SOURCE or load(conn) and stores
+nothing, because there is no feed to version - `derived.categories` calls
+`fetch_image` per page while it builds, and the lru_cache is the only memory.
 """
 
 from functools import lru_cache

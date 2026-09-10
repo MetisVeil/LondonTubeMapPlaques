@@ -1,7 +1,10 @@
-"""The TfL station data pipeline: download the feed, version it, derive coordinates.
+"""Where the stations are: TfL's detailed station data feed, a zip of CSVs.
 
-`coordinates(conn)` is the entry point - it runs every step and hands back the
-averaged station positions.
+`coordinates(conn)` is the entry point - it downloads the feed, versions it, and
+hands back the averaged position of each station.
+
+The companion source is `tfl_network`, which carries how the stations connect.
+This one knows nothing about lines; that one knows nothing about positions.
 """
 
 import sqlite3

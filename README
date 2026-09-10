@@ -231,3 +231,28 @@ The views in `utils/sql/` join the two together. The wrinkle they handle is that
 the API calls Euston `940GZZLUEUS` while the station data files it under its hub
 code `HUBEUS`; falling back to `topMostParentId` is what gets all 469 stops on
 all 19 lines onto a row with coordinates.
+
+## Credits
+
+The page carries these under Options, top left; they are set out in full here.
+
+  * **[Open Plaques](https://openplaques.org)** - the blue plaques and the people
+    they commemorate, without which there is no map to draw. The data is
+    dedicated to the public domain under [PDDL
+    1.0](https://opendatacommons.org/licenses/pddl/1-0/) and they ask for no
+    credit at all, which is all the more reason to give it.
+  * **[d3-tube-map](https://github.com/johnwalley/d3-tube-map)** by John Walley,
+    BSD-3-Clause - draws tube maps in the style of the London Underground, and is
+    the reason a diagram of one's own is possible rather than a re-drawing of
+    TfL's.
+  * **Transport for London** - Powered by TfL Open Data. Contains OS data (c)
+    Crown copyright and database rights 2016, and Geomni UK Map data (c) and
+    database rights 2019. The [Unified API](https://api.tfl.gov.uk) and the
+    station data feed supply every line, stop and coordinate here, under terms
+    that are the Open Government Licence v2.0 with TfL's own amendments.
+  * **[D3](https://d3js.org)** by Mike Bostock, BSD-3-Clause - v6, which is what
+    d3-tube-map 1.5.0 wants.
+  * **Wikipedia** - the portrait beside each name, taken from the page's
+    infobox. Those images carry their own licences, which vary image by image
+    and are not all free for re-use; anyone publishing this map somewhere public
+    should check them rather than assume.

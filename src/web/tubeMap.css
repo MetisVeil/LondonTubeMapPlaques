@@ -166,8 +166,7 @@ text {
 
 #options-menu {
   left: 0;
-  min-width: 100%;
-  white-space: nowrap;
+  width: 290px;
 }
 
 .category-group {
@@ -228,6 +227,53 @@ text {
   margin: 0;
   cursor: pointer;
   accent-color: var(--ink);
+}
+
+.credits {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--edge);
+}
+
+.credits-heading {
+  padding: 2px 10px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--faint);
+}
+
+.credit {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 3px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.credit:hover {
+  background: var(--hover);
+}
+
+.credit .who {
+  display: block;
+  text-decoration: underline;
+}
+
+.credit .what {
+  display: block;
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.small-print {
+  margin: 6px 0 0;
+  padding: 0 10px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--faint);
 }
 
 /* The library paints these on as presentation attributes, which any rule here

@@ -464,14 +464,21 @@ def export_categories(conn: sqlite3.Connection, path: Path = CATEGORIES_PATH,
                 named[keys[uid]] = dict(plaque, label=label(plaque["person"]))
         if named:
             themes.append({"name": theme["name"], "group": theme["group"],
-                           "when": theme["when"], "stations": named})
+                           "when": theme["when"], "about": theme["about"],
+                           "stations": named})
 
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(themes, indent=1))
 
+    # A month whose article did not come back still draws, it just cannot say
+    # what it is about - which is quiet enough to go unnoticed without this.
+    unexplained = [t["name"] for t in themes if t["when"] and not t["about"]]
+
     return {"categories": len(themes),
             "widest": max((f'{t["name"]} ({len(t["stations"])} stations)' for t in themes),
                           key=lambda t: int(t.split("(")[1].split()[0])),
+            "months": f'{sum(1 for t in themes if t["when"])} of 12'
+                      + (f", no article for {', '.join(unexplained)}" if unexplained else ""),
             "in season": export_season(themes),
             "path": str(path)}
 

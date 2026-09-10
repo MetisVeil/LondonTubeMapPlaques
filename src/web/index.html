@@ -80,11 +80,13 @@
     <div id="selection"><span class="hint">Click a station</span></div>
 
     <div id="season" hidden>
-      <div class="copy">
-        <div class="season-name"></div>
-        <div class="season-note"></div>
-      </div>
-      <button class="season-close" aria-label="Dismiss">&times;</button>
+      <div class="season-name"></div>
+      <div class="season-note"></div>
+      <details class="season-context" open>
+        <summary></summary>
+        <div class="season-about"></div>
+        <a class="season-more" target="_blank" rel="noopener">Read the rest on Wikipedia &rarr;</a>
+      </details>
     </div>
 
     <script>
@@ -105,6 +107,8 @@
       var overgroundBox = document.getElementById('overground-toggle');
       var darkBox = document.getElementById('dark-toggle');
       var overground = false;
+      var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
       // Dark is the map's default; the toggle is the way back to light.
       var dark = true;
       var initialBounds = {
@@ -387,6 +391,7 @@
           data.stations[key].label = named ? named.label : names[key];
         });
         document.getElementById('category-name').textContent = theme ? theme.name : 'Tube map';
+        describe(theme);
         draw(true);
       }
 
@@ -397,21 +402,41 @@
           (groups[theme.group || 'Whole map'] = groups[theme.group || 'Whole map'] || []).push(theme);
         });
 
-        function item(label, count, theme) {
+        function item(label, count, theme, now) {
           var row = document.createElement('button');
-          row.className = 'category-item';
+          row.className = 'category-item' + (now ? ' category-now' : '');
           row.innerHTML = '<span>' + label + '</span>' +
                           (count === null ? '' : '<span class="count">' + count + '</span>');
           row.onclick = function () { show(theme); close(); };
           menu.appendChild(row);
         }
 
+        function heading(text) {
+          var label = document.createElement('div');
+          label.className = 'category-group';
+          label.textContent = text;
+          menu.appendChild(label);
+        }
+
         item('Tube map', null, null);
+
+        // The year first, in order, so the whole calendar is one thing you can
+        // read rather than twelve themes to be found among the rest. They keep
+        // their place in their own group below as well.
+        var year = themes.filter(function (theme) { return theme.when; })
+                         .sort(function (a, b) { return a.when.month - b.when.month; });
+
+        if (year.length) {
+          heading('Through the year');
+          year.forEach(function (theme) {
+            item(MONTHS[theme.when.month - 1] + ' &middot; ' + theme.name,
+                 Object.keys(theme.stations).length, theme,
+                 theme.when.month === new Date().getMonth() + 1);
+          });
+        }
+
         Object.keys(groups).forEach(function (name) {
-          var heading = document.createElement('div');
-          heading.className = 'category-group';
-          heading.textContent = name;
-          menu.appendChild(heading);
+          heading(name);
           groups[name].forEach(function (theme) {
             item(theme.name, Object.keys(theme.stations).length, theme);
           });
@@ -468,12 +493,9 @@
 
       document.addEventListener('click', function (event) {
         if (!menu.contains(event.target) && !optionsMenu.contains(event.target)) close();
-        if (!seasonPanel.contains(event.target)) seasonRead();
       });
       document.addEventListener('keydown', function (event) {
-        if (event.key !== 'Escape') return;
-        close();
-        seasonRead();
+        if (event.key === 'Escape') close();
       });
 
       darkBox.checked = dark;
@@ -512,34 +534,38 @@
       // rebuilt on the 1st - so the page only has to put it on and say what it
       // is. Saying so is the part worth dismissing: the theme stays either way.
       var seasonPanel = document.getElementById('season');
-      var inSeason = null;
 
-      // Anywhere off the panel counts as clicking it away, and having read it
-      // once is enough - until next month, when the name changes and it is news
-      // again. A browser that refuses storage simply gets told each time.
-      function seasonRead() {
-        if (!inSeason) return;
-        seasonPanel.hidden = true;
-        try {
-          window.localStorage.setItem('season-seen', inSeason.name);
-        } catch (error) {}
-      }
-
-      function openInSeason(theme) {
-        if (!theme || !theme.stations) return;
-        inSeason = theme;
-        show(theme);
-
-        try {
-          if (window.localStorage.getItem('season-seen') === theme.name) return;
-        } catch (error) {}
+      // Called for every theme, not just this month's: picking August in
+      // February is still asking what August is about. A theme with no occasion
+      // behind it - most of the menu - closes the panel again.
+      //
+      // The article sits in a <details>, so folding it away to just its title
+      // is the browser's own job rather than ours, and the panel itself stays:
+      // it says which map you are looking at, which is worth keeping on screen.
+      function describe(theme) {
+        seasonPanel.hidden = !(theme && theme.when);
+        if (seasonPanel.hidden) return;
 
         seasonPanel.querySelector('.season-name').textContent = theme.name;
         seasonPanel.querySelector('.season-note').textContent = theme.when.note;
-        seasonPanel.hidden = false;
+
+        var context = seasonPanel.querySelector('.season-context');
+        var about = seasonPanel.querySelector('.season-about');
+        context.hidden = !theme.about;
+        about.innerHTML = '';
+        if (!theme.about) return;
+
+        context.open = true;
+        context.querySelector('summary').textContent = theme.about.title;
+        theme.about.extract.forEach(function (paragraph) {
+          about.appendChild(document.createElement('p')).textContent = paragraph;
+        });
+        seasonPanel.querySelector('.season-more').href = theme.about.url;
       }
 
-      seasonPanel.querySelector('.season-close').onclick = seasonRead;
+      function openInSeason(theme) {
+        if (theme && theme.stations) show(theme);
+      }
     </script>
   </body>
 </html>

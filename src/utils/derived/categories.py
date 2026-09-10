@@ -10,6 +10,7 @@ changing to add one. Its shape is three levels:
       - occupation: musician      or what Wikidata says the subject did
       - wikipedia: jazz musicians or a Wikipedia category the subject is in
       - when: August - Carnival   and the month this map is the one on show
+      - about: Notting Hill Carnival  the article explaining that occasion
       - except: film scores       less anything a loose match wrongly reached
 
 `build(conn)` reads it, works out which plaque belongs at which station for each
@@ -22,6 +23,7 @@ import sqlite3
 import unicodedata
 
 from ..sources.wikipedia import fetch_image as wikipedia_image
+from ..sources.wikipedia import fetch_intro as wikipedia_intro
 
 GROUP = re.compile(r"^##\s+(?:\d+\.\s*)?(.+?)\s*$")
 CATEGORY = re.compile(r"^-\s+(.+?)\s*$")
@@ -70,6 +72,8 @@ def parse(path) -> list[dict]:
                 field, value = rule.group(1), rule.group(2)
                 if field == "when":
                     current["when"] = when(value)
+                elif field == "about":
+                    current["about"] = value
                 elif field == "except":
                     current["except"].append(value)
                 elif field in FACTS:
@@ -78,11 +82,11 @@ def parse(path) -> list[dict]:
                     current["filters"].append((FIELDS[field], value))
                 else:
                     raise ValueError(f"{entry!r}: unknown field {field!r}, expected one of "
-                                     f"{sorted([*FIELDS, *FACTS, 'when', 'except'])}")
+                                     f"{sorted([*FIELDS, *FACTS, 'when', 'about', 'except'])}")
             else:
                 current["roles"].append(normalise(entry))
         elif found := CATEGORY.match(line):
-            current = {"name": found.group(1), "group": group, "when": None,
+            current = {"name": found.group(1), "group": group, "when": None, "about": None,
                        "roles": [], "filters": [], "facts": [], "except": []}
             categories.append(current)
 
@@ -111,7 +115,8 @@ def whole_groups(categories: list[dict]) -> list[dict]:
         if category["group"] is None or category["group"] == "Special":
             continue
         whole = merged.setdefault(category["group"],
-                                  {"name": category["group"], "group": None, "when": None,
+                                  {"name": category["group"], "group": None,
+                                   "when": None, "about": None,
                                    "roles": [], "filters": [], "facts": [], "except": []})
         whole["roles"] += category["roles"]
         whole["filters"] += category["filters"]
@@ -203,7 +208,8 @@ def build(conn: sqlite3.Connection, path) -> list[dict]:
         stations = assign(conn, plaques_for(conn, category))
         if stations:
             built.append({"name": category["name"], "group": category["group"],
-                          "when": category["when"], "stations": stations})
+                          "when": category["when"], "stations": stations,
+                          "about": wikipedia_intro(category["about"])})
     return built
 
 

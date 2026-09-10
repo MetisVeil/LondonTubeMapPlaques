@@ -5,12 +5,14 @@
 - Women of London
   - subject_type: woman
   - when: March - International Women's Day, 8 March
+  - about: International Women's Day
 
 - Men of London
   - subject_type: man
 
 - Queer London
   - when: February - LGBT+ History Month
+  - about: LGBT History Month
   - series: Studio Voltaire Rainbow Plaques
   - wikipedia: LGBTQ
   - wikipedia: Lesbian
@@ -20,6 +22,7 @@
 
 - Black London
   - when: October - Black History Month
+  - about: Black History Month
   - organisation: Nubian Jak
   - wikipedia: Black British
   - wikipedia: African-American
@@ -31,6 +34,7 @@
 
 - Exiles & emigres
   - when: June - Refugee Week, around World Refugee Day on 20 June
+  - about: Refugee Week
   - series: I am a Refugee
   - wikipedia: emigrants to the United Kingdom
   - wikipedia: refugees
@@ -44,6 +48,7 @@
 
 - Writer / Literary figure
   - when: April - Shakespeare's birthday and World Book Night, 23 April
+  - about: World Book Day
   - occupation: writer
   - writer
   - wit
@@ -163,6 +168,7 @@
 
 - Performing arts
   - when: December - panto season
+  - about: Pantomime
   - occupation: actor
   - occupation: comedian
   - occupation: dancer
@@ -219,6 +225,7 @@
 
 - Music
   - when: August - Notting Hill Carnival
+  - about: Notting Hill Carnival
   - occupation: musician
   - occupation: singer
   - occupation: composer
@@ -361,6 +368,7 @@
 
 - Engineering
   - when: January - the first Underground train ran on 10 January 1863
+  - about: Metropolitan Railway
   - occupation: engineer
   - occupation: inventor
   - wikipedia: London Underground
@@ -578,6 +586,7 @@
 
 - Social reform & activism
   - when: May - May Day, 1 May
+  - about: International Workers' Day
   - occupation: activist
   - wikipedia: suffrag
   - wikipedia: trade unionists
@@ -709,6 +718,7 @@
 
 - Military
   - when: November - Remembrance Day, 11 November
+  - about: Remembrance Day
   - occupation: military personnel
   - soldier
   - Royal Navy Admiral
@@ -761,6 +771,7 @@
 
 - Emergency services
   - when: September - the Blitz began on 7 September 1940
+  - about: The Blitz
   - wikipedia: The Blitz
   - wikipedia: firefighters
   - wikipedia: Metropolitan Police
@@ -795,6 +806,7 @@
 
 - Sportsperson
   - when: July - Wimbledon fortnight, and London 2012 opened on 27 July
+  - about: The Championships, Wimbledon
   - occupation: athlete
   - wikipedia: Olympic
   - cricketer

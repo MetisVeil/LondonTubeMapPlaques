@@ -3,6 +3,7 @@
   "name": "Arts & Literature",
   "group": null,
   "when": null,
+  "about": null,
   "stations": {
    "Northfields": {
     "plaque": "40743",
@@ -2530,6 +2531,7 @@
   "name": "Science, Medicine & Engineering",
   "group": null,
   "when": null,
+  "about": null,
   "stations": {
    "Northfields": {
     "plaque": "40743",
@@ -4077,6 +4079,7 @@
   "name": "Politics, Government & Royalty",
   "group": null,
   "when": null,
+  "about": null,
   "stations": {
    "HydeParkCorner": {
     "plaque": "60033",
@@ -5344,6 +5347,7 @@
   "name": "Social, Law, Activism & Religion",
   "group": null,
   "when": null,
+  "about": null,
   "stations": {
    "BondStreet": {
     "plaque": "145",
@@ -6921,6 +6925,7 @@
   "name": "Military, Emergency Services & Exploration",
   "group": null,
   "when": null,
+  "about": null,
   "stations": {
    "Euston": {
     "plaque": "51581",
@@ -7998,6 +8003,7 @@
   "name": "Sport & Physical Performance",
   "group": null,
   "when": null,
+  "about": null,
   "stations": {
    "LeicesterSquare": {
     "plaque": "30090",
@@ -8775,6 +8781,7 @@
   "name": "Business & Commerce",
   "group": null,
   "when": null,
+  "about": null,
   "stations": {
    "HydeParkCorner": {
     "plaque": "60032",
@@ -9602,6 +9609,7 @@
   "name": "Education & Other",
   "group": null,
   "when": null,
+  "about": null,
   "stations": {
    "FulhamBroadway": {
     "plaque": "55926",
@@ -10371,6 +10379,14 @@
   "when": {
    "month": 3,
    "note": "International Women's Day, 8 March"
+  },
+  "about": {
+   "title": "International Women's Day",
+   "extract": [
+    "International Women's Day (IWD) is celebrated on 8 March, commemorating women's fight for equality and liberation along with the women's rights movement. International Women's Day gives focus to issues such as gender equality, reproductive rights, and violence and abuse against women. Spurred by the universal female suffrage movement, International Women's Day originated from labor movements in Europe and North America during the early 20th century.",
+    "The earliest version reported was a \"Woman's Day\" organized by the Socialist Party of America in New York City on 28 February 1909. In solidarity with them, communist activist and politician Clara Zetkin proposed the celebration of \"Working Women's Day\", approved at the 1910 International Socialist Women's Conference in Copenhagen, albeit with no set date; the following year saw the first demonstrations and commemorations of International Women's Day across Europe. Vladimir Lenin declared 8 March as International Women's Day in 1922 to honour the women's role in the 1917 Russian Revolution; it was subsequently celebrated on that date by the socialist movement and communist countries. The holiday was promoted by the United Nations in 1977."
+   ],
+   "url": "https://en.wikipedia.org/wiki/International_Women%27s_Day"
   },
   "stations": {
    "Aldgate": {
@@ -11799,6 +11815,7 @@
   "name": "Men of London",
   "group": "Special",
   "when": null,
+  "about": null,
   "stations": {
    "Northfields": {
     "plaque": "40743",
@@ -14619,6 +14636,14 @@
    "month": 2,
    "note": "LGBT+ History Month"
   },
+  "about": {
+   "title": "LGBTQ History Month",
+   "extract": [
+    "Lesbian, Gay, Bisexual, Transgender and Queer/Questioning (LGBTQ) History Month is an annual month-long observance of the history of lesbian, gay, bisexual, transgender and queer people, and the history of the gay rights and related civil rights movements. It was founded in 1994 by Missouri high-school history teacher Rodney Wilson. LGBTQ History Month provides role models, builds community, and represents a civil rights statement about the contributions of the LGBTQ community. As of 2022, LGBTQ History Month is a month-long celebration that is specific to Australia, Canada, Cuba, Finland, Germany, Hungary, Russia, China, Spain, Italy,  the United Kingdom and the United States.",
+    "In the United States, Canada, Armenia, Romania, the Netherlands, Southeast Asia, and Australia, it is celebrated in October to coincide with National Coming Out Day on 11 October and to commemorate the first and second Marches on Washington in 1979 and 1987 for LGBTQ rights. In the United Kingdom it is observed during February; in the UK this coincides with a major celebration of the 2003 abolition of Section 28. In Berlin, the capital of Germany, it is known as Queer History Month and is celebrated in May."
+   ],
+   "url": "https://en.wikipedia.org/wiki/LGBTQ_History_Month"
+  },
   "stations": {
    "ClaphamJunction": {
     "plaque": "51942",
@@ -15289,6 +15314,13 @@
    "month": 10,
    "note": "Black History Month"
   },
+  "about": {
+   "title": "Black History Month",
+   "extract": [
+    "Black History Month is an annually observed commemorative month originating in the United States, where it is also known as African-American History Month. It began as a way of remembering important people and events in African-American history, before it spread to other countries where it could celebrate black people worldwide. It initially lasted a week before becoming a month-long observation since 1970. It is celebrated in February in the United States and Canada, where it has received official recognition from governments, and more recently has also been celebrated in Ireland and the United Kingdom where it is observed in October."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Black_History_Month"
+  },
   "stations": {
    "Aldgate": {
     "plaque": "53088",
@@ -15828,6 +15860,13 @@
   "when": {
    "month": 6,
    "note": "Refugee Week, around World Refugee Day on 20 June"
+  },
+  "about": {
+   "title": "Refugee Week",
+   "extract": [
+    "Refugee Week takes place every year around World Refugee Day (20th June). Over 20 countries around the world observe a Refugee Week."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Refugee_Week"
   },
   "stations": {
    "Euston": {
@@ -16558,6 +16597,13 @@
   "when": {
    "month": 4,
    "note": "Shakespeare's birthday and World Book Night, 23 April"
+  },
+  "about": {
+   "title": "World Book Day",
+   "extract": [
+    "World Book Day, also known as World Book and Copyright Day or International Day of the Book, is an annual event organized by UNESCO (United Nations Educational, Scientific and Cultural Organization) to promote reading, publishing, and copyright. The first World Book Day was celebrated on 23 April in 1995, and continues to be recognized on that day. A related event in the United Kingdom and Ireland, also called World Book Day, is observed in March. On the occasion of World Book and Copyright Day, UNESCO along with the advisory committee from the major sectors of the book industry, select the World Book Capital for one year. Each designated World Book Capital City carries out a program of activities to celebrate and promote books and reading. In 2024, Strasbourg was designated as the World Book Capital."
+   ],
+   "url": "https://en.wikipedia.org/wiki/World_Book_Day"
   },
   "stations": {
    "EnfieldTown": {
@@ -18526,6 +18572,7 @@
   "name": "Visual artist",
   "group": "Arts & Literature",
   "when": null,
+  "about": null,
   "stations": {
    "RussellSquare": {
     "plaque": "33150",
@@ -19553,6 +19600,7 @@
   "name": "Architecture & design",
   "group": "Arts & Literature",
   "when": null,
+  "about": null,
   "stations": {
    "Northfields": {
     "plaque": "40743",
@@ -20232,6 +20280,14 @@
   "when": {
    "month": 12,
    "note": "panto season"
+  },
+  "about": {
+   "title": "Pantomime",
+   "extract": [
+    "Pantomime (; informally panto) is a type of musical comedy stage production designed for family entertainment, generally combining broad and topical humour and cross-dressing actors with a story more or less based on a well-known fairy tale, fable or folk tale. Pantomime is a participatory form of theatre developed in England in the 18th century in which the audience is encouraged and expected to sing along with certain parts of the music and to shout out phrases to the performers.",
+    "The origins of pantomime reach back to ancient Greek classical theatre. It developed partly from the 16th century commedia dell'arte tradition of Italy and partly from other European and British stage traditions, such as 17th-century masques and music hall. An important part of the pantomime, until the late 19th century, was the harlequinade. Modern pantomime is performed throughout the United Kingdom, Ireland and (to a lesser extent) in other English-speaking countries, especially during the Christmas and New Year season, and includes songs, gags, slapstick comedy and dancing."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Pantomime"
   },
   "stations": {
    "MorningtonCrescent": {
@@ -21523,6 +21579,14 @@
    "month": 8,
    "note": "Notting Hill Carnival"
   },
+  "about": {
+   "title": "Notting Hill Carnival",
+   "extract": [
+    "The Notting Hill Carnival is an annual Caribbean Carnival event that has taken place in London, UK since 1966 on the streets of the Notting Hill area of Kensington, over the August Bank Holiday weekend.",
+    "It is led by members of the British Caribbean community, and attracts around two million people annually, making it one of the world's largest street festivals, the largest in Europe, and a significant event in British African Caribbean and British Indo-Caribbean culture. In 2006, the UK public voted the Notting Hill Carnival onto a list of icons of England."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Notting_Hill_Carnival"
+  },
   "stations": {
    "HydeParkCorner": {
     "plaque": "60033",
@@ -22590,7 +22654,7 @@
     "role": "composer",
     "distance_m": 761,
     "wikipedia": "https://en.wikipedia.org/wiki/John_Ireland_(composer)",
-    "person_image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/John_Nicholson_Ireland_%28circa_1920%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+    "person_image": null,
     "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/JOHN_IRELAND_1879-1962_Composer_lived_here.jpg?width=640",
     "label": "John\nIreland"
    },
@@ -22840,6 +22904,7 @@
   "name": "Scientist",
   "group": "Science, Medicine & Engineering",
   "when": null,
+  "about": null,
   "stations": {
    "GreenPark": {
     "plaque": "251",
@@ -23547,6 +23612,7 @@
   "name": "Medicine & healthcare",
   "group": "Science, Medicine & Engineering",
   "when": null,
+  "about": null,
   "stations": {
    "Bermondsey": {
     "plaque": "39136",
@@ -24106,6 +24172,14 @@
   "when": {
    "month": 1,
    "note": "the first Underground train ran on 10 January 1863"
+  },
+  "about": {
+   "title": "Metropolitan Railway",
+   "extract": [
+    "The Metropolitan Railway (also known as the Met) was a passenger and goods railway that served London from 1863 to 1933, its main line heading north-west from the capital's financial heart in the City to what were to become the Middlesex suburbs. Its first line connected the main-line railway termini at Paddington, Euston, and King's Cross to the City. The first section was built beneath the New Road using cut-and-cover between Paddington and King's Cross and in tunnel and cuttings beside Farringdon Road from King's Cross to near Smithfield, near the City. It opened to the public on 10 January 1863 with gas-lit wooden carriages hauled by steam locomotives, the world's first passenger-carrying designated underground railway.",
+    "The line was soon extended from both ends, and northwards via a branch from Baker Street. Southern branches, directly served, reached Hammersmith in 1864, Richmond in 1877 and the original completed the Inner Circle in 1884. The most important route was northwest into the Middlesex countryside, stimulating the development of new suburbs. Harrow was reached in 1880, and from 1897, having achieved the early patronage of the Duke of Buckingham and the owners of Waddesdon Manor, services extended for many years to Verney Junction in Buckinghamshire."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Metropolitan_Railway"
   },
   "stations": {
    "Northfields": {
@@ -25224,6 +25298,7 @@
   "name": "Politician & government",
   "group": "Politics, Government & Royalty",
   "when": null,
+  "about": null,
   "stations": {
    "Westminster": {
     "plaque": "57425",
@@ -26011,6 +26086,7 @@
   "name": "Royalty",
   "group": "Politics, Government & Royalty",
   "when": null,
+  "about": null,
   "stations": {
    "HydeParkCorner": {
     "plaque": "60033",
@@ -26598,6 +26674,7 @@
   "name": "Honours & distinctions",
   "group": "Politics, Government & Royalty",
   "when": null,
+  "about": null,
   "stations": {
    "Euston": {
     "plaque": "51581",
@@ -27117,6 +27194,14 @@
   "when": {
    "month": 5,
    "note": "May Day, 1 May"
+  },
+  "about": {
+   "title": "International Workers' Day",
+   "extract": [
+    "International Workers' Day, also called Labour Day in some countries and often referred to as May Day, is a celebration of labourers, the labour movement and the working class that is marked every year on 1 May, or the first Monday in May.",
+    "Traditionally, 1 May is the date of the European spring festival of May Day. The International Workers Congress held in Paris in 1889 established the Second International for labor, socialist, and Marxist parties. It adopted a resolution for a \"great international demonstration\" in support of working-class demands for the eight-hour day. The date was chosen by the American Federation of Labor to commemorate a general strike in the United States, which had begun on 1 May 1886 and culminated in the Haymarket affair on 4 May. The demonstration subsequently became a yearly event. The 1904 Sixth Conference of the Second International, called on \"all Social Democratic Party organisations and trade unions of all countries to demonstrate energetically on the First of May for the legal establishment of the eight-hour day, for the class demands of the proletariat, and for universal peace\"."
+   ],
+   "url": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
   },
   "stations": {
    "BondStreet": {
@@ -28595,6 +28680,7 @@
   "name": "Law",
   "group": "Social, Law, Activism & Religion",
   "when": null,
+  "about": null,
   "stations": {
    "Brixton": {
     "plaque": "7277",
@@ -28742,6 +28828,7 @@
   "name": "Religion",
   "group": "Social, Law, Activism & Religion",
   "when": null,
+  "about": null,
   "stations": {
    "TowerHill": {
     "plaque": "472",
@@ -29191,6 +29278,14 @@
   "when": {
    "month": 11,
    "note": "Remembrance Day, 11 November"
+  },
+  "about": {
+   "title": "Remembrance Day",
+   "extract": [
+    "Remembrance Day (also known as Poppy Day owing to the tradition of wearing a remembrance poppy) is a memorial day observed in former countries of the British Empire, and current Commonwealth member states since the end of the First World War to honour armed forces members who have died in the line of duty. The day is also marked by war remembrances in several other non-Commonwealth countries. In most countries, Remembrance Day is observed on 11 November to recall the end of First World War hostilities. Hostilities ended \"at the 11th hour of the 11th day of the 11th month\" of 1918, in accordance with the armistice signed by representatives of Germany and the Entente between 5:12 and 5:20 that morning. (\"At the 11th hour\" refers to the passing of the 11th hour, or 11:00 am.) The First World War formally ended with the signing of the Treaty of Versailles on 28 June 1919.",
+    "The tradition of Remembrance Day evolved out of Armistice Day. The initial Armistice Day was observed at Buckingham Palace, commencing with King George V hosting a \"Banquet in Honour of the President of the French Republic\" during the evening hours of 10 November 1919. The first official Armistice Day was subsequently held on the grounds of Buckingham Palace the following morning. During the Second World War, many countries changed the name of the holiday. Member states of the Commonwealth of Nations adopted Remembrance Day, while the US chose Veterans Day."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Remembrance_Day"
   },
   "stations": {
    "Euston": {
@@ -29972,6 +30067,14 @@
    "month": 9,
    "note": "the Blitz began on 7 September 1940"
   },
+  "about": {
+   "title": "The Blitz",
+   "extract": [
+    "The Blitz (English: 'lightning') was a bombing campaign by Nazi Germany and Fascist Italy against the United Kingdom during the Second World War. It lasted for eight months, from 7 September 1940 to 16 May 1941. The name is a shortened form of Blitzkrieg, a term used in the popular press to describe a German style of surprise attack used during the war.",
+    "Toward the end of the Battle of Britain in 1940, daylight air superiority over the United Kingdom was contested between the Luftwaffe and the Royal Air Force. Germany began conducting mass air attacks against British cities, beginning with London, in an attempt to draw the RAF Fighter Command into a battle of annihilation. Adolf Hitler and Reichsmarschall Hermann G\u00f6ring, commander-in-chief of the Luftwaffe, ordered the new policy on 6 September 1940. From 7 September 1940, London was systematically bombed by the Luftwaffe for 56 of the following 57 days and nights. The attacks included a large daylight attack against London on 15 September, a large raid on 29 December 1940 against London resulting in a firestorm known as the Second Great Fire of London, and a large raid on the night of 10\u201311 May 1941."
+   ],
+   "url": "https://en.wikipedia.org/wiki/The_Blitz"
+  },
   "stations": {
    "TowerHill": {
     "plaque": "5396",
@@ -30289,6 +30392,7 @@
   "name": "Exploration & travel",
   "group": "Military, Emergency Services & Exploration",
   "when": null,
+  "about": null,
   "stations": {
    "WarrenStreet": {
     "plaque": "484",
@@ -30458,6 +30562,14 @@
   "when": {
    "month": 7,
    "note": "Wimbledon fortnight, and London 2012 opened on 27 July"
+  },
+  "about": {
+   "title": "Wimbledon Championships",
+   "extract": [
+    "The Wimbledon Championships, commonly called Wimbledon, is a tennis tournament organised annually by the All England Lawn Tennis and Croquet Club in collaboration with the Lawn Tennis Association in Wimbledon, London. It is chronologically the third of the four Grand Slam tennis events each year, held after the Australian Open and the French Open and before the US Open. It is the oldest tennis tournament in the world and is widely regarded as the most prestigious. ",
+    "Wimbledon has been held since 1877 and is played on outdoor grass courts; it is the only tennis major still played on grass, the traditional surface. It is also the only major that retains a night-time curfew for logistical reasons, with matches continuing until 23:00 BST under floodlighting since 2009."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Wimbledon_Championships"
   },
   "stations": {
    "LeicesterSquare": {
@@ -31236,6 +31348,7 @@
   "name": "Business",
   "group": "Business & Commerce",
   "when": null,
+  "about": null,
   "stations": {
    "HydeParkCorner": {
     "plaque": "60032",
@@ -32063,6 +32176,7 @@
   "name": "Education",
   "group": "Education & Other",
   "when": null,
+  "about": null,
   "stations": {
    "MarbleArch": {
     "plaque": "3065",
@@ -32580,6 +32694,7 @@
   "name": "Personality / descriptive",
   "group": "Education & Other",
   "when": null,
+  "about": null,
   "stations": {
    "MorningtonCrescent": {
     "plaque": "1898",
@@ -32827,6 +32942,7 @@
   "name": "Other",
   "group": "Education & Other",
   "when": null,
+  "about": null,
   "stations": {
    "FulhamBroadway": {
     "plaque": "55926",

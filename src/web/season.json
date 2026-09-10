@@ -5,6 +5,14 @@
   "month": 9,
   "note": "the Blitz began on 7 September 1940"
  },
+ "about": {
+  "title": "The Blitz",
+  "extract": [
+   "The Blitz (English: 'lightning') was a bombing campaign by Nazi Germany and Fascist Italy against the United Kingdom during the Second World War. It lasted for eight months, from 7 September 1940 to 16 May 1941. The name is a shortened form of Blitzkrieg, a term used in the popular press to describe a German style of surprise attack used during the war.",
+   "Toward the end of the Battle of Britain in 1940, daylight air superiority over the United Kingdom was contested between the Luftwaffe and the Royal Air Force. Germany began conducting mass air attacks against British cities, beginning with London, in an attempt to draw the RAF Fighter Command into a battle of annihilation. Adolf Hitler and Reichsmarschall Hermann G\u00f6ring, commander-in-chief of the Luftwaffe, ordered the new policy on 6 September 1940. From 7 September 1940, London was systematically bombed by the Luftwaffe for 56 of the following 57 days and nights. The attacks included a large daylight attack against London on 15 September, a large raid on 29 December 1940 against London resulting in a firestorm known as the Second Great Fire of London, and a large raid on the night of 10\u201311 May 1941."
+  ],
+  "url": "https://en.wikipedia.org/wiki/The_Blitz"
+ },
  "stations": {
   "TowerHill": {
    "plaque": "5396",

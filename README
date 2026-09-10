@@ -236,11 +236,20 @@ all 19 lines onto a row with coordinates.
 
 The page carries these under Options, top left; they are set out in full here.
 
-  * **[Open Plaques](https://openplaques.org)** - the blue plaques and the people
-    they commemorate, without which there is no map to draw. The data is
-    dedicated to the public domain under [PDDL
+  * **[Open Plaques](https://openplaques.org)** - the reason this project exists
+    at all. It started from noticing how many blue plaques London has and how
+    scattered they are to actually go and see - Open Plaques had already done
+    the work of cataloguing thousands of them, and the tube map was the shape
+    that let all of them be looked at together instead of one street at a time.
+    The data is dedicated to the public domain under [PDDL
     1.0](https://opendatacommons.org/licenses/pddl/1-0/) and they ask for no
-    credit at all, which is all the more reason to give it.
+    credit at all, which is all the more reason to give it - and, since it's a
+    volunteer catalogue rather than a company, the useful way to support it is
+    not money but the same thing that built it: [adding a plaque they're
+    missing](https://openplaques.org/plaques/new), a photo to one that's
+    unphotographed, or [flagging an error or gap](https://openplaques.org/posts/contact).
+    [How can you help?](https://openplaques.org/posts/contribute) covers all of
+    it in more depth.
   * **[d3-tube-map](https://github.com/johnwalley/d3-tube-map)** by John Walley,
     BSD-3-Clause - draws tube maps in the style of the London Underground, and is
     the reason a diagram of one's own is possible rather than a re-drawing of

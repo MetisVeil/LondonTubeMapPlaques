@@ -268,6 +268,42 @@ text {
   color: var(--muted);
 }
 
+/* The one credit that gets a paragraph instead of a line: a link, then prose,
+   then a second, quieter link, rather than the whole block being one <a>. */
+.credit-featured {
+  padding: 6px 10px;
+}
+
+/* Unlike the others, the card itself isn't a link - only the two lines of text
+   inside it are - so it shouldn't light up as if the whole thing were clickable. */
+.credit-featured:hover {
+  background: none;
+}
+
+.credit-featured .who {
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.credit-featured .what {
+  margin: 4px 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.credit-featured .how-to-help {
+  display: block;
+  font-size: 12px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.credit-featured .how-to-help:hover {
+  text-decoration: underline;
+}
+
 .small-print {
   margin: 6px 0 0;
   padding: 0 10px;

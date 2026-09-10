@@ -36,6 +36,10 @@
           <input type="checkbox" id="dark-toggle" /><span>Dark mode</span>
         </label>
 
+        <a class="option option-link" href="./methodology.html">
+          <span>How this map is made</span><span class="arrow">&rarr;</span>
+        </a>
+
         <div class="credits">
           <div class="credits-heading">Made possible by</div>
 
@@ -65,7 +69,7 @@
           </a>
           <a class="credit" href="https://en.wikipedia.org" target="_blank" rel="noopener">
             <span class="who">Wikipedia</span>
-            <span class="what">the portraits, and where each name leads</span>
+            <span class="what">the portraits, the station photographs and what each article says</span>
           </a>
 
           <p class="small-print">
@@ -102,6 +106,8 @@
         .margin({ top: 40, right: 40, bottom: 40, left: 40 });
 
       var svg, root, data, names = {}, themes = null, showing = null, initialViewApplied = false;
+      // Which lines reach each station, as last drawn; filled in by shown().
+      var callsAt = {};
       var options = document.getElementById('options-toggle');
       var optionsMenu = document.getElementById('options-menu');
       var overgroundBox = document.getElementById('overground-toggle');
@@ -109,6 +115,8 @@
       var overground = false;
       var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
                     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      // The theme the build picked for this week, marked wherever it appears.
+      var showingNow = null;
       // Dark is the map's default; the toggle is the way back to light.
       var dark = true;
       var initialBounds = {
@@ -273,6 +281,7 @@
           });
         });
 
+        callsAt = through;
         return { stations: stations, lines: lines };
       }
 
@@ -393,6 +402,7 @@
         document.getElementById('category-name').textContent = theme ? theme.name : 'Tube map';
         describe(theme);
         draw(true);
+        if (selected) present(selected);
       }
 
       function buildMenu() {
@@ -420,25 +430,30 @@
 
         item('Tube map', null, null);
 
-        // The year first, in order, so the whole calendar is one thing you can
-        // read rather than twelve themes to be found among the rest. They keep
-        // their place in their own group below as well.
+        // The year first, in date order, so the whole calendar is one thing you
+        // can read rather than twelve themes to be found among the rest. They
+        // keep their place in their own group below as well.
         var year = themes.filter(function (theme) { return theme.when; })
-                         .sort(function (a, b) { return a.when.month - b.when.month; });
+                         .sort(function (a, b) {
+                           return a.when.month - b.when.month ||
+                                  (a.when.day || 0) - (b.when.day || 0);
+                         });
 
         if (year.length) {
           heading('Through the year');
           year.forEach(function (theme) {
-            item(MONTHS[theme.when.month - 1] + ' &middot; ' + theme.name,
-                 Object.keys(theme.stations).length, theme,
-                 theme.when.month === new Date().getMonth() + 1);
+            var month = MONTHS[theme.when.month - 1];
+            item((theme.when.day ? theme.when.day + ' ' + month : 'All ' + month) +
+                 ' &middot; ' + theme.name, Object.keys(theme.stations).length, theme,
+                 theme.name === showingNow);
           });
         }
 
         Object.keys(groups).forEach(function (name) {
           heading(name);
           groups[name].forEach(function (theme) {
-            item(theme.name, Object.keys(theme.stations).length, theme);
+            item(theme.name, Object.keys(theme.stations).length, theme,
+                 theme.name === showingNow);
           });
         });
       }
@@ -488,6 +503,9 @@
       darkBox.onchange = function () {
         dark = darkBox.checked;
         document.body.classList.toggle('dark', dark);
+        // Remembered only so the methodology page can open in the same theme;
+        // the map itself still starts dark, which is its own default.
+        try { localStorage.setItem('dark', dark); } catch (e) {}
         draw(true);
       };
 
@@ -501,6 +519,75 @@
       darkBox.checked = dark;
       document.body.classList.toggle('dark', dark);
 
+      // What the panel is showing, and what Wikipedia had to say about the
+      // stations. The articles are a third of a megabyte - more than the map -
+      // and nobody needs them until they click something, so they are fetched
+      // on the first click and the open panel is redrawn once they land.
+      var selected = null, stationArticles = null, articlesAsked = null;
+
+      function articles() {
+        if (articlesAsked) return articlesAsked;
+
+        articlesAsked = d3.json('./stations.json').then(function (loaded) {
+          stationArticles = loaded;
+          if (selected) present(selected);
+        }).catch(function () {
+          stationArticles = {};
+        });
+
+        return articlesAsked;
+      }
+
+      function escaped(text) {
+        return String(text).replace(/[&<>"]/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+      }
+
+      function card(image, title, hint, body, href) {
+        selection.html(
+          (image ? '<img class="portrait" src="' + escaped(image) + '" alt="" />' : '') +
+          '<div class="copy"><div class="name">' + escaped(title) + '</div>' +
+          (hint ? '<div class="hint">' + escaped(hint) + '</div>' : '') +
+          (body ? '<p class="summary">' + escaped(body) + '</p>' : '') +
+          (href ? '<a class="more" target="_blank" rel="noopener" href="' +
+                  escaped(href) + '">Wikipedia &rarr;</a>' : '') +
+          '</div>');
+      }
+
+      // Two things a station can be. Under a themed map it stands for whoever
+      // the theme put there, which is the plaque nearby rather than the station
+      // - so the station's own article would be beside the point. Everywhere
+      // else, and at every station a theme has nobody for, it is just itself.
+      function present(key) {
+        var named = showing && showing.stations[key];
+
+        if (named) {
+          return card(named.person_image, named.person,
+                      named.role + ' \u00b7 ' + named.distance_m + 'm from ' +
+                      names[key].replace(/\n/g, ' '),
+                      null, named.wikipedia);
+        }
+
+        var article = stationArticles && stationArticles[key];
+        card(article && article.image, names[key].replace(/\n/g, ' '),
+             calling(key), article && article.summary, article && article.url);
+      }
+
+      // The lines a station is on, as the map currently draws it: with the
+      // overground hidden, a stop it shares with nothing else is a stop on one
+      // line, and saying otherwise would describe a map that isn't on screen.
+      //
+      // The word goes on each name rather than once at the end, because TfL's
+      // own names are not all the same shape - "Elizabeth line" already carries
+      // it, "DLR" never takes it, and "Waterloo & City" would make a list
+      // joined with an ampersand unreadable.
+      function calling(key) {
+        return Object.keys(callsAt[key] || {}).map(function (line) {
+          return /line$/.test(line) || /^[A-Z]+$/.test(line) ? line : line + ' line';
+        }).join(', ');
+      }
+
       d3.json('./map.json').then(function (loaded) {
         data = loaded;
         Object.keys(data.stations).forEach(function (key) {
@@ -508,21 +595,9 @@
         });
 
         map.on('click', function (key) {
-          var station = data.stations[key];
-          var named = showing && showing.stations[key];
-          var title = named ? named.person : station.label.replace(/\n/g, ' ');
-          var under = named
-            ? named.role + ' &middot; ' + named.distance_m + 'm from ' +
-              names[key].replace(/\n/g, ' ')
-            : station.uid + ' &middot; ' + station.lat.toFixed(4) + ', ' + station.lon.toFixed(4);
-          var image = named && named.person_image
-            ? '<img class="portrait" width="56" height="56" src="' + named.person_image + '" alt="" />'
-            : '';
-
-          selection.html(image + '<div class="copy"><div class="name">' + title + '</div><div class="hint">' + under + '</div>' +
-            (named && named.wikipedia
-              ? '<a class="more" target="_blank" rel="noopener" href="' + named.wikipedia + '">Wikipedia</a>'
-              : '') + '</div>');
+          selected = key;
+          present(key);
+          articles();
         });
 
         draw(false);
@@ -535,19 +610,24 @@
       // is. Saying so is the part worth dismissing: the theme stays either way.
       var seasonPanel = document.getElementById('season');
 
-      // Called for every theme, not just this month's: picking August in
-      // February is still asking what August is about. A theme with no occasion
-      // behind it - most of the menu - closes the panel again.
+      // Called for every theme, because the panel's first job is to say which
+      // map you are looking at - most weeks that is a theme taking its turn,
+      // with no occasion behind it and so no note and no article. Only the
+      // plain tube map, which is the station names themselves, needs nothing.
       //
       // The article sits in a <details>, so folding it away to just its title
-      // is the browser's own job rather than ours, and the panel itself stays:
-      // it says which map you are looking at, which is worth keeping on screen.
+      // is the browser's own job rather than ours.
       function describe(theme) {
-        seasonPanel.hidden = !(theme && theme.when);
-        if (seasonPanel.hidden) return;
+        seasonPanel.hidden = !theme;
+        if (!theme) return;
 
         seasonPanel.querySelector('.season-name').textContent = theme.name;
-        seasonPanel.querySelector('.season-note').textContent = theme.when.note;
+        // The map the page opened with arrives with its reason already written -
+        // which date it is for, or, on a week with no date, which one is next.
+        // A map picked from the menu has only its own occasion to give.
+        var note = seasonPanel.querySelector('.season-note');
+        note.textContent = theme.note || (theme.when ? theme.when.note : '');
+        note.hidden = !note.textContent;
 
         var context = seasonPanel.querySelector('.season-context');
         var about = seasonPanel.querySelector('.season-about');
@@ -564,7 +644,9 @@
       }
 
       function openInSeason(theme) {
-        if (theme && theme.stations) show(theme);
+        if (!theme || !theme.stations) return;
+        showingNow = theme.name;
+        show(theme);
       }
     </script>
   </body>

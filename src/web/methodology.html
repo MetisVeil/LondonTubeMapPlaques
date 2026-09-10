@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How this map is made</title>
+    <meta
+      name="description"
+      content="How the blue plaque tube map is built: where the data comes from, how plaques are attributed to stations, how the diagram is drawn, how the people are chosen, and how the calendar decides which map opens."
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hammersmith+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      /* The map's palette, kept in step with tubeMap.css. This page cannot
+         share that stylesheet: it locks the document to the window height and
+         hides overflow, which is right for a map and wrong for prose. */
+      :root {
+        --paper: #fff;
+        --ink: #10137e;
+        --panel: rgba(255, 255, 255, 0.94);
+        --solid: #fff;
+        --edge: #d4d7e5;
+        --muted: #6b6f85;
+        --faint: #8b8fa3;
+        --hover: #eef0fa;
+        --shadow: rgba(16, 19, 126, 0.14);
+      }
+
+      body.dark {
+        color-scheme: dark;
+
+        --paper: #15171c;
+        --ink: #e6e9f5;
+        --panel: rgba(28, 31, 38, 0.94);
+        --solid: #1c1f26;
+        --edge: #3a3f4b;
+        --muted: #9aa1b6;
+        --faint: #848b9f;
+        --hover: #262a33;
+        --shadow: rgba(0, 0, 0, 0.5);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--ink);
+        background: var(--paper);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      /* ------------------------------------------------------------------ */
+      /* The bar back to the map                                            */
+      /* ------------------------------------------------------------------ */
+
+      header.bar {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 20px;
+        font-size: 13px;
+        background: var(--panel);
+        border-bottom: 1px solid var(--edge);
+        backdrop-filter: blur(6px);
+      }
+
+      .bar .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        text-decoration: none;
+        border: 1px solid var(--edge);
+        border-radius: 4px;
+      }
+
+      .bar .back:hover {
+        border-color: var(--ink);
+      }
+
+      .bar .here {
+        margin-left: auto;
+        color: var(--faint);
+      }
+
+      /* ------------------------------------------------------------------ */
+      /* Title, and the numbers under it                                    */
+      /* ------------------------------------------------------------------ */
+
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 24px 96px;
+      }
+
+      h1 {
+        margin: 56px 0 0;
+        font-family: "Hammersmith One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 40px;
+        font-weight: normal;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+      }
+
+      .standfirst {
+        margin: 16px 0 0;
+        font-size: 17px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+
+      .numbers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1px;
+        margin: 36px 0 8px;
+        overflow: hidden;
+        background: var(--edge);
+        border: 1px solid var(--edge);
+        border-radius: 4px;
+      }
+
+      .numbers div {
+        padding: 14px 16px;
+        background: var(--solid);
+      }
+
+      .numbers b {
+        display: block;
+        font-family: "Hammersmith One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 1.2;
+      }
+
+      .numbers span {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      /* ------------------------------------------------------------------ */
+      /* The sections, drawn as a line with a stop at each heading           */
+      /* ------------------------------------------------------------------ */
+
+      /* Each section paints its own segment of the line in its own colour, so
+         the segments stack into one continuous route down the page, changing
+         colour at every stop the way a journey with changes does. */
+      section {
+        position: relative;
+        padding: 28px 0 28px 40px;
+      }
+
+      section::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background: var(--line);
+      }
+
+      /* The first and last segments are rounded, as the end of a line is. */
+      section:first-of-type::before {
+        top: 34px;
+        border-radius: 3px 3px 0 0;
+      }
+
+      section:last-of-type::before {
+        bottom: auto;
+        height: 34px;
+        border-radius: 0 0 3px 3px;
+      }
+
+      /* The interchange marker: paper filled, drawn in ink, as on the map. */
+      h2 {
+        position: relative;
+        margin: 0 0 14px;
+        font-family: "Hammersmith One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 23px;
+        font-weight: normal;
+        line-height: 1.25;
+      }
+
+      h2::before {
+        content: "";
+        position: absolute;
+        left: -40px;
+        top: 8px;
+        width: 15px;
+        height: 15px;
+        background: var(--paper);
+        border: 3px solid var(--ink);
+        border-radius: 50%;
+      }
+
+      h3 {
+        margin: 28px 0 8px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 0 0 14px;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      em {
+        font-style: italic;
+      }
+
+      code {
+        padding: 1px 5px;
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 0.86em;
+        color: var(--ink);
+        background: var(--hover);
+        border-radius: 3px;
+      }
+
+      .aside {
+        margin: 18px 0;
+        padding: 12px 16px;
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: var(--muted);
+        background: var(--hover);
+        border-left: 3px solid var(--edge);
+        border-radius: 0 3px 3px 0;
+      }
+
+      .aside p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ------------------------------------------------------------------ */
+      /* The four stages of a build                                         */
+      /* ------------------------------------------------------------------ */
+
+      .pipeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin: 22px 0;
+      }
+
+      .stage {
+        position: relative;
+        padding: 12px 14px;
+        background: var(--solid);
+        border: 1px solid var(--edge);
+        border-radius: 4px;
+      }
+
+      .stage b {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--faint);
+      }
+
+      .stage span {
+        display: block;
+        margin-top: 4px;
+        font-size: 13px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      /* ------------------------------------------------------------------ */
+      /* The calendar                                                       */
+      /* ------------------------------------------------------------------ */
+
+      .scroll {
+        margin: 22px 0;
+        overflow-x: auto;
+        border: 1px solid var(--edge);
+        border-radius: 4px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13.5px;
+      }
+
+      th {
+        padding: 9px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--faint);
+        white-space: nowrap;
+        background: var(--hover);
+      }
+
+      td {
+        padding: 9px 12px;
+        vertical-align: top;
+        border-top: 1px solid var(--edge);
+      }
+
+      td.day {
+        white-space: nowrap;
+        color: var(--muted);
+      }
+
+      td.count {
+        text-align: right;
+        color: var(--faint);
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* The tick beside a map's name, in that month's colour. */
+      td .tick {
+        display: inline-block;
+        width: 4px;
+        height: 13px;
+        margin-right: 9px;
+        vertical-align: -2px;
+        border-radius: 1px;
+      }
+
+      /* ------------------------------------------------------------------ */
+      /* Footer                                                             */
+      /* ------------------------------------------------------------------ */
+
+      footer {
+        margin-top: 48px;
+        padding-top: 24px;
+        font-size: 13px;
+        color: var(--muted);
+        border-top: 1px solid var(--edge);
+      }
+
+      footer a {
+        color: var(--ink);
+      }
+
+      @media (max-width: 640px) {
+        h1 {
+          margin-top: 36px;
+          font-size: 31px;
+        }
+
+        .wrap {
+          padding: 0 18px 64px;
+        }
+
+        section {
+          padding-left: 28px;
+        }
+
+        section::before {
+          left: 0;
+          width: 4px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        h2::before {
+          left: -28px;
+          top: 6px;
+          width: 12px;
+          height: 12px;
+          border-width: 2px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="dark">
+    <header class="bar">
+      <a class="back" href="./index.html">&larr; The map</a>
+      <span class="here">Methodology</span>
+    </header>
+
+    <div class="wrap">
+      <h1>How this map is made</h1>
+      <p class="standfirst">
+        Every plaque in London that has a position on it gets attributed to the
+        stations nearest it, and the Underground is redrawn with people's names
+        where the station names usually go. None of it is placed by hand. This
+        page goes through it in the order a build does.
+      </p>
+
+      <div class="numbers">
+        <div><b>3,781</b><span>plaques catalogued</span></div>
+        <div><b>3,238</b><span>near a station</span></div>
+        <div><b>421</b><span>stations drawn</span></div>
+        <div><b>19</b><span>lines</span></div>
+        <div><b>35</b><span>themed maps</span></div>
+      </div>
+
+      <section style="--line: #b36305">
+        <h2>What you are looking at</h2>
+        <p>
+          London has been putting up commemorative plaques since 1866. Over
+          1,000 of them are English Heritage's blue plaques, and
+          <a href="https://openplaques.org" target="_blank" rel="noopener">Open Plaques</a>
+          catalogues thousands more from every other scheme besides. The trouble
+          is that they are scattered. You come across one by accident rather
+          than setting out to see it, and there is no good way to look at more
+          than a few at a time.
+        </p>
+        <p>
+          The Underground is the diagram Londoners already use to think about
+          where things are, so the two get put together here. Each plaque is
+          attributed to the stations nearest it, the network is redrawn as a
+          tube map, and a themed map swaps each station's name for somebody
+          commemorated near it.
+        </p>
+        <div class="pipeline">
+          <div class="stage">
+            <b>1 &middot; Fetch</b>
+            <span>Open Plaques, TfL stations, TfL routes</span>
+          </div>
+          <div class="stage">
+            <b>2 &middot; Version</b>
+            <span>into SQLite, keeping every past state</span>
+          </div>
+          <div class="stage">
+            <b>3 &middot; Derive</b>
+            <span>plaque&rarr;station, geometry, themes</span>
+          </div>
+          <div class="stage">
+            <b>4 &middot; Write</b>
+            <span>four JSON files the page reads</span>
+          </div>
+        </div>
+        <p>
+          The page itself is plain HTML with no build step. It loads the JSON
+          and hands it to
+          <a href="https://github.com/johnwalley/d3-tube-map" target="_blank" rel="noopener">d3-tube-map</a>,
+          which draws diagrams in the Underground's own style.
+        </p>
+      </section>
+
+      <section style="--line: #e32017">
+        <h2>Where the data comes from</h2>
+        <p>Three feeds, none of them typed in by hand:</p>
+        <ul>
+          <li>
+            <strong>Open Plaques</strong>, whose London dump is a CSV
+            republished as plaques are added. It holds 3,781 plaques, of which
+            3,675 carry coordinates. The rest have never been positioned, so
+            there is nothing to attribute them to. The data is public domain
+            under PDDL 1.0.
+          </li>
+          <li>
+            <strong>TfL station data</strong>, a zip of CSVs giving station
+            names and the coordinates every distance here is measured from.
+          </li>
+          <li>
+            <strong>TfL's Unified API</strong>, for the lines and their route
+            sequences: which stations each line calls at, in running order. The
+            track between them is drawn from that.
+          </li>
+        </ul>
+        <p>
+          Two further lookups fill in what a plaque does not say about the
+          person on it. <strong>Wikidata</strong> supplies occupations from a
+          controlled vocabulary. <strong>Wikipedia</strong> supplies the
+          categories an article sits in, the opening paragraphs explaining a
+          calendar occasion, and the portrait beside each name.
+        </p>
+        <p>
+          Wikipedia also answers for the stations themselves, which is what the
+          panel shows when you click one on the plain map: its photograph and
+          the opening paragraph of its own article. Finding that article is most
+          of the work, because London's stations are filed under three different
+          conventions &mdash; <em>Oval tube station</em>, <em>Stratford
+          station</em>, <em>Abbey Road DLR station</em> &mdash; and the bare name
+          is usually taken by the district instead.
+          <a href="https://en.wikipedia.org/wiki/List_of_London_Underground_stations" target="_blank" rel="noopener">List
+          of London Underground stations</a> names the article for all 272 tube
+          stations outright; the Overground, DLR and Elizabeth line stops are
+          tried against each convention in turn, and the first name that both
+          exists, reads as a station and is not one of Wikipedia's
+          disambiguation pages wins. All 421 resolve, every one of them with a
+          photograph.
+        </p>
+
+        <h3>Nothing is overwritten</h3>
+        <p>
+          The database keeps the full history of every row. A version records
+          the load it first appeared in and the load that replaced it, so
+          re-running the build against an unchanged feed writes nothing at all.
+          When a station gets renamed or a plaque corrected, the old value stays
+          behind rather than being erased. Each table has a
+          <code>current_</code> view of the rows that are live now, and that is
+          what everything downstream reads.
+        </p>
+        <div class="aside">
+          <p>
+            The join between TfL's two feeds is not quite clean. The API calls
+            Euston <code>940GZZLUEUS</code> while the station files list it
+            under its hub code, <code>HUBEUS</code>. Falling back to the parent
+            station id is what resolves every stop on all 19 lines onto a row
+            that actually has coordinates.
+          </p>
+        </div>
+      </section>
+
+      <section style="--line: #ffd300">
+        <h2>Which station a plaque belongs to</h2>
+        <p>
+          Every station is measured against every plaque, which comes to 421 by
+          3,675 great-circle distances, computed as a single matrix. Ranking is
+          then a sort down each column, and the three nearest stations are kept
+          for each plaque.
+        </p>
+        <p>
+          Anything more than a kilometre from the nearest station is dropped. A
+          kilometre is roughly a twelve-minute walk and takes in 88% of the
+          positioned plaques. The tail runs out to 37 km, where the Elizabeth
+          line reaches Reading and there are no plaques for miles. What survives
+          is 3,238 plaques, covering 295 of the 421 stations, at a median walk
+          of 324 m.
+        </p>
+        <p>
+          Three stations get kept rather than one because the closest station is
+          often not the one anybody would actually use, and because a themed map
+          that wants a different name at every station needs somewhere to fall
+          back to when its first choice is taken.
+        </p>
+      </section>
+
+      <section style="--line: #00782a">
+        <h2>How the diagram is drawn</h2>
+        <p>
+          The lines, stations and stretches of track are live TfL data. The
+          positions are not. The real Tube map is a copyrighted design, licensed
+          on terms that forbid altering it, renaming stations included, which
+          happens to be the entire point of this project. So the diagram is
+          drawn from scratch instead.
+        </p>
+        <p>
+          The drawing library will not accept an arbitrary polyline. Every
+          segment has to run along one of the eight compass points, and a change
+          of direction needs its own node one step past the end of the run. The
+          geometry is worked out in four passes.
+        </p>
+        <ul>
+          <li>
+            <strong>Place.</strong> Project each station's coordinates, then
+            pull it towards the centre by the square root of its distance out.
+            Beck's map gives the centre most of the room and squeezes the ends
+            of the lines in. Without that compression the grid would need
+            something like 1,000 cells to keep Covent Garden and Leicester
+            Square apart, and would be mostly empty. Stations then take an
+            integer grid cell, busiest first, so interchanges land where they
+            asked to and the quiet stops shuffle around them.
+          </li>
+          <li>
+            <strong>Route.</strong> Join each pair of stations with straight
+            runs and corners, trying short sequences before long ones and
+            preferring the shortest drawn line. That preference is what puts the
+            diagonals in. A line leaves a station the way it arrived, so all the
+            turning happens in between. Four corners is a full reversal, the
+            worst any line asks for, and that is the Central doubling back round
+            the Hainault loop.
+          </li>
+          <li>
+            <strong>Validate.</strong> The library's own geometry rules,
+            reimplemented and run over every branch before the JSON is written,
+            so a mistake fails the build rather than the browser.
+          </li>
+          <li>
+            <strong>Label.</strong> Measure each name into a rectangle and score
+            it on what it would cover. Landing on another name costs more than
+            crossing a line, since two names on top of each other are
+            unreadable, where a name over a line is only untidy. The most
+            crowded stations choose first, then the worst few are placed again
+            against everything else.
+          </li>
+        </ul>
+        <p>
+          The last build reported no overlapping labels and 56 sitting close to
+          a line. That overlap count is exact. The line count is pessimistic,
+          because it treats a line as filling every cell it crosses. Anywhere
+          the automatic result can be beaten by eye, a small overrides file is
+          applied last, so hand-tuning survives a rebuild.
+        </p>
+        <div class="aside">
+          <p>
+            Where two lines share the same track they have to be drawn side by
+            side, offset along their own normal, but only by one line width.
+            Push further and a line tears open at its junctions, because each
+            branch is offset along a different bearing, and a gap reads as the
+            line ending.
+          </p>
+        </div>
+      </section>
+
+      <section style="--line: #6950a1">
+        <h2>How the people are chosen</h2>
+        <p>
+          The themed maps come from a single markdown file, which is the only
+          thing that has to be edited to add one. It has three levels: a
+          <strong>group</strong>, the <strong>categories</strong> within it, and
+          the <strong>rules</strong> deciding which plaques a category covers. A
+          rule can be any of four things.
+        </p>
+        <ul>
+          <li>
+            <strong>A role</strong>, matched against what the plaque itself
+            records. This is free text, filled in for 3,186 plaques and running
+            to 1,091 distinct spellings of a job, so matching folds case and
+            turns curly apostrophes into straight ones.
+          </li>
+          <li>
+            <strong>A field and value</strong>: the plaque's subject type, sex,
+            colour, area, series or erecting organisation. The list of allowed
+            fields is fixed, so a typo gets rejected by name instead of quietly
+            matching nothing.
+          </li>
+          <li>
+            <strong>An occupation</strong> from Wikidata, where each word sits
+            at the top of a subclass tree rather than at a leaf. Asking for
+            <code>writer</code> therefore also answers for poets, novelists and
+            playwrights, and for whatever occupation gets coined next year.
+          </li>
+          <li>
+            <strong>A Wikipedia category</strong>, matched loosely so that one
+            line covers a whole family of them. Loose matching is what makes
+            these worth having, and now and then it reaches somebody it should
+            not. An <code>except:</code> line says so, which beats giving up and
+            listing people by hand.
+          </li>
+        </ul>
+        <p>
+          A category is the union of its rules, less its exceptions, and takes
+          only plaques whose subject is a man or a woman. That keeps out the
+          many plaques commemorating churches, public houses and bomb sites,
+          which have no business on a map about people. Every group also gets a
+          combined map of everything under it, since several categories are thin
+          on their own and good together. There are 35 maps in all: the eight
+          groups, their categories, and five that stand alone.
+        </p>
+
+        <h3>One name per station, one station per name</h3>
+        <p>
+          Both directions matter. A station can only carry one name, and a
+          person ought to turn up once rather than at every station they
+          happened to live near. Pairings are taken nearest first, and a person
+          whose closest station is already spoken for falls back to the second
+          or third station kept for them. That fallback is worth real coverage:
+          Music fills 131 stations, where only about 80 have a musician as their
+          single nearest plaque.
+        </p>
+        <p>
+          Matching is keyed on the person rather than the plaque. Dickens has
+          twenty plaques and Hendrix three, and reading those as different
+          people would put the same name on three different stations.
+        </p>
+      </section>
+
+      <section style="--line: #0098d4">
+        <h2>How the calendar works</h2>
+        <p>
+          Twelve of the maps carry a date. Opening the page does not give you
+          the plain tube map, it gives you whichever map is in season, already
+          chosen. That choice is made by the build rather than in the browser,
+          because the build knows how long its own answer has to last.
+        </p>
+        <p>Each build asks three questions in order.</p>
+        <ul>
+          <li>
+            <strong>Is a dated occasion within the next seven days?</strong> If
+            so, that map takes the week. It looks at this year's date, or next
+            year's if the day has already gone, which is how a build at the end
+            of December still finds 10 January.
+          </li>
+          <li>
+            <strong>Is it the month of a month-long occasion?</strong> LGBT+
+            History Month and Black History Month really do run all month, so
+            they take theirs.
+          </li>
+          <li>
+            <strong>Otherwise, whose turn is it?</strong> Every remaining week
+            goes to a map with no occasion of its own, picked by the week
+            number, so every build in the same week agrees without anything
+            being remembered between them. Maps covering fewer than 40 stations
+            sit the rotation out. Law has fourteen, which makes a map that just
+            looks broken.
+          </li>
+        </ul>
+        <p>
+          Seven days is not a round number picked at random. It is how long a
+          build's output stays up, since the site rebuilds weekly. Any shorter
+          and a date could fall in a week no build was ever looking at, so the
+          map would miss the day itself and then show it late.
+        </p>
+
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>When</th>
+                <th>Map</th>
+                <th>The occasion</th>
+                <th>Stations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="day">10 Jan</td>
+                <td><span class="tick" style="background: #b36305"></span>Engineering</td>
+                <td>the first Underground train ran on this day in 1863</td>
+                <td class="count">111</td>
+              </tr>
+              <tr>
+                <td class="day">All Feb</td>
+                <td><span class="tick" style="background: #e32017"></span>Queer London</td>
+                <td>LGBT+ History Month</td>
+                <td class="count">66</td>
+              </tr>
+              <tr>
+                <td class="day">8 Mar</td>
+                <td><span class="tick" style="background: #ffd300"></span>Women of London</td>
+                <td>International Women's Day</td>
+                <td class="count">142</td>
+              </tr>
+              <tr>
+                <td class="day">23 Apr</td>
+                <td><span class="tick" style="background: #00782a"></span>Writer / Literary figure</td>
+                <td>Shakespeare's birthday, and World Book Day</td>
+                <td class="count">196</td>
+              </tr>
+              <tr>
+                <td class="day">1 May</td>
+                <td><span class="tick" style="background: #6950a1"></span>Social reform &amp; activism</td>
+                <td>May Day</td>
+                <td class="count">147</td>
+              </tr>
+              <tr>
+                <td class="day">20 Jun</td>
+                <td><span class="tick" style="background: #0098d4"></span>Exiles &amp; emigres</td>
+                <td>World Refugee Day, and Refugee Week around it</td>
+                <td class="count">72</td>
+              </tr>
+              <tr>
+                <td class="day">27 Jul</td>
+                <td><span class="tick" style="background: #9b0056"></span>Sportsperson</td>
+                <td>London 2012 opened on this day, mid-Wimbledon</td>
+                <td class="count">77</td>
+              </tr>
+              <tr>
+                <td class="day">25 Aug</td>
+                <td><span class="tick" style="background: #00a4a7"></span>Music</td>
+                <td>Notting Hill Carnival, on the bank holiday weekend</td>
+                <td class="count">131</td>
+              </tr>
+              <tr>
+                <td class="day">7 Sep</td>
+                <td><span class="tick" style="background: #003688"></span>Emergency services</td>
+                <td>the Blitz began on this day in 1940</td>
+                <td class="count">31</td>
+              </tr>
+              <tr>
+                <td class="day">All Oct</td>
+                <td><span class="tick" style="background: #ed1b00"></span>Black London</td>
+                <td>Black History Month</td>
+                <td class="count">53</td>
+              </tr>
+              <tr>
+                <td class="day">11 Nov</td>
+                <td><span class="tick" style="background: #5bbd72"></span>Military</td>
+                <td>Remembrance Day</td>
+                <td class="count">77</td>
+              </tr>
+              <tr>
+                <td class="day">All Dec</td>
+                <td><span class="tick" style="background: #f3a9bb"></span>Performing arts</td>
+                <td>panto season</td>
+                <td class="count">128</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          The panel at the top of the map says which map you are looking at. For
+          a dated one it carries the opening of the Wikipedia article explaining
+          the occasion, fetched at build time and folded away to its title if
+          you would rather just look at the map. Every other map in the menu can
+          still be picked at any time. The calendar only decides which one
+          opens.
+        </p>
+        <div class="aside">
+          <p>
+            The chosen map is written to a small file of its own. The full set
+            of themed maps runs to about 1.5 MB, six times the map itself, and
+            is only worth fetching once somebody opens the menu.
+          </p>
+        </div>
+      </section>
+
+      <section style="--line: #9b0056">
+        <h2>How it stays up to date</h2>
+        <p>
+          The site is published from the repository to GitHub Pages. A push
+          deploys whatever is committed. A scheduled run every Monday at 04:00
+          UTC does the whole thing: refetch all three feeds, rebuild the map,
+          the themed maps and the calendar's choice, commit the regenerated
+          JSON, then deploy that. The same run can be triggered by hand.
+        </p>
+        <p>
+          Because the database is not committed, the workflow caches it between
+          runs, and the version history rolls forward from week to week instead
+          of starting again from nothing.
+        </p>
+      </section>
+
+      <!-- The Northern line, which the map treats as ink rather than a colour:
+           no mixture of black is still black, so like the labels it flips. -->
+      <section style="--line: var(--ink)">
+        <h2>What this map is not</h2>
+        <ul>
+          <li>
+            <strong>Not geography.</strong> Positions are compressed towards the
+            centre and every station is snapped to a grid cell, so a station
+            sits where the diagram wants it rather than where it is. Distances
+            on the page mean nothing. The distances in metres, from plaque to
+            station, are real.
+          </li>
+          <li>
+            <strong>Not TfL's map</strong>, and not endorsed by them. The
+            network data is theirs, under the Open Government Licence. The
+            drawing belongs to this project, for the licensing reasons above.
+          </li>
+          <li>
+            <strong>Not only English Heritage's blue plaques.</strong> Open
+            Plaques catalogues every commemorative scheme, in every colour. A
+            category can narrow to one of them, but by default they are all in.
+          </li>
+          <li>
+            <strong>Not a record of who lived where.</strong> It records who
+            somebody thought worth a plaque, with all the biases that decision
+            carries: heavily male, heavily central, heavily nineteenth and
+            twentieth century. A station with no name on a themed map means
+            nothing nearby matched, not that nobody was there.
+          </li>
+          <li>
+            <strong>Only as good as the catalogue's fields.</strong> Roles are
+            free text and inconsistent, and the sex field records 95 men as
+            <code>object</code>, which is why subject type gets preferred to it
+            wherever a category needs to know.
+          </li>
+          <li>
+            <strong>Hiding a lot, deliberately.</strong> Around a busy
+            interchange there may be dozens of matching plaques, and the map
+            shows one. Clicking a station is how to see what sits behind the
+            name.
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>
+          Built from
+          <a href="https://openplaques.org" target="_blank" rel="noopener">Open Plaques</a>
+          (public domain, PDDL 1.0) and
+          <a href="https://tfl.gov.uk/info-for/open-data-users/" target="_blank" rel="noopener">TfL Open Data</a>.
+          Contains OS data &copy; Crown copyright and database rights 2016, and
+          Geomni UK Map data &copy; and database rights 2019. Drawn with
+          <a href="https://github.com/johnwalley/d3-tube-map" target="_blank" rel="noopener">d3-tube-map</a>
+          and <a href="https://d3js.org" target="_blank" rel="noopener">D3</a>.
+          Portraits, station photographs and article extracts come from
+          Wikipedia and carry their own licences, which vary image by image.
+        </p>
+        <p>
+          Open Plaques is a volunteer catalogue, so the useful way to support it
+          is not money:
+          <a href="https://openplaques.org/plaques/new" target="_blank" rel="noopener">add a plaque they are missing</a>,
+          a photo to one unphotographed, or flag an error.
+        </p>
+        <p><a href="./index.html">&larr; Back to the map</a></p>
+      </footer>
+    </div>
+
+    <script>
+      // Dark is the default here as it is on the map. The map records the
+      // choice when it is toggled, so following it is all this page has to do -
+      // and an unset value, or storage being unavailable, leaves it dark.
+      try {
+        if (localStorage.getItem('dark') === 'false') {
+          document.body.classList.remove('dark');
+        }
+      } catch (e) {}
+    </script>
+  </body>
+</html>

@@ -1,188 +1,898 @@
 {
- "name": "Emergency services",
- "group": "Military, Emergency Services & Exploration",
- "when": {
-  "month": 9,
-  "note": "the Blitz began on 7 September 1940"
- },
- "about": {
-  "title": "The Blitz",
-  "extract": [
-   "The Blitz (English: 'lightning') was a bombing campaign by Nazi Germany and Fascist Italy against the United Kingdom during the Second World War. It lasted for eight months, from 7 September 1940 to 16 May 1941. The name is a shortened form of Blitzkrieg, a term used in the popular press to describe a German style of surprise attack used during the war.",
-   "Toward the end of the Battle of Britain in 1940, daylight air superiority over the United Kingdom was contested between the Luftwaffe and the Royal Air Force. Germany began conducting mass air attacks against British cities, beginning with London, in an attempt to draw the RAF Fighter Command into a battle of annihilation. Adolf Hitler and Reichsmarschall Hermann G\u00f6ring, commander-in-chief of the Luftwaffe, ordered the new policy on 6 September 1940. From 7 September 1940, London was systematically bombed by the Luftwaffe for 56 of the following 57 days and nights. The attacks included a large daylight attack against London on 15 September, a large raid on 29 December 1940 against London resulting in a firestorm known as the Second Great Fire of London, and a large raid on the night of 10\u201311 May 1941."
-  ],
-  "url": "https://en.wikipedia.org/wiki/The_Blitz"
- },
+ "name": "Science, Medicine & Engineering",
+ "group": null,
+ "when": null,
+ "about": null,
  "stations": {
-  "TowerHill": {
-   "plaque": "5396",
-   "person": "Abraham Lewis",
-   "role": "Auxiliary Fireman",
-   "distance_m": 47,
+  "Northfields": {
+   "plaque": "40743",
+   "person": "Charles Holden",
+   "role": "Fellow of the Royal Institute of British Architects",
+   "distance_m": 7,
+   "wikipedia": "https://en.wikipedia.org/wiki/Charles_Holden",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Holden_by_Benjamin_Nelson.jpg?width=640",
+   "plaque_photo": "https://farm2.staticflickr.com/1468/23436299024_658bdc717f_z.jpg",
+   "label": "Charles\nHolden"
+  },
+  "Bermondsey": {
+   "plaque": "39136",
+   "person": "Alfred Salter",
+   "role": "general practitioner",
+   "distance_m": 8,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alfred_Salter",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alfred_Salter_Statue.jpg?width=640",
+   "plaque_photo": "https://farm9.staticflickr.com/8576/16488168036_53b1901862_z.jpg",
+   "label": "Alfred\nSalter"
+  },
+  "KentishTown": {
+   "plaque": "70725",
+   "person": "Kentish Town station",
+   "role": null,
+   "distance_m": 12,
+   "wikipedia": "https://en.wikipedia.org/wiki/Kentish_Town_station",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Kentish_Town_stn_building.JPG/1280px-Kentish_Town_stn_building.JPG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/54236309110_c0a8443cd1_z.jpg",
+   "label": "Kentish\nTown\nstation"
+  },
+  "Rotherhithe": {
+   "plaque": "59716",
+   "person": "Marc Isambard Brunel",
+   "role": "civil engineer",
+   "distance_m": 17,
+   "wikipedia": "https://en.wikipedia.org/wiki/Marc_Isambard_Brunel",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Marc_Isambard_Brunel_by_James_Northcote.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/53403512774_78b698d477_z.jpg",
+   "label": "Marc\nIsambard\nBrunel"
+  },
+  "BakerStreet": {
+   "plaque": "58500",
+   "person": "Metropolitan Railway",
+   "role": "underground passenger railway",
+   "distance_m": 21,
+   "wikipedia": "https://en.wikipedia.org/wiki/Metropolitan_Railway",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/MetropolitanRailwayCoatOfArms.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/52782449155_9255424e9f_z.jpg",
+   "label": "Metropolitan\nRailway"
+  },
+  "GreenPark": {
+   "plaque": "251",
+   "person": "Henry Pelham",
+   "role": "Fellow of the Royal Society",
+   "distance_m": 22,
+   "wikipedia": "https://en.wikipedia.org/wiki/Henry_Pelham",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Henry_Pelham_by_William_Hoare.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Henry_Pelham_(c.1695-1754)_Prime_Minister_lived_here_-_Blue_Plaque.JPG?width=640",
+   "label": "Henry\nPelham"
+  },
+  "Paddington": {
+   "plaque": "12719",
+   "person": "Isambard Kingdom Brunel",
+   "role": "civil engineer",
+   "distance_m": 23,
+   "wikipedia": "https://en.wikipedia.org/wiki/Isambard_Kingdom_Brunel",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/IKBrunelChains.jpg?width=640",
+   "plaque_photo": "https://farm8.staticflickr.com/7419/8956339489_79b88526d5_z.jpg",
+   "label": "Isambard\nKingdom\nBrunel"
+  },
+  "StPauls": {
+   "plaque": "2389",
+   "person": "Guglielmo Marconi",
+   "role": "inventor of a wireless telegraphy system",
+   "distance_m": 25,
+   "wikipedia": "https://en.wikipedia.org/wiki/Guglielmo_Marconi",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guglielmo_Marconi.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/From_this_site_Guglielmo_Marconi_made_the_first_public_transmission_of_wireless_signals_on_27_July_1896.jpg?width=640",
+   "label": "Guglielmo\nMarconi"
+  },
+  "FinchleyCentral": {
+   "plaque": "11724",
+   "person": "Harry Beck",
+   "role": "designer of the London Underground map",
+   "distance_m": 27,
+   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Beck",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/0/03/Harry_Beck.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Beck_Plaque.jpg?width=640",
+   "label": "Harry Beck"
+  },
+  "Westminster": {
+   "plaque": "3077",
+   "person": "John Peake Knight",
+   "role": "inventor of traffic lights",
+   "distance_m": 32,
+   "wikipedia": "https://en.wikipedia.org/wiki/J._P._Knight",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/John_Peake_Knight.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/49662868871_c50fca6118_z.jpg",
+   "label": "John Peake\nKnight"
+  },
+  "Blackfriars": {
+   "plaque": "53396",
+   "person": "Dick Whitwell",
+   "role": "railway engineer",
+   "distance_m": 35,
    "wikipedia": null,
    "person_image": null,
-   "plaque_photo": null,
-   "label": "Abraham\nLewis"
+   "plaque_photo": "https://farm66.staticflickr.com/65535/49738027678_9849d35a29_z.jpg",
+   "label": "Dick\nWhitwell"
+  },
+  "SouthKensington": {
+   "plaque": "403",
+   "person": "Margery Blackie",
+   "role": "homoeopathic physician",
+   "distance_m": 38,
+   "wikipedia": "https://en.wikipedia.org/wiki/Margery_Blackie",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Dr._Margery_Blackie_%284524487428%29.jpg/1280px-Dr._Margery_Blackie_%284524487428%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/DR._MARGERY_BLACKIE_1898-1981_Homoeopathic_Physician_lived_and_worked_here_1929-1980.jpg?width=640",
+   "label": "Margery\nBlackie"
+  },
+  "GoodgeStreet": {
+   "plaque": "73933",
+   "person": "Robert Bosch",
+   "role": null,
+   "distance_m": 39,
+   "wikipedia": "https://en.wikipedia.org/wiki/Robert_Bosch",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Bosch,_1925.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Bosch_plaque_204-208_Tottenham_Court_Road_London_W1T_7PL.jpg?width=640",
+   "label": "Robert\nBosch"
+  },
+  "EalingCommon": {
+   "plaque": "51957",
+   "person": "Ada Lovelace",
+   "role": "pioneer of computing",
+   "distance_m": 43,
+   "wikipedia": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ada_Lovelace_portrait_circa_1840.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Ada_Countess_of_Lovelace_computer_pioneer_1815-1852_green_plaque_-_5_Station_Parade_Uxbridge_Road_Ealing_W5_3LD.jpg?width=640",
+   "label": "Ada\nLovelace"
+  },
+  "StJamessPark": {
+   "plaque": "43652",
+   "person": "Edward Johnston",
+   "role": "master calligrapher",
+   "distance_m": 44,
+   "wikipedia": "https://en.wikipedia.org/wiki/Edward_Johnston",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward_Johnston.png?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4372/36398558766_91b353f5b9_z.jpg",
+   "label": "Edward\nJohnston"
+  },
+  "ClaphamCommon": {
+   "plaque": "55003",
+   "person": "John Venn",
+   "role": "mathematician",
+   "distance_m": 49,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Venn",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Venn.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/51134724139_8aabbae9d2_z.jpg",
+   "label": "John Venn"
+  },
+  "KingsCrossStPancras": {
+   "plaque": "42224",
+   "person": "Nigel Gresley",
+   "role": "locomotive engineer",
+   "distance_m": 49,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nigel_Gresley",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flying_Scotsman_in_Doncaster.JPG?width=640",
+   "plaque_photo": "https://farm1.staticflickr.com/608/31636716840_53a7dd7da8_z.jpg",
+   "label": "Nigel\nGresley"
+  },
+  "PutneyBridge": {
+   "plaque": "10544",
+   "person": "Frederick Richard Simms",
+   "role": "father of the British Motor Industry",
+   "distance_m": 51,
+   "wikipedia": "https://en.wikipedia.org/wiki/Frederick_Richard_Simms",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Simms_Motor_Scout_1899.jpg?width=640",
+   "plaque_photo": "https://farm1.staticflickr.com/352/31855276822_b39b5d7869_z.jpg",
+   "label": "Frederick\nRichard\nSimms"
+  },
+  "TottenhamCourtRoad": {
+   "plaque": "50954",
+   "person": "Eduardo Luigi Paolozzi",
+   "role": "sculptor",
+   "distance_m": 58,
+   "wikipedia": "https://en.wikipedia.org/wiki/Eduardo_Paolozzi",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/NewtonBlakePaolozzi1.jpg?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4805/32869109948_9caf567b1e_z.jpg",
+   "label": "Eduardo\nLuigi\nPaolozzi"
+  },
+  "Monument": {
+   "plaque": "1942",
+   "person": "William Curtis",
+   "role": "botanist",
+   "distance_m": 59,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Curtis",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Botanical_Magazine-Curtis_Portrait(detail).jpg?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4674/38767289455_d5e5385e9b_z.jpg",
+   "label": "William\nCurtis"
+  },
+  "RegentsPark": {
+   "plaque": "591",
+   "person": "Charles Wheatstone",
+   "role": "scientist",
+   "distance_m": 62,
+   "wikipedia": "https://en.wikipedia.org/wiki/Charles_Wheatstone",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wheatstone_Charles_drawing_1868.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/SIR_CHARLES_WHEATSTONE_1802-1875_Scientist_and_Inventor_lived_here_-_post_2020_restoration.jpg?width=640",
+   "label": "Charles\nWheatstone"
+  },
+  "CoventGarden": {
+   "plaque": "56325",
+   "person": "Lionel Lukin",
+   "role": null,
+   "distance_m": 68,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lionel_Lukin",
+   "person_image": null,
+   "plaque_photo": "https://farm66.staticflickr.com/65535/53423001459_cda93eaac1_z.jpg",
+   "label": "Lionel\nLukin"
+  },
+  "Whitechapel": {
+   "plaque": "639",
+   "person": "Edith Cavell",
+   "role": "pioneer of modern nursing in Belgium",
+   "distance_m": 70,
+   "wikipedia": "https://en.wikipedia.org/wiki/Edith_Cavell",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edith_Cavell.jpg?width=640",
+   "plaque_photo": "https://farm9.staticflickr.com/8485/8153910151_30906fbf3a_z.jpg",
+   "label": "Edith\nCavell"
   },
   "LeicesterSquare": {
-   "plaque": "30419",
-   "person": "Al Bowlly",
-   "role": "singer",
-   "distance_m": 88,
-   "wikipedia": "https://en.wikipedia.org/wiki/Al_Bowlly",
-   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bowlly_small.jpg?width=640",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/AL_BOWLLY_1899-1941_Singer_lived_here_1933-1934.jpg?width=640",
-   "label": "Al Bowlly"
+   "plaque": "3105",
+   "person": "Sidney Webb",
+   "role": "social scientist",
+   "distance_m": 70,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sidney_Webb,_1st_Baron_Passfield",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Webb.jpg?width=640",
+   "plaque_photo": "https://farm7.staticflickr.com/6116/6238151047_3789dd155f_z.jpg",
+   "label": "Sidney Webb"
   },
-  "AldgateEast": {
-   "plaque": "49355",
-   "person": "Bill Faust",
-   "role": "firefighter",
-   "distance_m": 114,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Bill_Faust_and_Adam_Meere_plaque.jpg?width=640",
-   "label": "Bill Faust"
+  "EarlsCourt": {
+   "plaque": "460",
+   "person": "Norman Lockyer",
+   "role": "astronomer",
+   "distance_m": 77,
+   "wikipedia": "https://en.wikipedia.org/wiki/Norman_Lockyer",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lockyer-Norman.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_NORMAN_LOCKYER_1836-1920_Astronomer_Physicist_and_Founder_of_Nature_lived_here_1876-1920.jpg?width=640",
+   "label": "Norman\nLockyer"
   },
-  "LondonBridge": {
-   "plaque": "9906",
-   "person": "James Braidwood",
-   "role": "superintendent of the London Fire Brigade",
-   "distance_m": 122,
-   "wikipedia": "https://en.wikipedia.org/wiki/James_Braidwood",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/James_Braidwood_engraving.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/James_Braidwood_20230226_103158.jpg?width=640",
-   "label": "James\nBraidwood"
+  "BowRoad": {
+   "plaque": "42077",
+   "person": "Thomas John Barnardo",
+   "role": "Doctor - Bachelor of Medicine MBBS",
+   "distance_m": 80,
+   "wikipedia": "https://en.wikipedia.org/wiki/Thomas_John_Barnardo",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Drbarnardo.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/THOMAS_BARNARDO_1845-1905_Founder_of_Dr_Barnardo\u2019s_Homes_for_children_lived_here_1875-1879.jpg?width=640",
+   "label": "Thomas John\nBarnardo"
   },
-  "BromleyByBow": {
-   "plaque": "5392",
-   "person": "Fred Dell",
-   "role": "firefighter",
-   "distance_m": 139,
-   "wikipedia": "https://en.wikipedia.org/wiki/Fred_Dell",
-   "person_image": "https://upload.wikimedia.org/wikipedia/en/4/43/Fred_Dell.jpeg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
-   "plaque_photo": null,
-   "label": "Fred Dell"
-  },
-  "AbbeyRoad": {
-   "plaque": "9967",
-   "person": "Alf Bridgeman",
-   "role": "Air Raid Precautions rescue squad leader",
-   "distance_m": 166,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/In_memory_of_13_members_of_the_Air_Raid_Precautions_and_the_Fire_Service_killed_at_Abbey_Road_Depot_on_the_7th_September_1940.jpg?width=640",
-   "label": "Alf\nBridgeman"
-  },
-  "Knightsbridge": {
-   "plaque": "10428",
-   "person": "Jane Arbuthnot",
-   "role": "Woman Police Constable",
-   "distance_m": 193,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": "https://farm1.staticflickr.com/767/20980829236_da0cca20d0_z.jpg",
-   "label": "Jane\nArbuthnot"
-  },
-  "WestKensington": {
-   "plaque": "10347",
-   "person": "Stephen Tibble",
-   "role": "Police Constable",
-   "distance_m": 214,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": null,
-   "label": "Stephen\nTibble"
-  },
-  "PiccadillyCircus": {
-   "plaque": "8325",
-   "person": "Yvonne Fletcher",
-   "role": "Woman Police Constable",
-   "distance_m": 227,
-   "wikipedia": "https://en.wikipedia.org/wiki/Yvonne_Fletcher",
-   "person_image": "https://upload.wikimedia.org/wikipedia/en/2/28/WPC_Yvonne_Fletcher_shortly_after_being_shot.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
-   "plaque_photo": "https://farm1.staticflickr.com/713/21732032973_0074f985f5_z.jpg",
-   "label": "Yvonne\nFletcher"
-  },
-  "DollisHill": {
-   "plaque": "10366",
-   "person": "Ronan McCloskey",
-   "role": "Police Constable",
-   "distance_m": 230,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/PC_Ronan_McCloskey_memorial.jpg?width=640",
-   "label": "Ronan\nMcCloskey"
-  },
-  "ClaphamNorth": {
-   "plaque": "10346",
-   "person": "Patrick Dunne",
-   "role": "Police Constable",
-   "distance_m": 234,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": null,
-   "label": "Patrick\nDunne"
+  "Bank": {
+   "plaque": "40985",
+   "person": "James Henry Greathead",
+   "role": "railway engineer",
+   "distance_m": 80,
+   "wikipedia": "https://en.wikipedia.org/wiki/James_Henry_Greathead",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/James_Henry_Greathead.png?width=640",
+   "plaque_photo": "https://farm2.staticflickr.com/1460/24507326679_6a68eac66c_z.jpg",
+   "label": "James Henry\nGreathead"
   },
   "Pimlico": {
-   "plaque": "50073",
-   "person": "Harry Mallin",
-   "role": "boxer",
-   "distance_m": 246,
-   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Mallin",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/7/71/HarryMallin.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Harry_Mallin_1892-1969_Policeman_and_Olympic_Boxing_Champion_in_1920_and_1924_lived_and_worked_here.jpg?width=640",
-   "label": "Harry\nMallin"
+   "plaque": "244",
+   "person": "Walter Clopton Wingfield",
+   "role": "father of lawn tennis",
+   "distance_m": 85,
+   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Clopton_Wingfield",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wingfield.jpg?width=640",
+   "plaque_photo": "https://s0.geograph.org.uk/geophotos/01/19/46/1194611_2b0f9834.jpg",
+   "label": "Walter\nClopton\nWingfield"
   },
-  "NewCrossGate": {
-   "plaque": "43711",
-   "person": "Battle of Lewisham",
-   "role": "battle",
-   "distance_m": 253,
-   "wikipedia": "https://en.wikipedia.org/wiki/Battle_of_Lewisham",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Plaque_for_the_Battle_of_Lewisham%2C_New_Cross_Road_and_Clifton_Rise_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Remembering_the_Battle_of_Lewisham_Thousands_united_here_against_racism_and_fascism_13_August_1977.jpg?width=640",
-   "label": "Battle of\nLewisham"
+  "OxfordCircus": {
+   "plaque": "173",
+   "person": "William Roy",
+   "role": "British Army Major General",
+   "distance_m": 86,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Roy",
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/MAJOR-GENERAL_WILLIAM_ROY_1726-1790_Founder_of_the_Ordnance_Survey_lived_here_(3).jpg?width=640",
+   "label": "William Roy"
+  },
+  "GreatPortlandStreet": {
+   "plaque": "2501",
+   "person": "Joseph Lister",
+   "role": "surgeon",
+   "distance_m": 91,
+   "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Lister",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Lister_1902.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/LORD_LISTER_(1827-1912)_SURGEON_LIVED_HERE.jpg?width=640",
+   "label": "Joseph\nLister"
+  },
+  "WarwickAvenue": {
+   "plaque": "506",
+   "person": "John Ambrose Fleming",
+   "role": "Fellow of the Royal Society",
+   "distance_m": 98,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Ambrose_Fleming",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Ambrose_Fleming_1890.png?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_AMBROSE_FLEMING_1849-1945_Scientist_and_Electrical_Engineer_lived_here.jpg?width=640",
+   "label": "John\nAmbrose\nFleming"
+  },
+  "Angel": {
+   "plaque": "5312",
+   "person": "Eduard Suess",
+   "role": "geologist",
+   "distance_m": 102,
+   "wikipedia": "https://en.wikipedia.org/wiki/Eduard_Suess",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduard_Suess_1869.jpg?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4146/5220887230_0749037c31_z.jpg",
+   "label": "Eduard\nSuess"
+  },
+  "BruceGrove": {
+   "plaque": "190",
+   "person": "Luke Howard",
+   "role": "namer of clouds",
+   "distance_m": 103,
+   "wikipedia": "https://en.wikipedia.org/wiki/Luke_Howard_(meteorologist)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luke_Howard.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/51096170571_efaea5b57f_z.jpg",
+   "label": "Luke Howard"
+  },
+  "HighamsPark": {
+   "plaque": "9661",
+   "person": "George Edwards",
+   "role": "aircraft designer",
+   "distance_m": 129,
+   "wikipedia": "https://en.wikipedia.org/wiki/George_Edwards_(aviation)",
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_George_Edwards_(Waltham_Forest_Heritage).jpg?width=640",
+   "label": "George\nEdwards"
+  },
+  "RavenscourtPark": {
+   "plaque": "55919",
+   "person": "Joshua Stein",
+   "role": "Doctor - Bachelor of Medicine MBBS",
+   "distance_m": 134,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://farm66.staticflickr.com/65535/51791741366_83b24f3985_z.jpg",
+   "label": "Joshua\nStein"
+  },
+  "Hampstead": {
+   "plaque": "39",
+   "person": "Henry Hallett Dale",
+   "role": "physiologist",
+   "distance_m": 141,
+   "wikipedia": "https://en.wikipedia.org/wiki/Henry_Hallett_Dale",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Henry_Dale_nobel.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/SIR_HENRY_DALE_1875-1968_Physiologist_lived_here.jpg?width=640",
+   "label": "Henry\nHallett\nDale"
+  },
+  "PiccadillyCircus": {
+   "plaque": "262",
+   "person": "William Hunter",
+   "role": "anatomist",
+   "distance_m": 143,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Hunter_(anatomist)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Hunter_(anatomist).jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/THIS_WAS_THE_HOME_AND_MUSEUM_OF_DR_WILLIAM_HUNTER_ANATOMIST_1718-1783.jpg?width=640",
+   "label": "William\nHunter"
+  },
+  "HighStreetKensington": {
+   "plaque": "247",
+   "person": "Edward Burne-Jones",
+   "role": "painter",
+   "distance_m": 146,
+   "wikipedia": "https://en.wikipedia.org/wiki/Edward_Burne-Jones",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward_Burne-Jones_Photogravure_Hollyer.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/SIR_EDWARD_BURNE-JONES_1833-1898_Artist_lived_here_1865-1867.jpg?width=640",
+   "label": "Edward\nBurne-Jones"
   },
   "Temple": {
-   "plaque": "9197",
-   "person": "James Morrison",
-   "role": "police officer",
-   "distance_m": 289,
+   "plaque": "8783",
+   "person": "Rosalind Franklin",
+   "role": "pioneer of the study of molecular structures including DNA",
+   "distance_m": 147,
+   "wikipedia": "https://en.wikipedia.org/wiki/Rosalind_Franklin",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Rosalind_Franklin_%28retouched%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/R._E._Franklin_R._G._Gosling_H._R._Wilson_M._H._F._Wilkins_A._R._Stoke_plaque_in_London.jpg?width=640",
+   "label": "Rosalind\nFranklin"
+  },
+  "Embankment": {
+   "plaque": "39296",
+   "person": "William Smith",
+   "role": "father of English geology",
+   "distance_m": 150,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Smith_(geologist)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Smith_(geologist).jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Smith_1769_-_1839_Father_of_English_Geology.jpg?width=640",
+   "label": "William\nSmith"
+  },
+  "HampsteadHeath": {
+   "plaque": "685",
+   "person": "Rowland Hill",
+   "role": "postal reformer",
+   "distance_m": 152,
+   "wikipedia": "https://en.wikipedia.org/wiki/Rowland_Hill",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rowland_Hill_photo_cleaned.jpg?width=640",
+   "plaque_photo": "https://farm3.staticflickr.com/2244/1567681568_24813622a3_z.jpg",
+   "label": "Rowland\nHill"
+  },
+  "LadbrokeGrove": {
+   "plaque": "10548",
+   "person": "Miodrag Al. Purkovi\u0107",
+   "role": "Doctor of Philosophy",
+   "distance_m": 155,
+   "wikipedia": "https://en.wikipedia.org/wiki/Miodrag_Purkovi\u0107",
+   "person_image": null,
+   "plaque_photo": "https://farm66.staticflickr.com/65535/49266051928_31d9d9a611_z.jpg",
+   "label": "Miodrag Al.\nPurkovi\u0107"
+  },
+  "MarbleArch": {
+   "plaque": "366",
+   "person": "Thomas Sopwith",
+   "role": "aviator",
+   "distance_m": 162,
+   "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Sopwith",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Sopwith_1910.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Thomas_Sopwith_1888-1989_aviator_and_aircraft_manufacturer_lived_here_1934-1940.jpg?width=640",
+   "label": "Thomas\nSopwith"
+  },
+  "EustonSquare": {
+   "plaque": "31506",
+   "person": "David Ricardo",
+   "role": "political economist",
+   "distance_m": 164,
+   "wikipedia": "https://en.wikipedia.org/wiki/David_Ricardo",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg?width=640",
+   "plaque_photo": "https://farm2.staticflickr.com/1756/42673736002_129d7d7e13_z.jpg",
+   "label": "David\nRicardo"
+  },
+  "HackneyWick": {
+   "plaque": "8584",
+   "person": "Alexander Parkes",
+   "role": "inventor of the first plastic",
+   "distance_m": 166,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alexander_Parkes",
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaque_to_the_first_plastic_in_the_world.jpg?width=640",
+   "label": "Alexander\nParkes"
+  },
+  "WarrenStreet": {
+   "plaque": "47",
+   "person": "August Wilhelm von Hofmann",
+   "role": "Professor of Chemistry",
+   "distance_m": 167,
+   "wikipedia": "https://en.wikipedia.org/wiki/August_Wilhelm_von_Hofmann",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoffman_August_Wilhelm_von.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/A.W._HOFMANN_1818-1892_Professor_of_Chemistry_lived_here.jpg?width=640",
+   "label": "August\nWilhelm von\nHofmann"
+  },
+  "LondonBridge": {
+   "plaque": "57367",
+   "person": "Arthur Hurst",
+   "role": "physician",
+   "distance_m": 177,
+   "wikipedia": "https://en.wikipedia.org/wiki/Arthur_Frederick_Hurst",
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Arthur_Hurst_20220819_112108.jpg?width=640",
+   "label": "Arthur\nHurst"
+  },
+  "Holborn": {
+   "plaque": "571",
+   "person": "John Harrison",
+   "role": "inventor of the marine chronometer",
+   "distance_m": 186,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Harrison",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Harrison_Uhrmacher.jpg?width=640",
+   "plaque_photo": "https://farm3.staticflickr.com/2474/3914574839_731f5e2f69_z.jpg",
+   "label": "John\nHarrison"
+  },
+  "Farringdon": {
+   "plaque": "8244",
+   "person": "James Upjohn",
+   "role": "clockmaker",
+   "distance_m": 189,
    "wikipedia": null,
    "person_image": null,
    "plaque_photo": null,
-   "label": "James\nMorrison"
+   "label": "James\nUpjohn"
   },
-  "ForestHill": {
-   "plaque": "4376",
-   "person": "Dietrich Bonhoeffer",
-   "role": "theologian",
-   "distance_m": 292,
-   "wikipedia": "https://en.wikipedia.org/wiki/Dietrich_Bonhoeffer",
-   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_146-1987-074-16,_Dietrich_Bonhoeffer.jpg?width=640",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dietrich_Bonhoeffer_1906-1945_Theologian_and_Pastor_lived_here_1933-1935.jpg?width=640",
-   "label": "Dietrich\nBonhoeffer"
+  "GloucesterRoad": {
+   "plaque": "514",
+   "person": "Charles Booth",
+   "role": "pioneer in social research",
+   "distance_m": 189,
+   "wikipedia": "https://en.wikipedia.org/wiki/Charles_Booth_(social_reformer)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Booth_by_George_Frederic_Watts.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/CHARLES_BOOTH_1840-1916_PIONEER_IN_SOCIAL_RESEARCH_lived_here.jpg?width=640",
+   "label": "Charles\nBooth"
   },
-  "Borough": {
-   "plaque": "636",
-   "person": "Eyre Massey Shaw",
-   "role": "Chief Officer of the Metropolitan Fire Brigade",
-   "distance_m": 323,
-   "wikipedia": "https://en.wikipedia.org/wiki/Eyre_Massey_Shaw",
-   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masseyshaw.gif?width=640",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Plaque_commemorating_Sir_Eyre_Massey_Shaw.JPG?width=640",
-   "label": "Eyre Massey\nShaw"
+  "RoyalOak": {
+   "plaque": "54428",
+   "person": "John Alcindor",
+   "role": "Doctor - Bachelor of Medicine MBBS",
+   "distance_m": 191,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Alcindor",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Alcindor.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Alcindor_plaque.jpg?width=640",
+   "label": "John\nAlcindor"
   },
-  "EastActon": {
-   "plaque": "10327",
-   "person": "Christopher Head",
-   "role": "Police Sergeant",
+  "BondStreet": {
+   "plaque": "197",
+   "person": "Patrick Manson",
+   "role": "father of modern tropical medicine",
+   "distance_m": 192,
+   "wikipedia": "https://en.wikipedia.org/wiki/Patrick_Manson",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mason_Patrick_1844-1922.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/SIR_PATRICK_MANSON_1844-1922_Father_of_Modern_Tropical_Medicine_lived_here.jpg?width=640",
+   "label": "Patrick\nManson"
+  },
+  "TurnhamGreen": {
+   "plaque": "652",
+   "person": "John Lindley",
+   "role": "botanist",
+   "distance_m": 194,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Lindley",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Lindley00.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/JOHN_LINDLEY_1799-1865_Botanist_and_Pioneer_Orchidologist_lived_here_from_1836_and_died_here.jpg?width=640",
+   "label": "John\nLindley"
+  },
+  "ChalkFarm": {
+   "plaque": "31020",
+   "person": "Noel Bertram Farman",
+   "role": "surgeon",
+   "distance_m": 195,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Noel_Farman_plaque.jpg?width=640",
+   "label": "Noel\nBertram\nFarman"
+  },
+  "WestKensington": {
+   "plaque": "626",
+   "person": "Geoffrey De Havilland",
+   "role": "aircraft designer",
+   "distance_m": 197,
+   "wikipedia": "https://en.wikipedia.org/wiki/Geoffrey_de_Havilland",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/De_Havilland._Perth,_1929.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/SIR_GEOFFREY_DE_HAVILLAND_1882-1965_Aircraft_designer_lived_here_1909-1910.jpg?width=640",
+   "label": "Geoffrey De\nHavilland"
+  },
+  "MorningtonCrescent": {
+   "plaque": "676",
+   "person": "John Desmond Bernal",
+   "role": "crystallographer",
+   "distance_m": 199,
+   "wikipedia": "https://en.wikipedia.org/wiki/J._D._Bernal",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/b/b9/John_Desmond_Bernal.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/JOHN_DESMOND_BERNAL_1901-1971_crystallographer_lived_and_died_here.jpg?width=640",
+   "label": "John\nDesmond\nBernal"
+  },
+  "CamdenRoad": {
+   "plaque": "56932",
+   "person": "Oliver Heaviside",
+   "role": "electrical engineer",
+   "distance_m": 205,
+   "wikipedia": "https://en.wikipedia.org/wiki/Oliver_Heaviside",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oliver_Heaviside2.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/OLIVER_HEAVISIDE_1850-1925_Theorist_of_Telecommunications_lived_here.jpg?width=640",
+   "label": "Oliver\nHeaviside"
+  },
+  "WestbournePark": {
+   "plaque": "33149",
+   "person": "William Henry Hudson",
+   "role": "naturalist",
+   "distance_m": 211,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Henry_Hudson",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/William_Henry_Hudson.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/THE_HOUSE_WHERE_I_WAS_BORN_IN_THE_SOUTH_AMERICAN_PAMPAS..._W.H.HUDSON.jpg?width=640",
+   "label": "William\nHenry\nHudson"
+  },
+  "CanaryWharf": {
+   "plaque": "13028",
+   "person": "Ian Jones",
+   "role": "Chartered Engineer",
+   "distance_m": 219,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://farm4.staticflickr.com/3764/9426322099_484bf98585_z.jpg",
+   "label": "Ian Jones"
+  },
+  "Brixton": {
+   "plaque": "441",
+   "person": "Henry Havelock Ellis",
+   "role": "pioneer in the scientific study of sex",
+   "distance_m": 219,
+   "wikipedia": "https://en.wikipedia.org/wiki/Havelock_Ellis",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Havelock_Ellis_cph.3b08675.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/HENRY_HAVELOCK_ELLIS_Pioneer_in_the_scientific_study_of_sex_lived_here.jpg?width=640",
+   "label": "Henry\nHavelock\nEllis"
+  },
+  "Shadwell": {
+   "plaque": "7469",
+   "person": "William Henry Perkin",
+   "role": "Fellow of the Royal Society",
+   "distance_m": 220,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Henry_Perkin",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Henry_Perkin.jpg?width=640",
+   "plaque_photo": "https://farm6.staticflickr.com/5462/9426203217_2db7824e0c_z.jpg",
+   "label": "William\nHenry\nPerkin"
+  },
+  "Wanstead": {
+   "plaque": "10425",
+   "person": "James Bradley",
+   "role": "astronomer",
+   "distance_m": 220,
+   "wikipedia": "https://en.wikipedia.org/wiki/James_Bradley",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/James_Bradley_by_Thomas_Hudson.jpg?width=640",
+   "plaque_photo": "https://farm6.staticflickr.com/5443/8912993150_4aced52958_z.jpg",
+   "label": "James\nBradley"
+  },
+  "EnfieldTown": {
+   "plaque": "6448",
+   "person": "Robert Uvedale",
+   "role": "horticulturist",
+   "distance_m": 223,
+   "wikipedia": "https://en.wikipedia.org/wiki/Robert_Uvedale",
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Robert\nUvedale"
+  },
+  "LancasterGate": {
+   "plaque": "51829",
+   "person": "Edward Frankland",
+   "role": "Fellow of the Royal Society",
+   "distance_m": 223,
+   "wikipedia": "https://en.wikipedia.org/wiki/Edward_Frankland",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward_Frankland.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward_Frankland_plaque.jpg?width=640",
+   "label": "Edward\nFrankland"
+  },
+  "ManorHouse": {
+   "plaque": "10312",
+   "person": "Thomas Hancock",
+   "role": "inventor of the vulcanisation of rubber",
+   "distance_m": 225,
+   "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Hancock_(inventor)",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Nuvola_apps_kaboodle.svg/40px-Nuvola_apps_kaboodle.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+   "plaque_photo": null,
+   "label": "Thomas\nHancock"
+  },
+  "SilverStreet": {
+   "plaque": "6422",
+   "person": "Thomas Wilson",
+   "role": "Doctor (unknown type)",
+   "distance_m": 226,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Thomas\nWilson"
+  },
+  "HollowayRoad": {
+   "plaque": "1755",
+   "person": "Joe Meek",
+   "role": "record producer",
+   "distance_m": 227,
+   "wikipedia": "https://en.wikipedia.org/wiki/Joe_Meek",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/9/99/Joe_Meek_historic.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://farm8.staticflickr.com/7149/6841925499_04d5072218_z.jpg",
+   "label": "Joe Meek"
+  },
+  "FinchleyRoad": {
+   "plaque": "2194",
+   "person": "Anna Freud",
+   "role": "pioneer of child psychoanalysis",
+   "distance_m": 231,
+   "wikipedia": "https://en.wikipedia.org/wiki/Anna_Freud",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anna_Freud_1957.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/ANNA_FREUD_1895-1982_Pioneer_of_Child_Psychoanalysis_lived_here_1938-1982.jpg?width=640",
+   "label": "Anna Freud"
+  },
+  "QueensRoadPeckham": {
+   "plaque": "3181",
+   "person": "Innes Pearse",
+   "role": "Doctor - Bachelor of Medicine MBBS",
+   "distance_m": 235,
+   "wikipedia": "https://en.wikipedia.org/wiki/Innes_Hope_Pearse",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/2/2d/Innes_Pearse.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr._INNES_PEARSE_1889-1978_and_Dr._GEORGE_SCOTT_WILLIAMSON_1884-1953_founded_the_Pioneer_Health_Centre_here_in_1926.jpg?width=640",
+   "label": "Innes\nPearse"
+  },
+  "RussellSquare": {
+   "plaque": "49462",
+   "person": "James Burton",
+   "role": "builder",
+   "distance_m": 238,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://farm8.staticflickr.com/7920/45617499305_a40baf01c1_z.jpg",
+   "label": "James\nBurton"
+  },
+  "Queensway": {
+   "plaque": "475",
+   "person": "John Loudon",
+   "role": "horticulturalist",
+   "distance_m": 254,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Claudius_Loudon",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Claudius_Loudon.png?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4064/4644568348_7d09161c23_z.jpg",
+   "label": "John Loudon"
+  },
+  "TowerHill": {
+   "plaque": "55772",
+   "person": "Alexander John Forsyth",
+   "role": "Reverend",
+   "distance_m": 257,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alexander_John_Forsyth",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Alexander_Forsyth_c._1820.jpg/960px-Alexander_Forsyth_c._1820.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/51487387688_2158d35076_z.jpg",
+   "label": "Alexander\nJohn\nForsyth"
+  },
+  "WalthamstowQueensRoad": {
+   "plaque": "9559",
+   "person": "Frederick Bremer",
+   "role": "engineer",
+   "distance_m": 262,
+   "wikipedia": "https://en.wikipedia.org/wiki/Frederick_Bremer",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Bremer_car_at_Vestry_House_Museum%2C_Walthamstow.jpg/1280px-Bremer_car_at_Vestry_House_Museum%2C_Walthamstow.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Frederick_Bremer_(Waltham_Forest_Heritage).jpg?width=640",
+   "label": "Frederick\nBremer"
+  },
+  "NewCrossGate": {
+   "plaque": "4398",
+   "person": "Barnes Wallis",
+   "role": "Commander of the Most Excellent Order of the British Empire",
+   "distance_m": 276,
+   "wikipedia": "https://en.wikipedia.org/wiki/Barnes_Wallis",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Barnes_Wallis_(RNV).jpg?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4107/5413305617_f8a9d5fc67_z.jpg",
+   "label": "Barnes\nWallis"
+  },
+  "Moorgate": {
+   "plaque": "53711",
+   "person": "George Kemp",
+   "role": "assistant of Guglielmo Marconi",
+   "distance_m": 278,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://farm66.staticflickr.com/65535/49973366097_ce7be69b98_z.jpg",
+   "label": "George Kemp"
+  },
+  "Euston": {
+   "plaque": "42226",
+   "person": "Elizabeth Garrett Anderson",
+   "role": "Doctor - Bachelor of Medicine MBBS",
+   "distance_m": 278,
+   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Garrett_Anderson",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eganderson.jpg?width=640",
+   "plaque_photo": "https://farm6.staticflickr.com/5707/31408362945_39a4fe06e3_z.jpg",
+   "label": "Elizabeth\nGarrett\nAnderson"
+  },
+  "SloaneSquare": {
+   "plaque": "648",
+   "person": "Vita Sackville-West",
+   "role": "writer",
+   "distance_m": 288,
+   "wikipedia": "https://en.wikipedia.org/wiki/Vita_Sackville-West",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Laszlo_-_Vita_Sackville-West.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/HAROLD_NICOLSON_1886-1968_VITA_SACKVILLE-WEST_1892-1962_Writers_and_Gardeners_lived_here.JPG?width=640",
+   "label": "Vita\nSackville-\nWest"
+  },
+  "CharingCross": {
+   "plaque": "3121",
+   "person": "Joseph Mallord William Turner",
+   "role": "painter",
+   "distance_m": 290,
+   "wikipedia": "https://en.wikipedia.org/wiki/J._M._W._Turner",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Turner_selfportrait.jpg?width=640",
+   "plaque_photo": "https://farm8.staticflickr.com/7161/6530597315_e76c234d37_z.jpg",
+   "label": "Joseph\nMallord\nWilliam\nTurner"
+  },
+  "MaidaVale": {
+   "plaque": "3037",
+   "person": "Joseph Hertz",
+   "role": "Doctor (unknown type)",
+   "distance_m": 295,
+   "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Hertz",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Herman_Hertz._1913._ggbain.12503.II.jpg?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4131/5026641490_122be27e9b_z.jpg",
+   "label": "Joseph\nHertz"
+  },
+  "WoodsidePark": {
+   "plaque": "43327",
+   "person": "Ela Klein",
+   "role": "gardener",
+   "distance_m": 299,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Ela Klein"
+  },
+  "LiverpoolStreet": {
+   "plaque": "6148",
+   "person": "Robert Hooke",
+   "role": "scientist",
+   "distance_m": 302,
+   "wikipedia": "https://en.wikipedia.org/wiki/Robert_Hooke",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/13_Portrait_of_Robert_Hooke.JPG?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Hooke_1635_-_1703_Eminent_Early_Scientist_first_laid_to_rest_here.jpg?width=640",
+   "label": "Robert\nHooke"
+  },
+  "ColliersWood": {
+   "plaque": "58674",
+   "person": "John Rennie",
+   "role": "engineer",
+   "distance_m": 302,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Rennie_the_Elder",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Rennie_(Engineer).jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Connolly's_Mill_plaque_Wandle_Bank_Colliers_Wood_London_SW19_1UR.jpg?width=640",
+   "label": "John Rennie"
+  },
+  "KensingtonOlympia": {
+   "plaque": "340",
+   "person": "Chaim Weizmann",
+   "role": "scientist",
+   "distance_m": 310,
+   "wikipedia": "https://en.wikipedia.org/wiki/Chaim_Weizmann",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Government_Press_Office_(GPO)_-_President_Chaim_Weizmann.jpg?width=640",
+   "plaque_photo": "https://farm4.staticflickr.com/3596/3460106438_e6a1b29d27_z.jpg",
+   "label": "Chaim\nWeizmann"
+  },
+  "NorwoodJunction": {
+   "plaque": "89",
+   "person": "William Stanley",
+   "role": "inventor",
+   "distance_m": 311,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Stanley_(inventor)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/William-stanley.jpg?width=640",
+   "plaque_photo": "https://farm6.staticflickr.com/5614/15420621108_c23e2b6f43_z.jpg",
+   "label": "William\nStanley"
+  },
+  "Sydenham": {
+   "plaque": "41513",
+   "person": "George Grove",
+   "role": "writer on music",
+   "distance_m": 321,
+   "wikipedia": "https://en.wikipedia.org/wiki/George_Grove",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/George-grove.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_GEORGE_GROVE_1820-1900_Promoter_of_Musical_Knowledge_lived_here.jpg?width=640",
+   "label": "George\nGrove"
+  },
+  "Haggerston": {
+   "plaque": "8601",
+   "person": "Philip Henry Gosse",
+   "role": "zoologist",
+   "distance_m": 322,
+   "wikipedia": "https://en.wikipedia.org/wiki/Philip_Henry_Gosse",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/PhilipHenryGosse,1855.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Here_lived_Philip_Henry_Gosse_1810-1888_Zoologist_Sir_Edmund_Gosse_1849-1928_Writer_and_Critic_born_here.jpg?width=640",
+   "label": "Philip\nHenry Gosse"
+  },
+  "Richmond": {
+   "plaque": "55101",
+   "person": "Ardaseer Cursetjee Wadia",
+   "role": "civil engineer",
    "distance_m": 324,
-   "wikipedia": "https://en.wikipedia.org/wiki/Shepherd's_Bush_murders",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Massacre_of_Braybrook_Street_002.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/PS_Christopher_Head,_PC_Geoffrey_Fox,_PC_David_Wombwell_memorial.jpg?width=640",
-   "label": "Christopher\nHead"
+   "wikipedia": null,
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ardaseer_Cursetjee_1969_stamp_of_India.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/51302926920_3d794a7a1f_z.jpg",
+   "label": "Ardaseer\nCursetjee\nWadia"
+  },
+  "HydeParkCorner": {
+   "plaque": "67",
+   "person": "George Bentham",
+   "role": "botanist",
+   "distance_m": 328,
+   "wikipedia": "https://en.wikipedia.org/wiki/George_Bentham",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgeBentham.jpg?width=640",
+   "plaque_photo": "https://farm4.staticflickr.com/3949/32609301370_9e980dd3e7_z.jpg",
+   "label": "George\nBentham"
+  },
+  "Westferry": {
+   "plaque": "50823",
+   "person": "David Widgery",
+   "role": "general practitioner",
+   "distance_m": 334,
+   "wikipedia": "https://en.wikipedia.org/wiki/David_Widgery",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/David_Widgery_-_St_Anne%27s_Church_Three_Colt_Street_Poplar_London_E14_7HA.jpg/1280px-David_Widgery_-_St_Anne%27s_Church_Three_Colt_Street_Poplar_London_E14_7HA.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr_David_Widgery_(1947-1992)_-_St_Anne's_Church_Three_Colt_Street_Poplar_London_E14_7HA.jpg?width=640",
+   "label": "David\nWidgery"
   },
   "ParkRoyal": {
    "plaque": "30",
@@ -194,135 +904,646 @@
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/ALAN_DOWER_BLUMLEIN_1903-1942_Electronics_Engineer_and_Inventor_lived_here.jpg?width=640",
    "label": "Alan\nBlumlein"
   },
-  "Whitechapel": {
+  "KilburnHighRoad": {
+   "plaque": "53456",
+   "person": "William Friese-Greene",
+   "role": "cinematograph pioneer",
+   "distance_m": 349,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Friese-Greene",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Williamfriesegreen.jpg?width=640",
+   "plaque_photo": null,
+   "label": "William\nFriese-\nGreene"
+  },
+  "StJohnsWood": {
+   "plaque": "9140",
+   "person": "Alexis Soyer",
+   "role": "inventor",
+   "distance_m": 351,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alexis_Soyer",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexissoyer1849.jpg?width=640",
+   "plaque_photo": "https://farm8.staticflickr.com/7123/7556473154_2c3693198e_z.jpg",
+   "label": "Alexis\nSoyer"
+  },
+  "HackneyCentral": {
+   "plaque": "8583",
+   "person": "Loddiges Nursery",
+   "role": "nursery",
+   "distance_m": 351,
+   "wikipedia": "https://en.wikipedia.org/wiki/Loddiges_family",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Phyllostachys_nigra_folium.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": null,
+   "label": "Loddiges\nNursery"
+  },
+  "NottingHillGate": {
+   "plaque": "442",
+   "person": "Edward Henry",
+   "role": "fingerprint pioneer",
+   "distance_m": 379,
+   "wikipedia": "https://en.wikipedia.org/wiki/Edward_Henry",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward_Richard_Henry00.jpg?width=640",
+   "plaque_photo": "https://farm9.staticflickr.com/8772/17369358621_ba56591fc6_z.jpg",
+   "label": "Edward\nHenry"
+  },
+  "BatterseaPowerStation": {
+   "plaque": "33141",
+   "person": "Horace Short",
+   "role": "aviation pioneer",
+   "distance_m": 380,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/THE_SHORT_BROTHERS_HORACE_1872-1917_EUSTACE_1875-1932_OSWALD_1883-1969_Aeronautical_Engineers_worked_in_arches_75_and_81.jpg?width=640",
+   "label": "Horace\nShort"
+  },
+  "ElephantCastle": {
+   "plaque": "9732",
+   "person": "John Newlands",
+   "role": "chemist",
+   "distance_m": 381,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Newlands_(chemist)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Alexander_Reina_Newlands.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/49949792096_be0c920b4c_z.jpg",
+   "label": "John\nNewlands"
+  },
+  "Hanwell": {
+   "plaque": "40684",
+   "person": "Jim Marshall",
+   "role": "founder of Marshall Amplification",
+   "distance_m": 394,
+   "wikipedia": "https://en.wikipedia.org/wiki/Jim_Marshall_(businessman)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jim_Marshall_at_Summer_NAMM_2007.jpg?width=640",
+   "plaque_photo": "https://farm2.staticflickr.com/1741/28768669528_9043fe85b7_z.jpg",
+   "label": "Jim\nMarshall"
+  },
+  "LambethNorth": {
+   "plaque": "10433",
+   "person": "Harold Ridley",
+   "role": "Fellow of the Royal Society",
+   "distance_m": 400,
+   "wikipedia": "https://en.wikipedia.org/wiki/Harold_Ridley_(ophthalmologist)",
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaque_for_Harold_Ridley%27s_first_intraocular_lens_at_St_Thomas%27_Hospital.jpg?uselang=en-gb?width=640",
+   "label": "Harold\nRidley"
+  },
+  "SouthHampstead": {
+   "plaque": "667",
+   "person": "Bernard Spilsbury",
+   "role": "forensic pathologist",
+   "distance_m": 406,
+   "wikipedia": "https://en.wikipedia.org/wiki/Bernard_Spilsbury",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/BernardSpilsbury.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_BERNARD_SPILSBURY_1877-1947_Forensic_Pathologist_lived_here_1912-1940.jpg?width=640",
+   "label": "Bernard\nSpilsbury"
+  },
+  "GospelOak": {
+   "plaque": "31677",
+   "person": "Geoffrey Jellicoe",
+   "role": "landscape architect",
+   "distance_m": 407,
+   "wikipedia": "https://en.wikipedia.org/wiki/Geoffrey_Jellicoe",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jellicoe-and-nicholson.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Geoffrey_Jellicoe_plaque.jpg?width=640",
+   "label": "Geoffrey\nJellicoe"
+  },
+  "ShoreditchHighStreet": {
+   "plaque": "30857",
+   "person": "Nicholas Culpeper",
+   "role": "physician",
+   "distance_m": 440,
+   "wikipedia": "https://en.wikipedia.org/wiki/Nicholas_Culpeper",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/In_Effigiam_Nicholai_Culpeper_Equitis_by_Richard_Gaywood.jpg?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4875/31125410157_30bfb6d5b4_z.jpg",
+   "label": "Nicholas\nCulpeper"
+  },
+  "SevenKings": {
+   "plaque": "54853",
+   "person": "Kathleen Lonsdale",
+   "role": null,
+   "distance_m": 441,
+   "wikipedia": "https://en.wikipedia.org/wiki/Kathleen_Lonsdale",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathleen_Yardley_Lonsdale_(1903-1971).jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dame_KATHLEEN_LONSDALE_1903\u20131971_Crystallographer_and_peace_campaigner_lived_here_in_early_life.jpg?width=640",
+   "label": "Kathleen\nLonsdale"
+  },
+  "NorthEaling": {
+   "plaque": "51953",
+   "person": "John Compton (organ builder)",
+   "role": "organ builder",
+   "distance_m": 446,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Compton_(organ_builder)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Apollo_organ_console_small.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Compton_green_plaque_-_37_Audley_Road_Ealing_London_W5_3ES.jpg?width=640",
+   "label": "John\nCompton\n(organ\nbuilder)"
+  },
+  "BelsizePark": {
+   "plaque": "9245",
+   "person": "Henry Moore",
+   "role": "sculptor",
+   "distance_m": 447,
+   "wikipedia": "https://en.wikipedia.org/wiki/Henry_Moore",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Henry_Moore_in_workshop_Allan_Warren.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/HENRY_MOORE_1898-1986_Sculptor_lived_and_worked_here_1929-1940.jpg?width=640",
+   "label": "Henry Moore"
+  },
+  "HighburyIslington": {
+   "plaque": "31799",
+   "person": "Francis Ronalds",
+   "role": "meteorologist",
+   "distance_m": 451,
+   "wikipedia": "https://en.wikipedia.org/wiki/Francis_Ronalds",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Francis_Ronalds_crop.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Francis_Ronalds_green_plaque.JPG?width=640",
+   "label": "Francis\nRonalds"
+  },
+  "CaledonianRoad": {
+   "plaque": "30375",
+   "person": "Lilian Lindsay",
+   "role": "British woman dentist",
+   "distance_m": 471,
+   "wikipedia": "https://en.wikipedia.org/wiki/Lilian_Lindsay",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Lilian_Lindsay_%281871-1960%29_portrait_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://farm6.staticflickr.com/5765/20772380452_6f0d6a8a12_z.jpg",
+   "label": "Lilian\nLindsay"
+  },
+  "OldStreet": {
+   "plaque": "8602",
+   "person": "James Parkinson",
+   "role": "physician",
+   "distance_m": 481,
+   "wikipedia": "https://en.wikipedia.org/wiki/James_Parkinson",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/James_Parkinson_signature_1809.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/James_Parkinson_plaque.jpg?width=640",
+   "label": "James\nParkinson"
+  },
+  "Victoria": {
+   "plaque": "215",
+   "person": "Walter Bagehot",
+   "role": "writer",
+   "distance_m": 491,
+   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Bagehot",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Walter_Bagehot_NPG_cropped.jpg?width=640",
+   "plaque_photo": "https://farm1.staticflickr.com/391/32834962992_58706283e0_z.jpg",
+   "label": "Walter\nBagehot"
+  },
+  "PeckhamRye": {
+   "plaque": "210",
+   "person": "Alan Cobham",
+   "role": "aviator",
+   "distance_m": 507,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alan_Cobham",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alan_Cobham_(Bain_Collection).jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_ALAN_COBHAM_1894-1973_Aviator_was_born_here.jpg?width=640",
+   "label": "Alan Cobham"
+  },
+  "HollandPark": {
+   "plaque": "10128",
+   "person": "William Crookes",
+   "role": "scientist",
+   "distance_m": 509,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Crookes",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/PSM_V10_D660_William_Crookes.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/49266173203_ace7c5cb0d_z.jpg",
+   "label": "William\nCrookes"
+  },
+  "Knightsbridge": {
+   "plaque": "356",
+   "person": "Francis Galton",
+   "role": "explorer",
+   "distance_m": 511,
+   "wikipedia": "https://en.wikipedia.org/wiki/Francis_Galton",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Francis_Galton_1850s.jpg?width=640",
+   "plaque_photo": "https://s0.geograph.org.uk/geophotos/03/86/12/3861290_223d8626.jpg",
+   "label": "Francis\nGalton"
+  },
+  "Arsenal": {
+   "plaque": "9722",
+   "person": "Arthur Keith",
+   "role": "anatomist",
+   "distance_m": 531,
+   "wikipedia": "https://en.wikipedia.org/wiki/Arthur_Keith",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Arthur_Keith.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Arthur_Keith_(1866\u20131955)_distinguished_physiologist_and_anthropologist_lived_here_1908-1933.jpg?width=640",
+   "label": "Arthur\nKeith"
+  },
+  "CrystalPalace": {
+   "plaque": "9921",
+   "person": "Camille Pissarro",
+   "role": "Impressionist painter",
+   "distance_m": 532,
+   "wikipedia": "https://en.wikipedia.org/wiki/Camille_Pissarro",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pissarro-portrait.jpg?width=640",
+   "plaque_photo": "https://farm9.staticflickr.com/8338/8217386330_746c834c6e_z.jpg",
+   "label": "Camille\nPissarro"
+  },
+  "EalingBroadway": {
+   "plaque": "58806",
+   "person": "John Soane",
+   "role": "Royal Academician",
+   "distance_m": 532,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Soane",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Christopher_William_Hunneman_-_Portrait_of_Sir_John_Soane.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/53037435957_11ca17b28d_z.jpg",
+   "label": "John Soane"
+  },
+  "WestBrompton": {
+   "plaque": "142",
+   "person": "Sydney Copeman",
+   "role": "immunologist",
+   "distance_m": 559,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sydney_Copeman",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Copeman.jpg?width=640",
+   "plaque_photo": "https://farm6.staticflickr.com/5795/20436312759_95b6c2aa28_z.jpg",
+   "label": "Sydney\nCopeman"
+  },
+  "FinchleyRoadFrognal": {
+   "plaque": "24",
+   "person": "Leonard Huxley",
+   "role": "man of science",
+   "distance_m": 563,
+   "wikipedia": "https://en.wikipedia.org/wiki/Leonard_Huxley_(writer)",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Leonard_Huxley_%281860%E2%80%931933%29_in_1896.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/LEONARD_HUXLEY_1860-1933_JULIAN_HUXLEY_1887-1975_ALDOUS_HUXLEY_1894-1963_Men_of_Science_and_Letters_lived_here.jpg?width=640",
+   "label": "Leonard\nHuxley"
+  },
+  "ClaphamJunction": {
+   "plaque": "50505",
+   "person": "Hilda Hewlett",
+   "role": "pilot",
+   "distance_m": 569,
+   "wikipedia": "https://en.wikipedia.org/wiki/Hilda_Hewlett",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hilda_Hewlett.jpg?width=640",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/54374874349_560f41da6d_z.jpg",
+   "label": "Hilda\nHewlett"
+  },
+  "Kilburn": {
+   "plaque": "12945",
+   "person": "Ida Mann",
+   "role": "ophthalmologist",
+   "distance_m": 575,
+   "wikipedia": "https://en.wikipedia.org/wiki/Ida_Mann",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/b/b0/Ida_Caroline_Mann.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dame_IDA_MANN_1893-1983_Ophthalmologist_lived_here_1902-1934.jpg?width=640",
+   "label": "Ida Mann"
+  },
+  "ActonTown": {
+   "plaque": "2298",
+   "person": "William Willett",
+   "role": "builder",
+   "distance_m": 578,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Willett",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/William-Willett.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Willett_plaque.jpg?width=640",
+   "label": "William\nWillett"
+  },
+  "WillesdenGreen": {
+   "plaque": "9929",
+   "person": "Morris Kaufman",
+   "role": "Doctor of Philosophy",
+   "distance_m": 618,
+   "wikipedia": "https://en.wikipedia.org/wiki/Morris_Kaufman",
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Morris\nKaufman"
+  },
+  "ForestHill": {
+   "plaque": "4386",
+   "person": "Richard Jefferies",
+   "role": "naturalist",
+   "distance_m": 619,
+   "wikipedia": "https://en.wikipedia.org/wiki/Richard_Jefferies",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Richard_jefferies.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Richard_Jefferies_1848-1887_Nature_writer_and_novelist_lived_here.jpg?width=640",
+   "label": "Richard\nJefferies"
+  },
+  "HighBarnet": {
+   "plaque": "40700",
+   "person": "Robert W. Paul",
+   "role": "cinema pioneer",
+   "distance_m": 634,
+   "wikipedia": "https://en.wikipedia.org/wiki/Robert_W._Paul",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_William_Paul.jpg?width=640",
+   "plaque_photo": null,
+   "label": "Robert W.\nPaul"
+  },
+  "EastPutney": {
+   "plaque": "49676",
+   "person": "Alliott Verdon Roe",
+   "role": "maker of the first all-British powered flight",
+   "distance_m": 649,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alliott_Verdon_Roe",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Avroe-1930.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/A._V._Roe_1877-1958_Aircraft_pioneer_and_designer_of_AVRO_aeroplanes_experimented_in_stables_on_this_site.jpg?width=640",
+   "label": "Alliott\nVerdon Roe"
+  },
+  "ElversonRoad": {
+   "plaque": "141",
+   "person": "James Glaisher",
+   "role": "astronomer",
+   "distance_m": 668,
+   "wikipedia": "https://en.wikipedia.org/wiki/James_Glaisher",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/James_Glaisher.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/JAMES_GLAISHER_1809-1903_Astronomer_Meteorologist_and_pioneer_of_weather_forecasting_lived_here.jpg?width=640",
+   "label": "James\nGlaisher"
+  },
+  "GideaPark": {
+   "plaque": "9728",
+   "person": "Humphry Repton",
+   "role": "landscape gardener",
+   "distance_m": 672,
+   "wikipedia": "https://en.wikipedia.org/wiki/Humphry_Repton",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_Humphry_Repton.jpg?width=640",
+   "plaque_photo": null,
+   "label": "Humphry\nRepton"
+  },
+  "Gunnersbury": {
+   "plaque": "563",
+   "person": "Johann Zoffany",
+   "role": "painter",
+   "distance_m": 741,
+   "wikipedia": "https://en.wikipedia.org/wiki/Johan_Zoffany",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Zoffany._Self_portrait_with_dog,_Roma.jpeg?width=640",
+   "plaque_photo": "https://farm1.staticflickr.com/968/41758069542_e30fc2a89a_z.jpg",
+   "label": "Johann\nZoffany"
+  },
+  "Canonbury": {
+   "plaque": "6322",
+   "person": "David Gestetner",
+   "role": "developer of office copying machinery",
+   "distance_m": 756,
+   "wikipedia": "https://en.wikipedia.org/wiki/David_Gestetner",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/2/22/David_Gestetner_outside_his_home_at_124_Highbury_New_Park_London_circa_1905.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/DAVID_GESTETNER_1854-1939_Developer_of_Office_Copying_Machinery_lived_here_1898-1939.jpg?width=640",
+   "label": "David\nGestetner"
+  },
+  "SwissCottage": {
+   "plaque": "50751",
+   "person": "Agnes Arber",
+   "role": "botanist",
+   "distance_m": 762,
+   "wikipedia": "https://en.wikipedia.org/wiki/Agnes_Arber",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/0/0f/Agnes_Arber_circa_1916.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/AGNES_ARBER_nee_Robertson_1879-1960_Botanist_lived_here_1890-1909.jpg?width=640",
+   "label": "Agnes Arber"
+  },
+  "GoldersGreen": {
+   "plaque": "52363",
+   "person": "William Bowman",
+   "role": "ophthalmic surgeon",
+   "distance_m": 767,
+   "wikipedia": "https://en.wikipedia.org/wiki/Sir_William_Bowman,_1st_Baronet",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Bowman.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_WILLIAM_BOWMAN_1816-1892_Ophthalmic_surgeon_and_anatomist_lived_here.jpg?width=640",
+   "label": "William\nBowman"
+  },
+  "TurnpikeLane": {
+   "plaque": "10274",
+   "person": "Colin Chapman",
+   "role": "founder of Lotus Engineering Co",
+   "distance_m": 816,
+   "wikipedia": "https://en.wikipedia.org/wiki/Colin_Chapman",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colin_Chapman_1971.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Colin_Chapman_(Hornsey).jpg?width=640",
+   "label": "Colin\nChapman"
+  },
+  "WimbledonPark": {
+   "plaque": "49285",
+   "person": "Capability Brown",
+   "role": "landscape architect",
+   "distance_m": 898,
+   "wikipedia": "https://en.wikipedia.org/wiki/Capability_Brown",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lancelot_('Capability')_Brown_by_Nathaniel_Dance,_(later_Sir_Nathaniel_Dance-Holland,_Bt)_cropped.jpg?width=640",
+   "plaque_photo": "https://farm1.staticflickr.com/901/39692966920_146d19fed9_z.jpg",
+   "label": "Capability\nBrown"
+  },
+  "HendonCentral": {
+   "plaque": "9731",
+   "person": "Birt Acres",
+   "role": "film pioneer",
+   "distance_m": 907,
+   "wikipedia": "https://en.wikipedia.org/wiki/Birt_Acres",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Birt_Acres.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": null,
+   "label": "Birt Acres"
+  },
+  "Barbican": {
+   "plaque": "10775",
+   "person": "Christopher Pinchbeck",
+   "role": "clockmaker",
+   "distance_m": 286,
+   "wikipedia": "https://en.wikipedia.org/wiki/Christopher_Pinchbeck",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Christopher_Pinchbeck.jpg?width=640",
+   "plaque_photo": null,
+   "label": "Christopher\nPinchbeck"
+  },
+  "EdgwareRoad_940GZZLUERB": {
+   "plaque": "5174",
+   "person": "Alexander Fleming",
+   "role": "discoverer of penicillin",
+   "distance_m": 409,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alexander_Fleming",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Synthetic_Production_of_Penicillin_TR1468.jpg?width=640",
+   "plaque_photo": "https://farm4.staticflickr.com/3905/14548473747_92040433f6_z.jpg",
+   "label": "Alexander\nFleming"
+  },
+  "ChanceryLane": {
+   "plaque": "588",
+   "person": "William Marsden",
+   "role": "surgeon",
+   "distance_m": 421,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Marsden_(surgeon)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Marsden_(1796\u20131867)_by_Thomas_Henry_Illidge.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/WILLIAM_MARSDEN_1796-1867_SURGEON_Founder_of_the_Royal_Free_and_Royal_Marsden_Hospitals_lived_here.jpg?width=640",
+   "label": "William\nMarsden"
+  },
+  "Borough": {
+   "plaque": "51527",
+   "person": "John Fry",
+   "role": "researcher",
+   "distance_m": 477,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr_John_Fry_1922_-_1994_Pioneering_Family_Doctor.jpg?width=640",
+   "label": "John Fry"
+  },
+  "WalthamstowCentral": {
+   "plaque": "54409",
+   "person": "George Alfred Busby",
+   "role": "Doctor of Medicine",
+   "distance_m": 532,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr_George_Alfred_Busby_1899-1980.jpg?width=640",
+   "label": "George\nAlfred\nBusby"
+  },
+  "EdgwareRoad_940GZZLUERC": {
+   "plaque": "2493",
+   "person": "Mary Seacole",
+   "role": "heroine of the Crimean War",
+   "distance_m": 534,
+   "wikipedia": "https://en.wikipedia.org/wiki/Mary_Seacole",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Seacole_-_Challen.jpg?width=640",
+   "plaque_photo": "https://farm5.staticflickr.com/4011/4368281917_ffc0246e98_z.jpg",
+   "label": "Mary\nSeacole"
+  },
+  "StamfordBrook": {
+   "plaque": "55913",
+   "person": "William Tierney Clark",
+   "role": "designer of the first Hammersmith Bridge",
+   "distance_m": 556,
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Tierney_Clark",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Tierney_Clark_Barab\u00e1s_Mikl\u00f3s.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Hammersmith_Pumping_Station_(Hammersmith_and_Fulham_Historic_Buildings_Group).jpg?width=640",
+   "label": "William\nTierney\nClark"
+  },
+  "Homerton": {
+   "plaque": "620",
+   "person": "Joseph Priestley",
+   "role": "scientist",
+   "distance_m": 557,
+   "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Priestley",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Priestley.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/JOSEPH_PRIESTLEY_1733-1804_Scientist,_Philosopher_and_Theologian_was_Minister_to_the_Gravel_Pit_Meeting_here_in_1793-1794.jpg?width=640",
+   "label": "Joseph\nPriestley"
+  },
+  "Hammersmith": {
+   "plaque": "518",
+   "person": "Frank Short",
+   "role": "engraver",
+   "distance_m": 565,
+   "wikipedia": "https://en.wikipedia.org/wiki/Frank_Short",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Frank_Short_in_1914.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://farm66.staticflickr.com/65535/53324649984_bf05d55c14_z.jpg",
+   "label": "Frank Short"
+  },
+  "TowerGateway": {
+   "plaque": "8782",
+   "person": "John Wolfe Barry",
+   "role": "civil engineer",
+   "distance_m": 590,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Wolfe_Barry",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/JohnWolfeBarry2.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/TOWER_BRIDGE_DSCN5999.jpg?width=640",
+   "label": "John Wolfe\nBarry"
+  },
+  "CamdenTown": {
+   "plaque": "361",
+   "person": "Henry Wellcome",
+   "role": "pharmacist",
+   "distance_m": 642,
+   "wikipedia": "https://en.wikipedia.org/wiki/Henry_Wellcome",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Henry_Wellcome_1930.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/SIR_HENRY_WELLCOME_1853-1936_Pharmacist_Founder_of_the_Wellcome_Trust_and_Foundation_lived_here_(2).jpg?width=640",
+   "label": "Henry\nWellcome"
+  },
+  "Kennington": {
+   "plaque": "1140",
+   "person": "Charles Babbage",
+   "role": "mathematician",
+   "distance_m": 652,
+   "wikipedia": "https://en.wikipedia.org/wiki/Charles_Babbage",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Babbage_-_1860.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Babbage_1791-1871_London_Borough_of_Southwark_plaque.jpg?width=640",
+   "label": "Charles\nBabbage"
+  },
+  "BethnalGreen_910GBTHNLGR": {
    "plaque": "11584",
    "person": "Charles Pearson",
    "role": "London Fire Brigade District Officer",
-   "distance_m": 368,
+   "distance_m": 698,
    "wikipedia": "https://en.wikipedia.org/wiki/Charles_Pearson",
    "person_image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Charles_Pearson.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://farm3.staticflickr.com/2921/14268613465_d896cdd151_z.jpg",
    "label": "Charles\nPearson"
   },
-  "Euston": {
-   "plaque": "5398",
-   "person": "Stanley Harold Randolph",
-   "role": "Auxiliary Fireman",
-   "distance_m": 384,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/In_Memory_of_Auxiliary_Firemen_Stanley_Harold_Randolph_and_Harry_Richard_Skinner.jpg?width=640",
-   "label": "Stanley\nHarold\nRandolph"
+  "WhiteHartLane": {
+   "plaque": "3758",
+   "person": "John Alfred Prestwich",
+   "role": "engineer",
+   "distance_m": 746,
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Alfred_Prestwich",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/J._A._Prestwich_and_Phyllis_Copley_wedding.jpg/960px-J._A._Prestwich_and_Phyllis_Copley_wedding.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Alfred_Prestwich_1874-1952_Inventor_and_designer_of_engines_founded_J.A.P._Engineering_Company_here_in_1898.jpg?width=640",
+   "label": "John Alfred\nPrestwich"
   },
-  "Blackfriars": {
-   "plaque": "7530",
-   "person": "Sidney Alfred Holder",
-   "role": "Auxiliary Fireman",
-   "distance_m": 399,
-   "wikipedia": null,
-   "person_image": null,
+  "Wapping": {
+   "plaque": "9733",
+   "person": "Hannah Billig",
+   "role": "physician",
+   "distance_m": 769,
+   "wikipedia": "https://en.wikipedia.org/wiki/Hannah_Billig",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Hannah_Billig_blue_plaque.jpg/1280px-Hannah_Billig_blue_plaque.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://farm8.staticflickr.com/7383/9429780722_6dccd45f2a_z.jpg",
+   "label": "Hannah\nBillig"
+  },
+  "WestActon": {
+   "plaque": "10326",
+   "person": "Richard Titmuss",
+   "role": "social scientist",
+   "distance_m": 776,
+   "wikipedia": "https://en.wikipedia.org/wiki/Richard_Titmuss",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Richard_Titmuss.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/RICHARD_TITMUSS_1907-1973_Social_Scientist_lived_here_1951-1973.jpg?width=640",
+   "label": "Richard\nTitmuss"
+  },
+  "Vauxhall": {
+   "plaque": "7474",
+   "person": "Francis Crick",
+   "role": "discoverer of how DNA carries genetic information",
+   "distance_m": 833,
+   "wikipedia": "https://en.wikipedia.org/wiki/Francis_Crick",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Francis_Crick_crop.jpg?width=640",
+   "plaque_photo": "https://farm7.staticflickr.com/6021/5929486315_3f65a26caf_z.jpg",
+   "label": "Francis\nCrick"
+  },
+  "FinsburyPark": {
+   "plaque": "28269",
+   "person": "James Edmondson",
+   "role": "builder",
+   "distance_m": 992,
+   "wikipedia": "https://en.wikipedia.org/wiki/James_Edmondson_(builder)",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Crouch_End%2C_Tottenham_Lane%2C_N8_-_geograph.org.uk_-_988060.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://farm6.staticflickr.com/5535/10854524436_b017d58bab_z.jpg",
+   "label": "James\nEdmondson"
+  },
+  "MansionHouse": {
+   "plaque": "5224",
+   "person": "Thomas Linacre",
+   "role": "physician",
+   "distance_m": 336,
+   "wikipedia": "https://en.wikipedia.org/wiki/Thomas_Linacre",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Linacre_2.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/In_a_house_on_this_site_lived_Thomas_Linacre_Physician_1460-1524.jpg?width=640",
+   "label": "Thomas\nLinacre"
+  },
+  "Bayswater": {
+   "plaque": "34",
+   "person": "Charles Manby",
+   "role": "civil engineer",
+   "distance_m": 685,
+   "wikipedia": "https://en.wikipedia.org/wiki/Charles_Manby",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Charles_Manby_%284644564462%29.jpg/1280px-Charles_Manby_%284644564462%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://farm4.staticflickr.com/3329/4644564462_4e0ddaa1c8_z.jpg",
+   "label": "Charles\nManby"
+  },
+  "KentishTownWest": {
+   "plaque": "334",
+   "person": "Alfred Stevens",
+   "role": "artist",
+   "distance_m": 776,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alfred_Stevens_(sculptor)",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alfred_Stevens.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/ALFRED_STEVENS_(1817-1875)_Artist_Lived_Here.jpg?width=640",
+   "label": "Alfred\nStevens"
+  },
+  "Brondesbury": {
+   "plaque": "55789",
+   "person": "Paul Eisler",
+   "role": "inventor of the printed circuit board",
+   "distance_m": 847,
+   "wikipedia": "https://en.wikipedia.org/wiki/Paul_Eisler",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/e/e5/Paul-eisler-by-maurice-hubert.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
    "plaque_photo": null,
-   "label": "Sidney\nAlfred\nHolder"
-  },
-  "StratfordHighStreet": {
-   "plaque": "10309",
-   "person": "Nina Mackay",
-   "role": "Police Constable",
-   "distance_m": 447,
-   "wikipedia": "https://en.wikipedia.org/wiki/Death_of_Nina_Mackay",
-   "person_image": "https://upload.wikimedia.org/wikipedia/en/8/84/WPC_Nina_Mackay.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/PC_Nina_Mackay_memorial_Arthingworth_Street,_E15,_London_(1).jpg?width=640",
-   "label": "Nina Mackay"
-  },
-  "TowerGateway": {
-   "plaque": "3726",
-   "person": "Battle of Cable Street",
-   "role": "battle",
-   "distance_m": 473,
-   "wikipedia": "https://en.wikipedia.org/wiki/Battle_of_Cable_Street",
-   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Battle_of_Cable_Street_Plaque_%28Tower_Hamlets_Environment_Trust%29.jpg/960px-Battle_of_Cable_Street_Plaque_%28Tower_Hamlets_Environment_Trust%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
-   "plaque_photo": "https://farm6.staticflickr.com/5219/5398817791_0ac1c3253f_z.jpg",
-   "label": "Battle of\nCable\nStreet"
-  },
-  "BowRoad": {
-   "plaque": "5394",
-   "person": "Albert Edward Arber",
-   "role": "Auxiliary Fireman",
-   "distance_m": 596,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": null,
-   "label": "Albert\nEdward\nArber"
-  },
-  "OldStreet": {
-   "plaque": "50884",
-   "person": "Alfred Smith",
-   "role": "Police Constable",
-   "distance_m": 608,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/PC_Alfred_Smith_1880-1917_(London_Borough_of_Islington).jpg?width=640",
-   "label": "Alfred\nSmith"
-  },
-  "Ilford": {
-   "plaque": "10394",
-   "person": "Phillip Walters",
-   "role": "Police Constable",
-   "distance_m": 612,
-   "wikipedia": "https://en.wikipedia.org/wiki/Death_of_Phillip_Walters",
-   "person_image": "https://upload.wikimedia.org/wikipedia/en/6/64/PC_Phillip_Walters.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
-   "plaque_photo": null,
-   "label": "Phillip\nWalters"
-  },
-  "Haggerston": {
-   "plaque": "10432",
-   "person": "Laurence Brown",
-   "role": "Police Constable",
-   "distance_m": 656,
-   "wikipedia": "https://en.wikipedia.org/wiki/Laurie_Brown_(bishop)",
-   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Memorial_to_Laurence_Ambrose_Brown_in_Birmingham_Cathedral.jpg/1280px-Memorial_to_Laurence_Ambrose_Brown_in_Birmingham_Cathedral.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
-   "plaque_photo": null,
-   "label": "Laurence\nBrown"
-  },
-  "CrystalPalace": {
-   "plaque": "30599",
-   "person": "Leslie Howard",
-   "role": "film director",
-   "distance_m": 664,
-   "wikipedia": "https://en.wikipedia.org/wiki/Leslie_Howard",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Leslie_Howard_GWTW.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
-   "plaque_photo": "https://farm8.staticflickr.com/7429/13055683834_0d255e3226_z.jpg",
-   "label": "Leslie\nHoward"
-  },
-  "Maryland": {
-   "plaque": "42631",
-   "person": "Gary Toms",
-   "role": "Police Constable",
-   "distance_m": 680,
-   "wikipedia": null,
-   "person_image": null,
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Here_fell_PC_Gary_Toms_11_April_2009_Ashlin_Road_London_E15_(1).jpg?width=640",
-   "label": "Gary Toms"
-  },
-  "DenmarkHill": {
-   "plaque": "41822",
-   "person": "George Arthur Roberts",
-   "role": "firefighter",
-   "distance_m": 720,
-   "wikipedia": "https://en.wikipedia.org/wiki/George_Arthur_Roberts",
-   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/George_Arthur_Roberts.jpg/960px-George_Arthur_Roberts.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Plaque_-_George_Arthur_Roberts.jpg?width=640",
-   "label": "George\nArthur\nRoberts"
-  },
-  "SouthKensington": {
-   "plaque": "5388",
-   "person": "The Blitz",
-   "role": null,
-   "distance_m": 844,
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Blitz",
-   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Map_of_Knickebein_transmitters.svg?width=640",
-   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/In_memory_of_Twelve_London_Firemen_plaque_-_Chelsea_Fire_Station_264_Kings_Road_SW3_5UF.jpg?width=640",
-   "label": "The Blitz"
+   "label": "Paul Eisler"
   }
- }
+ },
+ "note": "This week's map - next on the calendar is October - Black History Month"
 }

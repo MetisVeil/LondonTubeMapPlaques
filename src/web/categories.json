@@ -10378,7 +10378,8 @@
   "group": "Special",
   "when": {
    "month": 3,
-   "note": "International Women's Day, 8 March"
+   "day": 8,
+   "note": "International Women's Day"
   },
   "about": {
    "title": "International Women's Day",
@@ -14634,6 +14635,7 @@
   "group": "Special",
   "when": {
    "month": 2,
+   "day": null,
    "note": "LGBT+ History Month"
   },
   "about": {
@@ -15312,6 +15314,7 @@
   "group": "Special",
   "when": {
    "month": 10,
+   "day": null,
    "note": "Black History Month"
   },
   "about": {
@@ -15859,7 +15862,8 @@
   "group": "Special",
   "when": {
    "month": 6,
-   "note": "Refugee Week, around World Refugee Day on 20 June"
+   "day": 20,
+   "note": "World Refugee Day, and Refugee Week around it"
   },
   "about": {
    "title": "Refugee Week",
@@ -16596,7 +16600,8 @@
   "group": "Arts & Literature",
   "when": {
    "month": 4,
-   "note": "Shakespeare's birthday and World Book Night, 23 April"
+   "day": 23,
+   "note": "Shakespeare's birthday, and World Book Day"
   },
   "about": {
    "title": "World Book Day",
@@ -20279,6 +20284,7 @@
   "group": "Arts & Literature",
   "when": {
    "month": 12,
+   "day": null,
    "note": "panto season"
   },
   "about": {
@@ -21577,7 +21583,8 @@
   "group": "Arts & Literature",
   "when": {
    "month": 8,
-   "note": "Notting Hill Carnival"
+   "day": 25,
+   "note": "Notting Hill Carnival, on the bank holiday weekend"
   },
   "about": {
    "title": "Notting Hill Carnival",
@@ -22654,7 +22661,7 @@
     "role": "composer",
     "distance_m": 761,
     "wikipedia": "https://en.wikipedia.org/wiki/John_Ireland_(composer)",
-    "person_image": null,
+    "person_image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/John_Nicholson_Ireland_%28circa_1920%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
     "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/JOHN_IRELAND_1879-1962_Composer_lived_here.jpg?width=640",
     "label": "John\nIreland"
    },
@@ -24171,7 +24178,8 @@
   "group": "Science, Medicine & Engineering",
   "when": {
    "month": 1,
-   "note": "the first Underground train ran on 10 January 1863"
+   "day": 10,
+   "note": "the first Underground train ran on this day in 1863"
   },
   "about": {
    "title": "Metropolitan Railway",
@@ -27193,7 +27201,8 @@
   "group": "Social, Law, Activism & Religion",
   "when": {
    "month": 5,
-   "note": "May Day, 1 May"
+   "day": 1,
+   "note": "May Day"
   },
   "about": {
    "title": "International Workers' Day",
@@ -29277,7 +29286,8 @@
   "group": "Military, Emergency Services & Exploration",
   "when": {
    "month": 11,
-   "note": "Remembrance Day, 11 November"
+   "day": 11,
+   "note": "Remembrance Day"
   },
   "about": {
    "title": "Remembrance Day",
@@ -30065,7 +30075,8 @@
   "group": "Military, Emergency Services & Exploration",
   "when": {
    "month": 9,
-   "note": "the Blitz began on 7 September 1940"
+   "day": 7,
+   "note": "the Blitz began on this day in 1940"
   },
   "about": {
    "title": "The Blitz",
@@ -30561,7 +30572,8 @@
   "group": "Sport & Physical Performance",
   "when": {
    "month": 7,
-   "note": "Wimbledon fortnight, and London 2012 opened on 27 July"
+   "day": 27,
+   "note": "London 2012 opened on this day, mid-Wimbledon"
   },
   "about": {
    "title": "Wimbledon Championships",

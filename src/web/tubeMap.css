@@ -77,6 +77,13 @@ text {
   min-width: 180px;
   width: 240px;
   max-width: calc(100vw - 32px);
+  /* A station's panel carries a paragraph as well as a picture, which is more
+     than a portrait and a name ever needed - so the card is allowed to scroll
+     rather than growing until it runs off the top of the window. The box is
+     content-box, so its own padding and border come off the height too: 16px
+     of margin top and bottom, 10px of padding either side, and the border. */
+  max-height: calc(100vh - 54px);
+  overflow-y: auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   color: var(--ink);
@@ -94,6 +101,18 @@ text {
   object-fit: contain;
   border-radius: 4px;
   background: var(--hover);
+}
+
+/* Wikipedia's own words, indented off a rule, the way the season panel quotes
+   an article. No scroll of its own: the panel around it already has one, and
+   two nested scrollbars in a 270px column is a worse answer than a long card. */
+#selection .summary {
+  margin: 8px 0 0;
+  padding-left: 10px;
+  border-left: 2px solid var(--edge);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 #selection .copy {
@@ -212,7 +231,8 @@ text {
 
 #selection .more {
   display: inline-block;
-  margin-top: 6px;
+  margin-top: 8px;
+  font-size: 12px;
   color: var(--ink);
 }
 
@@ -234,6 +254,21 @@ text {
   margin: 0;
   cursor: pointer;
   accent-color: var(--ink);
+}
+
+/* A row that leaves the page rather than toggling something, so it reads as a
+   link: no checkbox in the gutter, and an arrow where the checkbox would be. */
+.option-link {
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.option-link .arrow {
+  color: var(--faint);
+}
+
+.option-link:hover .arrow {
+  color: var(--ink);
 }
 
 .credits {
@@ -439,7 +474,7 @@ path.interchange {
   }
 }
 
-/* The month it is now, in the calendar at the top of the menu. */
+/* The theme the build picked for this week, wherever it appears in the menu. */
 .category-item.category-now {
   font-weight: 600;
   background: var(--hover);

@@ -4,7 +4,7 @@
 
 - Women of London
   - subject_type: woman
-  - when: March - International Women's Day, 8 March
+  - when: 8 March - International Women's Day
   - about: International Women's Day
 
 - Men of London
@@ -33,7 +33,7 @@
   - except: Activists for African-American
 
 - Exiles & emigres
-  - when: June - Refugee Week, around World Refugee Day on 20 June
+  - when: 20 June - World Refugee Day, and Refugee Week around it
   - about: Refugee Week
   - series: I am a Refugee
   - wikipedia: emigrants to the United Kingdom
@@ -47,7 +47,7 @@
 ## 1. Arts & Literature
 
 - Writer / Literary figure
-  - when: April - Shakespeare's birthday and World Book Night, 23 April
+  - when: 23 April - Shakespeare's birthday, and World Book Day
   - about: World Book Day
   - occupation: writer
   - writer
@@ -224,7 +224,7 @@
   - disc jockey
 
 - Music
-  - when: August - Notting Hill Carnival
+  - when: 25 August - Notting Hill Carnival, on the bank holiday weekend
   - about: Notting Hill Carnival
   - occupation: musician
   - occupation: singer
@@ -367,7 +367,7 @@
   - Mother of the Wounded
 
 - Engineering
-  - when: January - the first Underground train ran on 10 January 1863
+  - when: 10 January - the first Underground train ran on this day in 1863
   - about: Metropolitan Railway
   - occupation: engineer
   - occupation: inventor
@@ -585,7 +585,7 @@
 ## 4. Social, Law, Activism & Religion
 
 - Social reform & activism
-  - when: May - May Day, 1 May
+  - when: 1 May - May Day
   - about: International Workers' Day
   - occupation: activist
   - wikipedia: suffrag
@@ -717,7 +717,7 @@
 ## 5. Military, Emergency Services & Exploration
 
 - Military
-  - when: November - Remembrance Day, 11 November
+  - when: 11 November - Remembrance Day
   - about: Remembrance Day
   - occupation: military personnel
   - soldier
@@ -770,7 +770,7 @@
   - leader of the first women’s army corps
 
 - Emergency services
-  - when: September - the Blitz began on 7 September 1940
+  - when: 7 September - the Blitz began on this day in 1940
   - about: The Blitz
   - wikipedia: The Blitz
   - wikipedia: firefighters
@@ -805,7 +805,7 @@
 ## 6. Sport & Physical Performance
 
 - Sportsperson
-  - when: July - Wimbledon fortnight, and London 2012 opened on 27 July
+  - when: 27 July - London 2012 opened on this day, mid-Wimbledon
   - about: The Championships, Wimbledon
   - occupation: athlete
   - wikipedia: Olympic

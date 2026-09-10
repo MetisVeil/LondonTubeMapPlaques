@@ -16,11 +16,12 @@ import textwrap
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import categories, layout
+from . import categories, layout, station_articles
 
 SRC_DIR = Path(__file__).resolve().parents[2]          # src/
 MAP_PATH = SRC_DIR / "web" / "map.json"
 CATEGORIES_PATH = SRC_DIR / "web" / "categories.json"
+STATIONS_PATH = SRC_DIR / "web" / "stations.json"
 CATEGORIES_SOURCE = SRC_DIR / "role_categories.md"
 SEASON_PATH = SRC_DIR / "web" / "season.json"
 OVERRIDES_PATH = SRC_DIR / "layout_overrides.json"
@@ -483,21 +484,55 @@ def export_categories(conn: sqlite3.Connection, path: Path = CATEGORIES_PATH,
             "path": str(path)}
 
 
-def export_season(themes: list[dict], path: Path = SEASON_PATH, month: int | None = None) -> str:
-    """Write the one theme whose month this is, for the page to open itself with.
+def export_stations(conn: sqlite3.Connection, path: Path = STATIONS_PATH) -> dict:
+    """Write what Wikipedia says about each station, for the panel to show.
 
-    A file of its own because categories.json is 1.2MB - four times the map -
-    and is only worth fetching once someone opens the menu. Which month it is
-    gets decided here rather than in the browser: the data is rebuilt on the 1st
-    of every month anyway, so the answer is already fresh by the time it ships.
+    A file of its own, and fetched only when a station is first clicked: a
+    paragraph apiece is most of the size of the map itself, and the map has to
+    draw before anyone has anything to click on.
+
+    Keyed the way map.json keys its stations, so the page can look one up from
+    what it was handed by the click.
     """
-    month = month or datetime.now(timezone.utc).month
-    in_season = [t for t in themes if t["when"] and t["when"]["month"] == month]
+    stations, _, _ = read(conn)
+    keys = station_keys(stations)
+
+    written = {keys[uid]: {"title": title, "url": url, "image": image, "summary": summary}
+               for uid, title, url, image, summary in conn.execute(
+                   f'SELECT station_uid, title, url, image, summary FROM "{station_articles.TABLE}"')
+               if uid in keys}
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(in_season[0] if in_season else None, indent=1))
+    path.write_text(json.dumps(written, indent=1))
 
-    return f'{in_season[0]["name"]} ({len(in_season[0]["stations"])} stations)' if in_season else "nothing"
+    return {"stations": f"{len(written)} of {len(stations)} with an article",
+            "photographs": sum(1 for s in written.values() if s["image"]),
+            "path": str(path)}
+
+
+def export_season(themes: list[dict], path: Path = SEASON_PATH, today=None) -> str:
+    """Write the one theme to open the map with, for the page to pick up.
+
+    A file of its own because categories.json is 1.5MB - six times the map - and
+    is only worth fetching once someone opens the menu. Which theme it is gets
+    decided here rather than in the browser, because the build knows how long
+    its own answer has to last; `categories.in_season` is where that is worked
+    out.
+    """
+    today = today or datetime.now(timezone.utc).date()
+    chosen = categories.in_season(themes, today)
+
+    # Why this map, in the words the panel shows: worked out here because the
+    # answer depends on the date the build ran, which the page does not know.
+    if chosen:
+        chosen = dict(chosen, note=categories.why(chosen, themes, today))
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(chosen, indent=1))
+
+    if not chosen:
+        return "nothing"
+    return f'{chosen["name"]} ({len(chosen["stations"])} stations) - {chosen["note"]}'
 
 
 def export(conn: sqlite3.Connection, path: Path = MAP_PATH, scale: float = SCALE) -> dict:

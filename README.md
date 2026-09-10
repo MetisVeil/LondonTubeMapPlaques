@@ -32,18 +32,24 @@ The build writes `src/data/london.db`, which is gitignored — so run it after
 cloning. Use the venv's `python` and `-m` (not a file path), so `src/` lands on
 `sys.path` rather than `src/handler/`.
 
-`src/web/map.json` is generated but committed, so <http://localhost:8000> works
-straight from a clone without a build. Drag to pan, scroll to zoom, click a
-station for what the database holds on it.
+The JSON under `src/web/` is generated but committed, so <http://localhost:8000>
+works straight from a clone without a build. Drag to pan, scroll to zoom, click
+a station for what the map knows about it — the station itself, or the person a
+themed map has put there.
 
-Options, top left, holds two switches:
+Options, top left, holds two switches and a link to `src/web/methodology.html`,
+a standalone page explaining where the data comes from, how a plaque is
+attributed to a station, how the diagram is drawn, how the people are chosen and
+how the calendar picks the map that opens:
 
 * **Overground lines** — off to start with. Hiding the six Overground lines
   takes with them the 83 stations only they call at, and drops the interchange
   rings from 23 tube stops whose only connection was one of them.
 * **Dark mode** — on by default; the toggle is the way back to light. TfL's
   line colours mostly survive the flip, bar the few too dark to make out and
-  the Northern line's black, which is ink rather than a colour.
+  the Northern line's black, which is ink rather than a colour. The choice is
+  recorded in `localStorage` so the methodology page opens in the same theme;
+  the map itself still starts dark either way.
 
 The page is plain HTML — no build step, no node_modules — loading
 [d3-tube-map](https://github.com/johnwalley/d3-tube-map) from a CDN. It pins
@@ -63,12 +69,13 @@ src/
 │   │   ├── layout.py              the octilinear geometry: place, route, validate, label
 │   │   ├── mapdata.py             assembles src/web/map.json
 │   │   ├── categories.py          role_categories.md -> the themed maps
+│   │   ├── station_articles.py    each station's own Wikipedia article
 │   │   └── plaque_stations.py     which station each plaque belongs to
 │   ├── sources/
 │   │   ├── plaques.py             Open Plaques London dump: find, download, load
 │   │   ├── tfl_stations.py        TfL station data: names, coordinates
 │   │   ├── tfl_network.py         TfL route sequences: which stations each line calls at
-│   │   └── wikipedia.py           portraits for the names on the themed maps
+│   │   └── wikipedia.py           portraits, station photographs, article openings
 │   └── sql/                       derived views, reapplied on every build
 └── web/                           the map, as a static page
 ```
@@ -186,6 +193,47 @@ only 80 have a musician as their single nearest plaque.
 The result goes to `src/web/categories.json`, separate from the map so adding a
 category does not rewrite it, and fetched only when the menu is first opened.
 
+## The stations themselves
+
+Click a station on the plain map and the panel bottom left shows the station
+rather than a person: its photograph, the lines through it, and the opening
+paragraph of its Wikipedia article.
+
+Finding that article is the whole job. Wikipedia files London's stations under
+three conventions — `Oval tube station`, `Stratford station`, `Abbey Road DLR
+station` — and the bare name usually belongs to the district instead, so
+guessing is both easy and quiet: `Aldgate station` is a closed station in
+Somerset. `derived/station_articles.py` settles it two ways.
+
+[List of London Underground stations][list] names the article for every one of
+the 272 tube stations, which is authoritative and covers the ambiguous ones. Its
+table is keyed by the station's display name, and where a name appears twice —
+the two Edgware Roads, and the pairs of platforms Wikipedia splits Hammersmith
+and Paddington into — the article naming the most of the lines actually through
+that station wins. The list is consulted only for stations the Underground calls
+at: Bethnal Green and West Hampstead each name a tube station *and* a separate
+Overground one, which has an article of its own.
+
+[list]: https://en.wikipedia.org/wiki/List_of_London_Underground_stations
+
+Everything else — the Overground, the DLR, the Elizabeth line — is tried against
+each convention in turn, and the first candidate that both exists and reads as a
+station is taken. Two tests do the filtering. Requiring "station" in the resolved
+title keeps the districts out: `Cyprus DLR station` is a stop on the map,
+`Cyprus` is in the Mediterranean. Rejecting Wikipedia's disambiguation pages
+keeps out the ones that exist *because* the name is shared — `Woolwich station`
+is one sentence saying it may refer to two others, and `Woolwich railway
+station`, a candidate further down, is the Elizabeth line stop with a photograph
+on it.
+
+All 421 stations resolve, every one with a photograph. One call to
+`wikipedia.fetch_articles` does the lookup and the content together — a title
+with no article behind it is simply absent from the reply, which makes the same
+request the test of whether a guessed name exists.
+
+The result goes to `src/web/stations.json`, 300KB, and like the categories it is
+fetched only on demand — here, the first time a station is clicked.
+
 ## The database
 
 `src/data/london.db` keeps the full history of every row. A version records the
@@ -239,7 +287,8 @@ The page carries these under Options, top left; in full:
   Government Licence v2.0 with TfL's own amendments.
 * **[D3](https://d3js.org)** by Mike Bostock — v6.7.0, BSD-3-Clause, which is
   what d3-tube-map 1.5.0 wants. (D3 relicensed to ISC at v7.)
-* **Wikipedia** — the portrait beside each name, from the page's infobox. Those
-  images carry their own licences, which vary image by image and are not all
-  free for re-use; anyone publishing this map publicly should check rather than
-  assume.
+* **Wikipedia** — the portrait beside each name, from the page's infobox; each
+  station's own photograph and the opening of its article; and the article
+  behind a calendar occasion. Those images carry their own licences, which vary
+  image by image and are not all free for re-use; anyone publishing this map
+  publicly should check rather than assume.

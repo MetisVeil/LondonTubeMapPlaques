@@ -14,7 +14,7 @@ import shutil
 from pathlib import Path
 
 from utils import db
-from utils.derived import mapdata, plaque_stations
+from utils.derived import mapdata, plaque_stations, subject_facts
 from utils.sources import plaques, tfl_network, tfl_stations
 
 # Every source exposes SOURCE and load(conn). Add new ones here.
@@ -36,6 +36,10 @@ def build(db_path=db.DB_PATH) -> None:
 
         print("\nplaques:")
         for field, value in plaque_stations.build(conn).items():
+            print(f"  {field:16} {value}")
+
+        print("\nsubjects:")
+        for field, value in subject_facts.build(conn).items():
             print(f"  {field:16} {value}")
 
         print("\ncategories:")

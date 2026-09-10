@@ -13,6 +13,7 @@ import math
 import re
 import sqlite3
 import textwrap
+from datetime import datetime, timezone
 from pathlib import Path
 
 from . import categories, layout
@@ -21,6 +22,7 @@ SRC_DIR = Path(__file__).resolve().parents[2]          # src/
 MAP_PATH = SRC_DIR / "web" / "map.json"
 CATEGORIES_PATH = SRC_DIR / "web" / "categories.json"
 CATEGORIES_SOURCE = SRC_DIR / "role_categories.md"
+SEASON_PATH = SRC_DIR / "web" / "season.json"
 OVERRIDES_PATH = SRC_DIR / "layout_overrides.json"
 
 # Chosen by sweeping: the smallest grid on which every branch still routes, with
@@ -461,7 +463,8 @@ def export_categories(conn: sqlite3.Connection, path: Path = CATEGORIES_PATH,
             if uid in keys:
                 named[keys[uid]] = dict(plaque, label=label(plaque["person"]))
         if named:
-            themes.append({"name": theme["name"], "group": theme["group"], "stations": named})
+            themes.append({"name": theme["name"], "group": theme["group"],
+                           "when": theme["when"], "stations": named})
 
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(themes, indent=1))
@@ -469,7 +472,25 @@ def export_categories(conn: sqlite3.Connection, path: Path = CATEGORIES_PATH,
     return {"categories": len(themes),
             "widest": max((f'{t["name"]} ({len(t["stations"])} stations)' for t in themes),
                           key=lambda t: int(t.split("(")[1].split()[0])),
+            "in season": export_season(themes),
             "path": str(path)}
+
+
+def export_season(themes: list[dict], path: Path = SEASON_PATH, month: int | None = None) -> str:
+    """Write the one theme whose month this is, for the page to open itself with.
+
+    A file of its own because categories.json is 1.2MB - four times the map -
+    and is only worth fetching once someone opens the menu. Which month it is
+    gets decided here rather than in the browser: the data is rebuilt on the 1st
+    of every month anyway, so the answer is already fresh by the time it ships.
+    """
+    month = month or datetime.now(timezone.utc).month
+    in_season = [t for t in themes if t["when"] and t["when"]["month"] == month]
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(in_season[0] if in_season else None, indent=1))
+
+    return f'{in_season[0]["name"]} ({len(in_season[0]["stations"])} stations)' if in_season else "nothing"
 
 
 def export(conn: sqlite3.Connection, path: Path = MAP_PATH, scale: float = SCALE) -> dict:

@@ -4,13 +4,47 @@
 
 - Women of London
   - subject_type: woman
+  - when: March - International Women's Day, 8 March
 
 - Men of London
   - subject_type: man
 
+- Queer London
+  - when: February - LGBT+ History Month
+  - series: Studio Voltaire Rainbow Plaques
+  - wikipedia: LGBTQ
+  - wikipedia: Lesbian
+  - wikipedia: Bisexual
+  - wikipedia: Transgender
+  - except: LGBTQ history
+
+- Black London
+  - when: October - Black History Month
+  - organisation: Nubian Jak
+  - wikipedia: Black British
+  - wikipedia: African-American
+  - wikipedia: Pan-Africanis
+  - wikipedia: Windrush
+  - wikipedia: people of Caribbean descent
+  - wikipedia: people of African descent
+  - except: Activists for African-American
+
+- Exiles & emigres
+  - when: June - Refugee Week, around World Refugee Day on 20 June
+  - series: I am a Refugee
+  - wikipedia: emigrants to the United Kingdom
+  - wikipedia: refugees
+  - wikipedia: exiles
+  - wikipedia: Stateless
+  - political exile
+  - Holocaust survivor
+  - Holocaust victim
+
 ## 1. Arts & Literature
 
 - Writer / Literary figure
+  - when: April - Shakespeare's birthday and World Book Night, 23 April
+  - occupation: writer
   - writer
   - wit
   - fictional character
@@ -128,6 +162,10 @@
   - pioneer of the Garden City Movement
 
 - Performing arts
+  - when: December - panto season
+  - occupation: actor
+  - occupation: comedian
+  - occupation: dancer
   - actor
   - comedy actor
   - comic actor
@@ -180,6 +218,10 @@
   - disc jockey
 
 - Music
+  - when: August - Notting Hill Carnival
+  - occupation: musician
+  - occupation: singer
+  - occupation: composer
   - musician
   - composer
   - conductor
@@ -318,6 +360,10 @@
   - Mother of the Wounded
 
 - Engineering
+  - when: January - the first Underground train ran on 10 January 1863
+  - occupation: engineer
+  - occupation: inventor
+  - wikipedia: London Underground
   - engineer
   - civil engineer
   - electrical engineer
@@ -531,6 +577,10 @@
 ## 4. Social, Law, Activism & Religion
 
 - Social reform & activism
+  - when: May - May Day, 1 May
+  - occupation: activist
+  - wikipedia: suffrag
+  - wikipedia: trade unionists
   - social reformer
   - reformer
   - prison reformer
@@ -658,6 +708,8 @@
 ## 5. Military, Emergency Services & Exploration
 
 - Military
+  - when: November - Remembrance Day, 11 November
+  - occupation: military personnel
   - soldier
   - Royal Navy Admiral
   - United States Army General
@@ -708,6 +760,11 @@
   - leader of the first women’s army corps
 
 - Emergency services
+  - when: September - the Blitz began on 7 September 1940
+  - wikipedia: The Blitz
+  - wikipedia: firefighters
+  - wikipedia: Metropolitan Police
+  - wikipedia: civilians killed in World War II
   - Police Constable
   - firefighter
   - Auxiliary Fireman
@@ -737,6 +794,9 @@
 ## 6. Sport & Physical Performance
 
 - Sportsperson
+  - when: July - Wimbledon fortnight, and London 2012 opened on 27 July
+  - occupation: athlete
+  - wikipedia: Olympic
   - cricketer
   - tennis player
   - pugilist

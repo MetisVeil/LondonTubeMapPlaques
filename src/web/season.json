@@ -1,0 +1,320 @@
+{
+ "name": "Emergency services",
+ "group": "Military, Emergency Services & Exploration",
+ "when": {
+  "month": 9,
+  "note": "the Blitz began on 7 September 1940"
+ },
+ "stations": {
+  "TowerHill": {
+   "plaque": "5396",
+   "person": "Abraham Lewis",
+   "role": "Auxiliary Fireman",
+   "distance_m": 47,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Abraham\nLewis"
+  },
+  "LeicesterSquare": {
+   "plaque": "30419",
+   "person": "Al Bowlly",
+   "role": "singer",
+   "distance_m": 88,
+   "wikipedia": "https://en.wikipedia.org/wiki/Al_Bowlly",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bowlly_small.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/AL_BOWLLY_1899-1941_Singer_lived_here_1933-1934.jpg?width=640",
+   "label": "Al Bowlly"
+  },
+  "AldgateEast": {
+   "plaque": "49355",
+   "person": "Bill Faust",
+   "role": "firefighter",
+   "distance_m": 114,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Bill_Faust_and_Adam_Meere_plaque.jpg?width=640",
+   "label": "Bill Faust"
+  },
+  "LondonBridge": {
+   "plaque": "9906",
+   "person": "James Braidwood",
+   "role": "superintendent of the London Fire Brigade",
+   "distance_m": 122,
+   "wikipedia": "https://en.wikipedia.org/wiki/James_Braidwood",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/James_Braidwood_engraving.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/James_Braidwood_20230226_103158.jpg?width=640",
+   "label": "James\nBraidwood"
+  },
+  "BromleyByBow": {
+   "plaque": "5392",
+   "person": "Fred Dell",
+   "role": "firefighter",
+   "distance_m": 139,
+   "wikipedia": "https://en.wikipedia.org/wiki/Fred_Dell",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/4/43/Fred_Dell.jpeg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": null,
+   "label": "Fred Dell"
+  },
+  "AbbeyRoad": {
+   "plaque": "9967",
+   "person": "Alf Bridgeman",
+   "role": "Air Raid Precautions rescue squad leader",
+   "distance_m": 166,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/In_memory_of_13_members_of_the_Air_Raid_Precautions_and_the_Fire_Service_killed_at_Abbey_Road_Depot_on_the_7th_September_1940.jpg?width=640",
+   "label": "Alf\nBridgeman"
+  },
+  "Knightsbridge": {
+   "plaque": "10428",
+   "person": "Jane Arbuthnot",
+   "role": "Woman Police Constable",
+   "distance_m": 193,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://farm1.staticflickr.com/767/20980829236_da0cca20d0_z.jpg",
+   "label": "Jane\nArbuthnot"
+  },
+  "WestKensington": {
+   "plaque": "10347",
+   "person": "Stephen Tibble",
+   "role": "Police Constable",
+   "distance_m": 214,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Stephen\nTibble"
+  },
+  "PiccadillyCircus": {
+   "plaque": "8325",
+   "person": "Yvonne Fletcher",
+   "role": "Woman Police Constable",
+   "distance_m": 227,
+   "wikipedia": "https://en.wikipedia.org/wiki/Yvonne_Fletcher",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/2/28/WPC_Yvonne_Fletcher_shortly_after_being_shot.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://farm1.staticflickr.com/713/21732032973_0074f985f5_z.jpg",
+   "label": "Yvonne\nFletcher"
+  },
+  "DollisHill": {
+   "plaque": "10366",
+   "person": "Ronan McCloskey",
+   "role": "Police Constable",
+   "distance_m": 230,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/PC_Ronan_McCloskey_memorial.jpg?width=640",
+   "label": "Ronan\nMcCloskey"
+  },
+  "ClaphamNorth": {
+   "plaque": "10346",
+   "person": "Patrick Dunne",
+   "role": "Police Constable",
+   "distance_m": 234,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Patrick\nDunne"
+  },
+  "Pimlico": {
+   "plaque": "50073",
+   "person": "Harry Mallin",
+   "role": "boxer",
+   "distance_m": 246,
+   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Mallin",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/7/71/HarryMallin.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Harry_Mallin_1892-1969_Policeman_and_Olympic_Boxing_Champion_in_1920_and_1924_lived_and_worked_here.jpg?width=640",
+   "label": "Harry\nMallin"
+  },
+  "NewCrossGate": {
+   "plaque": "43711",
+   "person": "Battle of Lewisham",
+   "role": "battle",
+   "distance_m": 253,
+   "wikipedia": "https://en.wikipedia.org/wiki/Battle_of_Lewisham",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Plaque_for_the_Battle_of_Lewisham%2C_New_Cross_Road_and_Clifton_Rise_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Remembering_the_Battle_of_Lewisham_Thousands_united_here_against_racism_and_fascism_13_August_1977.jpg?width=640",
+   "label": "Battle of\nLewisham"
+  },
+  "Temple": {
+   "plaque": "9197",
+   "person": "James Morrison",
+   "role": "police officer",
+   "distance_m": 289,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "James\nMorrison"
+  },
+  "ForestHill": {
+   "plaque": "4376",
+   "person": "Dietrich Bonhoeffer",
+   "role": "theologian",
+   "distance_m": 292,
+   "wikipedia": "https://en.wikipedia.org/wiki/Dietrich_Bonhoeffer",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_146-1987-074-16,_Dietrich_Bonhoeffer.jpg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dietrich_Bonhoeffer_1906-1945_Theologian_and_Pastor_lived_here_1933-1935.jpg?width=640",
+   "label": "Dietrich\nBonhoeffer"
+  },
+  "Borough": {
+   "plaque": "636",
+   "person": "Eyre Massey Shaw",
+   "role": "Chief Officer of the Metropolitan Fire Brigade",
+   "distance_m": 323,
+   "wikipedia": "https://en.wikipedia.org/wiki/Eyre_Massey_Shaw",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masseyshaw.gif?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Plaque_commemorating_Sir_Eyre_Massey_Shaw.JPG?width=640",
+   "label": "Eyre Massey\nShaw"
+  },
+  "EastActon": {
+   "plaque": "10327",
+   "person": "Christopher Head",
+   "role": "Police Sergeant",
+   "distance_m": 324,
+   "wikipedia": "https://en.wikipedia.org/wiki/Shepherd's_Bush_murders",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Massacre_of_Braybrook_Street_002.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/PS_Christopher_Head,_PC_Geoffrey_Fox,_PC_David_Wombwell_memorial.jpg?width=640",
+   "label": "Christopher\nHead"
+  },
+  "ParkRoyal": {
+   "plaque": "30",
+   "person": "Alan Blumlein",
+   "role": "electronics engineer",
+   "distance_m": 341,
+   "wikipedia": "https://en.wikipedia.org/wiki/Alan_Blumlein",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/7/79/Alan_Blumlein_1932-1933_from_Simon_Blumlein_archives_%28Burns_145%29_ENG.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/ALAN_DOWER_BLUMLEIN_1903-1942_Electronics_Engineer_and_Inventor_lived_here.jpg?width=640",
+   "label": "Alan\nBlumlein"
+  },
+  "Whitechapel": {
+   "plaque": "11584",
+   "person": "Charles Pearson",
+   "role": "London Fire Brigade District Officer",
+   "distance_m": 368,
+   "wikipedia": "https://en.wikipedia.org/wiki/Charles_Pearson",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Charles_Pearson.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://farm3.staticflickr.com/2921/14268613465_d896cdd151_z.jpg",
+   "label": "Charles\nPearson"
+  },
+  "Euston": {
+   "plaque": "5398",
+   "person": "Stanley Harold Randolph",
+   "role": "Auxiliary Fireman",
+   "distance_m": 384,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/In_Memory_of_Auxiliary_Firemen_Stanley_Harold_Randolph_and_Harry_Richard_Skinner.jpg?width=640",
+   "label": "Stanley\nHarold\nRandolph"
+  },
+  "Blackfriars": {
+   "plaque": "7530",
+   "person": "Sidney Alfred Holder",
+   "role": "Auxiliary Fireman",
+   "distance_m": 399,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Sidney\nAlfred\nHolder"
+  },
+  "StratfordHighStreet": {
+   "plaque": "10309",
+   "person": "Nina Mackay",
+   "role": "Police Constable",
+   "distance_m": 447,
+   "wikipedia": "https://en.wikipedia.org/wiki/Death_of_Nina_Mackay",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/8/84/WPC_Nina_Mackay.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/PC_Nina_Mackay_memorial_Arthingworth_Street,_E15,_London_(1).jpg?width=640",
+   "label": "Nina Mackay"
+  },
+  "TowerGateway": {
+   "plaque": "3726",
+   "person": "Battle of Cable Street",
+   "role": "battle",
+   "distance_m": 473,
+   "wikipedia": "https://en.wikipedia.org/wiki/Battle_of_Cable_Street",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Battle_of_Cable_Street_Plaque_%28Tower_Hamlets_Environment_Trust%29.jpg/960px-Battle_of_Cable_Street_Plaque_%28Tower_Hamlets_Environment_Trust%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://farm6.staticflickr.com/5219/5398817791_0ac1c3253f_z.jpg",
+   "label": "Battle of\nCable\nStreet"
+  },
+  "BowRoad": {
+   "plaque": "5394",
+   "person": "Albert Edward Arber",
+   "role": "Auxiliary Fireman",
+   "distance_m": 596,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": null,
+   "label": "Albert\nEdward\nArber"
+  },
+  "OldStreet": {
+   "plaque": "50884",
+   "person": "Alfred Smith",
+   "role": "Police Constable",
+   "distance_m": 608,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/PC_Alfred_Smith_1880-1917_(London_Borough_of_Islington).jpg?width=640",
+   "label": "Alfred\nSmith"
+  },
+  "Ilford": {
+   "plaque": "10394",
+   "person": "Phillip Walters",
+   "role": "Police Constable",
+   "distance_m": 612,
+   "wikipedia": "https://en.wikipedia.org/wiki/Death_of_Phillip_Walters",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/6/64/PC_Phillip_Walters.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": null,
+   "label": "Phillip\nWalters"
+  },
+  "Haggerston": {
+   "plaque": "10432",
+   "person": "Laurence Brown",
+   "role": "Police Constable",
+   "distance_m": 656,
+   "wikipedia": "https://en.wikipedia.org/wiki/Laurie_Brown_(bishop)",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Memorial_to_Laurence_Ambrose_Brown_in_Birmingham_Cathedral.jpg/1280px-Memorial_to_Laurence_Ambrose_Brown_in_Birmingham_Cathedral.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": null,
+   "label": "Laurence\nBrown"
+  },
+  "CrystalPalace": {
+   "plaque": "30599",
+   "person": "Leslie Howard",
+   "role": "film director",
+   "distance_m": 664,
+   "wikipedia": "https://en.wikipedia.org/wiki/Leslie_Howard",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Leslie_Howard_GWTW.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "plaque_photo": "https://farm8.staticflickr.com/7429/13055683834_0d255e3226_z.jpg",
+   "label": "Leslie\nHoward"
+  },
+  "Maryland": {
+   "plaque": "42631",
+   "person": "Gary Toms",
+   "role": "Police Constable",
+   "distance_m": 680,
+   "wikipedia": null,
+   "person_image": null,
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Here_fell_PC_Gary_Toms_11_April_2009_Ashlin_Road_London_E15_(1).jpg?width=640",
+   "label": "Gary Toms"
+  },
+  "DenmarkHill": {
+   "plaque": "41822",
+   "person": "George Arthur Roberts",
+   "role": "firefighter",
+   "distance_m": 720,
+   "wikipedia": "https://en.wikipedia.org/wiki/George_Arthur_Roberts",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/George_Arthur_Roberts.jpg/960px-George_Arthur_Roberts.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Plaque_-_George_Arthur_Roberts.jpg?width=640",
+   "label": "George\nArthur\nRoberts"
+  },
+  "SouthKensington": {
+   "plaque": "5388",
+   "person": "The Blitz",
+   "role": null,
+   "distance_m": 844,
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Blitz",
+   "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Map_of_Knickebein_transmitters.svg?width=640",
+   "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/In_memory_of_Twelve_London_Firemen_plaque_-_Chelsea_Fire_Station_264_Kings_Road_SW3_5UF.jpg?width=640",
+   "label": "The Blitz"
+  }
+ }
+}

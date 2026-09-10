@@ -79,6 +79,14 @@
 
     <div id="selection"><span class="hint">Click a station</span></div>
 
+    <div id="season" hidden>
+      <div class="copy">
+        <div class="season-name"></div>
+        <div class="season-note"></div>
+      </div>
+      <button class="season-close" aria-label="Dismiss">&times;</button>
+    </div>
+
     <script>
       var container = d3.select('#tube-map');
       var selection = d3.select('#selection');
@@ -460,9 +468,12 @@
 
       document.addEventListener('click', function (event) {
         if (!menu.contains(event.target) && !optionsMenu.contains(event.target)) close();
+        if (!seasonPanel.contains(event.target)) seasonRead();
       });
       document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') close();
+        if (event.key !== 'Escape') return;
+        close();
+        seasonRead();
       });
 
       darkBox.checked = dark;
@@ -494,7 +505,41 @@
 
         draw(false);
         window.addEventListener('resize', function () { fit(); });
+        d3.json('./season.json').then(openInSeason).catch(function () {});
       });
+
+      // The map this month is about. It arrives already chosen - the data is
+      // rebuilt on the 1st - so the page only has to put it on and say what it
+      // is. Saying so is the part worth dismissing: the theme stays either way.
+      var seasonPanel = document.getElementById('season');
+      var inSeason = null;
+
+      // Anywhere off the panel counts as clicking it away, and having read it
+      // once is enough - until next month, when the name changes and it is news
+      // again. A browser that refuses storage simply gets told each time.
+      function seasonRead() {
+        if (!inSeason) return;
+        seasonPanel.hidden = true;
+        try {
+          window.localStorage.setItem('season-seen', inSeason.name);
+        } catch (error) {}
+      }
+
+      function openInSeason(theme) {
+        if (!theme || !theme.stations) return;
+        inSeason = theme;
+        show(theme);
+
+        try {
+          if (window.localStorage.getItem('season-seen') === theme.name) return;
+        } catch (error) {}
+
+        seasonPanel.querySelector('.season-name').textContent = theme.name;
+        seasonPanel.querySelector('.season-note').textContent = theme.when.note;
+        seasonPanel.hidden = false;
+      }
+
+      seasonPanel.querySelector('.season-close').onclick = seasonRead;
     </script>
   </body>
 </html>

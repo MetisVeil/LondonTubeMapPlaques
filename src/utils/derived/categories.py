@@ -7,6 +7,10 @@ changing to add one. Its shape is three levels:
     - Music                       a category within it
       - composer                  a role, matched against the plaque's own
       - subject_type: woman       or a column and value, for anything not a role
+      - occupation: musician      or what Wikidata says the subject did
+      - wikipedia: jazz musicians or a Wikipedia category the subject is in
+      - when: August - Carnival   and the month this map is the one on show
+      - except: film scores       less anything a loose match wrongly reached
 
 `build(conn)` reads it, works out which plaque belongs at which station for each
 category, and hands back something the page can switch between.
@@ -23,11 +27,27 @@ GROUP = re.compile(r"^##\s+(?:\d+\.\s*)?(.+?)\s*$")
 CATEGORY = re.compile(r"^-\s+(.+?)\s*$")
 ENTRY = re.compile(r"^\s+-\s+(.+?)\s*$")
 FILTER = re.compile(r"^(\w+):\s*(.+)$")
+DASH = re.compile(r"\s[-–—]\s")
 
-# Columns a "field: value" entry is allowed to match on, so a typo names a
-# column that does not exist rather than quietly matching nothing.
-FIELDS = {"subject_type": "lead_subject_type", "gender": "lead_subject_sex",
-          "colour": "colour", "area": "area"}
+# What a "field: value" entry is allowed to match on, as the test it becomes.
+# Listed rather than built from the field name so a typo names a field that does
+# not exist rather than quietly matching nothing. `organisations` holds a JSON
+# array, so the one plaque body that erected it is looked for inside the string.
+FIELDS = {"subject_type": '"lead_subject_type" = ?',
+          "gender": '"lead_subject_sex" = ?',
+          "colour": '"colour" = ?',
+          "area": '"area" = ?',
+          "series": '"series" = ?',
+          "organisation": '"organisations" LIKE \'%\' || ? || \'%\''}
+
+# Entries answered by `derived.subject_facts` rather than by the plaque itself.
+# An occupation is matched whole, because it comes from a fixed vocabulary; a
+# Wikipedia category is matched loosely, because "LGBTQ" has to find "British
+# LGBTQ writers" and "20th-century English LGBTQ people" alike.
+FACTS = {"occupation": "value = ?", "wikipedia": "value LIKE '%' || ? || '%'"}
+
+MONTHS = ["january", "february", "march", "april", "may", "june", "july",
+          "august", "september", "october", "november", "december"]
 
 
 def normalise(role: str) -> str:
@@ -48,16 +68,36 @@ def parse(path) -> list[dict]:
             entry = found.group(1)
             if rule := FILTER.match(entry):
                 field, value = rule.group(1), rule.group(2)
-                if field not in FIELDS:
-                    raise ValueError(f"{entry!r}: unknown field {field!r}, expected one of {sorted(FIELDS)}")
-                current["filters"].append((FIELDS[field], value))
+                if field == "when":
+                    current["when"] = when(value)
+                elif field == "except":
+                    current["except"].append(value)
+                elif field in FACTS:
+                    current["facts"].append((field, value))
+                elif field in FIELDS:
+                    current["filters"].append((FIELDS[field], value))
+                else:
+                    raise ValueError(f"{entry!r}: unknown field {field!r}, expected one of "
+                                     f"{sorted([*FIELDS, *FACTS, 'when', 'except'])}")
             else:
                 current["roles"].append(normalise(entry))
         elif found := CATEGORY.match(line):
-            current = {"name": found.group(1), "group": group, "roles": [], "filters": []}
+            current = {"name": found.group(1), "group": group, "when": None,
+                       "roles": [], "filters": [], "facts": [], "except": []}
             categories.append(current)
 
-    return [c for c in categories if c["roles"] or c["filters"]]
+    return [c for c in categories if c["roles"] or c["filters"] or c["facts"]]
+
+
+def when(text: str) -> dict:
+    """"March - International Women's Day" -> the month, and why it is that month.
+
+    The note is what the page says when it opens the map on its own, so it is
+    written here beside the rules rather than kept in a calendar of its own.
+    """
+    month, *note = DASH.split(text, maxsplit=1)
+    return {"month": MONTHS.index(month.strip().lower()) + 1,
+            "note": note[0].strip() if note else ""}
 
 
 def whole_groups(categories: list[dict]) -> list[dict]:
@@ -71,10 +111,12 @@ def whole_groups(categories: list[dict]) -> list[dict]:
         if category["group"] is None or category["group"] == "Special":
             continue
         whole = merged.setdefault(category["group"],
-                                  {"name": category["group"], "group": None,
-                                   "roles": [], "filters": []})
+                                  {"name": category["group"], "group": None, "when": None,
+                                   "roles": [], "filters": [], "facts": [], "except": []})
         whole["roles"] += category["roles"]
         whole["filters"] += category["filters"]
+        whole["facts"] += category["facts"]
+        whole["except"] += category["except"]
     return list(merged.values())
 
 
@@ -85,12 +127,27 @@ def plaques_for(conn: sqlite3.Connection, category: dict, people_only: bool = Tr
         where.append("lower(replace(lead_subject_primary_role, char(8217), char(39))) IN (%s)"
                      % ",".join("?" * len(category["roles"])))
         params += category["roles"]
-    for column, value in category["filters"]:
-        where.append(f'"{column}" = ?')
+    for test, value in category["filters"]:
+        where.append(test)
+        params.append(value)
+    for kind, value in category["facts"]:
+        where.append("lead_subject_wikipedia IN (SELECT subject FROM subject_facts "
+                     f"WHERE kind = '{kind}' AND {FACTS[kind]})")
         params.append(value)
 
     # A category is a union of its rules: any role in the list, or any filter.
     clause = " OR ".join(where)
+
+    # ...less whatever it disowns. Matching a Wikipedia category loosely is what
+    # makes one line cover a whole family of them, and this is the price: now
+    # and then it reaches something it should not, and that is said here rather
+    # than by giving up and listing people by hand.
+    for value in category["except"]:
+        clause = (f"({clause}) AND (lead_subject_wikipedia IS NULL OR lead_subject_wikipedia "
+                  "NOT IN (SELECT subject FROM subject_facts WHERE kind = 'wikipedia' "
+                  "AND value LIKE '%' || ? || '%'))")
+        params.append(value)
+
     if people_only:
         clause = f"({clause}) AND lead_subject_type IN ('man', 'woman')"
 
@@ -120,15 +177,18 @@ def assign(conn: sqlite3.Connection, plaque_ids: list[str]) -> dict[str, dict]:
         ORDER BY a.rank, a.distance_m
     """, plaque_ids).fetchall()
 
+    # Keyed by the person rather than the plaque: Dickens has twenty plaques and
+    # Hendrix three, and a map that reads them as different people would put the
+    # same name on three stations.
     chosen, used = {}, set()
     for uid, plaque, rank, metres, person, role, wiki, portrait, photo in pairs:
-        if uid in chosen or plaque in used:
+        if uid in chosen or (wiki or person) in used:
             continue
         image = portrait or wikipedia_image(wiki)
         chosen[uid] = {"plaque": plaque, "person": person, "role": role,
                        "distance_m": round(metres), "wikipedia": wiki,
                        "person_image": image, "plaque_photo": photo}
-        used.add(plaque)
+        used.add(wiki or person)
 
     return chosen
 
@@ -143,5 +203,12 @@ def build(conn: sqlite3.Connection, path) -> list[dict]:
         stations = assign(conn, plaques_for(conn, category))
         if stations:
             built.append({"name": category["name"], "group": category["group"],
-                          "stations": stations})
+                          "when": category["when"], "stations": stations})
     return built
+
+
+if __name__ == "__main__":
+    assert when("March") == {"month": 3, "note": ""}
+    assert when("August — Notting Hill Carnival") == {"month": 8, "note": "Notting Hill Carnival"}
+    assert when("october - Black History Month") == {"month": 10, "note": "Black History Month"}
+    print("ok")

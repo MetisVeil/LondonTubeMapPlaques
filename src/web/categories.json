@@ -11815,8 +11815,18 @@
  {
   "name": "Men of London",
   "group": "Special",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 11,
+   "day": 19,
+   "note": "International Men's Day"
+  },
+  "about": {
+   "title": "International Men's Day",
+   "extract": [
+    "International Men's Day (IMD) is a global awareness day for many issues that men face, including abuse, homelessness, suicide, and violence, celebrated annually on 19 November. The objectives of celebrating an International Men's Day are set out in \"All the Six Pillars of International Men's Day\". It is also an occasion to celebrate boys' and men's lives, achievements and contributions, in particular for their contributions to nation, union, society, community, family, marriage, and childcare."
+   ],
+   "url": "https://en.wikipedia.org/wiki/International_Men%27s_Day"
+  },
   "stations": {
    "Northfields": {
     "plaque": "40743",
@@ -14641,7 +14651,7 @@
   "about": {
    "title": "LGBTQ History Month",
    "extract": [
-    "Lesbian, Gay, Bisexual, Transgender and Queer/Questioning (LGBTQ) History Month is an annual month-long observance of the history of lesbian, gay, bisexual, transgender and queer people, and the history of the gay rights and related civil rights movements. It was founded in 1994 by Missouri high-school history teacher Rodney Wilson. LGBTQ History Month provides role models, builds community, and represents a civil rights statement about the contributions of the LGBTQ community. As of 2022, LGBTQ History Month is a month-long celebration that is specific to Australia, Canada, Cuba, Finland, Germany, Hungary, Russia, China, Spain, Italy,  the United Kingdom and the United States.",
+    "Lesbian, Gay, Bisexual, Transgender and Queer/Questioning (LGBTQ) History Month is an annual month-long observance of the history of lesbian, gay, bisexual, transgender and queer people, and the history of the gay rights and related civil rights movements. It was founded in 1994 by Missouri high-school history teacher Rodney Wilson. LGBTQ History Month provides role models, builds community, and represents a civil rights statement about the contributions of the LGBTQ community. As of 2022, LGBTQ History Month is a month-long celebration that is specific to Australia, Canada, Cuba, Finland, Germany, Hungary, Russia, China, Spain, Italy, the United Kingdom and the United States.",
     "In the United States, Canada, Armenia, Romania, the Netherlands, Southeast Asia, and Australia, it is celebrated in October to coincide with National Coming Out Day on 11 October and to commemorate the first and second Marches on Washington in 1979 and 1987 for LGBTQ rights. In the United Kingdom it is observed during February; in the UK this coincides with a major celebration of the 2003 abolition of Section 28. In Berlin, the capital of Germany, it is known as Queer History Month and is celebrated in May."
    ],
    "url": "https://en.wikipedia.org/wiki/LGBTQ_History_Month"
@@ -18576,8 +18586,19 @@
  {
   "name": "Visual artist",
   "group": "Arts & Literature",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 5,
+   "day": 10,
+   "note": "the National Gallery opened on this day in 1824"
+  },
+  "about": {
+   "title": "National Gallery",
+   "extract": [
+    "The National Gallery is an art museum in Trafalgar Square in the City of Westminster, in Central London, England. Founded in 1824, it houses a collection of more than 2,300 paintings dating from the mid-13th century to 1900. The current director of the National Gallery is Gabriele Finaldi.",
+    "The National Gallery is an exempt charity, and a non-departmental public body of the Department for Culture, Media and Sport. Its collection is held in trust by the charity on behalf of the British public, and entry to the main collection is free of charge."
+   ],
+   "url": "https://en.wikipedia.org/wiki/National_Gallery"
+  },
   "stations": {
    "RussellSquare": {
     "plaque": "33150",
@@ -19604,8 +19625,19 @@
  {
   "name": "Architecture & design",
   "group": "Arts & Literature",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 9,
+   "day": 20,
+   "note": "Open House, when London's buildings open their doors"
+  },
+  "about": {
+   "title": "Open House London",
+   "extract": [
+    "Open House London, now known as Open House Festival, is an annual festival celebrating the architecture and urban landscape of London. It is staged by the charity Open City which campaigns to make London a more accessible, equitable and open city. Starting in London in 1992 the festival has spread to over 60 of cities across the world. During the Open House Festival, many buildings considered to be of architectural significance open their doors for free public tours.",
+    "The 2019 event featured over 800 buildings, neighbourhood walks, architects' talks, cycle tours, and more. Well-known buildings not usually open to the public which were open on Open House weekend in 2005, for example, included Marlborough House, Lancaster House, Mansion House, the Foreign and Commonwealth Office, and Horse Guards."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Open_House_London"
+  },
   "stations": {
    "Northfields": {
     "plaque": "40743",
@@ -20290,7 +20322,7 @@
   "about": {
    "title": "Pantomime",
    "extract": [
-    "Pantomime (; informally panto) is a type of musical comedy stage production designed for family entertainment, generally combining broad and topical humour and cross-dressing actors with a story more or less based on a well-known fairy tale, fable or folk tale. Pantomime is a participatory form of theatre developed in England in the 18th century in which the audience is encouraged and expected to sing along with certain parts of the music and to shout out phrases to the performers.",
+    "Pantomime (informally panto) is a type of musical comedy stage production designed for family entertainment, generally combining broad and topical humour and cross-dressing actors with a story more or less based on a well-known fairy tale, fable or folk tale. Pantomime is a participatory form of theatre developed in England in the 18th century in which the audience is encouraged and expected to sing along with certain parts of the music and to shout out phrases to the performers.",
     "The origins of pantomime reach back to ancient Greek classical theatre. It developed partly from the 16th century commedia dell'arte tradition of Italy and partly from other European and British stage traditions, such as 17th-century masques and music hall. An important part of the pantomime, until the late 19th century, was the harlequinade. Modern pantomime is performed throughout the United Kingdom, Ireland and (to a lesser extent) in other English-speaking countries, especially during the Christmas and New Year season, and includes songs, gags, slapstick comedy and dancing."
    ],
    "url": "https://en.wikipedia.org/wiki/Pantomime"
@@ -22910,8 +22942,19 @@
  {
   "name": "Scientist",
   "group": "Science, Medicine & Engineering",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 6,
+   "day": 22,
+   "note": "the Royal Observatory at Greenwich was founded on this day in 1675"
+  },
+  "about": {
+   "title": "Royal Observatory, Greenwich",
+   "extract": [
+    "The Royal Observatory, Greenwich (ROG; known as the Old Royal Observatory from 1957 to 1998, when the working Royal Greenwich Observatory, RGO, temporarily moved south from Greenwich to Herstmonceux) is an observatory situated on a hill in Greenwich Park in south east London, overlooking the River Thames to the north. It played a major role in the history of astronomy and navigation, and because the Prime Meridian passed through it, it gave its name to Greenwich Mean Time, the precursor to today's Coordinated Universal Time (UTC). The ROG has the IAU observatory code of 000, the first in the list. ROG, the National Maritime Museum, the Queen's House and the clipper ship Cutty Sark are collectively designated Royal Museums Greenwich.",
+    "The observatory was commissioned in 1675 by King Charles II, with the foundation stone being laid on 10 August. The old hilltop site of Greenwich Castle was chosen by Sir Christopher Wren, a former Savilian Professor of Astronomy; as Greenwich Park was a royal estate, no new land needed to be bought. At that time the King also created the position of Astronomer Royal, to serve as the director of the observatory and to \"apply himself with the most exact care and diligence to the rectifying of the tables of the motions of the heavens, and the places of the fixed stars, so as to find out the so much desired longitude of places for the perfecting of the art of navigation.\" He appointed John Flamsteed as the first Astronomer Royal. The building was completed in the summer of 1676. The building was often called \"Flamsteed House\", in reference to its first occupant."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Royal_Observatory%2C_Greenwich"
+  },
   "stations": {
    "GreenPark": {
     "plaque": "251",
@@ -23618,8 +23661,19 @@
  {
   "name": "Medicine & healthcare",
   "group": "Science, Medicine & Engineering",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 7,
+   "day": 5,
+   "note": "the NHS began on this day in 1948"
+  },
+  "about": {
+   "title": "National Health Service",
+   "extract": [
+    "The National Health Service (NHS) is the collective term for the four separate publicly funded healthcare systems of the United Kingdom: the National Health Service in England, NHS Scotland, NHS Wales, and Health and Social Care in Northern Ireland, which were created separately, and are often referred to collectively or individually as \"the NHS\".",
+    "The three original systems for England and Wales, Scotland and Northern Ireland were established in 1948 \u2013 with a Welsh system later founded in 1969 \u2013 as part of major social reforms following the Second World War, and officially launched at Park Hospital in Davyhulme, near Manchester, England (now known as Trafford General Hospital). The founding principles were that services should be comprehensive, universal and free at the point of delivery. Each system provides a comprehensive range of health services, provided without charge for residents of the United Kingdom apart from dental treatment and optical care, though NHS patients in England who are not exempt have to pay prescription charges."
+   ],
+   "url": "https://en.wikipedia.org/wiki/National_Health_Service"
+  },
   "stations": {
    "Bermondsey": {
     "plaque": "39136",
@@ -25305,8 +25359,19 @@
  {
   "name": "Politician & government",
   "group": "Politics, Government & Royalty",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 6,
+   "day": 7,
+   "note": "the Great Reform Act became law on this day in 1832"
+  },
+  "about": {
+   "title": "Reform Act 1832",
+   "extract": [
+    "The Representation of the People Act 1832 (2 & 3 Will. 4. c. 45), also known as the Reform Act 1832, Great Reform Act or First Reform Act, was an act of the Parliament of the United Kingdom to reform the electoral system in England and Wales and to expand the male franchise, but excluded women from voting. The measure was brought forward by the Whig government of Prime Minister Charles Grey, 2nd Earl Grey.",
+    "The legislation granted the right to vote to a broader segment of the male population by standardising property qualifications, extending the franchise to small landowners, tenant farmers, shopkeepers, and all householders who paid a yearly rental of \u00a310 or more. The act also reapportioned constituencies to address the unequal distribution of seats. The act formally excluded women from voting, as a voter was defined in the Act as a male person; prior to 1832 there were occasional, rare, instances of women voting. The act of England and Wales was accompanied by the Scottish Reform Act 1832 (2 & 3 Will. 4. c. 65) and Irish Reform Act 1832 (2 & 3 Will. 4. c. 88)."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Reform_Act_1832"
+  },
   "stations": {
    "Westminster": {
     "plaque": "57425",
@@ -28688,8 +28753,18 @@
  {
   "name": "Law",
   "group": "Social, Law, Activism & Religion",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 3,
+   "day": 25,
+   "note": "Lady Day, when the English legal year began until 1752"
+  },
+  "about": {
+   "title": "Lady Day",
+   "extract": [
+    "In the Western liturgical year, Lady Day is the common name in some English-speaking countries of the Feast of the Annunciation, celebrated on 25 March to commemorate the annunciation of the archangel Gabriel to the Virgin Mary that she would bear Jesus Christ, the Son of God."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Lady_Day"
+  },
   "stations": {
    "Brixton": {
     "plaque": "7277",
@@ -28836,8 +28911,19 @@
  {
   "name": "Religion",
   "group": "Social, Law, Activism & Religion",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 9,
+   "day": 29,
+   "note": "Michaelmas, the quarter day the legal year still opens around"
+  },
+  "about": {
+   "title": "Michaelmas",
+   "extract": [
+    "Michaelmas ( MIK-\u0259l-m\u0259s), also known as the Feast of Saints Michael, Gabriel and Raphael, the Feast of the Archangels, and the Feast of Saint Michael and All Angels, is a Christian festival observed in many Western Christian liturgical calendars on 29 September and on 8 November in the Eastern Christian traditions. Michaelmas has been one of the four quarter days of the English and Irish financial, judicial and academic year.",
+    "In the Christian angelology of some traditions, the Archangel Michael is considered as the greatest of all the angels, being particularly honoured for defeating Satan in the War in Heaven."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Michaelmas"
+  },
   "stations": {
    "TowerHill": {
     "plaque": "472",
@@ -30402,8 +30488,18 @@
  {
   "name": "Exploration & travel",
   "group": "Military, Emergency Services & Exploration",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 5,
+   "day": 29,
+   "note": "Everest was climbed on this day in 1953"
+  },
+  "about": {
+   "title": "1953 British Mount Everest expedition",
+   "extract": [
+    "The 1953 British Mount Everest expedition was the ninth mountaineering expedition to attempt the first ascent of Mount Everest, and the first confirmed to have succeeded when Tenzing Norgay and Edmund Hillary reached the summit on 29 May 1953 at 11:30 a.m. Led by Colonel John Hunt, it was organised and financed by the Joint Himalayan Committee. News of the expedition's success reached London in time to be released on the morning of Queen Elizabeth II's coronation, on 2 June that year."
+   ],
+   "url": "https://en.wikipedia.org/wiki/1953_British_Mount_Everest_expedition"
+  },
   "stations": {
    "WarrenStreet": {
     "plaque": "484",
@@ -30578,7 +30674,7 @@
   "about": {
    "title": "Wimbledon Championships",
    "extract": [
-    "The Wimbledon Championships, commonly called Wimbledon, is a tennis tournament organised annually by the All England Lawn Tennis and Croquet Club in collaboration with the Lawn Tennis Association in Wimbledon, London. It is chronologically the third of the four Grand Slam tennis events each year, held after the Australian Open and the French Open and before the US Open. It is the oldest tennis tournament in the world and is widely regarded as the most prestigious. ",
+    "The Wimbledon Championships, commonly called Wimbledon, is a tennis tournament organised annually in Wimbledon, London, by the All England Lawn Tennis and Croquet Club in collaboration with the Lawn Tennis Association. It is chronologically the third of the four Grand Slam tennis events each year, held after the Australian Open and the French Open and before the US Open. It is the oldest tennis tournament in the world and is widely regarded as the most prestigious.",
     "Wimbledon has been held since 1877 and is played on outdoor grass courts; it is the only tennis major still played on grass, the traditional surface. It is also the only major that retains a night-time curfew for logistical reasons, with matches continuing until 23:00 BST under floodlighting since 2009."
    ],
    "url": "https://en.wikipedia.org/wiki/Wimbledon_Championships"
@@ -31359,8 +31455,19 @@
  {
   "name": "Business",
   "group": "Business & Commerce",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 1,
+   "day": 23,
+   "note": "the Royal Exchange opened on this day in 1571"
+  },
+  "about": {
+   "title": "Royal Exchange, London",
+   "extract": [
+    "The Royal Exchange is a building in central London, built to house the London Stock Exchange, which now operates elsewhere. Today, the Royal Exchange contains restaurants and luxury shops.",
+    "It was founded in the 16th century by the merchant Sir Thomas Gresham on the suggestion of his factor Richard Clough to act as a centre of commerce for the City of London. The site was provided by the City of London Corporation and the Worshipful Company of Mercers, who still jointly own the freehold. The original foundation was ceremonially opened by Queen Elizabeth I who granted it its \"royal\" title. Rebuilt in the 1840s, the current neoclassical building has a trapezoidal floor plan and is flanked by Cornhill and Threadneedle Street, which converge at Bank junction in the heart of the city. It lies in the Ward of Cornhill."
+   ],
+   "url": "https://en.wikipedia.org/wiki/Royal_Exchange%2C_London"
+  },
   "stations": {
    "HydeParkCorner": {
     "plaque": "60032",
@@ -32187,8 +32294,19 @@
  {
   "name": "Education",
   "group": "Education & Other",
-  "when": null,
-  "about": null,
+  "when": {
+   "month": 11,
+   "day": 28,
+   "note": "the University of London was chartered on this day in 1836"
+  },
+  "about": {
+   "title": "University of London",
+   "extract": [
+    "The University of London (UoL; abbreviated as Lond or more rarely Londin in post-nominals) is a federal public research university in London, England, United Kingdom. The university was established by royal charter in 1836 as a degree-awarding examination board for students holding certificates from University College London, King's College London, and \"other such institutions, corporate or unincorporated, as shall be established for the purpose of Education, whether within the Metropolis or elsewhere within our United Kingdom\". It is one of three institutions to have claimed the title of the third-oldest university in England. It moved to a federal structure with constituent colleges in 1900. It is now incorporated by its fourth (1863) royal charter and governed by the University of London Act 2018.",
+    "The university consists of 17 member institutions and three central academic bodies. It has around 48,000 distance learning external students and around 205,400 campus-based internal students, making it the largest university by number of students in the United Kingdom. For most practical purposes, ranging from admissions to funding, the member institutions operate on an independent basis, with many conferring their own degrees whilst remaining in the federal university."
+   ],
+   "url": "https://en.wikipedia.org/wiki/University_of_London"
+  },
   "stations": {
    "MarbleArch": {
     "plaque": "3065",

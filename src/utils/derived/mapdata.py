@@ -478,8 +478,10 @@ def export_categories(conn: sqlite3.Connection, path: Path = CATEGORIES_PATH,
     return {"categories": len(themes),
             "widest": max((f'{t["name"]} ({len(t["stations"])} stations)' for t in themes),
                           key=lambda t: int(t.split("(")[1].split()[0])),
-            "months": f'{sum(1 for t in themes if t["when"])} of 12'
-                      + (f", no article for {', '.join(unexplained)}" if unexplained else ""),
+            "calendar": f'{sum(1 for t in themes if t["when"])} occasions, '
+                        f'{52 - categories.bare_weeks(themes, datetime.now(timezone.utc).year)}'
+                        " of 52 weeks covered"
+                        + (f", no article for {', '.join(unexplained)}" if unexplained else ""),
             "in season": export_season(themes),
             "path": str(path)}
 

@@ -8,6 +8,8 @@
   - about: International Women's Day
 
 - Men of London
+  - when: 19 November - International Men's Day
+  - about: International Men's Day
   - subject_type: man
 
 - Queer London
@@ -108,6 +110,8 @@
   - Frank Richards
 
 - Visual artist
+  - when: 10 May - the National Gallery opened on this day in 1824
+  - about: National Gallery
   - artist
   - painter
   - portrait painter
@@ -138,6 +142,8 @@
   - potter
 
 - Architecture & design
+  - when: 20 September - Open House, when London's buildings open their doors
+  - about: Open House London
   - architect
   - theatre architect
   - landscape architect
@@ -275,6 +281,8 @@
 ## 2. Science, Medicine & Engineering
 
 - Scientist
+  - when: 22 June - the Royal Observatory at Greenwich was founded on this day in 1675
+  - about: Royal Observatory, Greenwich
   - scientist
   - man of science
   - physicist
@@ -322,6 +330,8 @@
   - head gardener at Chatsworth
 
 - Medicine & healthcare
+  - when: 5 July - the NHS began on this day in 1948
+  - about: National Health Service
   - physician
   - surgeon
   - immunologist
@@ -416,6 +426,8 @@
 ## 3. Politics, Government & Royalty
 
 - Politician & government
+  - when: 7 June - the Great Reform Act became law on this day in 1832
+  - about: Reform Act 1832
   - politician
   - statesman
   - Member of Parliament
@@ -662,6 +674,8 @@
   - founder of the London Penny Post
 
 - Law
+  - when: 25 March - Lady Day, when the English legal year began until 1752
+  - about: Lady Day
   - high court judge
   - judge
   - barrister
@@ -674,6 +688,8 @@
   - Serjeant-at-law
 
 - Religion
+  - when: 29 September - Michaelmas, the quarter day the legal year still opens around
+  - about: Michaelmas
   - Reverend
   - evangelist
   - missionary
@@ -790,6 +806,8 @@
   - Air Raid Precautions rescue squad leader
 
 - Exploration & travel
+  - when: 29 May - Everest was climbed on this day in 1953
+  - about: 1953 British Mount Everest expedition
   - explorer
   - Antarctic explorer
   - traveller
@@ -858,6 +876,8 @@
 ## 7. Business & Commerce
 
 - Business
+  - when: 23 January - the Royal Exchange opened on this day in 1571
+  - about: Royal Exchange, London
   - entrepreneur
   - founder of the Hogarth Press
   - bookseller
@@ -965,6 +985,8 @@
 ## 8. Education & Other
 
 - Education
+  - when: 28 November - the University of London was chartered on this day in 1836
+  - about: University of London
   - teacher
   - educator
   - professor

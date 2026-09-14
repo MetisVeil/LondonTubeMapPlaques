@@ -164,6 +164,22 @@ def why(theme: dict, themes: list[dict], today: datetime.date) -> str:
     return f"This week's map - next on the calendar is {occasion_text(ahead[0][1]['when'])}"
 
 
+def bare_weeks(themes: list[dict], year: int) -> int:
+    """How many of the year's weeks open on a rotation rather than an occasion.
+
+    What the calendar does not reach, in other words - the gaps a new `when:`
+    would fill. Asked of every day rather than of the Monday, because an
+    occasion takes the seven days up to itself and so can land mid-week.
+    """
+    first = datetime.date.fromisocalendar(year, 1, 1)
+    weeks = 0
+    for week in range(52):
+        days = (first + datetime.timedelta(weeks=week, days=day) for day in range(7))
+        chosen = (in_season(themes, day) for day in days)
+        weeks += not any(theme and theme["when"] for theme in chosen)
+    return weeks
+
+
 def in_season(themes: list[dict], today: datetime.date) -> dict | None:
     """The theme to open the map with: an occasion if one is near, else a turn.
 
@@ -328,4 +344,7 @@ if __name__ == "__main__":
     assert why(year[4], year, day(2026, 5, 4)) == (          # a turn borrows the next date
         "This week's map - next on the calendar is October")
     assert why(year[4], [year[4]], day(2026, 5, 4)) == "This week's map"
+
+    assert bare_weeks(year, 2027) == 45      # one date and one month reach 7 weeks
+    assert bare_weeks([year[2]], 2027) == 52  # a theme with no occasion reaches nothing
     print("ok")

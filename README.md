@@ -70,6 +70,7 @@ src/
 │   │   ├── mapdata.py             assembles src/web/map.json
 │   │   ├── categories.py          role_categories.md -> the themed maps
 │   │   ├── station_articles.py    each station's own Wikipedia article
+│   │   ├── person_articles.py     each plaque subject's, and their portrait
 │   │   └── plaque_stations.py     which station each plaque belongs to
 │   ├── sources/
 │   │   ├── plaques.py             Open Plaques London dump: find, download, load
@@ -193,13 +194,32 @@ only 80 have a musician as their single nearest plaque.
 The result goes to `src/web/categories.json`, separate from the map so adding a
 category does not rewrite it, and fetched only when the menu is first opened.
 
-## The stations themselves
+## What the panel says
 
-Click a station on the plain map and the panel bottom left shows the station
-rather than a person: its photograph, the lines through it, and the opening
-paragraph of its Wikipedia article.
+Clicking anything on the map answers the same way, because from the outside it
+is the same click: a photograph, a name, a line saying what it is, Wikipedia's
+opening paragraph and a link to the rest. What changes is only which of the two
+things a station is at that moment — under a themed map it stands for whoever
+the theme put there, and everywhere else, including at every station a theme has
+nobody for, it is just itself.
 
-Finding that article is the whole job. Wikipedia files London's stations under
+For a person that is `derived/person_articles.py`, and it is the easy half: the
+plaque already carries the subject's Wikipedia URL, so there is nothing to
+resolve and the lookup is only for the content. 2,047 of the 2,049 subjects the
+plaques name have an article; the 1,159 who reach a themed map go to
+`src/web/people.json`, 500KB.
+
+That module also fetches the **portraits**, which is most of the point of it.
+`derived/categories.py` used to scrape one Wikipedia page per person — over a
+thousand requests a build — and now reads them out of the table fifty at a time.
+The scrape survives as the fallback, because `pageimages` will not serve a
+non-free image and a few hundred subjects have nothing else; it runs for about
+350 people rather than all of them, and a category rebuild went from minutes to
+24 seconds.
+
+### Finding a station's article
+
+The station half is the hard one. Wikipedia files London's stations under
 three conventions — `Oval tube station`, `Stratford station`, `Abbey Road DLR
 station` — and the bare name usually belongs to the district instead, so
 guessing is both easy and quiet: `Aldgate station` is a closed station in
@@ -231,8 +251,10 @@ All 421 stations resolve, every one with a photograph. One call to
 with no article behind it is simply absent from the reply, which makes the same
 request the test of whether a guessed name exists.
 
-The result goes to `src/web/stations.json`, 300KB, and like the categories it is
-fetched only on demand — here, the first time a station is clicked.
+The result goes to `src/web/stations.json`, 300KB. Like `people.json` it is
+fetched only on demand — the two together on the first click, since neither is
+any use to a map nobody has clicked yet, and either one failing leaves the panel
+a paragraph short rather than breaking it.
 
 ## The database
 

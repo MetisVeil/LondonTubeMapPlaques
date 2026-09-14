@@ -65,7 +65,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/web/map.json src/web/categories.json src/web/stations.json src/web/season.json
+          git add src/web/map.json src/web/categories.json \
+                  src/web/stations.json src/web/people.json src/web/season.json
           git diff --cached --quiet && echo "feeds unchanged" && exit 0
           git commit -m "data: refresh TfL and Open Plaques feeds [skip ci]"
           git push

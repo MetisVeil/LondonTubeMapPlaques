@@ -519,23 +519,28 @@
       darkBox.checked = dark;
       document.body.classList.toggle('dark', dark);
 
-      // What the panel is showing, and what Wikipedia had to say about the
-      // stations. The articles are a third of a megabyte - more than the map -
-      // and nobody needs them until they click something, so they are fetched
-      // on the first click and the open panel is redrawn once they land.
-      var selected = null, stationArticles = null, articlesAsked = null;
+      // What the panel is showing, and the prose behind it: a paragraph for
+      // every station, and one for every person a themed map names. Between
+      // them they are three times the size of the map, and neither is any use
+      // until something has been clicked - so both are fetched on the first
+      // click, together, and the open panel is redrawn once they land.
+      var selected = null, stationProse = {}, personProse = {}, asked = null;
 
       function articles() {
-        if (articlesAsked) return articlesAsked;
+        if (asked) return asked;
 
-        articlesAsked = d3.json('./stations.json').then(function (loaded) {
-          stationArticles = loaded;
+        // Either file failing leaves the panel a paragraph short rather than
+        // breaking it, which is why they settle separately.
+        asked = Promise.all([
+          d3.json('./stations.json').catch(function () { return {}; }),
+          d3.json('./people.json').catch(function () { return {}; })
+        ]).then(function (loaded) {
+          stationProse = loaded[0];
+          personProse = loaded[1];
           if (selected) present(selected);
-        }).catch(function () {
-          stationArticles = {};
         });
 
-        return articlesAsked;
+        return asked;
       }
 
       function escaped(text) {
@@ -555,10 +560,12 @@
           '</div>');
       }
 
-      // Two things a station can be. Under a themed map it stands for whoever
-      // the theme put there, which is the plaque nearby rather than the station
-      // - so the station's own article would be beside the point. Everywhere
-      // else, and at every station a theme has nobody for, it is just itself.
+      // Two things a station can be, told the same way. Under a themed map it
+      // stands for whoever the theme put there, which is the plaque nearby
+      // rather than the station itself; everywhere else, and at every station a
+      // theme has nobody for, it is just itself. Either way the panel is a
+      // picture, a name, a line about it, Wikipedia's opening paragraph and the
+      // way to the rest - because from the outside they are the same click.
       function present(key) {
         var named = showing && showing.stations[key];
 
@@ -566,12 +573,12 @@
           return card(named.person_image, named.person,
                       named.role + ' \u00b7 ' + named.distance_m + 'm from ' +
                       names[key].replace(/\n/g, ' '),
-                      null, named.wikipedia);
+                      personProse[named.wikipedia], named.wikipedia);
         }
 
-        var article = stationArticles && stationArticles[key];
-        card(article && article.image, names[key].replace(/\n/g, ' '),
-             calling(key), article && article.summary, article && article.url);
+        var station = stationProse[key];
+        card(station && station.image, names[key].replace(/\n/g, ' '),
+             calling(key), station && station.summary, station && station.url);
       }
 
       // The lines a station is on, as the map currently draws it: with the

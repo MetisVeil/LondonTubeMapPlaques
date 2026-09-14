@@ -16,12 +16,13 @@ import textwrap
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import categories, layout, station_articles
+from . import categories, layout, person_articles, station_articles
 
 SRC_DIR = Path(__file__).resolve().parents[2]          # src/
 MAP_PATH = SRC_DIR / "web" / "map.json"
 CATEGORIES_PATH = SRC_DIR / "web" / "categories.json"
 STATIONS_PATH = SRC_DIR / "web" / "stations.json"
+PEOPLE_PATH = SRC_DIR / "web" / "people.json"
 CATEGORIES_SOURCE = SRC_DIR / "role_categories.md"
 SEASON_PATH = SRC_DIR / "web" / "season.json"
 OVERRIDES_PATH = SRC_DIR / "layout_overrides.json"
@@ -476,6 +477,7 @@ def export_categories(conn: sqlite3.Connection, path: Path = CATEGORIES_PATH,
     unexplained = [t["name"] for t in themes if t["when"] and not t["about"]]
 
     return {"categories": len(themes),
+            "people": export_people(conn, themes),
             "widest": max((f'{t["name"]} ({len(t["stations"])} stations)' for t in themes),
                           key=lambda t: int(t.split("(")[1].split()[0])),
             "calendar": f'{sum(1 for t in themes if t["when"])} occasions, '
@@ -510,6 +512,34 @@ def export_stations(conn: sqlite3.Connection, path: Path = STATIONS_PATH) -> dic
     return {"stations": f"{len(written)} of {len(stations)} with an article",
             "photographs": sum(1 for s in written.values() if s["image"]),
             "path": str(path)}
+
+
+def export_people(conn: sqlite3.Connection, themes: list[dict],
+                  path: Path = PEOPLE_PATH) -> str:
+    """Write the opening paragraph about each person a themed map names.
+
+    The same file, and the same reason for it, as stations.json: clicking a
+    person should answer the way clicking a station does, and a paragraph
+    apiece is far too much to carry in a map nobody has clicked yet.
+
+    Keyed by the Wikipedia URL, because that is what categories.json already
+    carries for each person and because it is the one thing that is the same
+    person twice - Dickens has twenty plaques, and one paragraph.
+    """
+    summaries = dict(conn.execute(
+        f'SELECT subject, summary FROM "{person_articles.TABLE}" WHERE summary IS NOT NULL'))
+
+    # Only the people who reached a map. The plaques name half again as many
+    # subjects as the categories ever use, and the unused ones would be a third
+    # of the file for nothing.
+    named = {person["wikipedia"] for theme in themes for person in theme["stations"].values()
+             if person.get("wikipedia")}
+    written = {url: summaries[url] for url in named if url in summaries}
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(written, indent=1))
+
+    return f"{len(written)} of {len(named)} with a paragraph -> {path}"
 
 
 def export_season(themes: list[dict], path: Path = SEASON_PATH, today=None) -> str:

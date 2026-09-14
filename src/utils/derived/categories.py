@@ -23,6 +23,7 @@ import re
 import sqlite3
 import unicodedata
 
+from . import person_articles
 from ..sources.wikipedia import fetch_image as wikipedia_image
 from ..sources.wikipedia import fetch_intro as wikipedia_intro
 
@@ -282,6 +283,13 @@ def assign(conn: sqlite3.Connection, plaque_ids: list[str]) -> dict[str, dict]:
         ORDER BY a.rank, a.distance_m
     """, plaque_ids).fetchall()
 
+    # The portraits `person_articles` already fetched, in batches, for everybody
+    # the plaques name. Preferred to scraping the page here: same image, and
+    # the lookup has been done once for the whole build rather than per person
+    # per category. The scrape is the last resort, for the few hundred subjects
+    # whose only portrait is non-free and so is not one `pageimages` will serve.
+    known = person_articles.portraits(conn)
+
     # Keyed by the person rather than the plaque: Dickens has twenty plaques and
     # Hendrix three, and a map that reads them as different people would put the
     # same name on three stations.
@@ -289,7 +297,7 @@ def assign(conn: sqlite3.Connection, plaque_ids: list[str]) -> dict[str, dict]:
     for uid, plaque, rank, metres, person, role, wiki, portrait, photo in pairs:
         if uid in chosen or (wiki or person) in used:
             continue
-        image = portrait or wikipedia_image(wiki)
+        image = portrait or known.get(wiki) or wikipedia_image(wiki)
         chosen[uid] = {"plaque": plaque, "person": person, "role": role,
                        "distance_m": round(metres), "wikipedia": wiki,
                        "person_image": image, "plaque_photo": photo}

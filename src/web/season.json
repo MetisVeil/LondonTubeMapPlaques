@@ -61,7 +61,7 @@
    "role": "architect",
    "distance_m": 32,
    "wikipedia": "https://en.wikipedia.org/wiki/Gerald_Horsley",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/7/78/All_Saints_Church%2C_Joiners_Square_-_geograph.org.uk_-_344847.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/7/78/All_Saints_Church%2C_Joiners_Square_-_geograph.org.uk_-_344847.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Hatch_End_Station_Harrow_Heritage_plaque.jpg?width=640",
    "label": "Gerald\nHorsley"
   },
@@ -231,7 +231,7 @@
    "role": "architect",
    "distance_m": 234,
    "wikipedia": "https://en.wikipedia.org/wiki/Richard_Norman_Shaw",
-   "person_image": "https://upload.wikimedia.org/wikipedia/en/b/ba/Norman-shaw.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/b/ba/Norman-shaw.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://farm4.staticflickr.com/3949/15357957119_564eef8244_z.jpg",
    "label": "Richard\nNorman Shaw"
   },
@@ -251,7 +251,7 @@
    "role": "architect",
    "distance_m": 263,
    "wikipedia": "https://en.wikipedia.org/wiki/William_Lethaby",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/0/00/All_Saints_Church%2C_Brockhampton_-_geograph.org.uk_-_1434628.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/0/00/All_Saints_Church%2C_Brockhampton_-_geograph.org.uk_-_1434628.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/WILLIAM_RICHARD_LETHABY_1857-1931_ARCHITECT_and_first_principal_of_this_School_in_1896-1911.jpg?width=640",
    "label": "William\nLethaby"
   },
@@ -271,7 +271,7 @@
    "role": "theatre architect",
    "distance_m": 299,
    "wikipedia": "https://en.wikipedia.org/wiki/W._G._R._Sprague",
-   "person_image": "https://upload.wikimedia.org/wikipedia/en/b/bf/W-G-R-Sprague.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/b/bf/W-G-R-Sprague.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Kings_Theatre_(Hammersmith_and_Fulham_Historic_Buildings_Group).jpg?width=640",
    "label": "W. G. R.\nSprague"
   },
@@ -291,7 +291,7 @@
    "role": "Royal Academician",
    "distance_m": 314,
    "wikipedia": "https://en.wikipedia.org/wiki/William_Russell_Flint",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/ILN0-1909-1225-0034-06_Russell_Flint.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/ILN0-1909-1225-0034-06_Russell_Flint.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Peel_Cottage_plaque.jpg?width=640",
    "label": "William\nRussell\nFlint"
   },
@@ -301,7 +301,7 @@
    "role": "architect",
    "distance_m": 320,
    "wikipedia": "https://en.wikipedia.org/wiki/George_Godwin",
-   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/George_Godwin.jpg/960px-George_Godwin.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/George_Godwin.jpg/960px-George_Godwin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
    "plaque_photo": "https://farm6.staticflickr.com/5832/20685182015_30cddb397a_z.jpg",
    "label": "George\nGodwin"
   },
@@ -381,7 +381,7 @@
    "role": "furniture designer",
    "distance_m": 444,
    "wikipedia": "https://en.wikipedia.org/wiki/Ambrose_Heal",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Ambrose_Heal_Notable_Londoners_1922.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Ambrose_Heal_Notable_Londoners_1922.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_AMBROSE_HEAL_1872-1959_Furniture_Designer_and_Retailer_lived_here.jpg?width=640",
    "label": "Ambrose\nHeal"
   },
@@ -411,7 +411,7 @@
    "role": "architect",
    "distance_m": 456,
    "wikipedia": "https://en.wikipedia.org/wiki/Giles_Gilbert_Scott",
-   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Giles_Gilbert_Scott_in_WT_Pike_London_%28136d%29.jpg/960px-Giles_Gilbert_Scott_in_WT_Pike_London_%28136d%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Giles_Gilbert_Scott_in_WT_Pike_London_%28136d%29.jpg/960px-Giles_Gilbert_Scott_in_WT_Pike_London_%28136d%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
    "plaque_photo": "https://farm66.staticflickr.com/65535/48637389462_6495597b71_z.jpg",
    "label": "Giles\nGilbert\nScott"
   },
@@ -491,7 +491,7 @@
    "role": "typographer",
    "distance_m": 606,
    "wikipedia": "https://en.wikipedia.org/wiki/Emery_Walker",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Emery_Walker.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Emery_Walker.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/SIR_EMERY_WALKER_1851-1933_Typographer_and_antiquary_lived_here_1903-1933.jpg?width=640",
    "label": "Emery\nWalker"
   },
@@ -561,7 +561,7 @@
    "role": "architect",
    "distance_m": 783,
    "wikipedia": "https://en.wikipedia.org/wiki/Ernest_George",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ernest_George_in_1919.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ernest_George_in_1919.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Ernest_George_(1839-1922)_-_Southwark_Council_plaque.jpg?width=640",
    "label": "Ernest\nGeorge"
   },
@@ -591,7 +591,7 @@
    "role": "architect",
    "distance_m": 903,
    "wikipedia": "https://en.wikipedia.org/wiki/Thomas_S._Tait",
-   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Calton_Hill_-_St_Andrew%27s_House.JPG/1280px-Calton_Hill_-_St_Andrew%27s_House.JPG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+   "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Calton_Hill_-_St_Andrew%27s_House.JPG/960px-Calton_Hill_-_St_Andrew%27s_House.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
    "plaque_photo": "https://farm9.staticflickr.com/8818/17051765077_ab85a171f7_z.jpg",
    "label": "Thomas\nSmith Tait"
   },
@@ -601,7 +601,7 @@
    "role": "church architect",
    "distance_m": 972,
    "wikipedia": "https://en.wikipedia.org/wiki/James_Brooks_(architect)",
-   "person_image": "https://upload.wikimedia.org/wikipedia/en/2/26/James_Brooks%2C_architect_%281825%E2%80%931901%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/en/2/26/James_Brooks%2C_architect_%281825%E2%80%931901%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://s0.geograph.org.uk/photos/87/86/878634_aa4be547.jpg",
    "label": "James\nBrooks"
   },
@@ -611,7 +611,7 @@
    "role": "architect",
    "distance_m": 379,
    "wikipedia": "https://en.wikipedia.org/wiki/George_Dance_the_Younger",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/John_Jackson_%281778-1831%29_-_George_Dance_%281741%E2%80%931825%29_-_L.F35.1948.0.0_-_Leicester_Museum_%5E_Art_Gallery.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/John_Jackson_%281778-1831%29_-_George_Dance_%281741%E2%80%931825%29_-_L.F35.1948.0.0_-_Leicester_Museum_%5E_Art_Gallery.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/GEORGE_DANCE_The_Younger_1741-1825_ARCHITECT_lived_and_died_here.jpg?width=640",
    "label": "George\nDance the\nYounger"
   },
@@ -631,7 +631,7 @@
    "role": "aircraft designer",
    "distance_m": 428,
    "wikipedia": "https://en.wikipedia.org/wiki/Frederick_Handley_Page",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Fhandleypage1936.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Fhandleypage1936.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://farm1.staticflickr.com/585/31837000476_ac07b681b2_z.jpg",
    "label": "Frederick\nHandley\nPage"
   },
@@ -641,7 +641,7 @@
    "role": "architect",
    "distance_m": 490,
    "wikipedia": "https://en.wikipedia.org/wiki/Philip_Webb",
-   "person_image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Philip_Speakman_Webb.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+   "person_image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Philip_Speakman_Webb.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/91-101_Worship_Street_(LB_Hackney).jpg?width=640",
    "label": "Philip Webb"
   },

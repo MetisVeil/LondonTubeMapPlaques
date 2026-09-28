@@ -69,7 +69,7 @@
   "title": "Bethnal Green railway station",
   "url": "https://en.wikipedia.org/wiki/Bethnal_Green_railway_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Bethnal_Green_Railway_Station_-_Dec_2025.jpg/960px-Bethnal_Green_Railway_Station_-_Dec_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Bethnal Green is a station on the Weaver line of the London Overground, located in the southern part of Bethnal Green in East London. The station is 1 mile 10 chains (1.8 kilometres) down the line from London Liverpool Street; the next station is either Hackney Downs (on the Chingford branch) or Cambridge Heath (on the route to Cheshunt and Enfield Town). Its three-letter station code is BET and it is in London fare zone 2."
+  "summary": "Bethnal Green is a railway station on the Weaver line of the London Overground, located in the southern part of Bethnal Green in East London. The station is 1 mile 10 chains (1.8 kilometres) down the line from London Liverpool Street; the next station is either Hackney Downs (on the Chingford branch) or Cambridge Heath (on the route to Cheshunt and Enfield Town)."
  },
  "CambridgeHeath": {
   "title": "Cambridge Heath railway station",
@@ -879,7 +879,7 @@
   "title": "Bethnal Green tube station",
   "url": "https://en.wikipedia.org/wiki/Bethnal_Green_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Bethnal_Green_stn_eastbound_look_east.JPG/960px-Bethnal_Green_stn_eastbound_look_east.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Bethnal Green is a London Underground station in Bethnal Green, London, England. It is on the Central line between Liverpool Street and Mile End stations, and is in London fare zone 2. It is open 24 hours on a Friday and Saturday as part of the Night Tube service. The station was opened as part of the long planned Central line eastern extension on 4 December 1946, having previously been used as an air-raid shelter."
+  "summary": "Bethnal Green is a London Underground station in Bethnal Green, east London, England. It is on the Central line between Liverpool Street and Mile End stations\u00bf It is open 24 hours on a Friday and Saturday, as part of the Night Tube service. The station was opened as part of the long planned Central line eastern extension on 4 December 1946."
  },
  "Bermondsey": {
   "title": "Bermondsey tube station",
@@ -896,7 +896,7 @@
  "BostonManor": {
   "title": "Boston Manor tube station",
   "url": "https://en.wikipedia.org/wiki/Boston_Manor_tube_station",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Boston_Manor_stn_building.JPG/960px-Boston_Manor_stn_building.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Boston_Manor_tube_station_September_2026.png/960px-Boston_Manor_tube_station_September_2026.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "summary": "Boston Manor is a London Underground station in Brentford, at the boundary of the boroughs of Hounslow and Ealing. It is on the Heathrow branch of the Piccadilly line, between Osterley and Northfields stations. It is in London fare zone 4."
  },
  "BaronsCourt": {
@@ -1209,7 +1209,7 @@
   "title": "Gants Hill tube station",
   "url": "https://en.wikipedia.org/wiki/Gants_Hill_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Gants_Hill_stn_southwest_entrance.JPG/960px-Gants_Hill_stn_southwest_entrance.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Gants Hill is a London Underground station in the largely residential Gants Hill district of Ilford, in east London, England. It is on the Hainault loop of the Central line between Redbridge and Newbury Park stations. It is the easternmost station to be below ground on the London Underground network and the busiest on the Hainault loop; it is located in London fare zone 4."
+  "summary": "Gants Hill is a London Underground station in the largely residential Gants Hill district of Ilford, in east London, England. It is on the Hainault loop of the Central line between Redbridge and Newbury Park stations. It is the easternmost station on the network that is underground and is located in London fare zone 4."
  },
  "GloucesterRoad": {
   "title": "Gloucester Road tube station",
@@ -1221,7 +1221,7 @@
   "title": "Holborn tube station",
   "url": "https://en.wikipedia.org/wiki/Holborn_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Holborn_Tube_Station_-_April_2006.jpg/960px-Holborn_Tube_Station_-_April_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Holborn ( HOH-b\u0259(r)n) is a London Underground station in Holborn, Central London. It is located at the junction of High Holborn and Kingsway. The station is served by the Central and Piccadilly lines, and is in London fare zone 1. On the Central line the station is between Tottenham Court Road and Chancery Lane stations, and on the Piccadilly line it is between Covent Garden and Russell Square stations. Close by are the British Museum, Lincoln's Inn Fields, Red Lion Square, Bloomsbury Square, London School of Economics and Sir John Soane's Museum."
+  "summary": "Holborn ( HOH-b\u0259(r)n) is a London Underground station in Holborn, Central London. It is located at the junction of High Holborn and Kingsway. The station is served by the Central and Piccadilly lines, and is in London fare zone 1. On the Central line, the station is between Tottenham Court Road and Chancery Lane stations, and on the Piccadilly line it is between Covent Garden and Russell Square stations. Close by are the British Museum, Lincoln's Inn Fields, Red Lion Square, Bloomsbury Square, London School of Economics and Sir John Soane's Museum."
  },
  "HighBarnet": {
   "title": "High Barnet tube station",
@@ -2060,8 +2060,8 @@
  "Bushey": {
   "title": "Bushey railway station",
   "url": "https://en.wikipedia.org/wiki/Bushey_railway_station",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Bushey_station_Overground_platforms_looking_north.JPG/960px-Bushey_station_Overground_platforms_looking_north.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Bushey is an interchange station in Hertfordshire which serves Bushey and Oxhey. It is located on an embankment where the Watford DC line, operated as the Lioness line of the London Overground, diverges from the West Coast Main Line (WCML). National Rail services along the WCML are operated by London Northwestern Railway. It is in London fare zone 8."
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Bushey_rail_station_Pinner_Road_entrance.jpg/960px-Bushey_rail_station_Pinner_Road_entrance.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "summary": "Bushey is an interchange station in Hertfordshire which serves Bushey and Oxhey. It is located on an embankment where the Watford DC line, operated as the Lioness line of the London Overground, diverges from the West Coast Main Line (WCML). National Rail services along the WCML are operated by London Northwestern Railway. It is in London fare zone 8. It is 15 miles 79 chains (25.7 km) from London Euston."
  },
  "CanningTown": {
   "title": "Canning Town station",
@@ -2457,7 +2457,7 @@
   "title": "Watford Junction railway station",
   "url": "https://en.wikipedia.org/wiki/Watford_Junction_railway_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Watford_Junction_2025_19_01_58_353000.jpeg/960px-Watford_Junction_2025_19_01_58_353000.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Watford Junction is a railway station serving the town of Watford, in Hertfordshire, England. It is on the West Coast Main Line (WCML), 17 miles 34 chains (28 km) down the line from London Euston,. It is also the northern terminus of the Lioness line of the London Overground, which operates via the Watford DC line to central London. The Abbey Line branch to St Albans Abbey diverges from the WCML at Watford Junction. The station is to the north of a viaduct over the Colne Valley and is immediately south of Watford Tunnel."
+  "summary": "Watford Junction is a railway station serving the town of Watford, in Hertfordshire, England. It is on the West Coast Main Line (WCML), 17 miles 34 chains (28 km) down the line from London Euston. It is also the northern terminus of the Lioness line of the London Overground, which operates via the Watford DC line to central London. The Abbey Line branch to St Albans Abbey diverges from the WCML at Watford Junction. The station is to the north of a viaduct over the Colne Valley and is immediately south of Watford Tunnel."
  },
  "WalthamstowCentral": {
   "title": "Walthamstow Central station",

@@ -1089,7 +1089,7 @@
   "title": "East Finchley tube station",
   "url": "https://en.wikipedia.org/wiki/East_Finchley_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/East_Finchley_Station_%282%29_01.jpg/960px-East_Finchley_Station_%282%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "East Finchley is a London Underground station in East Finchley in the London Borough of Barnet. It is on the High Barnet branch of the Northern line, between Finchley Central and Highgate stations. It is in London fare zone 3."
+  "summary": "East Finchley is a London Underground station in the area of East Finchley, in north London, England. It lies on the High Barnet branch of the Northern line, between Finchley Central and Highgate. The station was opened on 22 August 1867, on the Great Northern Railway's line between Finsbury Park and Edgware. As part of London Underground's only partially-completed Northern Heights plan, the station was completely rebuilt with additional tracks in the late 1930s. Northern line trains started serving the station on 3 July 1939 and main line passenger services ended on 2 March 1941."
  },
  "Edgware": {
   "title": "Edgware tube station",
@@ -1257,7 +1257,7 @@
   "title": "Highgate tube station",
   "url": "https://en.wikipedia.org/wiki/Highgate_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Highgate_Station_%285%29_01.jpg/960px-Highgate_Station_%285%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Highgate is a London Underground station and a former railway station on Archway Road, in the London Borough of Haringey. The station takes its name from nearby Highgate Village. It is on the High Barnet branch of the Northern line, between East Finchley and Archway stations. It is in London fare zone 3."
+  "summary": "Highgate is a London Underground station and a former railway station on Archway Road, in north London, England. The station takes its name from nearby Highgate Village. It lies on the High Barnet branch of the Northern line, between East Finchley and Archway."
  },
  "Hainault": {
   "title": "Hainault tube station",
@@ -2259,7 +2259,7 @@
   "title": "London Bridge station",
   "url": "https://en.wikipedia.org/wiki/London_Bridge_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/London_January_5_2018_%2847%29_London_Bridge_Station_%2838813334494%29.jpg/960px-London_January_5_2018_%2847%29_London_Bridge_Station_%2838813334494%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "London Bridge is a central London railway terminus and connected London Underground station in Southwark, south-east London. It occupies a large area on three levels immediately south-east of London Bridge, from which it takes its name. The main line station is the oldest railway station in London fare zone 1 and one of the oldest in the world having opened in 1836. It is one of two main line termini in London to the south of the River Thames (the other being Waterloo) and is the fourth-busiest station in London, handling over 50 million passengers a year."
+  "summary": "London Bridge is a central London railway terminus and connected London Underground station in Southwark, south-east London. It occupies a large area on three levels immediately south-east of London Bridge, from which it takes its name. The main line station is the oldest railway station in London fare zone 1 and one of the oldest in the world, having opened in 1836. It is one of two main line termini in London to the south of the River Thames (the other being Waterloo) and is the fifth-busiest station in London, handling over 50 million passengers a year."
  },
  "LondonCityAirport": {
   "title": "London City Airport DLR station",

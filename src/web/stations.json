@@ -231,7 +231,7 @@
   "title": "Hackney Downs railway station",
   "url": "https://en.wikipedia.org/wiki/Hackney_Downs_railway_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Hackney_Downs_station_20171221_134731_%2849455561248%29.jpg/960px-Hackney_Downs_station_20171221_134731_%2849455561248%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Hackney Downs is a London Overground and National Rail station in Hackney Central and serves the old common land of Hackney Downs in Lower Clapton in the London Borough of Hackney, it is on the Lea Valley lines and West Anglia Main Line. It is 2 miles 78 chains (4.8 km) down the line from London Liverpool Street and has a direct passenger link to Hackney Central station, providing interchange with the Mildmay line of the Overground network."
+  "summary": "Hackney Downs is a London Overground and National Rail station located in Hackney Central in the London Borough of Hackney, and is on the Lea Valley lines and West Anglia Main Line. It is 2 miles 78 chains (4.8 km) down the line from London Liverpool Street and is named after the nearby Hackney Downs and has a direct passenger link to Hackney Central station, providing interchange with the Mildmay line of the Overground network."
  },
  "Hanwell": {
   "title": "Hanwell railway station",
@@ -350,7 +350,7 @@
  "LeytonstoneHighRoad": {
   "title": "Leytonstone High Road railway station",
   "url": "https://en.wikipedia.org/wiki/Leytonstone_High_Road_railway_station",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Leytonstone_High_Road_railway_station_MMB_03.jpg/960px-Leytonstone_High_Road_railway_station_MMB_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Leytonstone_High_Road_stn_entrance_2024.jpg/960px-Leytonstone_High_Road_stn_entrance_2024.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "summary": "Leytonstone High Road is a railway station in Leytonstone in the London Borough of Waltham Forest, on the Gospel Oak to Barking line (currently branded as the Suffragette line of the London Overground), 9 miles 76 chains (16.0 km) down the line from Gospel Oak and situated between Leyton Midland Road and Wanstead Park. It has two platforms that are elevated approximately 20 feet (6 m) above ground level, each of which contains a metal shelter, covered but not completely enclosed. Ticket machines and Oyster validators (for touching in and out) are installed under the arch at the foot of the stairs."
  },
  "ManorPark": {
@@ -759,7 +759,7 @@
   "title": "Stratford International station",
   "url": "https://en.wikipedia.org/wiki/Stratford_International_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Stratford_International_7859960534.jpg/960px-Stratford_International_7859960534.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Stratford International is a National Rail station in Stratford and a separate Docklands Light Railway (DLR) station nearby, located in East Village in London. Despite its name, no international services stop at the station; plans for it to be served by Eurostar trains never came to fruition. However, there are plans to use it as a terminus for Eurostar competitor Gemini Trains from 2029 (see International services). The National Rail platforms are served by Southeastern trains on the High Speed 1 route originating at London St Pancras International (which is served by Eurostar). On the DLR, it is a terminus \u2013 one of seven end-of-the-line termini \u2013 for local services via Canning Town and London City Airport."
+  "summary": "Stratford International is a National Rail station in Stratford and a separate Docklands Light Railway (DLR) station nearby, located in East Village in London. Despite its name, no international services currently stop at the station; plans for it to be served by Eurostar trains never came to fruition. However, there are plans to use it as a terminus for Eurostar competitor Gemini Trains from 2029 (see International services). The National Rail platforms are served by Southeastern trains on the High Speed 1 route originating at London St Pancras International (which is served by Eurostar). On the DLR, it is a terminus \u2013 one of seven end-of-the-line termini \u2013 for local services via Canning Town and London City Airport."
  },
  "SouthQuay": {
   "title": "South Quay DLR station",
@@ -843,7 +843,7 @@
   "title": "Bromley-by-Bow tube station",
   "url": "https://en.wikipedia.org/wiki/Bromley-by-Bow_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/New_Bromley-by-Bow_LU_Station.jpg/960px-New_Bromley-by-Bow_LU_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Bromley-by-Bow is a London Underground station located on the Blackwall Tunnel Northern Approach in the Bromley-by-Bow neighbourhood of the London Borough of Tower Hamlets, East London. It is on the District and Hammersmith & City lines, between Bow Road to the west and West Ham to the east. The station was opened as Bromley by the London, Tilbury and Southend Railway on 31 March 1858 on a new more direct route from Fenchurch Street to Barking. The station was rebuilt to accommodate the electric District Railway services on an additional set of tracks in 1905. In the late 19th and early 20th centuries the station was served by Great Eastern Railway and North London Railway trains. Metropolitan line service commenced in 1936. The Fenchurch Street\u2013Southend British Railways service was withdrawn in 1962, leaving abandoned platforms. The station was renamed Bromley-by-Bow in 1967. It is in London fare zones 2 and 3."
+  "summary": "Bromley-by-Bow is a London Underground station located on the Blackwall Tunnel Northern Approach in the Bromley-by-Bow neighbourhood of the London Borough of Tower Hamlets, East London. It is on the District and Hammersmith & City lines, between Bow Road to the west and West Ham to the east."
  },
  "Barbican": {
   "title": "Barbican tube station",
@@ -1106,7 +1106,7 @@
  "Embankment": {
   "title": "Embankment tube station",
   "url": "https://en.wikipedia.org/wiki/Embankment_tube_station",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Embankment_tube_station_entrance_July_2017.png/960px-Embankment_tube_station_entrance_July_2017.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Embankment_Underground_station_%28London%29.jpg/960px-Embankment_Underground_station_%28London%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "summary": "Embankment is a London Underground station in the City of Westminster, known by various names during its history. It is served by four lines: Bakerloo, Circle, District and Northern. On the Bakerloo line and the Charing Cross branch of the Northern line, the station is between Charing Cross and Waterloo stations. On the Circle and District lines, it is between Westminster and Temple stations. It is in London fare zone 1. The station has two entrances, one on Victoria Embankment and the other on Villiers Street. The station is adjacent to Victoria Embankment Gardens and is close to Charing Cross station, Embankment Pier, Hungerford Bridge, Cleopatra's Needle, the Royal Air Force Memorial, the Savoy Chapel and Savoy Hotel and the Playhouse and New Players Theatres."
  },
  "Epping": {
@@ -1610,7 +1610,7 @@
  "PutneyBridge": {
   "title": "Putney Bridge tube station",
   "url": "https://en.wikipedia.org/wiki/Putney_Bridge_tube_station",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Putney_Bridge_stn_look_north_2019.jpg/960px-Putney_Bridge_stn_look_north_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Putney_Bridge_station_%28London%29.jpg/960px-Putney_Bridge_station_%28London%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "summary": "Putney Bridge is a London Underground station on the Wimbledon branch of the District line. It is between Parsons Green and East Putney stations and is in London fare zone 2. The station is located in the south of Fulham, adjacent to Fulham High Street and New Kings Road (A308) and is a short distance from the north end of Putney Bridge from which it takes its name."
  },
  "Queensbury": {
@@ -2085,7 +2085,7 @@
   "title": "Charing Cross tube station",
   "url": "https://en.wikipedia.org/wiki/Charing_Cross_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Charing_Cross_Tube_Exit_6_July_2017.jpg/960px-Charing_Cross_Tube_Exit_6_July_2017.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Charing Cross (sometimes informally abbreviated as Charing +, Charing X, CHX or CH+) is a London Underground station at Charing Cross in the City of Westminster. It is served by the Bakerloo and Northern lines, and provides an interchange with its mainline station above. On the Bakerloo line, the station is between Piccadilly Circus and Embankment stations. On its branch of the Northern line, it is between Leicester Square and Embankment stations. The station is in London fare zone 1."
+  "summary": "Charing Cross (sometimes informally abbreviated as Charing +, Charing X, CHX or CH+) is a London Underground station at Charing Cross in the City of Westminster. It is served by the Bakerloo and Northern lines, and provides an interchange with its mainline station above. It served the Jubilee line from 1979 to 1999. On the Bakerloo line, the station is between Piccadilly Circus and Embankment stations. On its branch of the Northern line, it is between Leicester Square and Embankment stations. The station is in London fare zone 1."
  },
  "ClaphamJunction": {
   "title": "Clapham Junction railway station",
@@ -2277,7 +2277,7 @@
   "title": "Limehouse station",
   "url": "https://en.wikipedia.org/wiki/Limehouse_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Limehouse_station_MMB_14_DLR_57.jpg/960px-Limehouse_station_MMB_14_DLR_57.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Limehouse is a National Rail and connected Docklands Light Railway (DLR) station in Limehouse, London, England. It is served by regional services operated by c2c to and from Fenchurch Street and by light metro services provided by the DLR to and from Tower Gateway or Bank. On the main line, Limehouse is located 1 mile 58 chains (2.8 km) from Fenchurch Street and the following station is West Ham; on the DLR it is between Shadwell and Westferry in London fare zone 2."
+  "summary": "Limehouse is a National Rail and Docklands Light Railway (DLR) station in Limehouse located in the London Borough of Tower Hamlets, England. It is served by services operated by c2c to and from Fenchurch Street and by the DLR to and from Tower Gateway or Bank. On the main line, Limehouse is located 1 mile 58 chains (2.8 km) from Fenchurch Street and the following station is West Ham; on the DLR it is between Shadwell and Westferry in London fare zone 2."
  },
  "LiverpoolStreet": {
   "title": "Liverpool Street station",

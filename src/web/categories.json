@@ -17372,14 +17372,14 @@
     "label": "T. S. Eliot"
    },
    "Highgate": {
-    "plaque": "52824",
-    "person": "Cy Grant",
-    "role": "activist",
-    "distance_m": 218,
-    "wikipedia": "https://en.wikipedia.org/wiki/Cy_Grant",
-    "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cy_Grant.jpg?width=640",
-    "plaque_photo": null,
-    "label": "Cy Grant"
+    "plaque": "1483",
+    "person": "Peter Sellers",
+    "role": "actor",
+    "distance_m": 211,
+    "wikipedia": "https://en.wikipedia.org/wiki/Peter_Sellers",
+    "person_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Sellers_at_home_in_Belgravia,_London,_1973.jpg?width=640",
+    "plaque_photo": "https://farm66.staticflickr.com/65535/49868275952_718585be33_z.jpg",
+    "label": "Peter\nSellers"
    },
    "EarlsCourt": {
     "plaque": "634",
@@ -26517,7 +26517,7 @@
     "role": "Earl of Rosebery",
     "distance_m": 425,
     "wikipedia": "https://en.wikipedia.org/wiki/Archibald_Primrose,_5th_Earl_of_Rosebery",
-    "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/The_Earl_of_Rosebery.jpg/960px-The_Earl_of_Rosebery.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Archibald_Philip_Primrose%2C_5th_Earl_of_Rosebery.jpg/960px-Archibald_Philip_Primrose%2C_5th_Earl_of_Rosebery.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/ARCHIBALD_PHILIP_PRIMROSE_5th_EARL_of_ROSEBERY_1847-1929)_PRIME_MINISTER_and_first_Chairman_of_the_London_County_Council_was_born_here.jpg?width=640",
     "label": "Archibald\nPrimrose"
    },
@@ -27260,12 +27260,12 @@
    "note": "May Day"
   },
   "about": {
-   "title": "International Workers' Day",
+   "title": "Labour Day",
    "extract": [
-    "International Workers' Day, also called Labour Day in some countries and often referred to as May Day, is a celebration of labourers, the labour movement and the working class that is marked every year on 1 May, or the first Monday in May.",
-    "Traditionally, 1 May is the date of the European spring festival of May Day. The International Workers Congress held in Paris in 1889 established the Second International for labor, socialist, and Marxist parties. It adopted a resolution for a \"great international demonstration\" in support of working-class demands for the eight-hour day. The date was chosen by the American Federation of Labor to commemorate a general strike in the United States, which had begun on 1 May 1886 and culminated in the Haymarket affair on 4 May. The demonstration subsequently became a yearly event. The 1904 Sixth Conference of the Second International, called on \"all Social Democratic Party organisations and trade unions of all countries to demonstrate energetically on the First of May for the legal establishment of the eight-hour day, for the class demands of the proletariat, and for universal peace\"."
+    "Labour Day (or Labor Day) is an official public holiday in many countries. In most countries, Labour Day is synonymous with, or linked with, International Workers' Day, which happens on 1 May. It was originally chosen to commemorate the 1886 general strike which culminated in the Haymarket affair. In the United States and in Canada, it is a public holiday on the first Monday in September.",
+    "Labour Day is a public / statutory holiday. It is an annual day of celebration of the labour movement and the institution of achievements. It has its origins in the labour union movement, specifically the eight-hour day movement, which advocated eight hours for work, eight hours for recreation, and eight hours for rest."
    ],
-   "url": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+   "url": "https://en.wikipedia.org/wiki/Labour_Day"
   },
   "stations": {
    "BondStreet": {
@@ -30537,7 +30537,7 @@
     "role": "explorer of Australia",
     "distance_m": 282,
     "wikipedia": "https://en.wikipedia.org/wiki/John_McDouall_Stuart",
-    "person_image": "https://upload.wikimedia.org/wikipedia/commons/6/62/John_McDouall_Stuart_%28Portrait%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "person_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/John_McDouall_Stuart_%28Portrait%29.jpg/960px-John_McDouall_Stuart_%28Portrait%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "plaque_photo": "https://commons.wikimedia.org/wiki/Special:FilePath/JOHN_MCDOUALL_STUART_1815-1866_First_Explorer_to_cross_Australia_lived_and_died_here.jpg?width=640",
     "label": "John\nMcDouall\nStuart"
    },

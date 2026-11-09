@@ -207,7 +207,7 @@
   "title": "Gospel Oak railway station",
   "url": "https://en.wikipedia.org/wiki/Gospel_Oak_railway_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Gospel_Oak_Overground_Station_-_geograph.org.uk_-_4897078.jpg/960px-Gospel_Oak_Overground_Station_-_geograph.org.uk_-_4897078.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Gospel Oak is a London Overground interchange station on Mansfield Road, in the London Borough of Camden. It is the western terminus of the Suffragette line to and from Barking Riverside, and is also situated on the Mildmay line between Clapham Junction/Richmond and Stratford. Passengers using Oyster cards are required to tap on interchange Oyster card readers when changing between the two lines. The station is in London fare zone 2."
+  "summary": "Gospel Oak is a London Overground interchange station on Mansfield Road, in the London Borough of Camden. It is the western terminus of the Suffragette line to and from Barking Riverside, and is also situated on the Mildmay line between Clapham Junction/Richmond and Stratford. Passengers using Oyster cards are required to tap on interchange Oyster-card readers when changing between the two lines. The station is in London fare zone 2."
  },
  "HackneyCentral": {
   "title": "Hackney Central railway station",
@@ -231,7 +231,7 @@
   "title": "Hackney Downs railway station",
   "url": "https://en.wikipedia.org/wiki/Hackney_Downs_railway_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Hackney_Downs_station_20171221_134731_%2849455561248%29.jpg/960px-Hackney_Downs_station_20171221_134731_%2849455561248%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Hackney Downs is a London Overground and National Rail station located in Hackney Central in the London Borough of Hackney, and is on the Lea Valley lines and West Anglia Main Line. It is 2 miles 78 chains (4.8 km) down the line from London Liverpool Street and is named after the nearby Hackney Downs and has a direct passenger link to Hackney Central station, providing interchange with the Mildmay line of the Overground network."
+  "summary": "Hackney Downs is a London Overground and National Rail station in Hackney Central and serves the old common land of Hackney Downs in Lower Clapton in the London Borough of Hackney, it is on the Lea Valley lines and West Anglia Main Line. It is 2 miles 78 chains (4.8 km) down the line from London Liverpool Street and has a direct passenger link to Hackney Central station, providing interchange with the Mildmay line of the Overground network."
  },
  "Hanwell": {
   "title": "Hanwell railway station",
@@ -350,7 +350,7 @@
  "LeytonstoneHighRoad": {
   "title": "Leytonstone High Road railway station",
   "url": "https://en.wikipedia.org/wiki/Leytonstone_High_Road_railway_station",
-  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Leytonstone_High_Road_stn_entrance_2024.jpg/960px-Leytonstone_High_Road_stn_entrance_2024.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Leytonstone_High_Road_railway_station_MMB_03.jpg/960px-Leytonstone_High_Road_railway_station_MMB_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "summary": "Leytonstone High Road is a railway station in Leytonstone in the London Borough of Waltham Forest, on the Gospel Oak to Barking line (currently branded as the Suffragette line of the London Overground), 9 miles 76 chains (16.0 km) down the line from Gospel Oak and situated between Leyton Midland Road and Wanstead Park. It has two platforms that are elevated approximately 20 feet (6 m) above ground level, each of which contains a metal shelter, covered but not completely enclosed. Ticket machines and Oyster validators (for touching in and out) are installed under the arch at the foot of the stairs."
  },
  "ManorPark": {
@@ -1191,7 +1191,7 @@
   "title": "Goldhawk Road tube station",
   "url": "https://en.wikipedia.org/wiki/Goldhawk_Road_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Goldhawk_Road_stn_look_north_2012_01.jpg/960px-Goldhawk_Road_stn_look_north_2012_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Goldhawk Road is a London Underground station located in the London Borough of Hammersmith and Fulham, on the south side of Goldhawk Road, about 250 metres (820 ft) west of Shepherd's Bush Green. It is on the Circle and Hammersmith & City lines, between Hammersmith and Shepherd's Bush Market stations. It is located in London fare zone 2."
+  "summary": "Goldhawk Road is a London Underground station located in the London Borough of Hammersmith and Fulham, on the corner of Goldhawk Road and Wells Road, about 250 metres (820 ft) west of Shepherd's Bush Green. It is on the Circle and Hammersmith & City lines, between Hammersmith and Shepherd's Bush Market stations. It is in London fare zone 2."
  },
  "GreenPark": {
   "title": "Green Park tube station",
@@ -1359,7 +1359,7 @@
   "title": "Ladbroke Grove tube station",
   "url": "https://en.wikipedia.org/wiki/Ladbroke_Grove_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Ladbroke_Grove_tube_station_2.jpg/960px-Ladbroke_Grove_tube_station_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Ladbroke Grove is a London Underground station. It is on the Circle and Hammersmith & City lines, between Latimer Road and Westbourne Park stations, and is located in London fare zone 2. The station is located in the Royal Borough of Kensington and Chelsea."
+  "summary": "Ladbroke Grove is a London Underground station situated in North Kensington, between Latimer Road and Westbourne Park stations. It is served by the Circle and Hammersmith & City lines, and is within London fare zone 2."
  },
  "LambethNorth": {
   "title": "Lambeth North tube station",
@@ -1527,13 +1527,13 @@
   "title": "Northwood tube station",
   "url": "https://en.wikipedia.org/wiki/Northwood_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Northwood_tube_station.jpg/960px-Northwood_tube_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Northwood is a London Underground station. It is on the Metropolitan line between Moor Park and Northwood Hills stations and is in London fare zone 6. It is situated just off the main road through the town, Green Lane. The line serves as the sole continuous link between the town of Northwood and London, key for a region known as Metro-Land."
+  "summary": "Northwood is a London Underground station in Northwood, in the London Borough of Hillingdon. It is on the Metropolitan line between Moor Park and Northwood Hills stations and is in London fare zone 6. It is situated just off the main road through the town, Green Lane. The line serves as the sole continuous link between the town of Northwood and London, key for a region known as Metro-Land."
  },
  "NorthwoodHills": {
   "title": "Northwood Hills tube station",
   "url": "https://en.wikipedia.org/wiki/Northwood_Hills_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Northwood_Hills_tube_station_2009.jpg/960px-Northwood_Hills_tube_station_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Northwood Hills is a London Underground station in Northwood, north-west London. It is on the Metropolitan line, between Northwood and Pinner stations. It is in London fare zone 6."
+  "summary": "Northwood Hills is a London Underground station in Northwood, in the London Borough of Hillingdon. It is on the Metropolitan line, between Northwood and Pinner stations. It is in London fare zone 6."
  },
  "Oakwood": {
   "title": "Oakwood tube station",
@@ -1712,7 +1712,7 @@
  "StepneyGreen": {
   "title": "Stepney Green tube station",
   "url": "https://en.wikipedia.org/wiki/Stepney_Green_tube_station",
-  "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8b/Stepney_Green_station_building.jpg/960px-Stepney_Green_station_building.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Stepney_Green_station_building.jpg/960px-Stepney_Green_station_building.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "summary": "Stepney Green is a London Underground station located on Mile End Road in the Stepney neighbourhood of the London Borough of Tower Hamlets, East London. It is on the District and Hammersmith & City lines, between Whitechapel to the west and Mile End to the east. The station was opened by the Whitechapel and Bow Railway on 2 June 1902, on a new route connecting the District Railway at Whitechapel with the London, Tilbury and Southend Railway to the east of Bow Road. Steam trains were replaced by electric on 20 August 1905. Metropolitan line service commenced in 1936. It is in London fare zone 2."
  },
  "Southgate": {
@@ -2085,7 +2085,7 @@
   "title": "Charing Cross tube station",
   "url": "https://en.wikipedia.org/wiki/Charing_Cross_tube_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Charing_Cross_Tube_Exit_6_July_2017.jpg/960px-Charing_Cross_Tube_Exit_6_July_2017.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Charing Cross (sometimes informally abbreviated as Charing +, Charing X, CHX or CH+) is a London Underground station at Charing Cross in the City of Westminster. It is served by the Bakerloo and Northern lines, and provides an interchange with its mainline station above. It served the Jubilee line from 1979 to 1999. On the Bakerloo line, the station is between Piccadilly Circus and Embankment stations. On its branch of the Northern line, it is between Leicester Square and Embankment stations. The station is in London fare zone 1."
+  "summary": "Charing Cross is a London Underground station at Charing Cross in the City of Westminster. It is served by the Bakerloo and Northern lines, and provides an interchange with its mainline station above. It served the Jubilee line from 1979 to 1999. On the Bakerloo line, the station is between Piccadilly Circus and Embankment stations. On its branch of the Northern line, it is between Leicester Square and Embankment stations. The station is in London fare zone 1."
  },
  "ClaphamJunction": {
   "title": "Clapham Junction railway station",
@@ -2115,7 +2115,7 @@
   "title": "Cutty Sark for Maritime Greenwich DLR station",
   "url": "https://en.wikipedia.org/wiki/Cutty_Sark_for_Maritime_Greenwich_DLR_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Docklands_Light_Railway_IMG_7896.jpg/960px-Docklands_Light_Railway_IMG_7896.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Cutty Sark is a light metro station on the Docklands Light Railway (DLR) in Greenwich, south-east London. Subtitled for Maritime Greenwich, the station is named for its proximity to the Cutty Sark in the Maritime Greenwich district. It is the most central of the Greenwich DLR stations, being situated in Greenwich town centre."
+  "summary": "Cutty Sark for Maritime Greenwich is a light metro station on the Docklands Light Railway (DLR) in Greenwich, south-east London. The station is named for its proximity to the Cutty Sark in the Maritime Greenwich district. It is the most central of the Greenwich DLR stations."
  },
  "CrystalPalace": {
   "title": "Crystal Palace railway station",
@@ -2277,7 +2277,7 @@
   "title": "Limehouse station",
   "url": "https://en.wikipedia.org/wiki/Limehouse_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Limehouse_station_MMB_14_DLR_57.jpg/960px-Limehouse_station_MMB_14_DLR_57.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Limehouse is a National Rail and Docklands Light Railway (DLR) station in Limehouse located in the London Borough of Tower Hamlets, England. It is served by services operated by c2c to and from Fenchurch Street and by the DLR to and from Tower Gateway or Bank. On the main line, Limehouse is located 1 mile 58 chains (2.8 km) from Fenchurch Street and the following station is West Ham; on the DLR it is between Shadwell and Westferry in London fare zone 2."
+  "summary": "Limehouse is a National Rail and connected Docklands Light Railway (DLR) station in Limehouse, London, England. It is served by regional services operated by c2c to and from Fenchurch Street and by light metro services provided by the DLR to and from Tower Gateway or Bank. On the main line, Limehouse is located 1 mile 58 chains (2.8 km) from Fenchurch Street and the following station is West Ham; on the DLR it is between Shadwell and Westferry in London fare zone 2."
  },
  "LiverpoolStreet": {
   "title": "Liverpool Street station",
@@ -2415,7 +2415,7 @@
   "title": "Upminster station",
   "url": "https://en.wikipedia.org/wiki/Upminster_station",
   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Upminster_Station_-_geograph.org.uk_-_7349490.jpg/960px-Upminster_Station_-_geograph.org.uk_-_7349490.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "summary": "Upminster is an interchange station in the town of Upminster in the London Borough of Havering, East London. It is on the London, Tilbury and Southend line, 15 miles 20 chains (24.5 km) down the line from Fenchurch Street in Central London. It is the eastern terminus of the District line on the London Underground and the eastern terminus of the Liberty line on the London Overground. The station was originally opened on 1 May 1885 by the London, Tilbury and Southend Railway on a new direct route from London to Southend that avoided Tilbury. It became a junction station in 1892 when a new branch line was opened to Romford. The station was expanded in 1932 by the London, Midland and Scottish Railway with a new entrance and additional platforms constructed to serve the electric District Railway local service which was extended from Barking. The station was expanded again in 1957 and 1958, with a seventh platform added and the main station building given a new facade. The station is managed by c2c and is in London fare zone 6."
+  "summary": "Upminster is a major interchange station in the town of Upminster in the London Borough of Havering, East London. It is on the London, Tilbury and Southend line, 15 miles 20 chains (24.5 km) down the line from Fenchurch Street in Central London. It is the eastern terminus of the District line on the London Underground and the eastern terminus of the Liberty line on the London Overground. The station was originally opened on 1 May 1885 by the London, Tilbury and Southend Railway on a new direct route from London to Southend that avoided Tilbury. It became a junction station in 1892 when a new branch line was opened to Romford. The station was expanded in 1932 by the London, Midland and Scottish Railway with a new entrance and additional platforms constructed to serve the electric Metropolitan District Railway local service which was extended from Barking. The station was expanded again in 1957 and 1958, with a seventh platform added and the main station building given a new facade. The station is managed by c2c and is in London fare zone 6."
  },
  "Victoria": {
   "title": "London Victoria station",
